@@ -1,0 +1,424 @@
+﻿<UserControl xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"  x:Class="BS.NotionsView.Clock.UCClockBingoDigital"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.Clock"
+             mc:Ignorable="d" FontSize="18"   FontWeight="Bold"
+               d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.NotionsView;component/NotionsImage/UCClockBingoDigital.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="111*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelHome"  Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuHeGeneralGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelToAnalog"  Grid.Column="30" Grid.Row="3" Grid.RowSpan="4" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ClockBingoAnalogVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <TextBlock  x:Name="TBBottom0" Grid.Column="16" Grid.Row="24"                   Margin="4,3,4,6" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock  x:Name="TBBottom1" Grid.Column="18" Grid.Row="24"                   Margin="5,3,4,6" Grid.RowSpan="2" />
+        <TextBlock  x:Name="TBBottom2" Grid.Column="19" Grid.Row="24"                   Margin="5,3,4,6" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <TextBlock  x:Name="TBBottom3" Grid.Column="16" Grid.Row="26" Grid.RowSpan="7"  Margin="4,7,4,6" Grid.ColumnSpan="2" />
+        <TextBlock  x:Name="TBBottom4" Grid.Column="18" Grid.Row="26" Grid.RowSpan="7"  Margin="6,7,4,6"            />
+        <TextBlock  x:Name="TBBottom5" Grid.Column="19" Grid.Row="26" Grid.RowSpan="7"  Margin="6,7,4,6" Grid.ColumnSpan="2" />
+        <TextBlock  x:Name="TBBottom6" Grid.Column="16" Grid.Row="33" Grid.RowSpan="2"  Margin="4,6,4,5" Grid.ColumnSpan="2"/>
+        <TextBlock  x:Name="TBBottom7" Grid.Column="18" Grid.Row="33" Grid.RowSpan="2"  Margin="5,6,4,5"                     />
+        <TextBlock  x:Name="TBBottom8" Grid.Column="19" Grid.Row="33" Grid.RowSpan="2"  Margin="5,6,4,5" Grid.ColumnSpan="2"/>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordBottom0" Grid.Column="16" Grid.Row="24" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <Items:UCBlinkBord x:Name="BlinkBordBottom1" Grid.Column="18" Grid.Row="24" Grid.RowSpan="2"                      />
+        <Items:UCBlinkBord x:Name="BlinkBordBottom2" Grid.Column="19" Grid.Row="24" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <Items:UCBlinkBord x:Name="BlinkBordBottom3" Grid.Column="16" Grid.Row="26" Grid.RowSpan="7" Grid.ColumnSpan="2" />
+        <Items:UCBlinkBord x:Name="BlinkBordBottom4" Grid.Column="18" Grid.Row="26" Grid.RowSpan="7"                     />
+        <Items:UCBlinkBord x:Name="BlinkBordBottom5" Grid.Column="19" Grid.Row="26" Grid.RowSpan="7" Grid.ColumnSpan="2" />
+        <Items:UCBlinkBord x:Name="BlinkBordBottom6" Grid.Column="16" Grid.Row="33" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <Items:UCBlinkBord x:Name="BlinkBordBottom7" Grid.Column="18" Grid.Row="33" Grid.RowSpan="2"                     />
+        <Items:UCBlinkBord x:Name="BlinkBordBottom8" Grid.Column="19" Grid.Row="33" Grid.RowSpan="2" Grid.ColumnSpan="2"/>-->
+        <TextBlock x:Name="TBTop0" Grid.Column="16" Grid.Row="2"  Grid.RowSpan="6" Grid.ColumnSpan="2" Margin="4,4,4,6">
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordTop0" Grid.Column="16" Grid.Row="2"  Grid.RowSpan="6" Grid.ColumnSpan="2"/>-->
+        <TextBlock x:Name="TBTop1" Grid.Column="18" Grid.Row="2"  Grid.RowSpan="6" Margin="5,5,5,6">
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordTop1" Grid.Column="18" Grid.Row="2"  Grid.RowSpan="6"  />-->
+        <TextBlock x:Name="TBTop2" Grid.Column="19" Grid.Row="2"  Grid.RowSpan="6" Margin="5,5,3,6" Grid.ColumnSpan="2" >
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordTop2" Grid.Column="19" Grid.Row="2" Grid.ColumnSpan="2"  Grid.RowSpan="6"  />-->
+        <TextBlock x:Name="TBTop3" Grid.Column="16" Grid.Row="9" Grid.ColumnSpan="2" Grid.RowSpan="7" Margin="4,3,4,3">
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordTop3" Grid.Column="16" Grid.Row="9"  Grid.RowSpan="7" Grid.ColumnSpan="2"/>-->
+        <TextBlock x:Name="TBTop4" Grid.Column="18" Grid.Row="9"  Grid.RowSpan="7" Margin="5,3,5,3">
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordTop4" Grid.Column="18" Grid.Row="9"  Grid.RowSpan="7" />-->
+        <TextBlock x:Name="TBTop5" Grid.Column="19" Grid.Row="9" Grid.RowSpan="7" Grid.ColumnSpan="2" Margin="5,3,3,3">
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordTop5"  Grid.Column="19" Grid.Row="9" Grid.ColumnSpan="2" Grid.RowSpan="7" />-->
+        <TextBlock x:Name="TBTop6" Grid.Column="16" Grid.Row="17" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="4,3,4,3"  >
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordTop6"  Grid.Column="16" Grid.Row="17" Grid.RowSpan="2" Grid.ColumnSpan="2" />-->
+        <TextBlock x:Name="TBTop7" Grid.Column="18" Grid.Row="17" Grid.RowSpan="2" Margin="5,3,5,3"  >
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordTop7" Grid.Column="18" Grid.Row="17" Grid.RowSpan="2"  />-->
+        <TextBlock x:Name="TBTop8" Grid.Column="19" Grid.Row="17" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="5,3,4,3" >
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordTop8"  Grid.Column="19" Grid.Row="17" Grid.RowSpan="2" Grid.ColumnSpan="2"   />-->
+
+        <Border Grid.ColumnSpan="2" Grid.Column="29" Grid.Row="18" Grid.RowSpan="3" Margin="4,5,4,5">
+            <TextBlock x:Name="TBRight0">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordRight0" Grid.ColumnSpan="2" Grid.Column="29" Grid.Row="18" Grid.RowSpan="3"/>-->
+        <Border Grid.ColumnSpan="6" Grid.Column="31" Grid.Row="18" Grid.RowSpan="3"  Margin="5,5,4,5">
+            <TextBlock x:Name="TBRight1" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordRight1" Grid.ColumnSpan="6" Grid.Column="31" Grid.Row="18" Grid.RowSpan="3"/>-->
+        <Border Grid.ColumnSpan="2" Grid.Column="38" Grid.Row="18" Grid.RowSpan="3"  Margin="4,5,3,6">
+            <TextBlock x:Name="TBRight2" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordRight2" Grid.ColumnSpan="2" Grid.Column="38" Grid.Row="18" Grid.RowSpan="3"/>-->
+        <Border Grid.ColumnSpan="2" Grid.Column="29" Grid.Row="21"  Margin="4,8,4,6">
+            <TextBlock x:Name="TBRight3">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordRight3" Grid.ColumnSpan="2" Grid.Column="29" Grid.Row="21" />-->
+        <Border Grid.ColumnSpan="6" Grid.Column="31" Grid.Row="21"  Margin="5,8,3,6">
+            <TextBlock x:Name="TBRight4">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordRight4" Grid.ColumnSpan="6" Grid.Column="31" Grid.Row="21" />-->
+        <Border Grid.ColumnSpan="2" Grid.Column="38" Grid.Row="21"  Margin="4,8,4,6">
+            <TextBlock x:Name="TBRight5" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordRight5" Grid.ColumnSpan="2" Grid.Column="38" Grid.Row="21" />-->
+        <Border Grid.ColumnSpan="2" Grid.Column="29" Grid.Row="22" Grid.RowSpan="3"  Margin="4,8,4,3">
+            <TextBlock x:Name="TBRight6">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordRight6" Grid.ColumnSpan="2" Grid.Column="29" Grid.Row="22" Grid.RowSpan="3"/>-->
+        <Border Grid.ColumnSpan="6" Grid.Column="31" Grid.Row="22" Grid.RowSpan="3"  Margin="5,8,4,3">
+            <TextBlock x:Name="TBRight7" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordRight7" Grid.ColumnSpan="6" Grid.Column="31" Grid.Row="22" Grid.RowSpan="3"/>-->
+        <Border Grid.ColumnSpan="2" Grid.Column="38" Grid.Row="22" Grid.RowSpan="3"  Margin="4,8,4,3">
+            <TextBlock x:Name="TBRight8">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordRight8" Grid.ColumnSpan="2" Grid.Column="38" Grid.Row="22" Grid.RowSpan="3"/>-->
+
+
+        <Border Grid.ColumnSpan="3" Grid.Column="2"  Grid.Row="18" Grid.RowSpan="3"  Margin="4,3,4,7">
+            <TextBlock x:Name="TBLeft0" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordLeft0" Grid.ColumnSpan="3" Grid.Column="2"  Grid.Row="18" Grid.RowSpan="3" />-->
+        <Border Grid.ColumnSpan="3" Grid.Column="5"  Grid.Row="18" Grid.RowSpan="3"  Margin="5,3,5,7">
+            <TextBlock x:Name="TBLeft1" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordLeft1" Grid.ColumnSpan="3" Grid.Column="5"  Grid.Row="18" Grid.RowSpan="3" />-->
+        <Border Grid.Column="8"    Grid.Row="18" Grid.RowSpan="3"  Margin="5,3,3,7">
+            <TextBlock x:Name="TBLeft2" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordLeft2" Grid.Column="8"  Grid.Row="18" Grid.RowSpan="3" />-->
+        <Border Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="21"  Margin="4,6,4,7">
+            <TextBlock x:Name="TBLeft3" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordLeft3" Grid.ColumnSpan="3" Grid.Column="2"  Grid.Row="21" />-->
+        <Border Grid.ColumnSpan="3" Grid.Column="5" Grid.Row="21"  Margin="5,6,5,7">
+            <TextBlock x:Name="TBLeft4" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordLeft4" Grid.ColumnSpan="3" Grid.Column="5"  Grid.Row="21"/>-->
+        <Border Grid.Column="8"       Grid.Row="21"  Margin="5,5,3,7">
+            <TextBlock x:Name="TBLeft5" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordLeft5" Grid.Column="8"  Grid.Row="21" />-->
+        <Border Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="22" Grid.RowSpan="3"  Margin="4,6,5,5">
+            <TextBlock x:Name="TBLeft6">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordLeft6" Grid.ColumnSpan="3" Grid.Column="2"  Grid.Row="22" Grid.RowSpan="3" />-->
+        <Border Grid.ColumnSpan="3" Grid.Column="5" Grid.Row="22" Grid.RowSpan="3"  Margin="5,6,5,5">
+            <TextBlock x:Name="TBLeft7">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordLeft7" Grid.ColumnSpan="3" Grid.Column="5"  Grid.Row="22" Grid.RowSpan="3" />-->
+        <Border Grid.Column="8" Grid.Row="22" Grid.RowSpan="3"  Margin="6,6,2,5">
+            <TextBlock x:Name="TBLeft8">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <!--<Items:UCBlinkBord x:Name="BlinkBordLeft8"  Grid.Column="8"  Grid.Row="22" Grid.RowSpan="3" />-->
+
+
+        <Label x:Name="LPlayer1" ContentStringFormat="1" Grid.Column="32" Grid.Row="2" Grid.RowSpan="2"  Grid.ColumnSpan="2"/>
+        <Label x:Name="LPlayer2" ContentStringFormat="2" Grid.Column="34" Grid.Row="2" Grid.RowSpan="2"  Grid.ColumnSpan="2" />
+        <Label x:Name="LPlayer3" ContentStringFormat="3" Grid.Column="36" Grid.Row="2" Grid.RowSpan="2"  Grid.ColumnSpan="2" />
+        <Label x:Name="LPlayer4" ContentStringFormat="4" Grid.Column="38" Grid.Row="2" Grid.RowSpan="2"  />
+        <Label x:Name="LTime1" Grid.Column="32" Grid.Row="5" ContentStringFormat="3"   Grid.ColumnSpan="2" />
+        <Label x:Name="LTime2" Grid.Column="34" Grid.Row="5" ContentStringFormat="6"  Grid.ColumnSpan="2"  />
+        <Label x:Name="LTime3" Grid.Column="36" Grid.Row="5" ContentStringFormat="8"  Grid.ColumnSpan="2"/>
+        <Label x:Name="LTime4" Grid.Column="38" Grid.Row="5" ContentStringFormat="12"  />
+        <Label x:Name="labelStart" Grid.Column="38" Grid.Row="34"  Grid.ColumnSpan="2"/>
+        <!--<Items:UCNewAnswerButton x:Name="UCNewAnswerButton1" MouseDown="UCNewAnswerButton1_MouseDown" Grid.Column="34" Grid.Row="34" Grid.ColumnSpan="3"/>-->
+        <TextBlock x:Name="TBBottomHure1" Grid.Column="10"   Grid.Row="29" Grid.RowSpan="2" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center"  />
+        <TextBlock x:Name="TBBottomHure0" Grid.Column="11"  Grid.Row="29" Grid.RowSpan="2" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center"    />
+        <TextBlock x:Name="TBBottomMinute1" Grid.Column="13"  Grid.Row="29" Grid.RowSpan="2" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock x:Name="TBBottomMinute0" Grid.Column="14"  Grid.Row="29" Grid.RowSpan="2" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock x:Name="TBTopHure1" Grid.Column="26" Grid.Row="11" Grid.RowSpan="2" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center"       >
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <TextBlock x:Name="TBTopHure0" Grid.Column="25" Grid.Row="11" Grid.RowSpan="2" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <TextBlock x:Name="TBTopMinute1" Grid.Column="23" Grid.Row="11" Grid.RowSpan="2" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <TextBlock x:Name="TBTopMinute0" Grid.Column="22" Grid.Row="11" Grid.RowSpan="2" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <Border  Grid.ColumnSpan="2" Grid.Column="33" Grid.Row="27" >
+            <TextBlock  x:Name="TBRightMinute0"  FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.ColumnSpan="2" Grid.Column="33" Grid.Row="28" Grid.RowSpan="2" >
+            <TextBlock  x:Name="TBRightMinute1"  FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.ColumnSpan="2" Grid.Column="33" Grid.Row="31"  >
+            <TextBlock x:Name="TBRightHure0"  FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.ColumnSpan="2" Grid.Column="33" Grid.Row="32"  >
+            <TextBlock x:Name="TBRightHure1"  FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.Column="6"  Grid.Row="9">
+            <TextBlock x:Name="TBLeftHure1" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="10">
+            <TextBlock x:Name="TBLeftHure0" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="12" Grid.RowSpan="2">
+            <TextBlock FontSize="20"  x:Name="TBLeftMinute1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="14" Grid.RowSpan="2">
+            <TextBlock FontSize="20" x:Name="TBLeftMinute0"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Rectangle Name="Rectangle3" Grid.ColumnSpan="13" Grid.Column="28" Grid.Row="10" Grid.RowSpan="24" Fill="#FF41AD48" Visibility="Hidden" />
+        <Rectangle Name="Rectangle2" Grid.ColumnSpan="16" Grid.Column="12" Grid.Row="1"  Grid.RowSpan="21" Fill="#FF41AD48" Visibility="Hidden" Margin="0,0,0,30"/>
+        <Rectangle Name="Rectangle4" Grid.ColumnSpan="9" Grid.Column="1"  Grid.Row="7"  Grid.RowSpan="23" Fill="#FF41AD48" Visibility="Hidden"  Margin="0,0,26,0"/>
+
+        <!--<Items:UCTimer x:Name="UCTimer1" Grid.ColumnSpan="3" Grid.Column="17" Grid.Row="20" Grid.RowSpan="3"/>-->
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

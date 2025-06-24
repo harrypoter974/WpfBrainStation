@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="BS.Items.UCTransparentCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.Items"
+             mc:Ignorable="d" 
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"  
+                    
+           Height="{ Binding CardHeight}" Width="{ Binding CardWidth}" Visibility="{Binding VisibilityCard}" >
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="212*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="TB" Grid.Column="1"  Grid.Row="1"   FontFamily="Times New Roman"
+             FontSize="{Binding TextSize}"      FontWeight="Bold"  Text="{Binding TextCard}" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" Foreground="Wheat"  >
+
+        </TextBlock>
+        <Label Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding PicCard}" Stretch="Uniform"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="PreviewMouseUp" >
+                    <i:InvokeCommandAction 
+                                Command="{Binding PreviewMouseUp}"
+                                CommandParameter="{Binding}" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="PreviewMouseDown" >
+                    <i:InvokeCommandAction 
+                                Command="{Binding PreviewMouseDown}"
+                               CommandParameter="{Binding}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+
+    </Grid>
+</UserControl>

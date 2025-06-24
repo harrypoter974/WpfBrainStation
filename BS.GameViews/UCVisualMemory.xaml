@@ -1,0 +1,152 @@
+﻿<UserControl  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.GameViews"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:boardVM="clr-namespace:CL.BS.GameVM;assembly=CL.BS.GameVM"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" x:Class="BS.GameViews.UCVisualMemory"
+             mc:Ignorable="d" 
+               d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type  boardVM:BoardVisualMemoryVM}">
+            <local:UCBoardVisualMemory/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <UserControl.Background>
+        <ImageBrush ImageSource="GameImage/UCVisualMemory.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="253*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="154*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="166*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="322*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="230*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuMemoryVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:NUCSpeaker Grid.ColumnSpan="2" Grid.RowSpan="3"
+Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
+        <Label  Grid.Column="9"  Grid.Row="7" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LimiteBut2}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetLimite}" CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="10"  Grid.Row="7" Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LimiteBut1}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetLimite}" CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="13"  Grid.Row="7" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LimiteBut0}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetLimite}" CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <local:UCBoardVisualMemory Grid.Column="2"  Grid.Row="1" Grid.ColumnSpan="4" 
+                                   Content="{Binding Board0}" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <local:UCBoardVisualMemory.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardVisualMemory.RenderTransform>
+        </local:UCBoardVisualMemory>
+        <local:UCBoardVisualMemory Grid.Column="3"  Grid.Row="6" Grid.ColumnSpan="4" 
+                                   Grid.RowSpan="5"  Content="{Binding Board3}"/>
+        <local:UCBoardVisualMemory  Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="4"  Content="{Binding Board1}"
+ Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" RenderTransformOrigin="0.21,0.35" >
+            <local:UCBoardVisualMemory.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardVisualMemory.RenderTransform>
+        </local:UCBoardVisualMemory>
+        <local:UCBoardVisualMemory Grid.Column="5"  Grid.Row="1" 
+                                   Content="{Binding Board2}" Grid.ColumnSpan="10" Grid.RowSpan="6"
+ Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" RenderTransformOrigin="0.65,0.26" >
+            <local:UCBoardVisualMemory.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardVisualMemory.RenderTransform>
+        </local:UCBoardVisualMemory>
+        <Label Grid.ColumnSpan="3" Grid.Column="12"  Grid.Row="9" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding NewGame}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
+            </Label.Background>
+        </Label>
+        <Label Grid.ColumnSpan="3" Grid.Column="8"   Grid.Row="9">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ExitButBackground}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:UCTimer  Grid.Column="4" Grid.Row="4" />
+        <Items:UCTimerControl Grid.ColumnSpan="2" Grid.Column="7"  Grid.Row="7" Width="100" Height="100"
+         Grid.RowSpan="3"                  VerticalAlignment="Bottom"/>
+    </Grid>
+</UserControl>

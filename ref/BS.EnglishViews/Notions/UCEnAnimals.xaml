@@ -1,0 +1,144 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.EnglishViews.Notions"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" x:Class="BS.EnglishViews.Notions.UCEnAnimals"
+             mc:Ignorable="d" 
+           d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+    </UserControl.Background>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="102*"/>
+            <ColumnDefinition Width="152*"/>
+            <ColumnDefinition Width="72*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="92*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="169*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="175*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="63*"/>
+        </Grid.RowDefinitions>
+
+        <!--<Items:UCSpeaker  Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" />-->
+        <Label x:Name="labelHome"     Grid.RowSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuEnGeneralVM"/>
+            </Label.InputBindings>
+        </Label>
+
+
+        <Label x:Name="LAnimals0" Grid.ColumnSpan="2" Grid.Column="2" Grid.Row="5" Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowAnimals}" CommandParameter="Horse:Giraffe"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals1"    Grid.Column="5" Grid.Row="6" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowAnimals}" CommandParameter="Cow:Zebra"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals2"   Grid.Column="8" Grid.Row="6" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowAnimals}" CommandParameter="Cat:Panda"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals3"  Grid.Column="12" Grid.Row="6" Grid.ColumnSpan="4" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowAnimals}" CommandParameter="Dog:Elephant"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals4"   Grid.Column="3" Grid.Row="8" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowAnimals}" CommandParameter="Goose:Mouse"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals5"   Grid.Column="5" Grid.Row="8"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Chicken:Turtle"  Command="{Binding ShowAnimals}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals6" Grid.Column="9" Grid.Row="8" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Sheep:Frog"  Command="{Binding ShowAnimals}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals7"  Grid.ColumnSpan="4" Grid.Column="12"  Grid.Row="8" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Donkey:Fish"  Command="{Binding ShowAnimals}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals8" Grid.Column="3"  Grid.Row="10" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Camel:Snake"  Command="{Binding ShowAnimals}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals9"  Grid.Column="5"  Grid.Row="10">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Goat:Lion"  Command="{Binding ShowAnimals}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals10"  Grid.Column="9" Grid.Row="10" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Rabbit:Monkey"  Command="{Binding ShowAnimals}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAnimals11" Grid.Column="12" Grid.Row="10" Grid.ColumnSpan="4" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Pigeon:Bear"  Command="{Binding ShowAnimals}"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label x:Name="labelHorse"    Background="#FF41AD48" Grid.Column="3"  Grid.Row="7"  />
+        <Label x:Name="labelCow"      Background="#FF41AD48" Grid.Column="5"  Grid.Row="7"  />
+        <Label x:Name="labelCat"      Background="#FF41AD48" Grid.Column="9"  Grid.Row="7" Grid.ColumnSpan="2"  />
+        <Label x:Name="labelDog"      Background="#FF41AD48" Grid.Column="12" Grid.Row="7" Grid.ColumnSpan="4"  />
+        <Label x:Name="labelGoose"    Background="#FF41AD48" Grid.Column="3"  Grid.Row="9"  />
+        <Label x:Name="labelChicken"  Background="#FF41AD48" Grid.Column="5"  Grid.Row="9"  />
+        <Label x:Name="labelSheep"    Background="#FF41AD48" Grid.Column="9"  Grid.Row="9" Grid.ColumnSpan="2"  />
+        <Label x:Name="labelDonkey"   Background="#FF41AD48" Grid.Column="12" Grid.Row="9"   Grid.ColumnSpan="4" />
+        <Label x:Name="labelCamel"    Background="#FF41AD48" Grid.Column="3"  Grid.Row="11" />
+        <Label x:Name="labelGoat"     Background="#FF41AD48" Grid.Column="5"  Grid.Row="11" />
+        <Label x:Name="labelRabbit"   Background="#FF41AD48" Grid.Column="8"  Grid.Row="11" Grid.ColumnSpan="3" />
+        <Label x:Name="labelPigeon"   Background="#FF41AD48" Grid.Column="12" Grid.Row="11" Grid.ColumnSpan="4" />
+
+        <Label x:Name="LWild" Grid.Column="6" Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="1"  Command="{Binding SwichPage}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHome" Grid.Column="7" Grid.Row="3"  Grid.ColumnSpan="2"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="0"  Command="{Binding SwichPage}"/>
+            </Label.InputBindings>
+        </Label>
+        <Image x:Name="imageMessage" Grid.Column="10" Grid.Row="3"  Grid.ColumnSpan="5" Grid.RowSpan="2" Stretch="Fill" />
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

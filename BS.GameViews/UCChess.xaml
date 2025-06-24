@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="BS.GameViews.UCChess"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:BS.GameViews"
+             mc:Ignorable="d"          
+             d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="GameImage/UCChess.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="24*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="labelHome"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuGameVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+    </Grid>
+</UserControl>

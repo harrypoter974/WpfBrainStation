@@ -1,0 +1,127 @@
+﻿<UserControl x:Class="BS.NotionsView.Colors.UCExerciseGroupColors"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.Colors"
+             mc:Ignorable="d" 
+               d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.NotionsView;component/NotionsImage/UCExerciseGroupColors.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="182*"/>
+            <RowDefinition Height="165*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="325*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="image" Grid.Column="1"  Grid.Row="5" Grid.RowSpan="2" Grid.ColumnSpan="6" Stretch="Fill" />
+        <!--<Items:UCSpeaker Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"/>-->
+        <Image x:Name="imageMeseg" Grid.Column="27" Grid.Row="3" Stretch="Fill" Grid.ColumnSpan="11" Grid.RowSpan="3"/>
+        <Label x:Name="LLearnGroup2" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="4">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ColorsLearnGroupVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LLearnGroup1" Grid.Column="5" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ColorsLearnGroupVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LExerciseGroup2"  Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ExerciseGroupColorsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LExerciseGroup1"  Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ExerciseGroupColorsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LExerciseColors"  Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="7" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ExerciseColorsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelHome" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuHeGeneralVM"/>
+            </Label.InputBindings>
+        </Label>
+        <!--<Items:UCNewAnswerButton x:Name="UCNewAnswerButton0" MouseDown="UCNewAnswerButton0_MouseDown" ContentStringFormat="0" Grid.Column="9"  Grid.Row="11"  />
+        <Items:UCNewAnswerButton x:Name="UCNewAnswerButton1" MouseDown="UCNewAnswerButton0_MouseDown" ContentStringFormat="1" Grid.Column="15" Grid.Row="11"  />
+        <Items:UCNewAnswerButton x:Name="UCNewAnswerButton2" MouseDown="UCNewAnswerButton0_MouseDown" ContentStringFormat="2" Grid.Column="21" Grid.Row="11"  />
+        <Items:UCNewAnswerButton x:Name="UCNewAnswerButton3" MouseDown="UCNewAnswerButton0_MouseDown" ContentStringFormat="3" Grid.Column="26" Grid.Row="11" Grid.ColumnSpan="2" />
+        <Items:UCNewAnswerButton x:Name="UCNewAnswerButton4" MouseDown="UCNewAnswerButton0_MouseDown" ContentStringFormat="4" Grid.Column="33" Grid.Row="11"  />
+        <Items:UCNewAnswerButton x:Name="UCNewAnswerButton5" MouseDown="UCNewAnswerButton0_MouseDown" ContentStringFormat="5" Grid.Column="40" Grid.Row="11" />-->
+
+        <TextBlock x:Name="TB0" Grid.Column="4"  HorizontalAlignment="Center" Grid.Row="11"  Text="" VerticalAlignment="Center" Grid.ColumnSpan="3"/>
+        <TextBlock x:Name="TB1" Grid.Column="11" HorizontalAlignment="Center" Grid.Row="11"  Text="" VerticalAlignment="Center" Grid.ColumnSpan="2" />
+        <TextBlock x:Name="TB2" Grid.Column="17" HorizontalAlignment="Center" Grid.Row="11"  Text="" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="TB3" Grid.Column="23" HorizontalAlignment="Center" Grid.Row="11"  Text="" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="TB4" Grid.Column="29" HorizontalAlignment="Center" Grid.Row="11"  Text="" VerticalAlignment="Center" Grid.ColumnSpan="2" />
+        <TextBlock x:Name="TB5" Grid.Column="35" HorizontalAlignment="Center" Grid.Row="11"  Text="" VerticalAlignment="Center" Grid.ColumnSpan="4"/>
+
+        <Border  Grid.Column="5"  Grid.ColumnSpan="2" Grid.Row="9" x:Name="border1"  />
+        <Border  Grid.Column="12"  Grid.Row="9" x:Name="border2"   Grid.ColumnSpan="2" />
+        <Border  Grid.Column="18"  Grid.Row="9" x:Name="border3"   Grid.ColumnSpan="2" />
+        <Border  Grid.Column="24"  Grid.Row="9" x:Name="border4"   Grid.ColumnSpan="2"  />
+        <Border  Grid.Column="30"  Grid.Row="9" x:Name="border5"   Grid.ColumnSpan="2"  />
+        <Border  Grid.Column="36"  Grid.Row="9" x:Name="border6"    Grid.ColumnSpan="3" />
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

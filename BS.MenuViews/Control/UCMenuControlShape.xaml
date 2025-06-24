@@ -1,0 +1,431 @@
+﻿<UserControl x:Class="BS.MenuViews.Control.UCMenuControlShape"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews.Control"
+             mc:Ignorable="d" 
+                 d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MenuViews;component/MenuImage/UCMenuControlShape.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="34*"/>
+        </Grid.RowDefinitions>
+
+        <Label  Grid.Column="1"  Grid.Row="5" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="ClockMenuVM,ClockCompassesVM,ClockDigitsVM,ClockBingoAnalogVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="1"  Grid.Row="9" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="ClockCompassesVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="1"  Grid.Row="13"  Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="ClockDigitsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="1"  Grid.Row="17" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="ClockBingoAnalogVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="11"  Grid.Row="5" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}"
+ CommandParameter="MenuMeasurementsVM,ConceptsLengthVM,ConceptsVM,MeasurementCircumferenceVM,AreaVM,CubageVM,AngleVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="12"  Grid.Row="9"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="ConceptsLengthVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="12"  Grid.Row="13"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="ConceptsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="12"  Grid.Row="17" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MeasurementCircumferenceVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="12"  Grid.Row="21" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="AreaVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="12"  Grid.Row="25" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="CubageVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="12"  Grid.Row="29" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="AngleVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="19"  Grid.Row="5"  Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" 
+ CommandParameter="MenuShapeAndAngleVM,LineOpenVM,AngleOpenVM,TringelOpenVM,RectOpenVM,CirclesOpenVM,ShapeOpenVM,ShapeGameVM,ShapeMemoryVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="20"  Grid.Row="9"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="LineOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="20"  Grid.Row="13"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="AngleOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="20"  Grid.Row="17"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="TringelOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="20"  Grid.Row="21" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="RectOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="20"  Grid.Row="25" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="CirclesOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="20"  Grid.Row="29" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="ShapeOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="20"  Grid.Row="33" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="ShapeGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="20"  Grid.Row="37" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="ShapeMemoryVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="4"  Grid.Row="5" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="ClockMenuVM,ClockCompassesVM,ClockDigitsVM,ClockBingoAnalogVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="9"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="ClockMenuVM,ClockCompassesVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="13"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="ClockMenuVM,ClockDigitsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="17"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="ClockMenuVM,ClockBingoAnalogVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="14"  Grid.Row="5" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}"
+ CommandParameter="MenuMeasurementsVM,ConceptsLengthVM,ConceptsVM,MeasurementCircumferenceVM,AreaVM,CubageVM,AngleVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="14"  Grid.Row="9" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuMeasurementsVM,ConceptsLengthVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="14"  Grid.Row="13" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuMeasurementsVM,ConceptsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="14"  Grid.Row="17" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuMeasurementsVM,MeasurementCircumferenceVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="14"  Grid.Row="21" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuMeasurementsVM,AreaVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="14"  Grid.Row="25" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuMeasurementsVM,CubageVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="14"  Grid.Row="29" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuMeasurementsVM,AngleVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.Row="5"  Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}"
+  CommandParameter="MenuShapeAndAngleVM,LineOpenVM,AngleOpenVM,TringelOpenVM,RectOpenVM,CirclesOpenVM,ShapeOpenVM,ShapeGameVM,ShapeMemoryVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.Row="9"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuShapeAndAngleVM,LineOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.Row="13"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuShapeAndAngleVM,AngleOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.Row="17"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuShapeAndAngleVM,TringelOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.Row="21" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuShapeAndAngleVM,RectOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.Row="25" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuShapeAndAngleVM,CirclesOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.Row="29" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuShapeAndAngleVM,ShapeOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.Row="33" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuShapeAndAngleVM,ShapeGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.Row="37" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuShapeAndAngleVM,ShapeMemoryVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="7"  Grid.Row="4" Grid.RowSpan="3" Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut0}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="7"  Grid.Row="8"  Grid.RowSpan="3" Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut1}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="7"  Grid.Row="12" Grid.RowSpan="3" Grid.ColumnSpan="3"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut2}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="7"  Grid.Row="16"  Grid.RowSpan="3" Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut3}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="17"  Grid.Row="4" Grid.RowSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut4}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="17"  Grid.Row="8" Grid.RowSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut5}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="17"  Grid.Row="12" Grid.RowSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut6}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="17"  Grid.Row="16" Grid.RowSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut7}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="17"  Grid.Row="20" Grid.RowSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut8}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="17"  Grid.Row="24" Grid.RowSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut9}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="17"  Grid.Row="28" Grid.RowSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut10}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25" Grid.Row="4" Grid.RowSpan="3" Grid.ColumnSpan="2"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut11}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25" Grid.Row="8"  Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut12}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25" Grid.Row="12" Grid.RowSpan="3" Grid.ColumnSpan="2"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut13}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25" Grid.Row="16"  Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut14}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25" Grid.Row="20" Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut15}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25" Grid.Row="24" Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut16}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25" Grid.Row="28" Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut17}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25" Grid.Row="32" Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut18}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25" Grid.Row="36" Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut19}"/>
+            </Label.Background>
+        </Label>
+
+        <Label Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="MenuControlCoreVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Items:NUCBlueUCSpeaker   VerticalAlignment="Top"  Margin="{Binding SpeakerMargin}" Grid.RowSpan="3"
+         Grid.ColumnSpan="8" HorizontalAlignment="Left"/>
+
+        <Label Grid.Column="8" Grid.Row="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" 
+  CommandParameter="MenuShapeVM,ClockMenuVM,ClockCompassesVM,ClockDigitsVM,ClockBingoAnalogVM,MenuMeasurementsVM,ConceptsLengthVM,ConceptsVM,MeasurementCircumferenceVM,AreaVM,CubageVM,AngleVM,MenuShapeAndAngleVM,LineOpenVM,AngleOpenVM,TringelOpenVM,RectOpenVM,CirclesOpenVM,ShapeOpenVM,ShapeGameVM,ShapeMemoryVM,AngleVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="21"  Grid.Row="2"  Grid.ColumnSpan="5" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}"
+  CommandParameter="MenuShapeVM,ClockMenuVM,ClockCompassesVM,ClockDigitsVM,ClockBingoAnalogVM,MenuMeasurementsVM,ConceptsLengthVM,ConceptsVM,MeasurementCircumferenceVM,AreaVM,CubageVM,AngleVM,MenuShapeAndAngleVM,LineOpenVM,AngleOpenVM,TringelOpenVM,RectOpenVM,CirclesOpenVM,ShapeOpenVM,ShapeGameVM,ShapeMemoryVM,AngleVM" />
+            </Label.InputBindings>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="MouseUp">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" To="#FF694899"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" To="Transparent"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+    </Grid>
+</UserControl>

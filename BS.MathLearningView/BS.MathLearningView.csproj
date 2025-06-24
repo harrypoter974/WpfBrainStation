@@ -1,0 +1,871 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7D3B66B-2CCA-409C-8BFD-FD1D8DFE84DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BS.MathLearningView</RootNamespace>
+    <AssemblyName>BS.MathLearningView</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BS.BingoBoard, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\BS.BingoBoard.dll</HintPath>
+    </Reference>
+    <Reference Include="CL.BS.MathLearningVM, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\CL.BS.MathLearningVM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add\UCMathAdd.xaml.cs">
+      <DependentUpon>UCMathAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Add\UCMathAddFracture.xaml.cs">
+      <DependentUpon>UCMathAddFracture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\Comper\UCBordComper.xaml.cs">
+      <DependentUpon>UCBordComper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\Comper\UCExerciseComper1.xaml.cs">
+      <DependentUpon>UCExerciseComper1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\Comper\UCExerciseComper2.xaml.cs">
+      <DependentUpon>UCExerciseComper2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\Comper\UCExerciseComper3.xaml.cs">
+      <DependentUpon>UCExerciseComper3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\Comper\UCLernComper.xaml.cs">
+      <DependentUpon>UCLernComper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\Comper\UCMathComper.xaml.cs">
+      <DependentUpon>UCMathComper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\Comper\UCMenuComper.xaml.cs">
+      <DependentUpon>UCMenuComper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCBoardArray.xaml.cs">
+      <DependentUpon>UCBoardArray.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCBoardExercise1.xaml.cs">
+      <DependentUpon>UCBoardExercise1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCBoardExerciseFracture.xaml.cs">
+      <DependentUpon>UCBoardExerciseFracture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCMathArray4.xaml.cs">
+      <DependentUpon>UCMathArray4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCMathExercise1.xaml.cs">
+      <DependentUpon>UCMathExercise1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCMathExercise2.xaml.cs">
+      <DependentUpon>UCMathExercise2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCMathExerciseFracture.xaml.cs">
+      <DependentUpon>UCMathExerciseFracture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCMathExerciseXEndSplit.xaml.cs">
+      <DependentUpon>UCMathExerciseXEndSplit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCMathVariable.xaml.cs">
+      <DependentUpon>UCMathVariable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Exercise\UCBoardVariable.xaml.cs">
+      <DependentUpon>UCBoardVariable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCBingoMath.xaml.cs">
+      <DependentUpon>UCBingoMath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCBingoNum.xaml.cs">
+      <DependentUpon>UCBingoNum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCBingoNumLan.xaml.cs">
+      <DependentUpon>UCBingoNumLan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCBingoQuestions.xaml.cs">
+      <DependentUpon>UCBingoQuestions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCBoardMathMatch.xaml.cs">
+      <DependentUpon>UCBoardMathMatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCBord4x4.xaml.cs">
+      <DependentUpon>UCBord4x4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCLaddersAndRopesMath.xaml.cs">
+      <DependentUpon>UCLaddersAndRopesMath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCMathMemoryNumLan.xaml.cs">
+      <DependentUpon>UCMathMemoryNumLan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCBoardMathArray2.xaml.cs">
+      <DependentUpon>UCBoardMathArray2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCBoardMathExRecognaz10.xaml.cs">
+      <DependentUpon>UCBoardMathExRecognaz10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCBoardPairExercise.xaml.cs">
+      <DependentUpon>UCBoardPairExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCBordMathArray1.xaml.cs">
+      <DependentUpon>UCBordMathArray1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCBordMathBlunArray.xaml.cs">
+      <DependentUpon>UCBordMathBlunArray.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCBordMathRecognaz2.xaml.cs">
+      <DependentUpon>UCBordMathRecognaz2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WritingNumbers\UCBordWritingNumber.xaml.cs">
+      <DependentUpon>UCBordWritingNumber.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCBord9x9.xaml.cs">
+      <DependentUpon>UCBord9x9.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCMathDoubleMatch.xaml.cs">
+      <DependentUpon>UCMathDoubleMatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCMathMatch.xaml.cs">
+      <DependentUpon>UCMathMatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCMathMatchMenu.xaml.cs">
+      <DependentUpon>UCMathMatchMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCMathMemoryMath.xaml.cs">
+      <DependentUpon>UCMathMemoryMath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCMathMemoryNum.xaml.cs">
+      <DependentUpon>UCMathMemoryNum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCSudoku.xaml.cs">
+      <DependentUpon>UCSudoku.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCSudoku4Player.xaml.cs">
+      <DependentUpon>UCSudoku4Player.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCSudoku4Player9x9.xaml.cs">
+      <DependentUpon>UCSudoku4Player9x9.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCSudukuBoard.xaml.cs">
+      <DependentUpon>UCSudukuBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCSudukuBoard9x9.xaml.cs">
+      <DependentUpon>UCSudukuBoard9x9.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Moltipol\UCMathMoltipol1.xaml.cs">
+      <DependentUpon>UCMathMoltipol1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Moltipol\UCMathMoltipol2.xaml.cs">
+      <DependentUpon>UCMathMoltipol2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Moltipol\UCMathMoltipolFracture.xaml.cs">
+      <DependentUpon>UCMathMoltipolFracture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Moltipol\UCPower.xaml.cs">
+      <DependentUpon>UCPower.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathArray3.xaml.cs">
+      <DependentUpon>UCMathArray3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathExRecognaz1.xaml.cs">
+      <DependentUpon>UCMathExRecognaz1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathExRecognaz10.xaml.cs">
+      <DependentUpon>UCMathExRecognaz10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathExRecognaz2.xaml.cs">
+      <DependentUpon>UCMathExRecognaz2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathRecognaz100B.xaml.cs">
+      <DependentUpon>UCMathRecognaz100B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathRecognaz100C.xaml.cs">
+      <DependentUpon>UCMathRecognaz100C.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathRecognaz10A.xaml.cs">
+      <DependentUpon>UCMathRecognaz10A.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathRecognaz10B.xaml.cs">
+      <DependentUpon>UCMathRecognaz10B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCNumberStructureExercise.xaml.cs">
+      <DependentUpon>UCNumberStructureExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCNumberStructureExercise01.xaml.cs">
+      <DependentUpon>UCNumberStructureExercise01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCNumberStructureLern.xaml.cs">
+      <DependentUpon>UCNumberStructureLern.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathRecognaz100A.xaml.cs">
+      <DependentUpon>UCMathRecognaz100A.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCPairExercise.xaml.cs">
+      <DependentUpon>UCPairExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCPairLern.xaml.cs">
+      <DependentUpon>UCPairLern.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Splite\UCMathSplit1.xaml.cs">
+      <DependentUpon>UCMathSplit1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Splite\UCMathSplit2.xaml.cs">
+      <DependentUpon>UCMathSplit2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Splite\UCMathSpliteFracture.xaml.cs">
+      <DependentUpon>UCMathSpliteFracture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Splite\UCRoot.xaml.cs">
+      <DependentUpon>UCRoot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sub\UCMathSub.xaml.cs">
+      <DependentUpon>UCMathSub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sub\UCMathSubFracture.xaml.cs">
+      <DependentUpon>UCMathSubFracture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WritingNumbers\UCWritingNum.xaml.cs">
+      <DependentUpon>UCWritingNum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WritingNumbers\UCWritingNumbersOpen.xaml.cs">
+      <DependentUpon>UCWritingNumbersOpen.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Recognaz\UCMathArray1.xaml.cs">
+      <DependentUpon>UCMathArray1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathArray2.xaml.cs">
+      <DependentUpon>UCMathArray2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognaz\UCMathBlunArray.xaml.cs">
+      <DependentUpon>UCMathBlunArray.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathAddFracture.jpg" />
+    <Resource Include="MathImage\UCMathAdd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Add\UCMathAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Add\UCMathAddFracture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\Comper\UCBordComper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\Comper\UCExerciseComper1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\Comper\UCExerciseComper2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\Comper\UCExerciseComper3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\Comper\UCLernComper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\Comper\UCMathComper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\Comper\UCMenuComper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCBoardArray.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCBoardExercise1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCBoardExerciseFracture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCMathArray4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCMathExercise1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCMathExercise2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCMathExerciseFracture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCMathExerciseXEndSplit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCMathVariable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Exercise\UCBoardVariable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCBingoMath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCBingoNum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCBingoNumLan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCBingoQuestions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCBoardMathMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCBord4x4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCLaddersAndRopesMath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCMathMemoryNumLan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCBoardMathArray2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCBoardMathExRecognaz10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCBoardPairExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCBordMathArray1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCBordMathBlunArray.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCBordMathRecognaz2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WritingNumbers\UCBordWritingNumber.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCBord9x9.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCMathDoubleMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCMathMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCMathMatchMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCMathMemoryMath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCMathMemoryNum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCSudoku.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCSudoku4Player.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCSudoku4Player9x9.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCSudukuBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCSudukuBoard9x9.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Moltipol\UCMathMoltipol1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Moltipol\UCMathMoltipol2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Moltipol\UCMathMoltipolFracture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Moltipol\UCPower.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathArray1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathArray2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathArray3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathBlunArray.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathExRecognaz1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathExRecognaz10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathExRecognaz2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathRecognaz100B.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathRecognaz100C.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathRecognaz10A.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathRecognaz10B.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCNumberStructureExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCNumberStructureExercise01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCNumberStructureLern.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCMathRecognaz100A.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCPairExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognaz\UCPairLern.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Splite\UCMathSplit1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Splite\UCMathSplit2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Splite\UCMathSpliteFracture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Splite\UCRoot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sub\UCMathSub.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sub\UCMathSubFracture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WritingNumbers\UCWritingNum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WritingNumbers\UCWritingNumbersOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathArray1.jpg" />
+    <Resource Include="MathImage\UCMathArray4.png" />
+    <Resource Include="MathImage\UCMathBlunArray.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\Balloons\balon1.png" />
+    <Resource Include="MathImage\Balloons\balon10.png" />
+    <Resource Include="MathImage\Balloons\balon2.png" />
+    <Resource Include="MathImage\Balloons\balon3.png" />
+    <Resource Include="MathImage\Balloons\balon4.png" />
+    <Resource Include="MathImage\Balloons\balon5.png" />
+    <Resource Include="MathImage\Balloons\balon6.png" />
+    <Resource Include="MathImage\Balloons\balon7.png" />
+    <Resource Include="MathImage\Balloons\balon8.png" />
+    <Resource Include="MathImage\Balloons\balon9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathSplit2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathSpliteFracture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathSubFracture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathSub.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCWritingNumbersOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathComper.jpg" />
+    <Resource Include="MathImage\fishGold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCSudoku.jpg" />
+    <Resource Include="MathImage\UCBingoMath.jpg" />
+    <Resource Include="MathImage\UCBingoNum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathMemoryNum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathMatchMenu.jpg" />
+    <Resource Include="MathImage\UCMathDoubleMatch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.GameViews\BS.GameViews.csproj">
+      <Project>{39b6194f-8a1b-4125-9cda-6a56e7e453a4}</Project>
+      <Name>BS.GameViews</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.MultipleMice\MultipleMice.csproj">
+      <Project>{5d7a3ad3-0146-48ba-930f-5525e99fa307}</Project>
+      <Name>MultipleMice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0b6191c5-6621-4dc6-8d7f-06cb3bd05bc3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\LetterBord.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathRecognazOpen10A.jpg" />
+    <Resource Include="MathImage\UCMathExRecognaz10.jpg" />
+    <Resource Include="MathImage\UCMathExRecognaz2.jpg" />
+    <Resource Include="MathImage\UCMathRecognazOpen100A.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathRecognazOpen10B.jpg" />
+    <Resource Include="MathImage\UCMathRecognazOpen100B.jpg" />
+    <Resource Include="MathImage\UCMathRecognazOpen100C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathMoltipol2.jpg" />
+    <Resource Include="MathImage\UCMathMoltipolFracture.jpg" />
+    <Resource Include="MathImage\UCMathMoltipol1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\Num2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCRoot.jpg" />
+    <Resource Include="MathImage\UCPower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\XUCMathVariable.jpg" />
+    <Resource Include="MathImage\Calculation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathExercise1.jpg" />
+    <Resource Include="MathImage\UCMathExercise2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\MathExercise1Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\VarTitel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\optionsBut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\listButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathExerciseXEndSplit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathExerciseFracture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathVariable.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMenuComper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCExerciseComperFish.jpg" />
+    <Resource Include="MathImage\UCExerciseComperNum.jpg" />
+    <Resource Include="MathImage\UCExerciseComperStare.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCNumberStructureExercise1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathMemoryMath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathArray3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBingoQuestions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCPairExercise.jpg" />
+    <Resource Include="MathImage\UCPairLern.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCPairExerciseEG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathArray2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBord4x4.png" />
+    <Resource Include="MathImage\UCBordWritingNumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBord9x9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\091221_Musagei Yesod_Heshbon_Tfos Oti Menia Mishak Game_REVA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCSudoku4Player.jpg" />
+    <Resource Include="MathImage\UCSudukuBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCSudukuBoard9x9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCSudoku4Player9x9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBordMathRecognaz2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\kadur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBordMathArray1.png" />
+    <Resource Include="MathImage\UCBordMathBlunArray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBoardMathExRecognaz10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBoardMathArray2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBordComper1.png" />
+    <Resource Include="MathImage\UCBordComper2.png" />
+    <Resource Include="MathImage\UCBordComper3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBoardPairExercise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBoardExercise1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBoardExerciseFracture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBoardVariable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathMatch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBoardMathMatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCBingoNumLan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCMathMemoryNumLan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\UCLaddersAndRopesMath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MathImage\A.png" />
+    <Resource Include="MathImage\B.png" />
+    <Resource Include="MathImage\C.png" />
+    <Resource Include="MathImage\D.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

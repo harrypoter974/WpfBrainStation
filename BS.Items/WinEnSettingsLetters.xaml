@@ -1,0 +1,194 @@
+﻿<Window x:Class="BS.Items.WinEnSettingsLetters"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BS.Items"
+        mc:Ignorable="d"
+        Title="WinEnSettingsLetters" Height="740" Width="550"  WindowStyle="None"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        FontSize="70" Foreground="White" >
+    <Window.Background>
+        <ImageBrush ImageSource="ItemsImage/WinEnSettingsLetters.png"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="52"/>
+            <ColumnDefinition Width="34*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="103*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="labelA" Text="{Binding letterPic0}" Grid.Column="1"  Grid.Row="3" 
+                   Grid.ColumnSpan="3" TextAlignment="Center" Margin="1" Background="{Binding letter0}">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="0"/>
+            </TextBlock.InputBindings>
+        </TextBlock>
+        <TextBlock x:Name="labelB" Text="{Binding letterPic1}" Grid.Column="4" 
+                   Background="{Binding letter1}" Grid.Row="3" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="1"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelC" Text="{Binding letterPic2}" Grid.Column="5"
+                   Background="{Binding letter2}" Grid.Row="3"  TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="2"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelD" Text="{Binding letterPic3}" Grid.Column="6"
+                   Background="{Binding letter3}" Grid.Row="3"    TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="3"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelE" Text="{Binding letterPic4}" Grid.Column="7"
+                   Background="{Binding letter4}" Grid.Row="3"   TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="4"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelF" Text="{Binding letterPic5}" Grid.Column="8"
+                   Background="{Binding letter5}" Grid.Row="3"   Grid.ColumnSpan="2" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="5"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelG" Text="{Binding letterPic6}" Grid.Column="1" 
+                   Grid.Row="4" Background="{Binding letter6}"  Grid.ColumnSpan="3" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="6"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelH" Text="{Binding letterPic7}" Grid.Column="4"
+                   Background="{Binding letter7}" Grid.Row="4" TextAlignment="Center" Margin="1" >
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="7"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelI" Text="{Binding letterPic8}" Grid.Column="5"
+                   Background="{Binding letter8}" Grid.Row="4" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="8"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelJ" Text="{Binding letterPic9}" Grid.Column="6" 
+                   Background="{Binding letter9}" Grid.Row="4" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="9"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelK" Text="{Binding letterPic10}" Grid.Column="7" Grid.Row="4"
+                   TextAlignment="Center" Background="{Binding letter10}" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="10"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelL" Text="{Binding letterPic11}" Grid.Column="8" Grid.Row="4" 
+                   Background="{Binding letter11}"   Grid.ColumnSpan="2" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="11"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelM" Text="{Binding letterPic12}" Grid.Column="1" Grid.Row="5"
+                   TextAlignment="Center"  Background="{Binding letter12}" Grid.ColumnSpan="3" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="12"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelN" Text="{Binding letterPic13}" Grid.Column="4" Grid.Row="5"
+                   Background="{Binding letter13}" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="13"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelO" Text="{Binding letterPic14}" Grid.Column="5" Grid.Row="5"
+                   Background="{Binding letter14}" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="14"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelP" Text="{Binding letterPic15}" Grid.Column="6" Grid.Row="5"
+                   Background="{Binding letter15}" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="15"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelQ" Text="{Binding letterPic16}" Grid.Column="7" Grid.Row="5"
+                   Background="{Binding letter16}" TextAlignment="Center" Margin="1" >
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="16"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelR" Text="{Binding letterPic17}" Grid.Column="8" Grid.Row="5"  
+                   Background="{Binding letter17}"  Grid.ColumnSpan="2" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="17"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelS" Text="{Binding letterPic18}" Grid.Column="1" 
+                   Background="{Binding letter18}" Grid.Row="6"   Grid.ColumnSpan="3" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="18"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelT" Text="{Binding letterPic19}" Grid.Column="4"
+                   Background ="{Binding letter19}" Grid.Row="6"  TextAlignment="Center" Margin="1" >
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="19"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelU" Text="{Binding letterPic20}" Grid.Column="5"
+                   Background="{Binding letter20}" Grid.Row="6" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="20"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelV" Text="{Binding letterPic21}" Grid.Column="6"
+                   Background="{Binding letter21}" Grid.Row="6" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="21"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelW" Text="{Binding letterPic22}" Grid.Column="7" 
+                   Background="{Binding letter22}" Grid.Row="6"  TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="22"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelX" Text="{Binding letterPic23}" Grid.Column="8" 
+                   Background="{Binding letter23}" Grid.Row="6"   Grid.ColumnSpan="2" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="23"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelY" Text="{Binding letterPic24}" Grid.Column="1"  
+                   Grid.Row="7" Background="{Binding letter24}"  Grid.ColumnSpan="3" TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="24"/>
+            </TextBlock.InputBindings></TextBlock>
+        <TextBlock x:Name="labelZ" Text="{Binding letterPic25}" Grid.Column="4"
+                   Grid.Row="7" Background="{Binding letter25}"   TextAlignment="Center" Margin="1">
+            <TextBlock.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding letterType}" CommandParameter="25"/>
+            </TextBlock.InputBindings></TextBlock>
+        <Label x:Name="labelHome" MouseDown="labelHome_MouseDown" Grid.ColumnSpan="2" />
+        <Label x:Name="labelCansel" 
+               Grid.Column="0"  Grid.Row="9"  Grid.ColumnSpan="5" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding Clear}" />
+            </Label.InputBindings>
+        </Label>  
+        <Label Grid.Column="5"  Grid.Row="9"  Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding IsBig}" />
+            </Label.InputBindings>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding IsBigBut}"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelSave" Grid.Column="7" Grid.Row="9"  Grid.ColumnSpan="4"  MouseDown="labelHome_MouseDown"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding Save}" />
+            </Label.InputBindings>
+        </Label>
+
+    </Grid>
+</Window>

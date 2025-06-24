@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33B7F26B-1D97-4F10-A246-0001A416BE1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CL.BS.EnglishVM</RootNamespace>
+    <AssemblyName>CL.BS.EnglishVM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VM\Game\EnBingoLetterVM.cs" />
+    <Compile Include="VM\Game\EnBingoOpenLetterVM.cs" />
+    <Compile Include="VM\Game\EnLottoVM.cs" />
+    <Compile Include="VM\Game\EnMemoryLetterVM.cs" />
+    <Compile Include="VM\Game\EnWordsGameVM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VM\Notions\EnAnimalsVM.cs" />
+    <Compile Include="VM\Notions\EnCalendarVM.cs" />
+    <Compile Include="VM\Notions\EnClockVM.cs" />
+    <Compile Include="VM\Notions\EnColorMenuVM.cs" />
+    <Compile Include="VM\Notions\EnColorVM.cs" />
+    <Compile Include="VM\Notions\EnDaysOfTheWeekVM.cs" />
+    <Compile Include="VM\Notions\EnFamilyVM.cs" />
+    <Compile Include="VM\Notions\EnNumbersVM.cs" />
+    <Compile Include="VM\Notions\EnOppositesExerciseVM.cs" />
+    <Compile Include="VM\Notions\EnOppositesLernVM.cs" />
+    <Compile Include="VM\Notions\EnPrepositionsExerciseVM.cs" />
+    <Compile Include="VM\Notions\EnPrepositionsLernVM.cs" />
+    <Compile Include="VM\Recognition\EnKnowLetterVM.cs" />
+    <Compile Include="VM\Recognition\EnLetterRecognition1VM.cs" />
+    <Compile Include="VM\Recognition\EnLetterRecognition2VM.cs" />
+    <Compile Include="VM\Recognition\EnLetterRecognition3VM.cs" />
+    <Compile Include="VM\Recognition\EnLettersKnowVM.cs" />
+    <Compile Include="VM\Text\EnTextBigVM.cs" />
+    <Compile Include="VM\Text\EnTextOppositesVM.cs" />
+    <Compile Include="VM\Text\EnTextPrepositionsVM.cs" />
+    <Compile Include="VM\Text\EnTextSmallVM.cs" />
+    <Compile Include="VM\Text\EnWriteLetterVM.cs" />
+    <Compile Include="VM\Text\EnWritingLettersMenuVM.cs" />
+    <Compile Include="VM\Text\WritingEnMenuVM.cs" />
+    <Compile Include="VM\Text\WritingEnNameVM.cs" />
+    <Compile Include="VM\Words\EnPronunciationVM.cs" />
+    <Compile Include="VM\Words\EnSyllableVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.EnglishManager\CL.BS.EnglishManager.csproj">
+      <Project>{02b10955-59bb-4ba7-b6c5-16a61887846b}</Project>
+      <Name>CL.BS.EnglishManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MEF\CL.BS.MEF.csproj">
+      <Project>{681bfcfc-6b4b-4800-abae-441f4c4bb0c2}</Project>
+      <Name>CL.BS.MEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

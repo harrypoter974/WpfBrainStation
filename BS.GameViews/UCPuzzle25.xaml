@@ -1,0 +1,188 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.GameViews"
+             xmlns:boardVM="clr-namespace:CL.BS.GameVM;assembly=CL.BS.GameVM"            
+    x:Class="BS.GameViews.UCPuzzle25"
+             mc:Ignorable="d"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+               d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.GameViews;component/GameImage/UCPuzzle1.jpg"/>
+    </UserControl.Background>
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type  boardVM:Puzzle25BoardVM}">
+            <local:UCPuzzle25Board/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="108*"/>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="111*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="111*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+
+        <local:UCPuzzle25Board  Content="{Binding Card20}" Grid.Row="1" Grid.RowSpan="3" Grid.Column="6" />
+        <local:UCPuzzle25Board  Content="{Binding Card00}" Grid.Row="1" Grid.RowSpan="3"  Grid.Column="8" />
+        <local:UCPuzzle25Board  Content="{Binding Card10}" Grid.Row="1" Grid.RowSpan="3" Grid.Column="10"/>
+        <local:UCPuzzle25Board  Content="{Binding Card40}" Grid.Row="5" Grid.RowSpan="3" Grid.Column="6" />
+        <local:UCPuzzle25Board  Content="{Binding Card30}" Grid.Row="5" Grid.RowSpan="3" Grid.Column="8" />
+        <local:UCPuzzle25Board  Content="{Binding Card50}" Grid.Row="5" Grid.RowSpan="3" Grid.Column="10" />
+
+        <local:UCPuzzle25Board  Content="{Binding Card21}" Grid.Row="3"   Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2" />
+        <local:UCPuzzle25Board  Content="{Binding Card01}" Grid.Row="7"   Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <local:UCPuzzle25Board  Content="{Binding Card11}" Grid.Row="11"  Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <local:UCPuzzle25Board  Content="{Binding Card41}" Grid.Row="3"   Grid.RowSpan="3" Grid.Column="4" />
+        <local:UCPuzzle25Board  Content="{Binding Card31}" Grid.Row="7"   Grid.RowSpan="3" Grid.Column="4" />
+        <local:UCPuzzle25Board  Content="{Binding Card51}" Grid.Row="11"  Grid.RowSpan="3" Grid.Column="4" />
+
+
+        <local:UCPuzzle25Board  Content="{Binding Card42}" Grid.Row="9" Grid.RowSpan="3" Grid.Column="6" />
+        <local:UCPuzzle25Board  Content="{Binding Card32}" Grid.Row="9" Grid.RowSpan="3"  Grid.Column="8" />
+        <local:UCPuzzle25Board  Content="{Binding Card52}" Grid.Row="9" Grid.RowSpan="3" Grid.Column="10"/>
+        <local:UCPuzzle25Board  Content="{Binding Card22}" Grid.Row="13" Grid.RowSpan="5" Grid.Column="6" />
+        <local:UCPuzzle25Board  Content="{Binding Card02}" Grid.Row="13" Grid.RowSpan="5" Grid.Column="8" />
+        <local:UCPuzzle25Board  Content="{Binding Card12}" Grid.Row="13" Grid.RowSpan="5" Grid.Column="10" />
+
+        <local:UCPuzzle25Board  Content="{Binding Card43}" Grid.Row="3"   Grid.RowSpan="3" Grid.Column="12" Grid.ColumnSpan="4" />
+        <local:UCPuzzle25Board  Content="{Binding Card33}" Grid.Row="7"   Grid.RowSpan="3" Grid.Column="12" Grid.ColumnSpan="4"/>
+        <local:UCPuzzle25Board  Content="{Binding Card53}" Grid.Row="11"  Grid.RowSpan="3" Grid.Column="12" Grid.ColumnSpan="4"/>
+        <local:UCPuzzle25Board  Content="{Binding Card23}" Grid.Row="3"   Grid.RowSpan="3" Grid.Column="18" Grid.ColumnSpan="5"/>
+        <local:UCPuzzle25Board  Content="{Binding Card03}" Grid.Row="7"   Grid.RowSpan="3" Grid.Column="18" Grid.ColumnSpan="5"/>
+        <local:UCPuzzle25Board  Content="{Binding Card13}" Grid.Row="11"  Grid.RowSpan="3" Grid.Column="18" Grid.ColumnSpan="5"/>
+
+        <Label  Grid.Column="16" Grid.Row="16"  Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding GroupBut3}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetGroup}" CommandParameter="6" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="15" Grid.Row="16"  Grid.RowSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding GroupBut2}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetGroup}" CommandParameter="3" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="14" Grid.Row="16"  Grid.RowSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding GroupBut1}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetGroup}" CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="13"  Grid.Row="16" Grid.RowSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding GroupBut0}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetGroup}" CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label Grid.Column="22"  Grid.Row="15" Grid.RowSpan="4" Grid.ColumnSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding NewGame}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
+            </Label.Background>
+        </Label>
+        <Label    Grid.Column="20" Grid.Row="15"   Grid.RowSpan="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ExitButBackground}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labelHome"  Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuHeGeneralGameVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="20" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding OpenEG}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="4"  Grid.Row="1" Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding OpenEG}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:NUCSpeaker Grid.ColumnSpan="12" Grid.RowSpan="4"
+Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
+
+    </Grid>
+</UserControl>

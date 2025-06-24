@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="BS.ShapesView.Line.UCBoardLine"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:BS.ShapesView.Line" mc:Ignorable="d"  
+         Height="{Binding BoardHeight}" Width="{Binding BoardWidth}"    >
+    <!--  d:DesignHeight="213" d:DesignWidth="481"  -->   
+    <UserControl.Background>
+        <ImageBrush ImageSource="{Binding BackgroundPic}" Stretch="Fill"/>
+        <!--<ImageBrush ImageSource="C:\Brain_Station\WpfBrainStationBrachoot\WpfBrainStation\Resources\Shapes\Line\LineAQ1.png"/>-->
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="172*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="137*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label  Grid.Column="3" Grid.Row="3" x:Name="UCAnswerButton1" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <!--<Label Grid.Column="1"  Grid.Row="3" Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ChangeMode}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>-->
+    </Grid>
+</UserControl>

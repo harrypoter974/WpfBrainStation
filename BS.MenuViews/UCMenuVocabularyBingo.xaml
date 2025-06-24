@@ -1,0 +1,193 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" x:Class="BS.MenuViews.UCMenuVocabularyBingo"
+             mc:Ignorable="d" 
+                 d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenuVocabularyBingo.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="124*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="468*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="258*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="57*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelHome" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding HomeBut}"  Stretch="None"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ExitingGame}" CommandParameter="MenuHeGeneralVM"/>
+                <MouseBinding MouseAction="RightClick"  Command="{Binding LookHome}" />
+            </Label.InputBindings>
+        </Label>
+        <Items:UCBlueUCSpeaker Grid.ColumnSpan="6"  Margin="{Binding SpeakerMargin}" Grid.RowSpan="3"
+ VerticalAlignment="Top"  HorizontalAlignment="Left"/>
+        <Label  Grid.Column="4"   Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="Colors2"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="9"   Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="Fruit"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="14"   Grid.Row="3"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="Vegetables"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="19"   Grid.Row="3"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="Animals"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label Grid.Column="24"   Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="Clothing"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="4"   Grid.Row="5" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="MusicalLnstruments"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="8"   Grid.Row="5" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="Professions"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="13"   Grid.Row="5" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="Vehicles"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="18"   Grid.Row="5" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="Tools"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="23"  Grid.Row="5" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToBingo}" CommandParameter="Shapes"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="3"   Grid.Row="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="Colors2"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="7"   Grid.Row="3" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="Fruit"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="12"   Grid.Row="3" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="Vegetables"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="17"   Grid.Row="3" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="Animals"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="22"   Grid.Row="3" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="Clothing"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="3"   Grid.Row="5">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="MusicalLnstruments"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6"   Grid.Row="5" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="Professions"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="11"   Grid.Row="5" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="Vehicles"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="16"   Grid.Row="5" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="Tools"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="21"  Grid.Row="5" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToMemory}" CommandParameter="Shapes"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="6"  Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToShadow}" CommandParameter="Fruit"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="11"  Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToShadow}" CommandParameter="Vegetables"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="16"  Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToShadow}" CommandParameter="Animals"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="21"  Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToShadow}" CommandParameter="Clothing"/>
+            </Label.InputBindings>
+        </Label>
+    </Grid>
+</UserControl>

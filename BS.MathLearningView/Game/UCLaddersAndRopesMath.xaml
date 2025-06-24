@@ -1,0 +1,314 @@
+﻿<UserControl x:Class="BS.MathLearningView.Game.UCLaddersAndRopesMath"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MathLearningView.Game"
+     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:boardVM="clr-namespace:BS.BingoBoard.VM;assembly=BS.BingoBoard"
+           xmlns:board="clr-namespace:BS.BingoBoard.View;assembly=BS.BingoBoard"
+             mc:Ignorable="d" 
+                 d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MathLearningView;component/MathImage/UCLaddersAndRopesMath.jpg"/>
+    </UserControl.Background>
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type  boardVM:LaddersAndRopesBoardVM}">
+            <board:UCLaddersAndRopesBoard/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="74*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+        <Label    Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuMathGameVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Image x:Name="iSoldier0" Source="/BS.MathLearningView;component/MathImage/A.png" HorizontalAlignment="Left" Height="45" Margin="1,1,0,0"   VerticalAlignment="Top" Width="45" Grid.Column="{Binding SoldierX3}" Grid.Row="{Binding SoldierY3}" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <Image x:Name="iSoldier1" Source="/BS.MathLearningView;component/MathImage/B.png" HorizontalAlignment="Left" Height="45" Margin="4,4,0,0"   VerticalAlignment="Top" Width="45" Grid.Column="{Binding SoldierX2}" Grid.Row="{Binding SoldierY2}" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <Image x:Name="iSoldier2" Source="/BS.MathLearningView;component/MathImage/C.png" HorizontalAlignment="Left" Height="45" Margin="7,7,0,0"   VerticalAlignment="Top" Width="45" Grid.Column="{Binding SoldierX0}" Grid.Row="{Binding SoldierY0}" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <Image x:Name="iSoldier3" Source="/BS.MathLearningView;component/MathImage/D.png" HorizontalAlignment="Left" Height="45" Margin="10,10,0,0" VerticalAlignment="Top" Width="45" Grid.Column="{Binding SoldierX1}" Grid.Row="{Binding SoldierY1}" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+
+
+
+
+        <Label Grid.Column="14" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="01" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+
+        <Label  Grid.Column="35" Grid.Row="21" Grid.ColumnSpan="3" Grid.RowSpan="3" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding NewGame}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="31" Grid.Row="22"  Grid.ColumnSpan="2"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ExitButBackground}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Items:UCTimer  Grid.Column="10" Grid.Row="2" Grid.ColumnSpan="3" Visibility="{Binding QuestionVisible0 }"
+ VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="102"
+                        Width="102" Grid.RowSpan="5">
+            <Items:UCTimer.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Items:UCTimer.RenderTransform>
+        </Items:UCTimer>
+        <Items:UCTimer  Grid.Column="2" Grid.Row="16" Grid.ColumnSpan="3" Visibility="{Binding QuestionVisible1 }"
+ VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5"
+                        Height="102" Width="102" Grid.RowSpan="3">
+            <Items:UCTimer.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Items:UCTimer.RenderTransform>
+        </Items:UCTimer>
+        <Items:UCTimer  Grid.Column="30" Grid.Row="7" Grid.ColumnSpan="8" Visibility="{Binding QuestionVisible2 }"
+ VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5"
+                        Height="102" Width="102" Grid.RowSpan="3">
+            <Items:UCTimer.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Items:UCTimer.RenderTransform>
+        </Items:UCTimer>
+        <Items:UCTimer  Grid.Column="21" Grid.Row="20" Grid.ColumnSpan="3" Visibility="{Binding QuestionVisible3 }"
+ VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" 
+                        Height="102" Width="102" Grid.RowSpan="3"/>
+
+        <Items:NUCSpeaker Grid.ColumnSpan="6" Grid.RowSpan="4" HorizontalAlignment="Left" Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"/>
+        <board:UCLaddersAndRopesBoard Grid.Column="14" Grid.Row="20" Grid.ColumnSpan="6" Grid.RowSpan="8"  
+                                      Content="{Binding Board_3}"  >  
+            <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TouchDown">
+                        <i:InvokeCommandAction Command="{Binding NextStep}" CommandParameter="3"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+         
+        </board:UCLaddersAndRopesBoard>
+        <board:UCLaddersAndRopesBoard Grid.Column="14" Grid.Row="1" Grid.ColumnSpan="6" Grid.RowSpan="5"
+                                 Content="{Binding Board_0}"      RenderTransformOrigin="0.5,0.5" >
+            <board:UCLaddersAndRopesBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCLaddersAndRopesBoard.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding NextStep}" CommandParameter="0"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </board:UCLaddersAndRopesBoard>
+        <board:UCLaddersAndRopesBoard Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="6" Grid.RowSpan="4"
+Width="{Binding BoardWidth}" Height="{Binding BoardHeight}"     
+                                      Content="{Binding Board_1}"   RenderTransformOrigin="0.28,0.69" >
+            <board:UCLaddersAndRopesBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCLaddersAndRopesBoard.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding NextStep}" CommandParameter="1"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </board:UCLaddersAndRopesBoard>
+        <board:UCLaddersAndRopesBoard Grid.Column="26" Grid.Row="10" Grid.ColumnSpan="12" Grid.RowSpan="4" 
+                                      Content="{Binding Board_2}"  
+Width="{Binding BoardWidth}" Height="{Binding BoardHeight}" RenderTransformOrigin="0.72,0.38" >
+            <board:UCLaddersAndRopesBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCLaddersAndRopesBoard.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding NextStep}" CommandParameter="2"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </board:UCLaddersAndRopesBoard>
+        <Label x:Name="LPlas"     Grid.Column="28" Grid.Row="4" Grid.ColumnSpan="2" IsEnabled="{Binding gameRun}">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LOperator0}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetOperator}" CommandParameter="+" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LSub" Grid.Column="30" Grid.Row="4" Grid.ColumnSpan="2" IsEnabled="{Binding gameRun}">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LOperator1}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetOperator}" CommandParameter="-" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LMoltipol" Grid.Column="32" Grid.Row="4" Grid.ColumnSpan="2" IsEnabled="{Binding gameRun}">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LOperator2}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetOperator}" CommandParameter="x" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LSplite"   Grid.Column="34" Grid.Row="4" Grid.ColumnSpan="2"  IsEnabled="{Binding gameRun}"   >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LOperator3}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetOperator}" CommandParameter=":" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label x:Name="LLimit0" Grid.Column="28" Grid.Row="2" Grid.ColumnSpan="3"  IsEnabled="{Binding gameRun}">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLimit0}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetLimit}" CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LLimit1" Grid.ColumnSpan="2" Grid.Column="31" Grid.Row="2" IsEnabled="{Binding gameRun}">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLimit1}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetLimit}" CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LLimit2" Grid.Column="33" Grid.ColumnSpan="3" Grid.Row="2" IsEnabled="{Binding gameRun}">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLimit2}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetLimit}" CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Items:UCTimerControl Grid.ColumnSpan="3" Grid.Column="24" Grid.RowSpan="4"
+VerticalAlignment="Top" Grid.Row="20" Width="100" Height="100" HorizontalAlignment="Center"/>
+    </Grid>
+</UserControl>

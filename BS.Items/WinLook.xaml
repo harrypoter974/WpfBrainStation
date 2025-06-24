@@ -1,0 +1,31 @@
+﻿<Window x:Class="BS.Items.WinLook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BS.Items"
+        mc:Ignorable="d"
+        Title="WinLook" Height="111" Width="170"   WindowStyle="None" >
+    <Window.Background>
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label                                           >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SetState}" CommandParameter="1"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.Row="1"                            >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SetState}" CommandParameter="2"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Row="2"  MouseDown="Close_MouseDown"/>
+
+    </Grid>
+</Window>

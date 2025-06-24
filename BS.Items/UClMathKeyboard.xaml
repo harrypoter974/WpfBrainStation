@@ -1,0 +1,104 @@
+﻿<UserControl x:Class="BS.Items.UserControlMathKeyboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.Items"
+             mc:Ignorable="d" 
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+           d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Background>
+        <ImageBrush ImageSource="ItemsImage/UserControlMathKeyboard.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="97*"/>
+            <RowDefinition Height="105*"/>
+            <RowDefinition Height="98*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="73*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FF3EAE4A" Grid.ColumnSpan="4" Grid.RowSpan="3" Visibility="{Binding KeyboardVisibility}"/>
+        <Label x:Name="label1"  ContentStringFormat="1"                               >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="1"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers></Label>
+        <Label x:Name="label2"  ContentStringFormat="2" Grid.Column="1"               >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="2"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="label3"  ContentStringFormat="3" Grid.Column="2"               >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="3"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="label4"  ContentStringFormat="4" Grid.Column="3"               >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="4"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="label5"  ContentStringFormat="5"                 Grid.Row="1"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="5"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="label6"  ContentStringFormat="6" Grid.Column="1" Grid.Row="1"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="6"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="label7"  ContentStringFormat="7" Grid.Column="2" Grid.Row="1"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="7"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="label8"  ContentStringFormat="8" Grid.Column="3" Grid.Row="1"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="8"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="label9"  ContentStringFormat="9"                 Grid.Row="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="9"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="label0"  ContentStringFormat="0" Grid.Column="1" Grid.Row="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="0"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labelDel"  Grid.Column="3" Grid.Row="2"                        >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeNum}"  CommandParameter="d"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+            
+    </Grid>
+</UserControl>

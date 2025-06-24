@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="BS.UserInformationView.UCEndDataEntry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.UserInformationView"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:boardVM="clr-namespace:CL.BS.UserInformationVM.BaseClass;assembly=CL.BS.UserInformationVM"    
+             mc:Ignorable="d" 
+       xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+                d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="UserInformationImage/EndDataEntry.jpg"/>
+    </UserControl.Background>
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type boardVM:EndDataEntryBordVM }">
+            <local:UCEndDataEntryBord/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*" />
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="312*" />
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="315*"/>
+            <RowDefinition Height="102*" />
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*" />
+            <ColumnDefinition Width="204*" />
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="374*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="236*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="labelHome" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuOpenVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:NUCSpeaker  Margin="{Binding SpeakerMargin}" HorizontalAlignment="Left"
+                           Grid.ColumnSpan="2" VerticalAlignment="Top"  Grid.RowSpan="3" />
+       <local:UCEndDataEntryBord Grid.Column="4"  Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2"
+  Content="{Binding Bord0}"   RenderTransformOrigin="0.5,0.5">
+            <local:UCEndDataEntryBord.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCEndDataEntryBord.RenderTransform>
+        </local:UCEndDataEntryBord>
+        <local:UCEndDataEntryBord Grid.Column="3"  Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="2"   Content="{Binding Bord3}" />
+        <local:UCEndDataEntryBord Grid.Column="4" Grid.ColumnSpan="4" Grid.RowSpan="5"   Content="{Binding Bord2}" 
+  Grid.Row="1" Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" 
+                                  RenderTransformOrigin="0.805,0.185">
+            <local:UCEndDataEntryBord.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCEndDataEntryBord.RenderTransform>
+        </local:UCEndDataEntryBord>
+        <local:UCEndDataEntryBord Grid.Column="0"  Grid.Row="1" Grid.ColumnSpan="5" 
+ Grid.RowSpan="5" Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" 
+   Content="{Binding Bord1}"  RenderTransformOrigin="0.20,0.18">
+            <local:UCEndDataEntryBord.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCEndDataEntryBord.RenderTransform>
+        </local:UCEndDataEntryBord>
+    </Grid>
+</UserControl>

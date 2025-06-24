@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D575353C-C711-43FB-9274-B8FE7431FFD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BS.MenuViews</RootNamespace>
+    <AssemblyName>BS.MenuViews</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UCMenu4Arithmetic.xaml.cs">
+      <DependentUpon>UCMenu4Arithmetic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuDataUser1.xaml.cs">
+      <DependentUpon>UCMenuDataUser1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuEnGame.xaml.cs">
+      <DependentUpon>UCMenuEnGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuEnGeneral.xaml.cs">
+      <DependentUpon>UCMenuEnGeneral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuEnglish1.xaml.cs">
+      <DependentUpon>UCMenuEnglish1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeReading.xaml.cs">
+      <DependentUpon>UCMenuHeReading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuEnWords.xaml.cs">
+      <DependentUpon>UCMenuEnWords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuGame1.xaml.cs">
+      <DependentUpon>UCMenuGame1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuGeography.xaml.cs">
+      <DependentUpon>UCMenuGeography.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHebrew1.xaml.cs">
+      <DependentUpon>UCMenuHebrew1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeGame.xaml.cs">
+      <DependentUpon>UCMenuHeGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeGeneral1.xaml.cs">
+      <DependentUpon>UCMenuHeGeneral1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeGeneralGame.xaml.cs">
+      <DependentUpon>UCMenuHeGeneralGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuLern1.xaml.cs">
+      <DependentUpon>UCMenuLern1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMath.xaml.cs">
+      <DependentUpon>UCMenuMath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMathGame.xaml.cs">
+      <DependentUpon>UCMenuMathGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMoney.xaml.cs">
+      <DependentUpon>UCMenuMoney.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuOpen1.xaml.cs">
+      <DependentUpon>UCMenuOpen1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuPrint.xaml.cs">
+      <DependentUpon>UCMenuPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuPuzzles.xaml.cs">
+      <DependentUpon>UCMenuPuzzles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuRiddles1.xaml.cs">
+      <DependentUpon>UCMenuRiddles1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuShape1.xaml.cs">
+      <DependentUpon>UCMenuShape1.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UCMenu4Arithmetic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuDataUser1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuEnGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuEnGeneral.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuEnglish1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHeReading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuEnWords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuGame1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuGeography.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHebrew1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHeGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHeGeneral1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHeGeneralGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuLern1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMathGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMoney.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuOpen1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuPuzzles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuRiddles1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuShape1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuRiddles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuGame.jpg" />
+    <Resource Include="MenuImage\UCMenuLern.jpg" />
+    <Resource Include="MenuImage\UCMenuOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuDataUser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuShape.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuEnglish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHeGeneral.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHebrew.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CL.BS.MenuVM\CL.BS.MenuVM.csproj">
+      <Project>{d83ff310-6ec4-4699-b680-f161590969c1}</Project>
+      <Name>CL.BS.MenuVM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuEnGeneral.jpg" />
+    <Resource Include="MenuImage\UCMenuPrint.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuEnGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuEnWords.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHeGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuMathGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuGeography.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuMoney.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuPuzzles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHeGeneralGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuEnReading.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenu4Arithmetic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuMath.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

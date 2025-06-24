@@ -1,0 +1,297 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.NotionsImage.Animals"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+    x:Class="BS.NotionsView.NotionsImage.Animals.UCAnimalsMemory"
+             mc:Ignorable="d" 
+                   d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.NotionsView;component/NotionsImage/UCAnimalsMemory.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/BS.NotionsView;component/NotionsImage/UCAnimalsMemoryOpen.jpg"/>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="31*"/>
+
+        </Grid.RowDefinitions>
+
+        <Label x:Name="labelHome" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuHeGeneralVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LPlayer1" ContentStringFormat="1" Grid.Column="28" Grid.Row="2" Grid.RowSpan="2" />
+        <Label x:Name="LPlayer2" ContentStringFormat="2" Grid.Column="30" Grid.Row="2" Grid.RowSpan="2" />
+        <Label x:Name="LPlayer3" ContentStringFormat="3" Grid.Column="31" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <Label x:Name="LPlayer4" ContentStringFormat="4" Grid.Column="33" Grid.Row="2" Grid.RowSpan="2"  />
+        <Label x:Name="LTime2" ContentStringFormat="3"      Grid.Column="28" Grid.Row="5" />
+        <Label x:Name="LTime4" ContentStringFormat="6"      Grid.Column="30" Grid.Row="5" />
+        <Label x:Name="LTime6" ContentStringFormat="9"      Grid.Column="31" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <Label x:Name="LTime8" ContentStringFormat="12"     Grid.Column="33" Grid.Row="5"/>
+        <Label x:Name="LNumColor3" ContentStringFormat="3"   Grid.Column="30" Grid.Row="7" Grid.RowSpan="3" />
+        <Label x:Name="LNumColor5" ContentStringFormat="5"  Grid.Column="31" Grid.Row="7" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <Label x:Name="LNumColor7" ContentStringFormat="7"  Grid.Column="33" Grid.Row="7" Grid.RowSpan="3"/>
+        <Label x:Name="labelStart" Grid.Column="33"  Grid.Row="39" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+
+        <!--<Items:UCSpeaker Grid.Column="1"  Grid.Row="1" Grid.RowSpan="2" />-->
+
+        <Border  Grid.Column="3"  Grid.Row="5" Grid.RowSpan="7">
+            <Items:UCQuestionCard x:Name="TBLCard0" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border  Grid.Column="3"  Grid.Row="13" Grid.RowSpan="4">
+            <Items:UCQuestionCard x:Name="TBLCard1" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="3"  Grid.Row="18" Grid.RowSpan="4" >
+            <Items:UCQuestionCard x:Name="TBLCard2" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="3"  Grid.Row="23" Grid.RowSpan="4">
+            <Items:UCQuestionCard x:Name="TBLCard3" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="3"  Grid.Row="28" Grid.RowSpan="4">
+            <Items:UCQuestionCard x:Name="TBLCard4" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="3"  Grid.Row="33" Grid.RowSpan="4">
+            <Items:UCQuestionCard x:Name="TBLCard5" Visibility="Hidden" >
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="3"  Grid.Row="38" Grid.RowSpan="3">
+            <Items:UCQuestionCard x:Name="TBLCard6" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+
+        <Items:UCQuestionCard  x:Name="TBTCard0" Grid.Column="6"  Grid.Row="2"  Grid.ColumnSpan="2"  Grid.RowSpan="6" Visibility="Hidden">
+            <Items:UCQuestionCard.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </Items:UCQuestionCard.LayoutTransform>
+        </Items:UCQuestionCard>
+        <Items:UCQuestionCard  x:Name="TBTCard1" Grid.Column="9"  Grid.Row="2"  Grid.RowSpan="6" Visibility="Hidden">
+            <Items:UCQuestionCard.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </Items:UCQuestionCard.LayoutTransform>
+        </Items:UCQuestionCard>
+        <Items:UCQuestionCard  x:Name="TBTCard2" Grid.Column="11" Grid.Row="2"  Grid.RowSpan="6" Grid.ColumnSpan="2" Visibility="Hidden" >
+            <Items:UCQuestionCard.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </Items:UCQuestionCard.LayoutTransform>
+        </Items:UCQuestionCard>
+        <Items:UCQuestionCard  x:Name="TBTCard3" Grid.Column="14"  Grid.Row="2" Grid.RowSpan="6" Visibility="Hidden">
+            <Items:UCQuestionCard.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </Items:UCQuestionCard.LayoutTransform>
+        </Items:UCQuestionCard>
+        <Items:UCQuestionCard  x:Name="TBTCard4" Grid.ColumnSpan="2" Grid.Column="17" Grid.RowSpan="6" Grid.Row="2" Visibility="Hidden">
+            <Items:UCQuestionCard.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </Items:UCQuestionCard.LayoutTransform>
+        </Items:UCQuestionCard>
+        <Items:UCQuestionCard  x:Name="TBTCard5" Grid.Column="20" Grid.Row="2" Grid.RowSpan="6" Visibility="Hidden">
+            <Items:UCQuestionCard.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </Items:UCQuestionCard.LayoutTransform>
+        </Items:UCQuestionCard>
+        <Items:UCQuestionCard  x:Name="TBTCard6" Grid.ColumnSpan="2" Grid.Column="22" Grid.Row="2" Grid.RowSpan="6" Visibility="Hidden"/>
+
+        <Border Grid.Column="26" Grid.Row="2" Grid.RowSpan="6">
+            <Items:UCQuestionCard x:Name="TBRCard0" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="26"  Grid.Row="9" Grid.RowSpan="5">
+            <Items:UCQuestionCard x:Name="TBRCard1" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="26"  Grid.Row="15" Grid.RowSpan="4">
+            <Items:UCQuestionCard x:Name="TBRCard2" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="26"  Grid.Row="20" Grid.RowSpan="4">
+            <Items:UCQuestionCard x:Name="TBRCard3" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="26"  Grid.Row="25" Grid.RowSpan="4">
+            <Items:UCQuestionCard x:Name="TBRCard4" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="26"  Grid.Row="30" Grid.RowSpan="4">
+            <Items:UCQuestionCard x:Name="TBRCard5" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.Column="26"  Grid.Row="35" Grid.RowSpan="5">
+            <Items:UCQuestionCard x:Name="TBRCard6" Visibility="Hidden">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+
+        <Items:UCQuestionCard  x:Name="TBBCard0" Grid.Column="6"  Visibility="Hidden" Grid.Row="38"  Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+        <Items:UCQuestionCard  x:Name="TBBCard1" Grid.Column="9"  Visibility="Hidden" Grid.Row="38" Grid.RowSpan="3"/>
+        <Items:UCQuestionCard  x:Name="TBBCard2" Grid.Column="11" Visibility="Hidden" Grid.Row="38" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <Items:UCQuestionCard  x:Name="TBBCard3" Grid.Column="14" Visibility="Hidden" Grid.Row="38" Grid.RowSpan="3"/>
+        <Items:UCQuestionCard  x:Name="TBBCard4" Grid.Column="17" Visibility="Hidden" Grid.Row="38" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <Items:UCQuestionCard  x:Name="TBBCard5" Grid.Column="20" Visibility="Hidden" Grid.Row="38" Grid.RowSpan="3"/>
+        <Items:UCQuestionCard  x:Name="TBBCard6" Grid.ColumnSpan="2" Visibility="Hidden" Grid.Column="22" Grid.Row="38" Grid.RowSpan="3"/>
+
+        <Rectangle Grid.ColumnSpan="20" Name="Rectangle2" Visibility="Hidden" Grid.Column="6" Fill="#FF41AD48"  Grid.Row="2" Grid.RowSpan="13" />
+        <Rectangle Grid.ColumnSpan="8" Grid.Column="8"  Grid.Row="14" Visibility="{Binding ElementName=Rectangle2,Path=Visibility}"  Fill="#FF41AD48" Grid.RowSpan="7"/>
+        <Rectangle  Name="Rectangle3" Visibility="Hidden" Grid.Column="26" Fill="#FF41AD48" Grid.Row="2" Grid.RowSpan="38"/>
+        <Rectangle Grid.Column="20"  Grid.Row="14" Visibility="{Binding ElementName=Rectangle3,Path=Visibility}"  Fill="#FF41AD48" Grid.ColumnSpan="5" Grid.RowSpan="12"/>
+        <Rectangle Grid.ColumnSpan="7" Name="Rectangle4" Visibility="Hidden" Grid.Column="4"  Fill="#FF41AD48"  Grid.Row="20" Grid.RowSpan="13"/>
+        <Rectangle Grid.Column="3"  Grid.Row="5" Visibility="{Binding ElementName=Rectangle4,Path=Visibility}"  Fill="#FF41AD48" Grid.ColumnSpan="2" Grid.RowSpan="35"/>
+
+        <!--<Items:UCNewAnswerButton x:Name="UCNewAnswerButton1"  Grid.Column="30"  Grid.Row="39"  Grid.ColumnSpan="2" Grid.RowSpan="2" />-->
+        <Items:UCTimer x:Name="UCTimer1" Grid.ColumnSpan="6" Grid.Column="12" Grid.Row="19" Grid.RowSpan="7" />
+        <Items:UCQuestionCard Grid.ColumnSpan="3" Grid.Column="13" Grid.Row="11" Grid.RowSpan="5" x:Name="TBTCard">
+            <Items:UCQuestionCard.LayoutTransform>
+                <RotateTransform Angle="180" />
+            </Items:UCQuestionCard.LayoutTransform>
+
+        </Items:UCQuestionCard>
+        <Items:UCQuestionCard Grid.ColumnSpan="4" Grid.Column="13" Grid.Row="31" Grid.RowSpan="5" x:Name="TBBCard"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="5"  Grid.Row="21" Grid.RowSpan="5">
+            <Items:UCQuestionCard x:Name="TBLCard">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+        </Border>
+        <Border Grid.ColumnSpan="2" Grid.Column="23" Grid.Row="21" Grid.RowSpan="5">
+            <Items:UCQuestionCard  x:Name="TBRCard">
+                <Items:UCQuestionCard.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Items:UCQuestionCard.LayoutTransform>
+            </Items:UCQuestionCard>
+
+        </Border>
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,130 @@
+﻿<UserControl x:Class="BS.HebrewView.Recognition.UCKnowLetterMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.HebrewView.Recognition"
+             mc:Ignorable="d" 
+               d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.HebrewView;component/HebrewImage/UCKnowLetterMenu.jpg" />
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*" />
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="141*" />
+            <RowDefinition Height="44*" />
+            <RowDefinition Height="164*"/>
+            <RowDefinition Height="77*" />
+            <RowDefinition Height="154*"/>
+            <RowDefinition Height="54*" />
+            <RowDefinition Height="32*" />
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*" />
+            <ColumnDefinition Width="16*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="65*" />
+            <ColumnDefinition Width="49*" />
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="58*" />
+            <ColumnDefinition Width="71*" />
+            <ColumnDefinition Width="46*" />
+            <ColumnDefinition Width="71*" />
+            <ColumnDefinition Width="70*" />
+            <ColumnDefinition Width="26*" />
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="39*" />
+            <ColumnDefinition Width="51*" />
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="52*" />
+        </Grid.ColumnDefinitions>
+
+        <Label  Grid.RowSpan="4"  Name="labelHome">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuHebrewVM"/>
+            </Label.InputBindings>
+        </Label>
+        <!--<my:UCSpeaker Grid.Column="1"  Grid.Row="2"  x:Name="uCSpeaker1"  />-->
+        <Label x:Name="LLetterA"   Grid.Column="20" Grid.Row="13" ContentStringFormat="א"  Grid.ColumnSpan="2"/>
+        <Label x:Name="LLetterB"   Grid.Column="17" Grid.Row="13" ContentStringFormat="ב"  Grid.ColumnSpan="2"/>
+        <Label x:Name="LLetterG"   Grid.Column="15" Grid.Row="13" ContentStringFormat="ג" />
+        <Label x:Name="LLetterD"   Grid.Column="13" Grid.Row="13" ContentStringFormat="ד" />
+        <Label x:Name="LLetterH"   Grid.Column="11" Grid.Row="13" ContentStringFormat="ה"  Grid.ColumnSpan="1"/>
+        <Label x:Name="LLetterV"   Grid.Column="8"  Grid.Row="13" ContentStringFormat="ו"  Grid.ColumnSpan="2"/>
+        <Label x:Name="LLetterZ"   Grid.Column="2" Grid.Row="13"  ContentStringFormat="ז"  Grid.ColumnSpan="3"/>
+        <Label x:Name="LLetterCh"  Grid.Column="20" Grid.Row="15" ContentStringFormat="ח"  Grid.ColumnSpan="2"/>
+        <Label x:Name="LLetterT"   Grid.Column="17" Grid.Row="15" ContentStringFormat="ט"  Grid.ColumnSpan="2"/>
+        <Label x:Name="LLetterY"   Grid.Column="15" Grid.Row="15" ContentStringFormat="י" />
+        <Label x:Name="LLetterC"  Grid.Column="13"  Grid.Row="15" ContentStringFormat="כ"  />
+        <Label x:Name="LLetterL"  Grid.Column="8"   Grid.Row="15" ContentStringFormat="ל"  Grid.ColumnSpan="2"/>
+        <Label x:Name="LLetterMsofit"  Grid.Column="20" Grid.Row="17" ContentStringFormat="ם" Grid.ColumnSpan="2"/>
+        <Label x:Name="LLetterM"  Grid.Column="2"  Grid.Row="15" ContentStringFormat="מ"       Grid.ColumnSpan="4"/>
+        <Label x:Name="LLetterN"  Grid.Column="17" Grid.Row="17" ContentStringFormat="נ"      Grid.ColumnSpan="2"/>
+        <Label x:Name="LLetterS"  Grid.Column="13" Grid.Row="17" ContentStringFormat="ס"     />
+        <Label x:Name="LLetterE"  Grid.Column="11" Grid.Row="17" ContentStringFormat="ע"   />
+        <Label x:Name="LLetterP"  Grid.Column="8"  Grid.Row="17" ContentStringFormat="פ"      Grid.ColumnSpan="2" />
+        <Label x:Name="LLetterQ"  Grid.Column="20" Grid.Row="19" ContentStringFormat="צ"     Grid.ColumnSpan="2" Grid.RowSpan="3" />
+        <Label x:Name="LLetterK"  Grid.Column="15" Grid.Row="19" ContentStringFormat="ק"       Grid.RowSpan="3" />
+        <Label x:Name="LLetterR"  Grid.Column="13" Grid.Row="19" ContentStringFormat="ר"  Grid.RowSpan="3"   />
+        <Label x:Name="LLetterX"  Grid.Column="11" Grid.Row="19" ContentStringFormat="ש" Grid.RowSpan="3"/>
+        <Label x:Name="LLetterF"  Grid.Column="8"  Grid.Row="19" ContentStringFormat="ת" Grid.RowSpan="3"  Grid.ColumnSpan="2"/>
+
+        <Image x:Name="imageGirlMeseg" Grid.ColumnSpan="4" Grid.Column="17" Grid.Row="5" Grid.RowSpan="6" Stretch="Fill"  />
+        <Rectangle x:Name="RectMeseg" Grid.ColumnSpan="4" Grid.Column="17" Grid.Row="5" Grid.RowSpan="6" Fill="#FF41AD48" />
+        <Label x:Name="LGirlName" Grid.ColumnSpan="7"  Grid.Column="1"  Grid.Row="20"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="KnowYourNameVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label x:Name="LLevel1" Grid.Row="5" Grid.ColumnSpan="3" Grid.RowSpan="3" ContentStringFormat="1" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="RecognaseLeters1VM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LLevel0" Grid.Column="3"  Grid.Row="9" Grid.RowSpan="3" Grid.ColumnSpan="2" ContentStringFormat="0">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="KnowLetterVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LLevel2" Grid.Row="8" Grid.ColumnSpan="3" Grid.RowSpan="2" ContentStringFormat="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="RecognaseLeters2VM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LLevel3" Grid.Row="10" Grid.ColumnSpan="3" Grid.RowSpan="3" ContentStringFormat="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="RecognaseLeters3VM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelך"  Grid.Column="11" Grid.Row="15"  ContentStringFormat="ך"   Grid.RowSpan="2"/>
+        <Label x:Name="labelן" Grid.Column="15" Grid.Row="17"  ContentStringFormat="ן" />
+        <Label x:Name="labelף" Grid.Column="2"  Grid.Row="17"  ContentStringFormat="ף"  Grid.ColumnSpan="3"/>
+        <Label x:Name="labelץ" Grid.Column="17" Grid.Row="19"  ContentStringFormat="ץ" Grid.RowSpan="3" Grid.ColumnSpan="2" />
+        <Label x:Name="LLevel" Grid.ColumnSpan="2"  Grid.Column="3"  Grid.Row="6"  Grid.RowSpan="3"></Label>
+        <!--<Label x:Name="LLevel3" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="7" ContentStringFormat="3"  Grid.RowSpan="2"/>-->
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

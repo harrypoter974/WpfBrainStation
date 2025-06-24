@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="BS.EnglishViews.Notions.UCEnOppositesExercise"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.EnglishViews.Notions"
+             mc:Ignorable="d" 
+                  d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="275*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="126*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="21*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="424*"/>
+            <RowDefinition Height="103*"/>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="32*"/>
+        </Grid.RowDefinitions>
+
+        <!--<Items:UCSpeaker Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"/>
+       <Items:UCButNotice Grid.Column="20"       Grid.Row="11" />-->
+        <Label x:Name="UCNewAnswerButton1"  Grid.Column="18" Grid.Row="11">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AnswerBut}"/>
+            </Label.InputBindings>
+        </Label>
+      <Label x:Name="labelHome"   Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuEnGeneralVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LLearn1" Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwichPage}" CommandParameter="2"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LLearn2" Grid.Column="2" Grid.Row="3" Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwichPage}" CommandParameter="1"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LLearn3" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwichPage}" CommandParameter="0"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelPlay"  Grid.Column="14"  Grid.Row="10" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        <Image x:Name="image0"  Grid.Column="7"   Grid.Row="8"/>
+        <Image x:Name="image1"  Grid.Column="9"   Grid.Row="8"/>
+        <Image x:Name="image2"  Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="8"/>
+        <Image x:Name="image3"  Grid.Column="14"  Grid.Row="8" Grid.ColumnSpan="2"/>
+
+        <Image x:Name="imageMessage" Grid.Column="12" Grid.ColumnSpan="7" Grid.RowSpan="3" Grid.Row="4" Stretch="Fill" />
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

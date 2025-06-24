@@ -1,0 +1,248 @@
+﻿<UserControl xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"  
+             x:Class="BS.MenuViews.Control.UCMenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews.Control"
+             mc:Ignorable="d" 
+              d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MenuViews;component/MenuImage/UCMenuControl.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="406*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="174*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+        <Label                 >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="MenuOperationVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="9"  Grid.Row="2"   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}"
+  CommandParameter="MenuEnglishVM,MenuEnGameVM
+,EnBingoLetterVM,EnMemoryLetterVM,EnBingoOpenLetterVM,EnWordsGameVM,EnMemoryWordsVM,EnLottoVM,EnLettersKnowVM,EnKnowLetterVM,EnWriteLetterVM,EnPronunciationVM,WritingEnWordsVM,
+,MenuShapeVM,ClockMenuVM,ClockCompassesVM,ClockDigitsVM,ClockBingoAnalogVM,MenuMeasurementsVM,ConceptsLengthVM,ConceptsVM,MeasurementCircumferenceVM
+,AreaVM,CubageVM,AngleVM,MenuShapeAndAngleVM,LineOpenVM,AngleOpenVM,TringelOpenVM,RectOpenVM,CirclesOpenVM,ShapeOpenVM,ShapeGameVM,ShapeMemoryVM,AngleVM
+,MenuMathVM,MenuMathGameVM,BingoNumVM,MathMemoryNumVM,BingoMathVM,MathMemoryMathVM,MathMatchMenuVM,Menu4ArithmeticVM,MenuAddVM,MenuSubVM,MenuMoltipolVM,MenuSpliteVM
+,MenuMathSummaryVM,MathExercise2VM,MathVariableVM,MathArray4VM,MenuMathPrefaceVM,MathRecognaz10BVM,MathRecognaz100BVM,MathRecognaz100CVM,LernComperVM,PairLernVM,
+WritingNumbersOpenVM,NumberStructureLernVM,NumberStructureLern1VM,MenuSpliteVM,WritingNumbersOpenVM
+,MenuHebrewVM,MenuHeGameVM,HeBingoLetterVM,HeMemoryLetterVM,HeOpenLetterVM,HeWordGameVM,HeMemoryWordsVM,HeLottoVM,KnowLetterMenuVM,KnowLetterVM
+,WritingLetterVM,MenuHeReadingVM,HeReadingSyllablesVM,HeReading2VM,HeReading3VM,LernWordsVM
+,MenuHeGeneralRulesWeightedVM,MenuHeGeneralDailySentencesVM,NumberIdentificationMenuVM,MenuTimeVM,OppositesLearnVM,PrepositionsLearnVM,EmotionsMenuVM,MenuVocabularyVM,ColorsMenuVM,MenuShapesVM,MenuToolsVM,MenuFamilyVM,MenuMusicalLnstrumentsVM,MenuProfessionsVM,MenuVehiclesVM,MenuClothingVM,
+ AnimalsMenuVM,MenuBodyVM,MenuVegetablesVM,MenuFruitVM,MenuFoodVM,MenuKitchenwareVM,AnimalsMenuVM
+,MenuHeGeneralSkillVM,MenuColorsGameVM,LdentifyConnectionsVM,CopyDrawingsVM,MoneyVM,WeightVM,BalanceVM,PianoVM,ScaleMemoryVM,MusicBingoVM,WhatIsMissingGameVM,WhatShapeChariotVM,UnusualGameVM
+,MenuHeGeneralGameVM,TriviGoVM,HandEyeCoordinationGameVM0,MazVM,GardenTriviaVM,Sudoku4PlayerVM,LaddersAndRopesVM,Puzzle25VM,BingoShapesVM,SortVM,MemoryVM,VisualMemoryVM,ScaleMemoryVM,MatchMenuVM,QuickThinkingVM
+,MenuTeamworkVM,PictureToStoryVM,ExerciseColorsVM,GroupPlayingVM,EducationalStaffVM
+,MenuSelfEditingVM,MapVM" />
+            </Label.InputBindings>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="MouseUp">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" To="#FF694899"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" To="Transparent"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="5"                   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MenuEnglishVM,MenuEnGameVM
+,EnBingoLetterVM,EnMemoryLetterVM,EnBingoOpenLetterVM,EnWordsGameVM,EnMemoryWordsVM,EnLottoVM,EnLettersKnowVM,EnKnowLetterVM,EnWriteLetterVM,EnPronunciationVM,WritingEnWordsVM,
+,MenuShapeVM,ClockMenuVM,ClockCompassesVM,ClockDigitsVM,ClockBingoAnalogVM,MenuMeasurementsVM,ConceptsLengthVM,ConceptsVM,MeasurementCircumferenceVM
+,AreaVM,CubageVM,AngleVM,MenuShapeAndAngleVM,LineOpenVM,AngleOpenVM,TringelOpenVM,RectOpenVM,CirclesOpenVM,ShapeOpenVM,ShapeGameVM,ShapeMemoryVM,AngleVM
+,MenuMathVM,MenuMathGameVM,BingoNumVM,MathMemoryNumVM,BingoMathVM,MathMemoryMathVM,MathMatchMenuVM,Menu4ArithmeticVM,MenuAddVM,MenuSubVM,MenuMoltipolVM,MenuSpliteVM
+,MenuMathSummaryVM,MathExercise2VM,MathVariableVM,MathArray4VM,MenuMathPrefaceVM,MathRecognaz10BVM,MathRecognaz100BVM,MathRecognaz100CVM,LernComperVM,PairLernVM,
+WritingNumbersOpenVM,NumberStructureLernVM,NumberStructureLern1VM,MenuSpliteVM,WritingNumbersOpenVM
+,MenuHebrewVM,MenuHeGameVM,HeBingoLetterVM,HeMemoryLetterVM,HeOpenLetterVM,HeWordGameVM,HeMemoryWordsVM,HeLottoVM,KnowLetterMenuVM,KnowLetterVM
+,WritingLetterVM,MenuHeReadingVM,HeReadingSyllablesVM,HeReading2VM,HeReading3VM,LernWordsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="5"               >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuEnglishVM,MenuEnGameVM
+,EnBingoLetterVM,EnMemoryLetterVM,EnBingoOpenLetterVM,EnWordsGameVM,EnMemoryWordsVM,EnLottoVM,EnLettersKnowVM,EnKnowLetterVM,EnWriteLetterVM,EnPronunciationVM,WritingEnWordsVM,
+,MenuShapeVM,ClockMenuVM,ClockCompassesVM,ClockDigitsVM,ClockBingoAnalogVM,MenuMeasurementsVM,ConceptsLengthVM,ConceptsVM,MeasurementCircumferenceVM
+,AreaVM,CubageVM,AngleVM,MenuShapeAndAngleVM,LineOpenVM,AngleOpenVM,TringelOpenVM,RectOpenVM,CirclesOpenVM,ShapeOpenVM,ShapeGameVM,ShapeMemoryVM,AngleVM
+,MenuMathVM,MenuMathGameVM,BingoNumVM,MathMemoryNumVM,BingoMathVM,MathMemoryMathVM,MathMatchMenuVM,Menu4ArithmeticVM,MenuAddVM,MenuSubVM,MenuMoltipolVM,MenuSpliteVM
+,MenuMathSummaryVM,MathExercise2VM,MathVariableVM,MathArray4VM,MenuMathPrefaceVM,MathRecognaz10BVM,MathRecognaz100BVM,MathRecognaz100CVM,LernComperVM,PairLernVM,
+WritingNumbersOpenVM,NumberStructureLernVM,NumberStructureLern1VM,MenuSpliteVM,WritingNumbersOpenVM
+,MenuHebrewVM,MenuHeGameVM,HeBingoLetterVM,HeMemoryLetterVM,HeOpenLetterVM,HeWordGameVM,HeMemoryWordsVM,HeLottoVM,KnowLetterMenuVM,KnowLetterVM
+,WritingLetterVM,MenuHeReadingVM,HeReadingSyllablesVM,HeReading2VM,HeReading3VM,LernWordsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="9"                   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MenuHeGeneralRulesWeightedVM,MenuHeGeneralDailySentencesVM,NumberIdentificationMenuVM,MenuTimeVM,OppositesLearnVM,PrepositionsLearnVM,EmotionsMenuVM,MenuVocabularyVM,ColorsMenuVM,MenuShapesVM,MenuToolsVM,MenuFamilyVM,MenuMusicalLnstrumentsVM,MenuProfessionsVM,MenuVehiclesVM,MenuClothingVM,
+ AnimalsMenuVM,MenuBodyVM,MenuVegetablesVM,MenuFruitVM,MenuFoodVM,MenuKitchenwareVM,AnimalsMenuVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="9"                   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuHeGeneralRulesWeightedVM,MenuHeGeneralDailySentencesVM,NumberIdentificationMenuVM,MenuTimeVM,OppositesLearnVM,PrepositionsLearnVM,EmotionsMenuVM,MenuVocabularyVM,ColorsMenuVM,MenuShapesVM,MenuToolsVM,MenuFamilyVM,MenuMusicalLnstrumentsVM,MenuProfessionsVM,MenuVehiclesVM,MenuClothingVM,
+ AnimalsMenuVM,MenuBodyVM,MenuVegetablesVM,MenuFruitVM,MenuFoodVM,MenuKitchenwareVM,AnimalsMenuVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="13"                  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MenuHeGeneralSkillVM,MenuColorsGameVM,LdentifyConnectionsVM,CopyDrawingsVM,MoneyVM,WeightVM,BalanceVM,PianoVM,ScaleMemoryVM,MusicBingoVM,WhatIsMissingGameVM,WhatShapeChariotVM,UnusualGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="13"                  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuHeGeneralSkillVM,MenuColorsGameVM,LdentifyConnectionsVM,CopyDrawingsVM,MoneyVM,WeightVM,BalanceVM,PianoVM,ScaleMemoryVM,MusicBingoVM,WhatIsMissingGameVM,WhatShapeChariotVM,UnusualGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="17"                  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MenuHeGeneralGameVM,TriviGoVM,HandEyeCoordinationGameVM0,MazVM,GardenTriviaVM,Sudoku4PlayerVM,LaddersAndRopesVM,Puzzle25VM,BingoShapesVM,SortVM,MemoryVM,VisualMemoryVM,ScaleMemoryVM,MatchMenuVM,QuickThinkingVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="17"                  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuHeGeneralGameVM,TriviGoVM,HandEyeCoordinationGameVM0,MazVM,GardenTriviaVM,Sudoku4PlayerVM,LaddersAndRopesVM,Puzzle25VM,BingoShapesVM,SortVM,MemoryVM,VisualMemoryVM,ScaleMemoryVM,MatchMenuVM,QuickThinkingVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="21"                  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MenuTeamworkVM,PictureToStoryVM,ExerciseColorsVM,GroupPlayingVM,EducationalStaffVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="21"                  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuTeamworkVM,PictureToStoryVM,ExerciseColorsVM,GroupPlayingVM,EducationalStaffVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="25"                  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MenuSelfEditingVM,MapVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="25"                  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuSelfEditingVM,MapVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="4"  Grid.RowSpan="3" Grid.ColumnSpan="5">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut0}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToControl}" CommandParameter="0,MenuControlCoreVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="8"  Grid.RowSpan="3"  Grid.ColumnSpan="5">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut1}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToControl}" CommandParameter="1,MenuControlWordsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="12" Grid.RowSpan="3"  Grid.ColumnSpan="5">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut2}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToControl}" CommandParameter="2,MenuControHeGeneralSkillVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="16" Grid.RowSpan="3"  Grid.ColumnSpan="5">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut3}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToControl}" CommandParameter="3,MenuControlHeGeneralGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="20" Grid.RowSpan="3"  Grid.ColumnSpan="5">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut4}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToControl}" CommandParameter="4,MenuControlTeamworkVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="24" Grid.RowSpan="3"  Grid.ColumnSpan="5">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut5}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToControl}" CommandParameter="5,MenuControlSelfEditingVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Items:NUCBlueUCSpeaker   VerticalAlignment="Top"  Margin="{Binding SpeakerMargin}" Grid.RowSpan="3"
+         Grid.ColumnSpan="5" HorizontalAlignment="Left"/>
+        <Label Grid.Column="7" Grid.Row="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" 
+  CommandParameter="MenuEnglishVM,MenuEnGameVM
+,EnBingoLetterVM,EnMemoryLetterVM,EnBingoOpenLetterVM,EnWordsGameVM,EnMemoryWordsVM,EnLottoVM,EnLettersKnowVM,EnKnowLetterVM,EnWriteLetterVM,EnPronunciationVM,WritingEnWordsVM,
+,MenuShapeVM,ClockMenuVM,ClockCompassesVM,ClockDigitsVM,ClockBingoAnalogVM,MenuMeasurementsVM,ConceptsLengthVM,ConceptsVM,MeasurementCircumferenceVM
+,AreaVM,CubageVM,AngleVM,MenuShapeAndAngleVM,LineOpenVM,AngleOpenVM,TringelOpenVM,RectOpenVM,CirclesOpenVM,ShapeOpenVM,ShapeGameVM,ShapeMemoryVM,AngleVM
+,MenuMathVM,MenuMathGameVM,BingoNumVM,MathMemoryNumVM,BingoMathVM,MathMemoryMathVM,MathMatchMenuVM,Menu4ArithmeticVM,MenuAddVM,MenuSubVM,MenuMoltipolVM,MenuSpliteVM
+,MenuMathSummaryVM,MathExercise2VM,MathVariableVM,MathArray4VM,MenuMathPrefaceVM,MathRecognaz10BVM,MathRecognaz100BVM,MathRecognaz100CVM,LernComperVM,PairLernVM,
+WritingNumbersOpenVM,NumberStructureLernVM,NumberStructureLern1VM,MenuSpliteVM,WritingNumbersOpenVM
+,MenuHebrewVM,MenuHeGameVM,HeBingoLetterVM,HeMemoryLetterVM,HeOpenLetterVM,HeWordGameVM,HeMemoryWordsVM,HeLottoVM,KnowLetterMenuVM,KnowLetterVM
+,WritingLetterVM,MenuHeReadingVM,HeReadingSyllablesVM,HeReading2VM,HeReading3VM,LernWordsVM
+,MenuHeGeneralRulesWeightedVM,MenuHeGeneralDailySentencesVM,NumberIdentificationMenuVM,MenuTimeVM,OppositesLearnVM,PrepositionsLearnVM,EmotionsMenuVM,MenuVocabularyVM,ColorsMenuVM,MenuShapesVM,MenuToolsVM,MenuFamilyVM,MenuMusicalLnstrumentsVM,MenuProfessionsVM,MenuVehiclesVM,MenuClothingVM,
+ AnimalsMenuVM,MenuBodyVM,MenuVegetablesVM,MenuFruitVM,MenuFoodVM,MenuKitchenwareVM,AnimalsMenuVM
+,MenuHeGeneralSkillVM,MenuColorsGameVM,LdentifyConnectionsVM,CopyDrawingsVM,MoneyVM,WeightVM,BalanceVM,PianoVM,ScaleMemoryVM,MusicBingoVM,WhatIsMissingGameVM,WhatShapeChariotVM,UnusualGameVM
+,MenuHeGeneralGameVM,TriviGoVM,HandEyeCoordinationGameVM0,MazVM,GardenTriviaVM,Sudoku4PlayerVM,LaddersAndRopesVM,Puzzle25VM,BingoShapesVM,SortVM,MemoryVM,VisualMemoryVM,ScaleMemoryVM,MatchMenuVM,QuickThinkingVM
+,MenuTeamworkVM,PictureToStoryVM,ExerciseColorsVM,GroupPlayingVM,EducationalStaffVM
+,MenuSelfEditingVM,MapVM"/>
+            </Label.InputBindings>
+        </Label>
+    </Grid>
+</UserControl>

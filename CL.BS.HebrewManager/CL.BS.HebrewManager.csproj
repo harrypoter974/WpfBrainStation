@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C493CC4C-F4D8-4514-8989-46FD0392A969}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CL.BS.HebrewManager</RootNamespace>
+    <AssemblyName>CL.BS.HebrewManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\Game\HeBingoLetterEngine.cs" />
+    <Compile Include="Engine\Game\HeLottoEngen.cs" />
+    <Compile Include="Engine\Game\HeMemoryLetterEngine.cs" />
+    <Compile Include="Engine\Game\HeMemoryWordsEngen.cs" />
+    <Compile Include="Engine\Game\HeOpenLetterEngine.cs" />
+    <Compile Include="Engine\Game\HeWord.cs" />
+    <Compile Include="Engine\Game\HeWordGameEngine.cs" />
+    <Compile Include="Engine\Reading\HeReading2Engine.cs" />
+    <Compile Include="Engine\Reading\HeReading3Engine.cs" />
+    <Compile Include="Engine\Reading\HeReadingEngine.cs" />
+    <Compile Include="Engine\Reading\HeReadingSyllablesExEngine.cs" />
+    <Compile Include="Engine\Recognition\KnowLetterEngine.cs" />
+    <Compile Include="Engine\Recognition\RecognaseLeters3Engine.cs" />
+    <Compile Include="Engine\Recognition\RecognaseLetersEngine.cs" />
+    <Compile Include="Engine\Writing\LernWordsEngine.cs" />
+    <Compile Include="Interface\Game\IHeBingoLetterManager.cs" />
+    <Compile Include="Interface\Game\IHeLottoManager.cs" />
+    <Compile Include="Interface\Game\IHeMemoryLetterManager.cs" />
+    <Compile Include="Interface\Game\IHeMemoryWordsManager.cs" />
+    <Compile Include="Interface\Game\IHeOpenLetterManager.cs" />
+    <Compile Include="Interface\Game\IHeWordGameManager.cs" />
+    <Compile Include="Interface\Reading\IHeReading2Manager.cs" />
+    <Compile Include="Interface\Reading\IHeReading3Manager.cs" />
+    <Compile Include="Interface\Reading\IHeReadingExTo4Manager.cs" />
+    <Compile Include="Interface\Reading\IHeReadingSyllablesExManager.cs" />
+    <Compile Include="Interface\Writing\ILernWordsManager.cs" />
+    <Compile Include="Interface\Writing\IWritingLettersManager.cs" />
+    <Compile Include="Manager\Game\HeLottoManager.cs" />
+    <Compile Include="Manager\Game\HeMemoryWordsManager.cs" />
+    <Compile Include="Manager\Reading\HeReadingExTo4Manager.cs" />
+    <Compile Include="Manager\Reading\HeReadingSyllablesExManager.cs" />
+    <Compile Include="Interface\Recognition\IKnowLetterManager.cs" />
+    <Compile Include="Interface\Recognition\IRecognaseLeters3Manager.cs" />
+    <Compile Include="Interface\Recognition\IRecognaseLetersManager.cs" />
+    <Compile Include="Manager\Reading\HeReading2Manager.cs" />
+    <Compile Include="Manager\Reading\HeReading3Manager.cs" />
+    <Compile Include="Manager\Recognition\KnowLetterManager.cs" />
+    <Compile Include="Manager\Game\HeBingoLetterManager.cs" />
+    <Compile Include="Manager\Game\HeMemoryLetterManager.cs" />
+    <Compile Include="Manager\Game\HeOpenLetterManager.cs" />
+    <Compile Include="Manager\Game\HeWordGameManager.cs" />
+    <Compile Include="Manager\Recognition\RecognaseLeters3Manager.cs" />
+    <Compile Include="Manager\Recognition\RecognaseLetersManager.cs" />
+    <Compile Include="Manager\Writing\LernWordsManager.cs" />
+    <Compile Include="Manager\Writing\WritingLettersManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Engine\Sentences\" />
+    <Folder Include="Interface\Sentences\" />
+    <Folder Include="Manager\Sentences\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.BingoBoard\BS.BingoBoard.csproj">
+      <Project>{46679341-644f-4c0a-9762-799643677225}</Project>
+      <Name>BS.BingoBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.GameManager\CL.BS.GameManager.csproj">
+      <Project>{862F791A-7C6E-40B5-8B4B-4C1D03FA64E8}</Project>
+      <Name>CL.BS.GameManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MEF\CL.BS.MEF.csproj">
+      <Project>{681bfcfc-6b4b-4800-abae-441f4c4bb0c2}</Project>
+      <Name>CL.BS.MEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0B6191C5-6621-4DC6-8D7F-06CB3BD05BC3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C5FF87A-7BC7-4E37-8AB6-CF146CE7B270}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BS.ShapesView</RootNamespace>
+    <AssemblyName>BS.ShapesView</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Angle\UCAngleLine.xaml.cs">
+      <DependentUpon>UCAngleLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Angle\UCAngleMach.xaml.cs">
+      <DependentUpon>UCAngleMach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Angle\UCAngleOpen.xaml.cs">
+      <DependentUpon>UCAngleOpen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Circles\UCCirclesExercise.xaml.cs">
+      <DependentUpon>UCCirclesExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Circles\UCCirclesOpen.xaml.cs">
+      <DependentUpon>UCCirclesOpen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCShapeGame.xaml.cs">
+      <DependentUpon>UCShapeGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Line\UCLineExercise.xaml.cs">
+      <DependentUpon>UCLineExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Line\UCLineMach.xaml.cs">
+      <DependentUpon>UCLineMach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Line\UCLineOpen.xaml.cs">
+      <DependentUpon>UCLineOpen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Rect\UCRectExercise.xaml.cs">
+      <DependentUpon>UCRectExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rect\UCRectMach.xaml.cs">
+      <DependentUpon>UCRectMach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rect\UCRectOpen.xaml.cs">
+      <DependentUpon>UCRectOpen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shape\UCShapeExercise.xaml.cs">
+      <DependentUpon>UCShapeExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shape\UCShapeOpen.xaml.cs">
+      <DependentUpon>UCShapeOpen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tringel\UCTringelExercise.xaml.cs">
+      <DependentUpon>UCTringelExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tringel\UCTringelMach.xaml.cs">
+      <DependentUpon>UCTringelMach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tringel\UCTringelOpen.xaml.cs">
+      <DependentUpon>UCTringelOpen.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802E63B-AB77-4DB8-ADA4-A2700D8160D2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Angle\UCAngleLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Angle\UCAngleMach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Angle\UCAngleOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Circles\UCCirclesExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Circles\UCCirclesOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCShapeGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Line\UCLineExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Line\UCLineMach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Line\UCLineOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Rect\UCRectExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Rect\UCRectMach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Rect\UCRectOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shape\UCShapeExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shape\UCShapeOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tringel\UCTringelExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tringel\UCTringelMach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tringel\UCTringelOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShapesImage\UCAngleOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShapesImage\UCCirclesOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShapesImage\UCLineOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShapesImage\UCRectOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShapesImage\UCShapeOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShapesImage\UCTringelOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShapesImage\UCShapeGame.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

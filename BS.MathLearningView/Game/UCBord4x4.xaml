@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="BS.MathLearningView.Game.UCBord4x4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MathLearningView.Game"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" FontWeight="Bold">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MathLearningView;component/MathImage/UCBord4x4.png"/>
+        <!--<ImageBrush ImageSource="{Binding PicBackground}"/>-->
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="74*" />
+            <RowDefinition Height="73*" />
+            <RowDefinition Height="78*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="39*" />
+            <ColumnDefinition Width="36*" />
+            <ColumnDefinition Width="35*" />
+            <ColumnDefinition Width="40*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock                              Name="tb11" Text="{Binding TB00}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Column="1"              Name="tb12" Text="{Binding TB01}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Column="2"              Name="tb13" Text="{Binding TB02}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Column="3"              Name="tb14" Text="{Binding TB03}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Row="1"                 Name="tb21" Text="{Binding TB10}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Column="1" Grid.Row="1" Name="tb22" Text="{Binding TB11}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Column="2" Grid.Row="1" Name="tb23" Text="{Binding TB12}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Column="3" Grid.Row="1" Name="tb24" Text="{Binding TB13}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Row="2"                 Name="tb31" Text="{Binding TB20}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Column="1" Grid.Row="2" Name="tb32" Text="{Binding TB21}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock Grid.Column="2" Grid.Row="2" Name="tb33" Text="{Binding TB22}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"/>
+        <TextBlock Grid.Column="3" Grid.Row="2" Name="tb34" Text="{Binding TB23}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"/>
+        <TextBlock Grid.Row="3"                 Name="tb41" Text="{Binding TB30}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Name="tb42" Text="{Binding TB31}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"/>
+        <TextBlock Grid.Column="2" Grid.Row="3" Name="tb43" Text="{Binding TB32}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"/>
+        <TextBlock Grid.Column="3" Grid.Row="3" Name="tb44" Text="{Binding TB33}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,76 @@
+﻿<UserControl xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"  x:Class="BS.MenuViews.UCMenuHeGeneral1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:BS.MenuViews"
+             mc:Ignorable="d" 
+            d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenuHeGeneral.jpg"/>
+        <!--<ImageBrush ImageSource="C:\brinStation\Tests\WpfBrainStation\ref\WpfBrainStation\Resources\Instructions\HalpeEnOpenLetter.jpg"/>-->
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="291*"/>
+            <RowDefinition Height="118*" />
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="118*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="117*"/>
+            <RowDefinition Height="102*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="227*" />
+            <ColumnDefinition Width="480*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="labelHome" Grid.RowSpan="4" Grid.ColumnSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding HomeBut}"  Stretch="None"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GOHome}" CommandParameter="MenuLernVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3"  Grid.Row="5" Background="{Binding BackgroundBut0}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuHeGeneralRulesWeightedVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3"  Grid.Row="7" Background="{Binding BackgroundBut1}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuHeGeneralSkillVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3"  Grid.Row="9" Background="{Binding BackgroundBut2}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuHeGeneralGameVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        
+
+        <Items:NUCBlueUCSpeaker Grid.ColumnSpan="3"  HorizontalAlignment="Left" Grid.RowSpan="5"
+                        Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

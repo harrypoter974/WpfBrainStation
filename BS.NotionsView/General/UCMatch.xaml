@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="BS.NotionsView.General.UCMatch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.General"
+             mc:Ignorable="d" 
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:Viwe="clr-namespace:BS.MathLearningView.Game;assembly=BS.MathLearningView"
+         xmlns:boardVM="clr-namespace:CL.BS.MathLearningVM.VM.Game;assembly=CL.BS.MathLearningVM"
+             d:DesignHeight="900" d:DesignWidth="1000"   Foreground="White" FontWeight="Bold" FontSize="70" >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MathLearningView;component/MathImage/UCMathMatch.jpg"/>
+        <!--<ImageBrush ImageSource="C:\Brain_Station\תמונות\תמונות 36\DOV_160423/Heshbon ba gafrurim.jpg"/>-->
+    </UserControl.Background>
+    <!--<UserControl.Resources>
+        <DataTemplate DataType="{x:Type  boardVM:BoardMathMatchVM}">
+            <Viwe:UCBoardMathMatch/>
+        </DataTemplate>
+    </UserControl.Resources>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="197*"/>
+            <RowDefinition Height="97*"/>
+            <RowDefinition Height="144*" />
+            <RowDefinition Height="91*"/>
+            <RowDefinition Height="195*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*" />
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="19*" />
+            <ColumnDefinition Width="221*"/>
+            <ColumnDefinition Width="453*"/>
+            <ColumnDefinition Width="162*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MatchMenuVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:UCExitButton Grid.Column="9" Grid.Row="10" Grid.RowSpan="2" />
+        <Image Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="3" Name="imageTitle" Source="{Binding TBTitle}" 
+               HorizontalAlignment="Center" VerticalAlignment="Center"  />
+        <!--<Viwe:UCBoardMathMatch Grid.Column="4"  Grid.Row="1" Grid.RowSpan="6" Content="{Binding Board0}" RenderTransformOrigin="0.5,0.5">
+            <Viwe:UCBoardMathMatch.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Viwe:UCBoardMathMatch.RenderTransform>
+        </Viwe:UCBoardMathMatch>
+        <Viwe:UCBoardMathMatch Grid.Column="4"  Grid.Row="8" Grid.RowSpan="5" Content="{Binding Board3}"/>
+        <Viwe:UCBoardMathMatch  Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" Content="{Binding Board1}"
+   Grid.Column="0"   Grid.ColumnSpan="6"  Grid.Row="4" Grid.RowSpan="6" RenderTransformOrigin="0.13,-0.19">
+            <Viwe:UCBoardMathMatch.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Viwe:UCBoardMathMatch.RenderTransform>
+        </Viwe:UCBoardMathMatch>
+        <Viwe:UCBoardMathMatch  Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" Content="{Binding Board2}"
+  Grid.Column="4" Grid.ColumnSpan="7" Grid.Row="5" Grid.RowSpan="6" RenderTransformOrigin="0.765,-0.05">
+            <Viwe:UCBoardMathMatch.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Viwe:UCBoardMathMatch.RenderTransform>
+        </Viwe:UCBoardMathMatch>-->
+        <Items:NUCSpeaker x:Name="uCSpeaker1" Grid.RowSpan="5" Grid.ColumnSpan="11"
+HorizontalAlignment="Left" Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"/>
+        <Rectangle Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="3"
+                   Visibility="{Binding RectBut}"  Fill="#FF41AD48" />
+        <Rectangle Grid.Column="8" Grid.Row="6" Grid.ColumnSpan="3" Grid.RowSpan="3"
+                   Visibility="{Binding RectBut}"  Fill="#FF41AD48" />
+        <Rectangle Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="4"
+                   Visibility="{Binding RectBut}"  Fill="#FF41AD48" />
+    </Grid>
+</UserControl>

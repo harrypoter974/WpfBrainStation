@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="BS.BingoBoard.View.UCJudaismCongratulationsBingoBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:local="clr-namespace:BS.BingoBoard.View"
+                mc:Ignorable="d" 
+             d:DesignHeight="517" d:DesignWidth="577" Foreground="White"
+    FontSize="46" FontWeight="Bold" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  
+             HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+    <!-- Height="363" Width="506"-->
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.BingoBoard;component/BingoBoardImage/UCJudaismCongratulationsBingoBoard.png"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="18*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Items:UCBlinkBord Grid.Row="5" Grid.RowSpan="8" Grid.Column="7" Grid.ColumnSpan="2" Visibility="{Binding BaseWinBlink}" />
+        <Image  Grid.Column="3"  Grid.ColumnSpan="9" Source="{Binding TxBrahot}"  HorizontalAlignment="Right"  />
+        <Image x:Name="image0" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2"  Source="{Binding  TB0}"  />
+        <Image x:Name="image1" Grid.Column="3" Grid.Row="3" Grid.RowSpan="2"  Source="{Binding  TB1}" />
+        <Image x:Name="image2" Grid.Column="5" Grid.Row="3" Grid.RowSpan="2"  Source="{Binding  TB2}" />
+        <Image x:Name="image3" Grid.Column="1" Grid.Row="6" Grid.RowSpan="3"  Source="{Binding  TB3}" />
+        <Image x:Name="image4" Grid.Column="3" Grid.Row="6" Grid.RowSpan="3"  Source="{Binding  TB4}" />
+        <Image x:Name="image5" Grid.Column="5" Grid.Row="6" Grid.RowSpan="3"  Source="{Binding  TB5}" />
+        <Image x:Name="image6" Grid.Column="1" Grid.Row="10" Grid.RowSpan="3"  Source="{Binding  TB6}" />
+        <Image x:Name="image7" Grid.Column="3" Grid.Row="10" Grid.RowSpan="3"  Source="{Binding  TB7}" />
+        <Image x:Name="image8" Grid.Column="5" Grid.Row="10" Grid.RowSpan="3"  Source="{Binding  TB8}" />
+
+
+        <Image x:Name="image" Grid.Column="7"  Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3" Source="{Binding TBQuestion}" />
+        <Label  Grid.Column="1" Grid.Row="3"  BorderThickness="6" BorderBrush="{Binding TBAnswer0}" Grid.RowSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="0"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3" Grid.Row="3"  BorderThickness="6"  BorderBrush="{Binding TBAnswer1}" Grid.RowSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="1"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="5" Grid.Row="3"   BorderThickness="6"  BorderBrush="{Binding TBAnswer2}" Grid.RowSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="2"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="1" Grid.RowSpan="3" Grid.Row="6" BorderThickness="6"  BorderBrush="{Binding TBAnswer3}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="3"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3" Grid.RowSpan="3" Grid.Row="6" BorderThickness="6" BorderBrush="{Binding TBAnswer4}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="4"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="5" Grid.RowSpan="3" Grid.Row="6" BorderThickness="6" BorderBrush="{Binding TBAnswer5}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="5"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="1" Grid.RowSpan="3" Grid.Row="10" BorderThickness="6"  BorderBrush="{Binding TBAnswer6}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="6"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3" Grid.RowSpan="3" Grid.Row="10" BorderThickness="6"  BorderBrush="{Binding TBAnswer7}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="7"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="5" Grid.RowSpan="3" Grid.Row="10" BorderThickness="6" BorderBrush="{Binding TBAnswer8}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="8"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:UCBlinkBord Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" Visibility="{Binding BB0}"/>
+        <Items:UCBlinkBord Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" Visibility="{Binding BB1}"/>
+        <Items:UCBlinkBord Grid.Column="5" Grid.Row="3" Grid.RowSpan="2" Visibility="{Binding BB2}"/>
+        <Items:UCBlinkBord Grid.Column="1" Grid.Row="6" Grid.RowSpan="3" Visibility="{Binding BB3}"/>
+        <Items:UCBlinkBord Grid.Column="3" Grid.Row="6" Grid.RowSpan="3" Visibility="{Binding BB4}"/>
+        <Items:UCBlinkBord Grid.Column="5" Grid.Row="6" Grid.RowSpan="3" Visibility="{Binding BB5}"/>
+        <Items:UCBlinkBord Grid.Column="1" Grid.Row="10" Grid.RowSpan="3" Visibility="{Binding BB6}"/>
+        <Items:UCBlinkBord Grid.Column="3" Grid.Row="10" Grid.RowSpan="3" Visibility="{Binding BB7}"/>
+        <Items:UCBlinkBord Grid.Column="5" Grid.Row="10" Grid.RowSpan="3" Visibility="{Binding BB8}"/>
+
+
+        <Image  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="11" Source="{Binding TBSoldier0}" Grid.RowSpan="2" />
+        <Image  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="8" Source="{Binding TBSoldier1}" Grid.RowSpan="4" />
+        <Image  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="7" Source="{Binding TBSoldier2}" Grid.RowSpan="4" />
+        <Image  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="5" Source="{Binding TBSoldier3}" Grid.RowSpan="3" />
+        <Image  Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="4" Grid.RowSpan="3" Source="{Binding TBSoldier4}" VerticalAlignment="Bottom" />
+
+    </Grid>
+</UserControl>

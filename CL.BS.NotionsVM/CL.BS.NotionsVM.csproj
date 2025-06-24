@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB609D58-22CD-47A3-AA95-C2893DA24ED1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CL.BS.NotionsVM</RootNamespace>
+    <AssemblyName>CL.BS.NotionsVM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>obj\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VM\Animals\AnimalsBingoVM.cs" />
+    <Compile Include="VM\Animals\AnimalsGameMenuVM.cs" />
+    <Compile Include="VM\Animals\AnimalsLanguagesVM.cs" />
+    <Compile Include="VM\Animals\AnimalsLernVM.cs" />
+    <Compile Include="VM\Animals\AnimalsMemoryVM.cs" />
+    <Compile Include="VM\Animals\AnimalsMenuVM.cs" />
+    <Compile Include="VM\Animals\ShadowGameVM.cs" />
+    <Compile Include="VM\Clock\CalendarVM.cs" />
+    <Compile Include="VM\Clock\Clock24End12VM.cs" />
+    <Compile Include="VM\Clock\ClockBingoAnalogBoardVM.cs" />
+    <Compile Include="VM\Clock\ClockBingoAnalogVM.cs" />
+    <Compile Include="VM\Clock\ClockBingoDigitalBoardVM.cs" />
+    <Compile Include="VM\Clock\ClockBingoDigitalVM.cs" />
+    <Compile Include="VM\Clock\ClockCompassesVM.cs" />
+    <Compile Include="VM\Clock\ClockDigitsVM.cs" />
+    <Compile Include="VM\Clock\ClockExerciseCompassesBoardVM.cs" />
+    <Compile Include="VM\Clock\ClockExerciseCompassesVM.cs" />
+    <Compile Include="VM\Clock\ClockExerciseDigitalVM.cs" />
+    <Compile Include="VM\Clock\ClockMenuVM.cs" />
+    <Compile Include="VM\Clock\GardensClockLearnVM.cs" />
+    <Compile Include="VM\Clock\GardensClockExerciseVM.cs" />
+    <Compile Include="VM\Clock\LearningClockVM.cs" />
+    <Compile Include="VM\Clock\ClockExerciseDigitalBoardVM.cs" />
+    <Compile Include="VM\Clock\MonthsVM.cs" />
+    <Compile Include="VM\Clock\TheDayVM.cs" />
+    <Compile Include="VM\Colors\Pic4Bord.cs" />
+    <Compile Include="VM\Colors\4PicVM.cs" />
+    <Compile Include="VM\Colors\ColorsBingoVM.cs" />
+    <Compile Include="VM\Colors\ColorsLearnGroupVM.cs" />
+    <Compile Include="VM\Colors\ColorsMemoryVM.cs" />
+    <Compile Include="VM\Colors\ColorsMenuVM.cs" />
+    <Compile Include="VM\Colors\CopyPicVM.cs" />
+    <Compile Include="VM\Colors\ExerciseColorsVM.cs" />
+    <Compile Include="VM\Colors\ExerciseGroupColorsVM.cs" />
+    <Compile Include="VM\Colors\MenuColorsGameVM.cs" />
+    <Compile Include="VM\Economy\BalanceVM.cs" />
+    <Compile Include="VM\Economy\MoneyVM.cs" />
+    <Compile Include="VM\Economy\WeightVM.cs" />
+    <Compile Include="VM\Gardens\BodyVM.cs" />
+    <Compile Include="VM\Gardens\EmotionsGameVM.cs" />
+    <Compile Include="VM\Gardens\EmotionsMenuVM.cs" />
+    <Compile Include="VM\Gardens\FoodVM.cs" />
+    <Compile Include="VM\Gardens\kitchenwareVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuBodyVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuClothingVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuFamilyVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuFoodVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuFruitVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuKitchenwareVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuMusicalLnstrumentsVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuProfessionsVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuShapesVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuToolsVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuVegetablesVM.cs" />
+    <Compile Include="VM\Gardens\Menu\MenuVehiclesVM.cs" />
+    <Compile Include="VM\Gardens\ShadowExerciseVM.cs" />
+    <Compile Include="VM\Gardens\ClothingVM.cs" />
+    <Compile Include="VM\Gardens\DaysOfTheWeekVM.cs" />
+    <Compile Include="VM\Gardens\EmotionsExerciseVM.cs" />
+    <Compile Include="VM\Gardens\EmotionsLearnVM.cs" />
+    <Compile Include="VM\Gardens\FamilyVM.cs" />
+    <Compile Include="VM\Gardens\FruitVM.cs" />
+    <Compile Include="VM\Gardens\MemoryGameVM.cs" />
+    <Compile Include="VM\Gardens\MusicalLnstrumentsExerciseVM.cs" />
+    <Compile Include="VM\Gardens\MusicalLnstrumentsVM.cs" />
+    <Compile Include="VM\Gardens\ProfessionsVM.cs" />
+    <Compile Include="VM\Gardens\ShapesVM.cs" />
+    <Compile Include="VM\Gardens\SortVM.cs" />
+    <Compile Include="VM\Gardens\ThinkVM.cs" />
+    <Compile Include="VM\Gardens\ToolsVM.cs" />
+    <Compile Include="VM\Gardens\VegetablesVM.cs" />
+    <Compile Include="VM\Gardens\VehiclesVM.cs" />
+    <Compile Include="VM\General\EducationalStaffVM.cs" />
+    <Compile Include="VM\General\GardenMemoryVM.cs" />
+    <Compile Include="VM\General\GardenTriviaBoardRVM.cs" />
+    <Compile Include="VM\General\GardenTriviaBoardSVM.cs" />
+    <Compile Include="VM\General\GardenTriviaBoardVM.cs" />
+    <Compile Include="VM\General\GardenTriviaVM.cs" />
+    <Compile Include="VM\General\HeOppositesVM.cs" />
+    <Compile Include="VM\General\HePrepositionsVM.cs" />
+    <Compile Include="VM\General\MatchMenuVM.cs" />
+    <Compile Include="VM\General\MatchVM.cs" />
+    <Compile Include="VM\General\OppositesLearnVM.cs" />
+    <Compile Include="VM\General\OppositesMenuVM.cs" />
+    <Compile Include="VM\General\PrepositionsLearnVM.cs" />
+    <Compile Include="VM\General\PrepositionsMenuVM.cs" />
+    <Compile Include="VM\General\Prepositions\BoardPrepositionsVM.cs" />
+    <Compile Include="VM\General\Prepositions\BoardPrepositionsVM1.cs" />
+    <Compile Include="VM\General\Prepositions\BoardPrepositionsVM2.cs" />
+    <Compile Include="VM\General\Prepositions\BoardPrepositionsVM3.cs" />
+    <Compile Include="VM\General\Prepositions\BoardPrepositionsVM4.cs" />
+    <Compile Include="VM\HandEyeCoordination\CopyDrawingsBoardVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\CopyDrawingsVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\CopyShapesVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\DrawingLinesVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\HandEyeCoordinationGameVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\HandEyeCoordinationGameVM0.cs" />
+    <Compile Include="VM\HandEyeCoordination\HandEyeCoordinationGameVM1.cs" />
+    <Compile Include="VM\HandEyeCoordination\HandEyeCoordinationGameVM2.cs" />
+    <Compile Include="VM\HandEyeCoordination\JoystickVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\LdentifyConnectionsVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\MatchBuilderVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\MazVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\PictureToStory2VM.cs" />
+    <Compile Include="VM\HandEyeCoordination\PictureToStoryVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\UnusualGameVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\UnusualVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\WhatIsMissingGameVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\WhatIsMissingVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\WhatShapeChariotBoardVM.cs" />
+    <Compile Include="VM\HandEyeCoordination\WhatShapeChariotVM.cs" />
+    <Compile Include="VM\Music\GroupPlayingVM.cs" />
+    <Compile Include="VM\Music\MusicBingoVM.cs" />
+    <Compile Include="VM\Music\PianoVM.cs" />
+    <Compile Include="VM\Music\Piano_bordVM.cs" />
+    <Compile Include="VM\Music\PlayingBingoVM.cs" />
+    <Compile Include="VM\Music\ScaleMemoryVM.cs" />
+    <Compile Include="VM\Music\SimonBoardVM.cs" />
+    <Compile Include="VM\Music\SimonVM.cs" />
+    <Compile Include="VM\Numbers\MathRecognaz1VM.cs" />
+    <Compile Include="VM\Numbers\MathRecognaz2VM.cs" />
+    <Compile Include="VM\Numbers\MathRecognaz3VM.cs" />
+    <Compile Include="VM\Numbers\NumberIdentificationMenuVM.cs" />
+    <Compile Include="VM\Numbers\NumbersGameMenuVM.cs" />
+    <Compile Include="VM\Numbers\NumbersMenuVM.cs" />
+    <Compile Include="VM\Print\PrintVM.cs" />
+    <Compile Include="VM\Sentences\BaseSentences.cs" />
+    <Compile Include="VM\Sentences\DailyWordsVM.cs" />
+    <Compile Include="VM\Sentences\EveningVM.cs" />
+    <Compile Include="VM\Sentences\GardenVM.cs" />
+    <Compile Include="VM\Sentences\HomeVM.cs" />
+    <Compile Include="VM\Sentences\MorningVM.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BS.BingoBoard\BS.BingoBoard.csproj">
+      <Project>{46679341-644f-4c0a-9762-799643677225}</Project>
+      <Name>BS.BingoBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.MultipleMice\MultipleMice.csproj">
+      <Project>{5D7A3AD3-0146-48BA-930F-5525E99FA307}</Project>
+      <Name>MultipleMice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Database\CL.BS.Database.csproj">
+      <Project>{4414B806-0F49-4CE7-87DF-309D7C6C3174}</Project>
+      <Name>CL.BS.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.GameManager\CL.BS.GameManager.csproj">
+      <Project>{862f791a-7c6e-40b5-8b4b-4c1d03fa64e8}</Project>
+      <Name>CL.BS.GameManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MathLearningManager\CL.BS.MathLearningManager.csproj">
+      <Project>{72A640D3-80FF-47AA-BE3C-810B5D1701C2}</Project>
+      <Name>CL.BS.MathLearningManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MathLearningVM\CL.BS.MathLearningVM.csproj">
+      <Project>{DFD6427A-6F68-4EFE-A0BD-69E99FDD70BE}</Project>
+      <Name>CL.BS.MathLearningVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MEF\CL.BS.MEF.csproj">
+      <Project>{681bfcfc-6b4b-4800-abae-441f4c4bb0c2}</Project>
+      <Name>CL.BS.MEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0b6191c5-6621-4dc6-8d7f-06cb3bd05bc3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.NotionsManager\CL.BS.NotionsManager.csproj">
+      <Project>{be9e2a19-c496-4bff-9111-28e02c78e0e4}</Project>
+      <Name>CL.BS.NotionsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

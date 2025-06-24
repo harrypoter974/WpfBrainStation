@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="BS.MenuViews.UCMenuEnGame"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews"
+             mc:Ignorable="d" 
+            d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenuEnGame.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="190*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="555*"/>
+            <ColumnDefinition Width="95*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="136*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="67*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelHome"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuEnglishVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelBingoLetter"  Grid.Column="2" Grid.Row="3"        Grid.ColumnSpan="5" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}"  CommandParameter="EnBingoLetterVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelMemoryLetter" Grid.Column="2" Grid.Row="7"   Grid.RowSpan="3" Grid.ColumnSpan="5" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}"  CommandParameter="EnMemoryLetterVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelOpenLetter"  Grid.Column="2"  Grid.Row="11"  Grid.ColumnSpan="5" Grid.RowSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}"  CommandParameter="EnBingoOpenLetterVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelVocabulary" Grid.Column="2" Grid.Row="15"    Grid.ColumnSpan="5" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}"  CommandParameter="EnWordsGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelLotto" Grid.Column="2" Grid.Row="19"         Grid.ColumnSpan="5" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}"  CommandParameter="EnLottoVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHalpe0"  Grid.Column="3" Grid.Row="4">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToHome}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHalpe1"  Grid.Column="3" Grid.Row="8" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToHome}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHalpe3"  Grid.Column="3" Grid.Row="12">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToHome}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHalpe4"  Grid.Column="3" Grid.Row="16">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToHome}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHalpe5"  Grid.Column="3" Grid.Row="20">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToHome}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="closeHelp" Grid.Column="5" Grid.Row="1">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToHome}"/>
+            </Label.InputBindings>
+        </Label>
+    </Grid>
+</UserControl>

@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="BS.NotionsView.Colors.UCExerciseColors"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.Colors"
+             mc:Ignorable="d" 
+                  d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="166*"/>
+            <ColumnDefinition Width="102*"/>
+            <ColumnDefinition Width="128*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="155*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="28*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="116*"/>
+            <RowDefinition Height="305*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+
+        <!--<Items:UCSpeaker Grid.Column="2" Grid.Row="2" />-->
+        <Label x:Name="labelHome"   Grid.RowSpan="4" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuHeGeneralVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label x:Name="LLearnGroup2" Grid.Column="1" Grid.Row="5" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ColorsLearnGroupVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LLearnGroup1" Grid.Column="4" Grid.Row="5" Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ColorsLearnGroupVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LExerciseGroup2"  Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3"  Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ExerciseGroupColorsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LExerciseGroup1"  Grid.Column="4" Grid.Row="8" Grid.ColumnSpan="2"  Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="ExerciseGroupColorsVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label x:Name="Limage" Grid.Column="7"  Grid.Row="11" Grid.RowSpan="4"  Grid.ColumnSpan="7">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding PicBord}"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="LTrain" Grid.Column="4" Grid.Row="15"  Grid.ColumnSpan="3" Grid.RowSpan="3" >
+              <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwitchPic}" CommandParameter="Train"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LTruck" Grid.Column="8" Grid.Row="15" Grid.RowSpan="3" >
+           <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwitchPic}" CommandParameter="Truck"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LShep" Grid.Column="11" Grid.Row="15"  Grid.RowSpan="3" >
+    <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwitchPic}" CommandParameter="Shep"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHome" Grid.Column="14" Grid.Row="15" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwitchPic}" CommandParameter="Home"/>
+            </Label.InputBindings>
+        </Label>
+            <Image x:Name="labelMesege" Grid.ColumnSpan="6" Grid.Column="10"  Grid.Row="5" Grid.RowSpan="4" Stretch="Fill" />
+        <Label x:Name="labelRevilPic" Grid.Column="17" Grid.Row="16">
+               <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowPic}" />
+            </Label.InputBindings>
+        </Label>
+    </Grid>
+</UserControl>

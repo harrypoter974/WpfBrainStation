@@ -1,0 +1,1195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{962E8F2E-65BC-4E91-9DB4-92E5AA33F02F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BS.NotionsView</RootNamespace>
+    <AssemblyName>BS.NotionsView</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CL.BS.GameVM, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\CL.BS.GameVM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animals\UCAnimalsBingo.xaml.cs">
+      <DependentUpon>UCAnimalsBingo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\UCAnimalsGameMenu1.xaml.cs">
+      <DependentUpon>UCAnimalsGameMenu1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\UCAnimalsLanguages.xaml.cs">
+      <DependentUpon>UCAnimalsLanguages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\UCAnimalsLern1.xaml.cs">
+      <DependentUpon>UCAnimalsLern1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\UCAnimalsMemory.xaml.cs">
+      <DependentUpon>UCAnimalsMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\UCAnimalsMenu1.xaml.cs">
+      <DependentUpon>UCAnimalsMenu1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\UCShadowGame.xaml.cs" />
+    <Compile Include="Clock\UCCalendar.xaml.cs" />
+    <Compile Include="Clock\UCClock24End12.xaml.cs">
+      <DependentUpon>UCClock24End12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockBingoAnalog.xaml.cs">
+      <DependentUpon>UCClockBingoAnalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockBingoAnalogBoard.xaml.cs">
+      <DependentUpon>UCClockBingoAnalogBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockBingoDigital.xaml.cs">
+      <DependentUpon>UCClockBingoDigital.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockBingoDigitalBoard.xaml.cs">
+      <DependentUpon>UCClockBingoDigitalBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockCompasses.xaml.cs">
+      <DependentUpon>UCClockCompasses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockDigits.xaml.cs">
+      <DependentUpon>UCClockDigits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockExerciseCompasses.xaml.cs">
+      <DependentUpon>UCClockExerciseCompasses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockExerciseCompassesBoard.xaml.cs">
+      <DependentUpon>UCClockExerciseCompassesBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockExerciseDigital.xaml.cs">
+      <DependentUpon>UCClockExerciseDigital.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockExerciseDigitalBoard.xaml.cs">
+      <DependentUpon>UCClockExerciseDigitalBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockMenu.xaml.cs">
+      <DependentUpon>UCClockMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCMonths.xaml.cs">
+      <DependentUpon>UCMonths.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCTheDay.xaml.cs">
+      <DependentUpon>UCTheDay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UC4Pic.xaml.cs">
+      <DependentUpon>UC4Pic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UC4PicBord.xaml.cs">
+      <DependentUpon>UC4PicBord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCColorsBingo.xaml.cs">
+      <DependentUpon>UCColorsBingo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCColorsLearnGroup.xaml.cs">
+      <DependentUpon>UCColorsLearnGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCColorsMemory.xaml.cs">
+      <DependentUpon>UCColorsMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCColorsMenu.xaml.cs">
+      <DependentUpon>UCColorsMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCExerciseColors.xaml.cs">
+      <DependentUpon>UCExerciseColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCExerciseGroupColors.xaml.cs">
+      <DependentUpon>UCExerciseGroupColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCMenuColorsGame.xaml.cs">
+      <DependentUpon>UCMenuColorsGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Economy\UCBalance.xaml.cs">
+      <DependentUpon>UCBalance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Economy\UCMoney.xaml.cs">
+      <DependentUpon>UCMoney.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Economy\UCWeight.xaml.cs">
+      <DependentUpon>UCWeight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\Menu\UCMenuBody.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuClothing.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuFamily.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuFood.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuFruit.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuKitchenware.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuMusicalLnstruments.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuProfessions.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuShapes.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuTools.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuVegetables.xaml.cs" />
+    <Compile Include="Gardens\Menu\UCMenuVehicles.xaml.cs" />
+    <Compile Include="Gardens\UCBody.xaml.cs">
+      <DependentUpon>UCBody.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCClothing.xaml.cs">
+      <DependentUpon>UCClothing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCEmotionsGame.xaml.cs" />
+    <Compile Include="Gardens\UCEmotionsMenu.xaml.cs" />
+    <Compile Include="Gardens\UCFood.xaml.cs" />
+    <Compile Include="Gardens\UCkitchenware.xaml.cs" />
+    <Compile Include="Gardens\UCShadowExercise.xaml.cs">
+      <DependentUpon>UCShadowExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCDaysOfTheWeek.xaml.cs">
+      <DependentUpon>UCDaysOfTheWeek.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCEmotionsExercise.xaml.cs">
+      <DependentUpon>UCEmotionsExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCEmotionsLearn.xaml.cs">
+      <DependentUpon>UCEmotionsLearn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCFamily.xaml.cs">
+      <DependentUpon>UCFamily.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCFruit.xaml.cs">
+      <DependentUpon>UCFruit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCGardensClockExercise.xaml.cs">
+      <DependentUpon>UCGardensClockExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCGardensClockLearn.xaml.cs">
+      <DependentUpon>UCGardensClockLearn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCMemoryGame.xaml.cs">
+      <DependentUpon>UCMemoryGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCMusicalLnstruments.xaml.cs">
+      <DependentUpon>UCMusicalLnstruments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCMusicalLnstrumentsExercise.xaml.cs">
+      <DependentUpon>UCMusicalLnstrumentsExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCProfessions.xaml.cs">
+      <DependentUpon>UCProfessions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCShapes.xaml.cs">
+      <DependentUpon>UCShapes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCSort.xaml.cs">
+      <DependentUpon>UCSort.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCThink.xaml.cs">
+      <DependentUpon>UCThink.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCTools.xaml.cs">
+      <DependentUpon>UCTools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCVegetables.xaml.cs">
+      <DependentUpon>UCVegetables.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gardens\UCVehicles.xaml.cs">
+      <DependentUpon>UCVehicles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Prepositions\UCPrepositions1.xaml.cs" />
+    <Compile Include="General\Prepositions\UCPrepositions2.xaml.cs" />
+    <Compile Include="General\Prepositions\UCPrepositions3.xaml.cs" />
+    <Compile Include="General\Prepositions\UCPrepositions4.xaml.cs" />
+    <Compile Include="General\UCEducationalStaff.xaml.cs">
+      <DependentUpon>UCEducationalStaff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCGardenMemory.xaml.cs">
+      <DependentUpon>UCGardenMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCGardenTrivia.xaml.cs">
+      <DependentUpon>UCGardenTrivia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCGardenTriviaBoardR.xaml.cs">
+      <DependentUpon>UCGardenTriviaBoardR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCGardenTriviaBoardS.xaml.cs">
+      <DependentUpon>UCGardenTriviaBoardS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCMatch.xaml.cs">
+      <DependentUpon>UCMatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCMatchMenu.xaml.cs">
+      <DependentUpon>UCMatchMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCOpposites.xaml.cs">
+      <DependentUpon>UCOpposites.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCOppositesLearn.xaml.cs">
+      <DependentUpon>UCOppositesLearn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCOppositesMenu.xaml.cs" />
+    <Compile Include="General\UCPrepositions.xaml.cs">
+      <DependentUpon>UCPrepositions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCPrepositionsLearn.xaml.cs">
+      <DependentUpon>UCPrepositionsLearn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCPrepositionsMenu.xaml.cs" />
+    <Compile Include="HandEyeCoordination\UCCopyDrawings.xaml.cs">
+      <DependentUpon>UCCopyDrawings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCCopyDrawingsBoard.xaml.cs">
+      <DependentUpon>UCCopyDrawingsBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCCopyShapes.xaml.cs">
+      <DependentUpon>UCCopyShapes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCDrawingLines.xaml.cs">
+      <DependentUpon>UCDrawingLines.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCHandEyeCoordinationGame.xaml.cs">
+      <DependentUpon>UCHandEyeCoordinationGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCHandEyeCoordinationGame1.xaml.cs">
+      <DependentUpon>UCHandEyeCoordinationGame1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCJoystick.xaml.cs">
+      <DependentUpon>UCJoystick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCLdentifyConnections.xaml.cs">
+      <DependentUpon>UCLdentifyConnections.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCMatchBuilder.xaml.cs">
+      <DependentUpon>UCMatchBuilder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCMaze.xaml.cs">
+      <DependentUpon>UCMaze.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCPictureToStory.xaml.cs">
+      <DependentUpon>UCPictureToStory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCPictureToStory2.xaml.cs" />
+    <Compile Include="HandEyeCoordination\UCUnusual.xaml.cs">
+      <DependentUpon>UCUnusual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCUnusualGame.xaml.cs">
+      <DependentUpon>UCUnusualGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCWhatIsMissing.xaml.cs">
+      <DependentUpon>UCWhatIsMissing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCWhatIsMissingGame.xaml.cs">
+      <DependentUpon>UCWhatIsMissingGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCWhatShapeChariot.xaml.cs">
+      <DependentUpon>UCWhatShapeChariot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandEyeCoordination\UCWhatShapeChariotBoard.xaml.cs">
+      <DependentUpon>UCWhatShapeChariotBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Music\UCPlayingBingo.xaml.cs">
+      <DependentUpon>UCPlayingBingo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Music\UCGroupPlaying.xaml.cs">
+      <DependentUpon>UCGroupPlaying.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Music\UCMusicBingo.xaml.cs">
+      <DependentUpon>UCMusicBingo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Music\UCPiano.xaml.cs">
+      <DependentUpon>UCPiano.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Music\UCPianoBord.xaml.cs">
+      <DependentUpon>UCPianoBord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Music\UCScaleMemory.xaml.cs">
+      <DependentUpon>UCScaleMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Music\UCSimon.xaml.cs">
+      <DependentUpon>UCSimon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Music\UCSimonBoard.xaml.cs">
+      <DependentUpon>UCSimonBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Numbers\UCMathRecognaz1.xaml.cs" />
+    <Compile Include="Numbers\UCMathRecognaz2.xaml.cs" />
+    <Compile Include="Numbers\UCMathRecognaz3.xaml.cs" />
+    <Compile Include="Numbers\UCNumberIdentificationMenu.xaml.cs" />
+    <Compile Include="Numbers\UCNumbersGameMenu.xaml.cs" />
+    <Compile Include="Numbers\UCNumbersMenu.xaml.cs" />
+    <Compile Include="Print\UCPrintView.xaml.cs">
+      <DependentUpon>UCPrintView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Sentences\UCDailyWords.xaml.cs" />
+    <Compile Include="Sentences\UCEvening.xaml.cs" />
+    <Compile Include="Sentences\UCGarden.xaml.cs" />
+    <Compile Include="Sentences\UCHome.xaml.cs" />
+    <Compile Include="Sentences\UCMorning.xaml.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.BingoBoard\BS.BingoBoard.csproj">
+      <Project>{46679341-644f-4c0a-9762-799643677225}</Project>
+      <Name>BS.BingoBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.MathLearningView\BS.MathLearningView.csproj">
+      <Project>{f7d3b66b-2cca-409c-8bfd-fd1d8dfe84de}</Project>
+      <Name>BS.MathLearningView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.MultipleMice\MultipleMice.csproj">
+      <Project>{5d7a3ad3-0146-48ba-930f-5525e99fa307}</Project>
+      <Name>MultipleMice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MathLearningVM\CL.BS.MathLearningVM.csproj">
+      <Project>{dfd6427a-6f68-4efe-a0bd-69e99fdd70be}</Project>
+      <Name>CL.BS.MathLearningVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0b6191c5-6621-4dc6-8d7f-06cb3bd05bc3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.NotionsVM\CL.BS.NotionsVM.csproj">
+      <Project>{bb609d58-22cd-47a3-aa95-c2893da24ed1}</Project>
+      <Name>CL.BS.NotionsVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Animals\UCAnimalsBingo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animals\UCAnimalsGameMenu1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animals\UCAnimalsLanguages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animals\UCAnimalsLern1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animals\UCAnimalsMemory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animals\UCAnimalsMenu1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animals\UCShadowGame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Clock\UCCalendar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Clock\UCClock24End12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockBingoAnalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockBingoAnalogBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockBingoDigital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockBingoDigitalBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockCompasses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockDigits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockExerciseCompasses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockExerciseCompassesBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockExerciseDigital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockExerciseDigitalBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCMonths.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCTheDay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UC4Pic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UC4PicBord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCColorsBingo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCColorsLearnGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCColorsMemory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCColorsMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCExerciseColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCExerciseGroupColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCMenuColorsGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Economy\UCBalance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Economy\UCMoney.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Economy\UCWeight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuBody.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuClothing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuFamily.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuFood.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuFruit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuKitchenware.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuMusicalLnstruments.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuProfessions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuShapes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuTools.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuVegetables.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\Menu\UCMenuVehicles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\UCBody.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCClothing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCEmotionsGame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\UCEmotionsMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\UCFood.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\UCkitchenware.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Gardens\UCShadowExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCDaysOfTheWeek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCEmotionsExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCEmotionsLearn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCFamily.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCFruit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCGardensClockExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCGardensClockLearn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCMemoryGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCMusicalLnstruments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCMusicalLnstrumentsExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCProfessions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCShapes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCSort.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCThink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCTools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCVegetables.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gardens\UCVehicles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Prepositions\UCPrepositions1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="General\Prepositions\UCPrepositions2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="General\Prepositions\UCPrepositions3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="General\Prepositions\UCPrepositions4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="General\UCEducationalStaff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCGardenMemory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCGardenTrivia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCGardenTriviaBoardR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCGardenTriviaBoardS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCMatchMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCOpposites.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCOppositesLearn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCOppositesMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="General\UCPrepositions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCPrepositionsLearn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\UCPrepositionsMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HandEyeCoordination\UCCopyDrawings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCCopyDrawingsBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCCopyShapes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCDrawingLines.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCHandEyeCoordinationGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCHandEyeCoordinationGame1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCJoystick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCLdentifyConnections.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCMatchBuilder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCMaze.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCPictureToStory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCPictureToStory2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HandEyeCoordination\UCUnusual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCUnusualGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCWhatIsMissing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCWhatIsMissingGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCWhatShapeChariot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HandEyeCoordination\UCWhatShapeChariotBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Music\UCPlayingBingo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Music\UCGroupPlaying.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Music\UCMusicBingo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Music\UCPiano.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Music\UCPianoBord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Music\UCScaleMemory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Music\UCSimon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Music\UCSimonBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Numbers\UCMathRecognaz1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Numbers\UCMathRecognaz2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Numbers\UCMathRecognaz3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Numbers\UCNumberIdentificationMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Numbers\UCNumbersGameMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Numbers\UCNumbersMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Print\UCPrintView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sentences\UCDailyWords.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sentences\UCEvening.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sentences\UCGarden.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sentences\UCHome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sentences\UCMorning.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCClockBingoAnalog.jpg" />
+    <Resource Include="NotionsImage\UCClockBingoDigital.jpg" />
+    <Resource Include="NotionsImage\UCClockCompasses.jpg" />
+    <Resource Include="NotionsImage\UCClockDigits.jpg" />
+    <Resource Include="NotionsImage\UCClockBingoDigitalBoard.png" />
+    <Resource Include="NotionsImage\UCClockExerciseCompasses.png" />
+    <Resource Include="NotionsImage\UCClockExerciseDigital.jpg" />
+    <Resource Include="NotionsImage\UCClockMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCAnimalsBingo.jpg" />
+    <Resource Include="NotionsImage\UCAnimalsMemory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\mahog dakot.png" />
+    <Resource Include="NotionsImage\mahog shaot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCColorsMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCExerciseGroupColors.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCClockBingoAnalogBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCColorsBingo.jpg" />
+    <Resource Include="NotionsImage\UCColorsMemory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCMenuColorsGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCAnimalsGameMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCAnimalsMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCClothing.jpg" />
+    <Resource Include="NotionsImage\UCEmotionsLearn.jpg" />
+    <Resource Include="NotionsImage\UCSort.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageClothing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCVegetables.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCDaysOfTheWeek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCShapes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCFruit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCTools.jpg" />
+    <Resource Include="NotionsImage\UCVehicles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageTool.png" />
+    <Resource Include="NotionsImage\messageVehicles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageDay.png" />
+    <Resource Include="NotionsImage\messageFruit.png" />
+    <Resource Include="NotionsImage\messageShapes.png" />
+    <Resource Include="NotionsImage\mwssageVegetables.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageEmotions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageEmotionsExercise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCGardensClockExercise.jpg" />
+    <Resource Include="NotionsImage\UCGardensClockLearn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageClockExercise.png" />
+    <Resource Include="NotionsImage\messageClockLearn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageMusicalLnstruments.png" />
+    <Resource Include="NotionsImage\UCMusicalLnstruments.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageProfessions.png" />
+    <Resource Include="NotionsImage\UCProfessions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCMonths.jpg" />
+    <Resource Include="NotionsImage\UCTheDay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCDrawingLines.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCCopyDrawings.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCFamily.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCGardenTrivia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCGardenTriviaBoardR.png" />
+    <Resource Include="NotionsImage\UCGardenTriviaBoardS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageDayPart.png" />
+    <Resource Include="NotionsImage\messageYear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCPictureToStory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCLdentifyConnections.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCCopyShapes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCWhatIsMissingGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="General\Prepositions\p1.png" />
+    <Resource Include="General\Prepositions\p2.png" />
+    <Resource Include="General\Prepositions\p3.png" />
+    <Resource Include="General\Prepositions\p4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\arithmetic.jpg" />
+    <Resource Include="NotionsImage\EmotionsGame.jpg" />
+    <Resource Include="NotionsImage\EmotionsMenu.jpg" />
+    <Resource Include="NotionsImage\messageBody.png" />
+    <Resource Include="NotionsImage\messageSeasons.png" />
+    <Resource Include="NotionsImage\NumberIdentification.jpg" />
+    <Resource Include="NotionsImage\NumbersMenu.jpg" />
+    <Resource Include="NotionsImage\OppositesMenu.jpg" />
+    <Resource Include="NotionsImage\PrepositionsMenu.jpg" />
+    <Resource Include="NotionsImage\ShadowGame.jpg" />
+    <Resource Include="NotionsImage\UCCalendar.jpg" />
+    <Resource Include="NotionsImage\UCClockExerciseCompasses.jpg" />
+    <Resource Include="NotionsImage\UCFood.jpg" />
+    <Resource Include="NotionsImage\UCkitchenware.jpg" />
+    <Resource Include="NotionsImage\UCMenuAnimals.jpg" />
+    <Resource Include="NotionsImage\UCMenuBody.jpg" />
+    <Resource Include="NotionsImage\UCMenuClothing.jpg" />
+    <Resource Include="NotionsImage\UCMenuFamily.jpg" />
+    <Resource Include="NotionsImage\UCMenuFood.jpg" />
+    <Resource Include="NotionsImage\UCMenuFruit.jpg" />
+    <Resource Include="NotionsImage\UCMenukitchenware.jpg" />
+    <Resource Include="NotionsImage\UCMenuMusicalLnstruments.jpg" />
+    <Resource Include="NotionsImage\UCMenuProfessions.jpg" />
+    <Resource Include="NotionsImage\UCMenuShapes.jpg" />
+    <Resource Include="NotionsImage\UCMenuTools.jpg" />
+    <Resource Include="NotionsImage\UCMenuVegetables.jpg" />
+    <Resource Include="NotionsImage\UCMenuVehicles.jpg" />
+    <Resource Include="NotionsImage\UCPrepositions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCUnusualGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCHandEyeCoordinationGame0.jpg" />
+    <Resource Include="NotionsImage\UCHandEyeCoordinationGame1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\blueBall.png" />
+    <Resource Include="NotionsImage\greenBall.png" />
+    <Resource Include="NotionsImage\redBall.png" />
+    <Resource Include="NotionsImage\yellowBall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UC4Pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCMemoryGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageKitchenware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageFood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\messageFamily.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCEducationalStaff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCClockExerciseCompassesBoard.png" />
+    <Resource Include="NotionsImage\UCClockExerciseDigitalBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCScaleMemory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCWhatShapeChariot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCWhatShapeChariotBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCClock24End12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCPiano.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\keysPressed.png" />
+    <Resource Include="NotionsImage\UCPianoBord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCSimon.jpg" />
+    <Resource Include="NotionsImage\UCSimonBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\SimonBorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCMusicBingo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCGroupPlaying.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCPlayingBingo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\keysA_DOWN.png" />
+    <Resource Include="NotionsImage\keysB_DOWN.png" />
+    <Resource Include="NotionsImage\keysC_DOWN.png" />
+    <Resource Include="NotionsImage\keysD_DOWN.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

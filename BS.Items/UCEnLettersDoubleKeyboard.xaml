@@ -1,0 +1,242 @@
+﻿<UserControl x:Class="BS.Items.UCEnLettersDoubleKeyboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.Items"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             mc:Ignorable="d" 
+             d:DesignHeight="61" d:DesignWidth="491" >
+    <UserControl.Background>
+        <ImageBrush ImageSource="ItemsImage/UCEnLettersDoubleKeyboard.jpg"/>
+    </UserControl.Background>
+<Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="16*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Label  x:Name="LetterA"  Grid.ColumnSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="a"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterB"  Grid.Column="2" Grid.ColumnSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="b"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterC"  Grid.Column="4" Grid.ColumnSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="c"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterD"  Grid.Column="6" Grid.ColumnSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="d"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterE"  Grid.Column="8" Grid.ColumnSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="e"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterF"  Grid.Column="10" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="f"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterG"  Grid.Column="12" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="g"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterH"  Grid.Column="14" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="h"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterI"  Grid.Column="16" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="i"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterJ"  Grid.Column="18" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="j"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterK"  Grid.Column="20" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="k"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterL"  Grid.Column="22" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="l"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterM"  Grid.Column="24" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="m"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterN"  Grid.Column="26" Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="n"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label  x:Name="LetterO"  Grid.ColumnSpan="2" Grid.Column="1"   Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="o"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterP"  Grid.Column="3"  Grid.ColumnSpan="2"  Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="p"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterQ"  Grid.Column="5"  Grid.ColumnSpan="2"  Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="q"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterR"  Grid.Column="7"  Grid.ColumnSpan="2" Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="r"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterS"  Grid.Column="9"  Grid.ColumnSpan="2"  Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="s"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterT" Grid.Column="11"  Grid.ColumnSpan="2" Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="t"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterU" Grid.Column="13"  Grid.ColumnSpan="2" Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="u"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterV"  Grid.Column="15" Grid.ColumnSpan="2" Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="v"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterW"  Grid.Column="17"  Grid.ColumnSpan="2" Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="w"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterX"  Grid.Column="19" Grid.ColumnSpan="2" Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="x"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterY"   Grid.Column="21" Grid.ColumnSpan="2" Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="y"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="LetterZ" Grid.Column="23"  Grid.ColumnSpan="2" Grid.Row="2"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="z"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labelDelet"   Grid.Column="25"   Grid.ColumnSpan="2" Grid.Row="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="0"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,186 @@
+﻿<UserControl xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             x:Class="BS.NotionsView.General.UCGardenTriviaBoardS"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.General"
+             mc:Ignorable="d" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             d:DesignHeight="360" d:DesignWidth="812">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="138*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="23*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.ColumnSpan="25" Grid.RowSpan="24" 
+               Source="/BS.NotionsView;component/NotionsImage/UCGardenTriviaBoardS.png" />
+
+        <Image x:Name="image0" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="13" Source="{Binding TBArrow0}" Grid.RowSpan="2"/>
+        <Image x:Name="image1" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="9" Source="{Binding TBArrow1}" Grid.RowSpan="2"  />
+        <Image x:Name="image2" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="8"  Source="{Binding TBArrow2}"  />
+        <Image x:Name="image3" Grid.Column="7" Grid.ColumnSpan="4"  Grid.Row="6" Source="{Binding TBArrow3}" />
+        <Image x:Name="image4" Grid.Column="7" Grid.ColumnSpan="4"  Grid.Row="4" Source="{Binding TBArrow4}"   />
+        <Image x:Name="image5" Grid.Column="7" Grid.ColumnSpan="4"  Grid.Row="2" Source="{Binding TBArrow5}"  />
+        <Image x:Name="image6" Grid.Column="7" Grid.ColumnSpan="4"               Source="{Binding TBArrow6}"  />
+        <Items:UCBlinkBord Grid.Row="8" Grid.Column="22" Grid.RowSpan="14" Visibility="{Binding BaseWinBlink}" />
+
+        <Image Grid.Column="22" Grid.Row="19" Source="{Binding TBSoldier0}" Grid.RowSpan="3" />
+        <Image Grid.Column="22" Grid.Row="16" Source="{Binding TBSoldier1}" Grid.RowSpan="4" />
+        <Image Grid.Column="22" Grid.Row="11" Source="{Binding TBSoldier2}" Grid.RowSpan="8" />
+        <Image Grid.Column="22" Grid.Row="8" Source="{Binding TBSoldier3}" Grid.RowSpan="9"   VerticalAlignment="Bottom"/>
+        <Image Grid.Column="22" Grid.Row="6" Source="{Binding TBSoldier4}" Grid.RowSpan="5"   VerticalAlignment="Bottom" />
+
+
+        <Image Stretch="Fill" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="23" Grid.RowSpan="2"  Source="{Binding RightAnswer0}"  />
+        <Image Stretch="Fill" Grid.Column="5" Grid.Row="23" Grid.RowSpan="2" Grid.ColumnSpan="4" Source="{Binding RightAnswer1}"      />
+        <Image Stretch="Fill" Grid.Row="23" Grid.Column="10" Grid.RowSpan="2" Grid.ColumnSpan="5"  Source="{Binding RightAnswer2}"    />
+        <Image Stretch="Fill" Grid.Column="15"  Grid.Row="23"  Grid.RowSpan="2" Source="{Binding RightAnswer3}" Grid.ColumnSpan="4" />
+
+        <Image Stretch="Fill" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="16"  Source="{Binding BackAnswer0}"  Grid.RowSpan="8" />
+        <Image Stretch="Fill" Grid.Column="5" Grid.Row="16" Grid.ColumnSpan="4" Source="{Binding BackAnswer1}"  Grid.RowSpan="8" />
+        <Image Stretch="Fill" Grid.Row="16" Grid.Column="9" Grid.ColumnSpan="7"  Source="{Binding BackAnswer2}" Grid.RowSpan="8" />
+        <Image Stretch="Fill" Grid.Column="15"  Grid.Row="16"  Source="{Binding BackAnswer3}" Grid.RowSpan="8" Grid.ColumnSpan="6" />
+
+        <TextBlock  Grid.Column="13" Grid.ColumnSpan="8" HorizontalAlignment="Center"   
+                    Text="{Binding TBQuestion}" VerticalAlignment="Top" Foreground="White"
+                    FontSize="22" FontWeight="Bold" Grid.RowSpan="2" />
+        <Border Grid.Column="2"  Grid.Row="18"  Grid.RowSpan="3">
+            <TextBlock   FontSize="55" FontWeight="Bold" Foreground="Green" Text="{Binding TBAnswer0}"
+                         TextAlignment="Center"  RenderTransformOrigin="0.5,0.5" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="{Binding TBPicAnswer0}"/>
+                </TextBlock.Background>
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle0}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Border>
+        <Border  Grid.Column="6"  Grid.Row="18"  Grid.RowSpan="3" >
+            <TextBlock FontSize="55" FontWeight="Bold" Foreground="Green" Text="{Binding TBAnswer1}" 
+                       TextAlignment="Center"  RenderTransformOrigin="0.5,0.5">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="{Binding TBPicAnswer1}"/>
+                </TextBlock.Background>
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle1}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.Column="11"  Grid.Row="18" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <TextBlock   FontSize="55" FontWeight="Bold" Foreground="Green" Text="{Binding TBAnswer2}" 
+                         TextAlignment="Center"   RenderTransformOrigin="0.5,0.5">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="{Binding TBPicAnswer2}"/>
+                </TextBlock.Background>
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle2}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Border>
+        <Border  Grid.Column="17"  Grid.Row="18" Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <TextBlock FontSize="55" FontWeight="Bold" Foreground="Green" Text="{Binding TBAnswer3}"
+                       TextAlignment="Center" RenderTransformOrigin="0.5,0.5"  >
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle3}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="3" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="{Binding TBPicAnswer3}"/>
+                </TextBlock.Background>
+            </TextBlock>
+        </Border>
+        <Image Grid.Row="2" Grid.ColumnSpan="7" Grid.Column="13" Grid.RowSpan="12" Source="{Binding IQuestion}"/>
+        <TextBlock Grid.ColumnSpan="7" Grid.Column="13"  Grid.Row="2" Grid.RowSpan="12" 
+                   Text="{Binding TextQuestion}" FontSize="55" FontWeight="Bold" Foreground="Yellow" 
+                   VerticalAlignment="Center" />
+    </Grid>
+</UserControl>

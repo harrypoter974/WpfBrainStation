@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="BS.MathLearningView.Moltipol.UCMathMoltipol1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MathLearningView.Moltipol"
+             xmlns:my1="clr-namespace:BS.Items;assembly=BS.Items"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"  
+             mc:Ignorable="d" 
+            d:DesignHeight="900" d:DesignWidth="1000" Foreground="White">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MathLearningView;component/MathImage/UCMathMoltipol1.jpg"/>
+    </UserControl.Background>
+    <Grid  x:Name="TargetGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*" />
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="98*" />
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="124*" />
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="21*" />
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="128*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="28*" />
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="115*" />
+            <ColumnDefinition Width="123*" />
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="125*" />
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="33*" />
+            <ColumnDefinition Width="57*"/>
+        </Grid.ColumnDefinitions>
+
+       <Image x:Name="imageMesseg" Grid.Column="8" Grid.Row="2"  Grid.ColumnSpan="10" Source="{Binding messagePic}"/>
+       
+
+        <ListBox Grid.Column="10" Grid.Row="4" x:Name="labelMoltipol" Grid.ColumnSpan="6"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"  Background="Transparent"
+                 ItemsSource="{Binding LstNum}" BorderBrush="Transparent" 
+   ScrollViewer.HorizontalScrollBarVisibility="Disabled"    ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Image Height="{Binding FontSize}" Width="21" Source="{Binding Text}" 
+                           HorizontalAlignment="Center" VerticalAlignment="Center"  Stretch="Uniform"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label  Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuMoltipolVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+          <my1:NUCSpeaker x:Name="uCSpeaker1" Grid.RowSpan="5" Grid.ColumnSpan="11"
+HorizontalAlignment="Left" Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"/>
+    
+      
+       
+        <Label Grid.Column="19" Grid.RowSpan="3" Grid.Row="10" x:Name="UCNewAnswerButton1" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Image Grid.Column="11"  Grid.Row="6" Grid.ColumnSpan="4"
+         Source="{Binding AnswerPic1}"  x:Name="imageNumAnswer2"  Stretch="Fill"/>
+        <TextBlock x:Name="TBNun1" Grid.Column="11"  Grid.Row="6"  Text="{Binding TAnswer2}" TextAlignment="Center" VerticalAlignment="Center" FontSize="74" FontWeight="Bold" Grid.ColumnSpan="2"   />
+        <TextBlock x:Name="TBNun0" Grid.Column="13"  Grid.Row="6"  Text="{Binding TAnswer1}" TextAlignment="Center" VerticalAlignment="Center" FontSize="74" FontWeight="Bold" Grid.ColumnSpan="2"  />
+    
+        
+        <Label x:Name="LNum2"  Grid.ColumnSpan="2" Grid.Column="10" Grid.Row="11"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LevelBut2}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ChangeLimit}" CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LNum1"  Grid.ColumnSpan="2" Grid.Column="12" Grid.Row="11">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LevelBut1}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ChangeLimit}" CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LNum0" ContentStringFormat="2" Grid.Column="14" Grid.Row="11"   Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LevelBut0}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ChangeLimit}" CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Rectangle Fill="#FF41AD48" Visibility="{Binding VNum3}"  Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" Grid.RowSpan="12" />
+        <Rectangle Fill="#FF41AD48" Visibility="{Binding VNum2}" Grid.Column="3"                      Grid.Row="2" Grid.RowSpan="12" />
+        <Rectangle Fill="#FF41AD48" Visibility="{Binding VNum1}"  Grid.Column="4" Grid.Row="2" Grid.RowSpan="12" />
+        <Rectangle Fill="#FF41AD48" Visibility="{Binding VNum0}"   Grid.Column="5"  Grid.Row="2" Grid.RowSpan="12" />
+
+        <my1:UserControlMathKeyboard Grid.ColumnSpan="8" Grid.Column="9" Grid.Row="8"  />
+    </Grid>
+</UserControl>

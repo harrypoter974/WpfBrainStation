@@ -1,0 +1,163 @@
+﻿<UserControl xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"    
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"   
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.JudaismView.Game"
+              xmlns:board="clr-namespace:BS.BingoBoard.View;assembly=BS.BingoBoard"
+             xmlns:boardVM="clr-namespace:BS.BingoBoard.VM;assembly=BS.BingoBoard"
+             xmlns:View="clr-namespace:BS.BingoBoard.View;assembly=BS.BingoBoard"
+             x:Class="BS.JudaismView.Game.UCJudaismCollect"
+             mc:Ignorable="d" 
+                d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type boardVM:CollectBoardVM}">
+            <board:UCCollectBoard/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.JudaismView;component/JudaismImage/UCJudaismCollect.jpg" />
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="113*"/>
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="146*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="116*"/>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="115*"/>
+            <RowDefinition Height="97*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="126*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+
+        <View:UCCollectBoard Grid.Column="7"  Grid.RowSpan="4" Grid.ColumnSpan="4" Grid.Row="1" 
+                             Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" 
+ Content="{Binding Board0}"  Visibility="{Binding BoardVisibility0}"  RenderTransformOrigin="0.5,0.5">
+            <View:UCCollectBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </View:UCCollectBoard.RenderTransform>
+
+        </View:UCCollectBoard>
+        <View:UCCollectBoard Grid.Column="0" Grid.ColumnSpan="8" Grid.Row="3" Grid.RowSpan="9"
+                             Height="{Binding BoardHeight}" Width="{Binding BoardWidth}"
+ Content="{Binding Board1}"  Visibility="{Binding BoardVisibility1}"  RenderTransformOrigin="0.43,0.32">
+            <View:UCCollectBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </View:UCCollectBoard.RenderTransform>
+        </View:UCCollectBoard>
+        <View:UCCollectBoard Grid.Column="12" Grid.ColumnSpan="7" Height="{Binding BoardHeight}" 
+                             Width="{Binding BoardWidth}"
+ Content="{Binding Board2}"  Visibility="{Binding BoardVisibility2}"  
+                             Grid.Row="0" Grid.RowSpan="13" RenderTransformOrigin="0.56,0.39">
+            <View:UCCollectBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </View:UCCollectBoard.RenderTransform>
+        </View:UCCollectBoard>
+        <View:UCCollectBoard Grid.Column="7" Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" 
+ Content="{Binding Board3}"  Visibility="{Binding BoardVisibility3}"  Grid.Row="8" Grid.ColumnSpan="4"  
+                             Grid.RowSpan="4" />
+        <Label  Grid.ColumnSpan="2"  Grid.RowSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" 
+                              CommandParameter="MenuCongratulationsGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.Column="14" Grid.Row="11"  x:Name="AnswerButton"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ExitButBackground}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AnswerBut}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelStart" Grid.Column="16" Grid.Row="11" IsEnabled="{Binding gameRun}">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding NewGame}"/>
+            </Label.InputBindings>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
+            </Label.Background>
+        </Label>
+
+        <Items:UCTimer Grid.Column="8"  Grid.Row="5" Visibility="{Binding TimerVisibility}"
+                       Grid.ColumnSpan="2" Margin="0,23,72,23" Grid.RowSpan="2" />
+        <ListBox x:Name="listBox" Background="Transparent" BorderBrush="Transparent"  
+                 Grid.ColumnSpan="6" Grid.Column="6" Grid.Row="4" 
+                 ItemsSource="{Binding Lists}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.RowSpan="4" >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding ImageCollect}" 
+                                           CommandParameter="{Binding ElementName=listBox,  Path=SelectedItem}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Label  Height="100" Width="100"  Uid="{Binding Uid}"   Margin="10" >
+                        <Label.Background>
+                            <ImageBrush ImageSource="{Binding Question}"/>
+                        </Label.Background>
+                    </Label>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ListBox>
+
+        <MediaElement x:Name="MediaElement1"   LoadedBehavior="{Binding IsPlay}"
+                      Volume="{Binding Volume}"
+                      Source="{Binding UrlPlay}" Visibility="Collapsed">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MediaEnded">
+                    <i:InvokeCommandAction Command="{Binding StopPlay}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </MediaElement>
+        <Items:UCTimerControl Grid.Column="14" Grid.Row="10" Grid.ColumnSpan="4" Grid.RowSpan="2"
+  HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Height="100"/>
+    </Grid>
+</UserControl>

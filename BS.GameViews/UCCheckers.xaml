@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="BS.GameViews.UCCheckers"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:BS.GameViews"
+             mc:Ignorable="d"         
+             d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="GameImage/UCCheckers.jpg"/>
+    </UserControl.Background>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="212*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="479*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="labelHome"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuGameVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Grid x:Name="grid1" Grid.Row="1" Grid.Column="1">
+
+     
+
+        </Grid>
+    </Grid>
+</UserControl>

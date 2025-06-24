@@ -1,0 +1,482 @@
+﻿<UserControl x:Class="BS.UserInformationView.UCEndDataEntryBord"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.UserInformationView"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Background>
+        <ImageBrush ImageSource="UserInformationImage/EndDataEntryBord.png"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="38*"/>
+        </Grid.ColumnDefinitions>
+        <Image  Grid.Column="2" Grid.ColumnSpan="3"   Grid.Row="1"  Source="{Binding Background28}"                 />
+        <Image  Grid.Column="6" Grid.ColumnSpan="2"   Grid.Row="1"  Source="{Binding Background20}"/>
+        <Image  Grid.Column="9" Grid.ColumnSpan="2"   Grid.Row="1"  Source="{Binding Background19}"/>
+        <Image  Grid.Column="12" Grid.ColumnSpan="3"  Grid.Row="1"  Source="{Binding Background6 }"/>
+        <Image  Grid.Column="16" Grid.ColumnSpan="1"  Grid.Row="1"  Source="{Binding Background7 }"                 />
+        <Image  Grid.Column="18" Grid.ColumnSpan="3"   Grid.Row="1" Source="{Binding Background8 }" />
+        <Image  Grid.Column="22" Grid.ColumnSpan="3"   Grid.Row="1" Source="{Binding Background9 }" />
+        <Image  Grid.Column="26" Grid.ColumnSpan="4"  Grid.Row="1"  Source="{Binding Background27}"/>
+        <Image  Grid.Column="31" Grid.ColumnSpan="3"   Grid.Row="1" Source="{Binding Background35}" />
+        <Image  Grid.Column="2" Grid.ColumnSpan="3"   Grid.Row="3"  Source="{Binding Background29}"                  />
+        <Image  Grid.Column="6" Grid.ColumnSpan="2"   Grid.Row="3"  Source="{Binding Background21}" />
+        <Image  Grid.Column="9" Grid.ColumnSpan="2"   Grid.Row="3"  Source="{Binding Background18}" />
+        <Image  Grid.Column="12" Grid.ColumnSpan="3"  Grid.Row="3"  Source="{Binding Background5 }" />
+        <Image  Grid.Column="16" Grid.ColumnSpan="1"  Grid.Row="3"  Source="{Binding Background0 }"                  />
+        <Image  Grid.Column="18" Grid.ColumnSpan="3"  Grid.Row="3"  Source="{Binding Background1 }" />
+        <Image  Grid.Column="22" Grid.ColumnSpan="3"  Grid.Row="3"  Source="{Binding Background10}" />
+        <Image  Grid.Column="26" Grid.ColumnSpan="4"  Grid.Row="3"  Source="{Binding Background26}" />
+        <Image  Grid.Column="31" Grid.ColumnSpan="3"  Grid.Row="3"  Source="{Binding Background34}" />
+        <Image  Grid.Column="2" Grid.ColumnSpan="3"    Grid.Row="5" Source="{Binding Background30}"                  />
+        <Image  Grid.Column="6" Grid.ColumnSpan="2"    Grid.Row="5" Source="{Binding Background22}" />
+        <Image  Grid.Column="9" Grid.ColumnSpan="2"    Grid.Row="5" Source="{Binding Background17}" />
+        <Image  Grid.Column="12" Grid.ColumnSpan="3"   Grid.Row="5" Source="{Binding Background4 }" />
+        <Image  Grid.Column="16" Grid.ColumnSpan="1"   Grid.Row="5" Source="{Binding Background3 }"                  />
+        <Image  Grid.Column="18" Grid.ColumnSpan="3"   Grid.Row="5" Source="{Binding Background2 }" />
+        <Image  Grid.Column="22" Grid.ColumnSpan="3"   Grid.Row="5" Source="{Binding Background11}" />
+        <Image  Grid.Column="26" Grid.ColumnSpan="4"   Grid.Row="5" Source="{Binding Background25}" />
+        <Image  Grid.Column="31" Grid.ColumnSpan="3"   Grid.Row="5" Source="{Binding Background33}" />       
+        <Image  Grid.Column="2" Grid.ColumnSpan="3"    Grid.Row="7" Source="{Binding Background31}"                  />
+        <Image  Grid.Column="6" Grid.ColumnSpan="2"    Grid.Row="7" Source="{Binding Background23}" />
+        <Image  Grid.Column="9" Grid.ColumnSpan="2"    Grid.Row="7" Source="{Binding Background16}" />
+        <Image  Grid.Column="12" Grid.ColumnSpan="3"   Grid.Row="7" Source="{Binding Background15}" />
+        <Image  Grid.Column="16" Grid.ColumnSpan="1"   Grid.Row="7" Source="{Binding Background14}"                  />
+        <Image  Grid.Column="18" Grid.ColumnSpan="3"   Grid.Row="7" Source="{Binding Background13}" />
+        <Image  Grid.Column="22" Grid.ColumnSpan="3"   Grid.Row="7" Source="{Binding Background12}" />
+        <Image  Grid.Column="26" Grid.ColumnSpan="4"   Grid.Row="7" Source="{Binding Background24}" />
+        <Image  Grid.Column="31" Grid.ColumnSpan="3"   Grid.Row="7" Source="{Binding Background32}"/>
+        <Label Grid.Column="2" Grid.ColumnSpan="3"   Grid.Row="1"    Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic28}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="28"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.Column="6" Grid.ColumnSpan="2"   Grid.Row="1"    Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic20}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="20"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="9" Grid.ColumnSpan="2"   Grid.Row="1"   Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic19}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="19"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="12" Grid.ColumnSpan="3"  Grid.Row="1"  Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic6}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="6"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="16" Grid.ColumnSpan="1"  Grid.Row="1"   Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic7}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="7"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="18" Grid.ColumnSpan="3"   Grid.Row="1" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic8}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="8"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="22" Grid.ColumnSpan="3"   Grid.Row="1" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic9}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="9"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="26" Grid.ColumnSpan="4"  Grid.Row="1" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic27}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="27"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.Column="31" Grid.ColumnSpan="3"   Grid.Row="1" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic35}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="35"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2" Grid.ColumnSpan="3"   Grid.Row="3"    Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic29}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="29"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6" Grid.ColumnSpan="2"   Grid.Row="3"   Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic21}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="21"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="9" Grid.ColumnSpan="2"   Grid.Row="3"    Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic18}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="18"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="12" Grid.ColumnSpan="3"  Grid.Row="3" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic5}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="5"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="16" Grid.ColumnSpan="1"  Grid.Row="3"   Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic0}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="0"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="18" Grid.ColumnSpan="3"  Grid.Row="3"  Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic1}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="1"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.ColumnSpan="3"  Grid.Row="3" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic10}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="10"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="26" Grid.ColumnSpan="4"  Grid.Row="3" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic26}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="26"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="31" Grid.ColumnSpan="3"  Grid.Row="3" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic34}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="34"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.Column="2" Grid.ColumnSpan="3"    Grid.Row="5"  Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic30}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="30"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6" Grid.ColumnSpan="2"    Grid.Row="5"  Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic22}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="22"/>
+            </Label.InputBindings>
+        </Label>
+        <Label    Grid.Column="9" Grid.ColumnSpan="2"    Grid.Row="5"   Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic17}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="17"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.Column="12" Grid.ColumnSpan="3"   Grid.Row="5" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic4}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="4"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="16" Grid.ColumnSpan="1"   Grid.Row="5"  Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic3}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="3"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="18" Grid.ColumnSpan="3"   Grid.Row="5" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic2}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="2"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="22" Grid.ColumnSpan="3"   Grid.Row="5" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic11}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="11"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="26" Grid.ColumnSpan="4"   Grid.Row="5" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic25}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="25"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="31" Grid.ColumnSpan="3"   Grid.Row="5" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic33}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="33"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2" Grid.ColumnSpan="3"    Grid.Row="7"  Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic31}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="31"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="6" Grid.ColumnSpan="2"    Grid.Row="7" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic23}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="23"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="9" Grid.ColumnSpan="2"    Grid.Row="7" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic16}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="16"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="12" Grid.ColumnSpan="3"   Grid.Row="7" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic15}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="15"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="16" Grid.ColumnSpan="1"   Grid.Row="7" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic14}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="14"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="18" Grid.ColumnSpan="3"   Grid.Row="7" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic13}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="13"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="22" Grid.ColumnSpan="3"   Grid.Row="7" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic12}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="12"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="26" Grid.ColumnSpan="4"   Grid.Row="7" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic24}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="24"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="31" Grid.ColumnSpan="3"   Grid.Row="7" Margin="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding Pic32}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding SelectStudent}" CommandParameter="32"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.Column="1"  Grid.Row="10" Grid.ColumnSpan="2" Grid.RowSpan="5">            
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TopFeeling}" CommandParameter="0"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.Column="4"  Grid.Row="10" Grid.RowSpan="5" Grid.ColumnSpan="3">            
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TopFeeling}" CommandParameter="1"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="10"  Grid.Row="10" Grid.RowSpan="5" Grid.ColumnSpan="3">            
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TopFeeling}" CommandParameter="2"/>
+            </Label.InputBindings>
+        </Label>
+        
+        <Label  Grid.Column="20" Grid.Row="9" Grid.RowSpan="3" Grid.ColumnSpan="3"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="1"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="24" Grid.Row="9" Grid.RowSpan="3" Grid.ColumnSpan="2"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="2"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="27" Grid.Row="9" Grid.RowSpan="3"                      >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="3"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="29" Grid.Row="9" Grid.RowSpan="3" Grid.ColumnSpan="3"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="4"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="33" Grid.Row="9" Grid.RowSpan="3"                      >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="5"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="35" Grid.Row="9" Grid.RowSpan="3"                      >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="6"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="20" Grid.Row="13" Grid.RowSpan="3" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="7"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="24" Grid.Row="13" Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="8"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="27" Grid.Row="13" Grid.RowSpan="3"                     >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="9"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="29" Grid.Row="13" Grid.RowSpan="3" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="0"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="35" Grid.Row="13" Grid.RowSpan="3"                     >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TapLetter}" CommandParameter="-1"/>
+            </Label.InputBindings>
+        </Label>
+
+        <ListBox Grid.Row="11"  Grid.ColumnSpan="5" Grid.Column="14" BorderBrush="Transparent" Margin="2"
+           Grid.RowSpan="3"   Height="60" VerticalAlignment="Center"
+ HorizontalAlignment="Center" Background="Transparent" ItemsSource="{Binding LstProduct, Mode=TwoWay }"   >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Height="30" Width="15"  Text="{Binding Text}" 
+ FontSize="28"  FontWeight ="Bold" TextAlignment="Center" Foreground="{Binding Background}">
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

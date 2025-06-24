@@ -1,0 +1,187 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.Sentences"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             x:Class="BS.NotionsView.Sentences.UCGarden"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <!--<ImageBrush ImageSource="C:\Brain_Station\WpfBrainStationBrachoot\WpfBrainStation\Resources\Notions\Sentences\GardenB.jpg"/>-->
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="226*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="272*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="157*"/>
+            <RowDefinition Height="296*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+
+        <Items:NUCBlueUCSpeaker   VerticalAlignment="Top"  Margin="{Binding SpeakerMargin}" Grid.RowSpan="5"
+         Grid.ColumnSpan="4" HorizontalAlignment="Left"/>
+        <Label  Grid.RowSpan="3">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuHeGeneralDailySentencesVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="4"   Grid.ColumnSpan="5" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SwitchGender}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Image Source="{Binding LanguageBut2}" Grid.Column="9"  Grid.Row="1" />
+        <Image Source="{Binding LanguageBut1}" Grid.Column="10" Grid.Row="1"   />
+        <Image Source="{Binding LanguageBut0}" Grid.Column="11" Grid.Row="1"  Grid.ColumnSpan="2" />
+        <Label  Grid.Column="9"  Grid.RowSpan="3"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SwitchLanguage}" CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="10"  Grid.RowSpan="3"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SwitchLanguage}" CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="11"  Grid.RowSpan="3" Grid.ColumnSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SwitchLanguage}" CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label  Grid.Column="1"  Grid.Row="12"  Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="When would you like to meet me" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="1"  Grid.Row="14"  Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="Do you want to come to my house" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="1"  Grid.Row="16"  Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="Lets walk to the garden" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="10"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="Do you want to play with me" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="12"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="What do you like to play" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="14"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="Do you want to play ball" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="16"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="Lets play in the playground" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="8"  Grid.Row="6"   Grid.ColumnSpan="4">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="Whats your name" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="8"  Grid.Row="8"   Grid.ColumnSpan="4">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="My name is Daniel" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="8"  Grid.Row="10"   Grid.ColumnSpan="4">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="How old are you" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="8"  Grid.Row="12"   Grid.ColumnSpan="4">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="Im five years old" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="14"   Grid.ColumnSpan="6">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="Its great to meet you" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="8"  Grid.Row="16"   Grid.ColumnSpan="4">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlaySentence}" CommandParameter="Youre a nice boy" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+    </Grid>
+</UserControl>

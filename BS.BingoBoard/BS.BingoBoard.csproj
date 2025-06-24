@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46679341-644F-4C0A-9762-799643677225}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BS.BingoBoard</RootNamespace>
+    <AssemblyName>BS.BingoBoard</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography">
+      <HintPath>..\CL.BS.UserInformationVM\bin\Release\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CL.BS.UserInformationVM\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode">
+      <HintPath>..\CL.BS.UserInformationVM\bin\Release\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BS.Items\bin\Debug\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\CL.BS.UserInformationVM\bin\Release\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy">
+      <HintPath>..\..\WinFormsAppDataBase\WinFormsAppDataBase\bin\Debug\net6.0-windows\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BS.Items\bin\Debug\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\UCBingoHeLetterBoard.xaml.cs">
+      <DependentUpon>UCBingoHeLetterBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCBingoHeOpenLetterBoard.xaml.cs">
+      <DependentUpon>UCBingoHeOpenLetterBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCBingoLetterBoard.xaml.cs">
+      <DependentUpon>UCBingoLetterBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCBingoMathBoard.xaml.cs">
+      <DependentUpon>UCBingoMathBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCBingoNumBard.xaml.cs">
+      <DependentUpon>UCBingoNumBard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCBingoOpenLetterBoard.xaml.cs">
+      <DependentUpon>UCBingoOpenLetterBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCBingoPicBoard.xaml.cs">
+      <DependentUpon>UCBingoPicBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCBingoQuestionsBoard.xaml.cs">
+      <DependentUpon>UCBingoQuestionsBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCBingoVocabularyBoard.xaml.cs" />
+    <Compile Include="View\UCBordEnMemoryWords.xaml.cs">
+      <DependentUpon>UCBordEnMemoryWords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCCollectBoard.xaml.cs">
+      <DependentUpon>UCCollectBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCDominoesBoard.xaml.cs">
+      <DependentUpon>UCDominoesBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCEmotionsBoard.xaml.cs" />
+    <Compile Include="View\UCHeMemoryLetter.xaml.cs">
+      <DependentUpon>UCHeMemoryLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCHeMouseLottoBoard.xaml.cs">
+      <DependentUpon>UCHeMouseLottoBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCJudaismCongratulationsBingoBoard.xaml.cs">
+      <DependentUpon>UCJudaismCongratulationsBingoBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCJudaismCongratulationsMemoryBoard.xaml.cs">
+      <DependentUpon>UCJudaismCongratulationsMemoryBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCLaddersAndRopesBoard.xaml.cs">
+      <DependentUpon>UCLaddersAndRopesBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCLottoBoard.xaml.cs">
+      <DependentUpon>UCLottoBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMemoryLetterBoard.xaml.cs">
+      <DependentUpon>UCMemoryLetterBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMemoryLetterBoard7Colors.xaml.cs">
+      <DependentUpon>UCMemoryLetterBoard7Colors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMemoryLetterBoard7Animals.xaml.cs">
+      <DependentUpon>UCMemoryLetterBoard7Animals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMemoryMathBoard.xaml.cs">
+      <DependentUpon>UCMemoryMathBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMemoryScaleBoard.xaml.cs">
+      <DependentUpon>UCMemoryScaleBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMemoryViewBoard.xaml.cs">
+      <DependentUpon>UCMemoryViewBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMouseLottoBoard.xaml.cs">
+      <DependentUpon>UCMouseLottoBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMusicBoard.xaml.cs">
+      <DependentUpon>UCMusicBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCQuartetsBoard.xaml.cs">
+      <DependentUpon>UCQuartetsBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCQuickThinkingBoard.xaml.cs">
+      <DependentUpon>UCQuickThinkingBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCShadowBoard.xaml.cs" />
+    <Compile Include="View\UCSortBoard.xaml.cs">
+      <DependentUpon>UCSortBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCTrafficLightsBoard.xaml.cs" />
+    <Compile Include="View\UCTrafficLightsBoard3.xaml.cs" />
+    <Compile Include="View\UCTriviaBoard.xaml.cs">
+      <DependentUpon>UCTriviaBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCVisualMemoryBoard.xaml.cs">
+      <DependentUpon>UCVisualMemoryBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCUnusualBoard.xaml.cs">
+      <DependentUpon>UCUnusualBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCWhatIsMissingBoard.xaml.cs">
+      <DependentUpon>UCWhatIsMissingBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCWordsGameBoard.xaml.cs">
+      <DependentUpon>UCWordsGameBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VM\BingoLetterBoardVM.cs" />
+    <Compile Include="VM\BingoOpenLetterBoardVM.cs" />
+    <Compile Include="VM\BingoPicBoardVM.cs" />
+    <Compile Include="VM\BingoVocabularyBoardVM.cs" />
+    <Compile Include="VM\CollectBoardVM.cs" />
+    <Compile Include="VM\DominoesBoardVM.cs" />
+    <Compile Include="VM\JudaismCongratulationsBingoBoardVM.cs" />
+    <Compile Include="VM\JudaismCongratulationsMemoryBoardVM.cs" />
+    <Compile Include="VM\LaddersAndRopesBoardVM.cs" />
+    <Compile Include="VM\LottoBoardVM.cs" />
+    <Compile Include="VM\MemoryLetterBoard7VM.cs" />
+    <Compile Include="VM\MemoryLetterBoardVM.cs" />
+    <Compile Include="VM\MemoryViewBoardVM.cs" />
+    <Compile Include="VM\MemoryVocabularyBoardVM.cs" />
+    <Compile Include="VM\QuartetsBoardVM.cs" />
+    <Compile Include="VM\QuickThinkingBoardVM.cs" />
+    <Compile Include="VM\ShadowBoardVM.cs" />
+    <Compile Include="VM\SortBoardVM.cs" />
+    <Compile Include="VM\TrafficLightsBoardVM.cs" />
+    <Compile Include="VM\TriviaBoardVM.cs" />
+    <Compile Include="VM\UnusualBoardVM.cs" />
+    <Compile Include="VM\VisualMemoryBoardVM.cs" />
+    <Compile Include="VM\WhatIsMissingBoardVM.cs" />
+    <Compile Include="VM\WordsGameBoardVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\UCBingoHeLetterBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCBingoHeOpenLetterBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCBingoLetterBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCBingoMathBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCBingoNumBard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCBingoOpenLetterBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCBingoPicBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCBingoQuestionsBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCBingoVocabularyBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UCBordEnMemoryWords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCCollectBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCDominoesBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCEmotionsBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UCHeMemoryLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCHeMouseLottoBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCJudaismCongratulationsBingoBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCJudaismCongratulationsMemoryBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCLaddersAndRopesBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCLottoBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMemoryLetterBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMemoryLetterBoard7Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMemoryLetterBoard7Animals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMemoryMathBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMemoryScaleBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMemoryViewBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMouseLottoBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMusicBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCQuartetsBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCQuickThinkingBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCShadowBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UCSortBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCTrafficLightsBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UCTrafficLightsBoard3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UCTriviaBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCVisualMemoryBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCUnusualBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCWhatIsMissingBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCWordsGameBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.MultipleMice\MultipleMice.csproj">
+      <Project>{5d7a3ad3-0146-48ba-930f-5525e99fa307}</Project>
+      <Name>MultipleMice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Database\CL.BS.Database.csproj">
+      <Project>{4414B806-0F49-4CE7-87DF-309D7C6C3174}</Project>
+      <Name>CL.BS.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.GameManager\CL.BS.GameManager.csproj">
+      <Project>{862f791a-7c6e-40b5-8b4b-4c1d03fa64e8}</Project>
+      <Name>CL.BS.GameManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0b6191c5-6621-4dc6-8d7f-06cb3bd05bc3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BingoBoardImage\4CellCard.jpg" />
+    <Resource Include="BingoBoardImage\UCBingoOpenLetterBoard.png" />
+    <Resource Include="BingoBoardImage\UCBingoPicBoard.png" />
+    <Resource Include="BingoBoardImage\UCBoardBingoLetter.png" />
+    <Resource Include="BingoBoardImage\UCLottoBoard.png" />
+    <Resource Include="BingoBoardImage\UCMemoryLetterBoard.png" />
+    <Resource Include="BingoBoardImage\UCMemoryLetterBoard7.png" />
+    <Resource Include="BingoBoardImage\UCMemoryLetterBoard7Animals.png" />
+    <Resource Include="BingoBoardImage\UCWordsGameBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BingoBoardImage\UCMemoryMathBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BingoBoardImage\UCBingoQuestionsBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BingoBoardImage\UCBordEnMemoryWords.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BingoBoardImage\UCMemoryViewBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BingoBoardImage\UCQuickThinkingBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BingoBoardImage\UCSortBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BingoBoardImage\UCJudaismCongratulationsBingoBoard.png" />
+    <Resource Include="BingoBoardImage\UCJudaismCongratulationsMemoryBoard.png" />
+    <Resource Include="BingoBoardImage\UCCollectBoard.png" />
+    <Resource Include="BingoBoardImage\UCShadowBoard.png" />
+    <Resource Include="BingoBoardImage\UCUnusualBoard.png" />
+    <Resource Include="BingoBoardImage\UCVisualMemoryBoard.png" />
+    <Resource Include="BingoBoardImage\UCHeMouseLottoBoard.png" />
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

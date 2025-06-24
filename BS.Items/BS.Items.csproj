@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0802E63B-AB77-4DB8-ADA4-A2700D8160D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BS.Items</RootNamespace>
+    <AssemblyName>BS.Items</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NUCBlueUCSpeaker.xaml.cs">
+      <DependentUpon>NUCBlueUCSpeaker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCAnswerCard.xaml.cs" />
+    <Compile Include="UCBFracture.xaml.cs">
+      <DependentUpon>UCBFracture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCBlueUCSpeaker.xaml.cs">
+      <DependentUpon>UCBlueUCSpeaker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCExitButton.xaml.cs">
+      <DependentUpon>UCExitButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCGoblet.xaml.cs">
+      <DependentUpon>UCGoblet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCHeLettersDoubleKeyboard.xaml.cs">
+      <DependentUpon>UCHeLettersDoubleKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCHeLettersFullKeyboard.xaml.cs">
+      <DependentUpon>UCHeLettersFullKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UClMathKeyLine.xaml.cs" />
+    <Compile Include="UCSpeaker.xaml.cs">
+      <DependentUpon>UCSpeaker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCTimerControl.xaml.cs">
+      <DependentUpon>UCTimerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCTMathKeyboard.xaml.cs">
+      <DependentUpon>UCTMathKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCTransparentCard.xaml.cs">
+      <DependentUpon>UCTransparentCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VM\KillMiceVM.cs" />
+    <Compile Include="VM\HeVowelsVM.cs" />
+    <Compile Include="VM\WinSettingsTriviaVM.cs" />
+    <Compile Include="VM\WordListVM.cs" />
+    <Compile Include="WinBrahotList.xaml.cs">
+      <DependentUpon>WinBrahotList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowPlay.xaml.cs">
+      <DependentUpon>WindowPlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinHeVowels.xaml.cs">
+      <DependentUpon>WinHeVowels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinMiceKiller.xaml.cs">
+      <DependentUpon>WinMiceKiller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinWordList.xaml.cs">
+      <DependentUpon>WinWordList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XUCBlueUCSpeaker.xaml.cs">
+      <DependentUpon>XUCBlueUCSpeaker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCEnLettersDoubleKeyboard.xaml.cs">
+      <DependentUpon>UCEnLettersDoubleKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCEnLettersKeyboard.xaml.cs">
+      <DependentUpon>UCEnLettersKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCHeLettersKeyboard.xaml.cs">
+      <DependentUpon>UCHeLettersKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMatchSpeaker.xaml.cs">
+      <DependentUpon>UCMatchSpeaker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCNoticeBut.xaml.cs">
+      <DependentUpon>UCNoticeBut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NUCSpeaker.xaml.cs">
+      <DependentUpon>NUCSpeaker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VM\BaseSettingsLetters.cs" />
+    <Compile Include="VM\EnSettingsLettersVM.cs" />
+    <Compile Include="VM\HeSettingsLettersVM.cs" />
+    <Compile Include="VM\NameEngine.cs" />
+    <Compile Include="VM\SettingsColorsVM.cs" />
+    <Compile Include="VM\ViewObject.cs" />
+    <Compile Include="VM\WinNicknamesVM.cs" />
+    <Compile Include="WinHeSettingsLetters.xaml.cs">
+      <DependentUpon>WinHeSettingsLetters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCBlinkBord.xaml.cs">
+      <DependentUpon>UCBlinkBord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCButCardOrWrote.xaml.cs">
+      <DependentUpon>UCButCardOrWrote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCCheckBox.xaml.cs">
+      <DependentUpon>UCCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCFracture.xaml.cs">
+      <DependentUpon>UCFracture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCNewAnswerButton.xaml.cs">
+      <DependentUpon>UCNewAnswerButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCQuestionCard.xaml.cs">
+      <DependentUpon>UCQuestionCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCResultTextBlock.xaml.cs">
+      <DependentUpon>UCResultTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinNicknames.xaml.cs">
+      <DependentUpon>WinNicknames.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinSettingsColors.xaml.cs">
+      <DependentUpon>WinSettingsColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinSettingsTrivia.xaml.cs">
+      <DependentUpon>WinSettingsTrivia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XUCSpeaker.xaml.cs">
+      <DependentUpon>XUCSpeaker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCTimer.xaml.cs">
+      <DependentUpon>UCTimer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UClMathKeyboard.xaml.cs">
+      <DependentUpon>UClMathKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VM\MathDefinitionsVM.cs" />
+    <Compile Include="WinEnSettingsLetters.xaml.cs">
+      <DependentUpon>WinEnSettingsLetters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinEnTextMenu.xaml.cs">
+      <DependentUpon>WinEnTextMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinHelp.xaml.cs">
+      <DependentUpon>WinHelp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinMathDefinitions.xaml.cs">
+      <DependentUpon>WinMathDefinitions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinSpeaker1.xaml.cs">
+      <DependentUpon>WinSpeaker1.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\ButDefinitions.jpg" />
+    <Resource Include="ItemsImage\buttonNewGameBlue.png" />
+    <Resource Include="ItemsImage\CardButton.png" />
+    <Resource Include="ItemsImage\itIsExercise.jpg" />
+    <Resource Include="ItemsImage\OrangeArrow.png" />
+    <Resource Include="ItemsImage\print.png" />
+    <Resource Include="ItemsImage\question.png" />
+    <Resource Include="ItemsImage\red frame.png" />
+    <Resource Include="ItemsImage\Slider.bmp" />
+    <Resource Include="ItemsImage\SliderBlue.bmp" />
+    <Resource Include="ItemsImage\UCTimer.png" />
+    <Resource Include="ItemsImage\WinEnSettingsLetters.png" />
+    <Resource Include="ItemsImage\WinExerciseGroupColors2.jpg" />
+    <Resource Include="ItemsImage\WinMathDefinitions.jpg" />
+    <Resource Include="ItemsImage\writingButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="NUCBlueUCSpeaker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\SliderStyleAudio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\SliderStyleMenuAudio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\SliderStyle_blue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UCAnswerCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UCBFracture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCBlueUCSpeaker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCExitButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCGoblet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCHeLettersDoubleKeyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCHeLettersFullKeyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UClMathKeyLine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UCTimerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCTMathKeyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCTransparentCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinBrahotList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowPlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinHeVowels.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinMiceKiller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinWordList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XUCBlueUCSpeaker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCEnLettersDoubleKeyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCEnLettersKeyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCHeLettersKeyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMatchSpeaker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCNoticeBut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCSpeaker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NUCSpeaker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinHeSettingsLetters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\SliderStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\SliderStyleBlue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCBlinkBord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCButCardOrWrote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCCheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCFracture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCNewAnswerButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCQuestionCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCResultTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinNicknames.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinSettingsColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinSettingsTrivia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XUCSpeaker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCTimer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UClMathKeyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinEnSettingsLetters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinEnTextMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinMathDefinitions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinSpeaker1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\LetterBord.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.MultipleMice\MultipleMice.csproj">
+      <Project>{5D7A3AD3-0146-48BA-930F-5525E99FA307}</Project>
+      <Name>MultipleMice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MEF\CL.BS.MEF.csproj">
+      <Project>{681bfcfc-6b4b-4800-abae-441f4c4bb0c2}</Project>
+      <Name>CL.BS.MEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0b6191c5-6621-4dc6-8d7f-06cb3bd05bc3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UserControlMathKeyboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\V_btn.png" />
+    <Resource Include="ItemsImage\X_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\WinHeSettingsLetters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\greenLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\blueLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UCEnLettersKeyboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\NameGameList.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UCHeLettersKeyboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\WinSettingsColors.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UCEnLettersDoubleKeyboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\WinSettingsTrivia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UCSpeaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\BlueUCSpeaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\SliderBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UClMathKeyLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\NUCSpeaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UCHeLettersDoubleKeyboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\NBlueUCSpeaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UCTMathKeyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\WinHeVowels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UCGoblet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemsImage\UCHeLettersFullKeyboard.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

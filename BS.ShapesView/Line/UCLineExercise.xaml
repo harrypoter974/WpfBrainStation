@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="BS.ShapesView.Line.UCLineExercise"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.ShapesView.Line"
+             xmlns:my1="clr-namespace:BS.Items;assembly=BS.Items"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.ShapesView;component/ShapesImage/UCLineExercise.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*" />
+            <ColumnDefinition Width="218*"/>
+            <ColumnDefinition Width="450*"/>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="187*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="252*" />
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="142*"/>
+            <RowDefinition Height="289*" />
+            <RowDefinition Height="18*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+        <my1:NUCSpeaker  Grid.RowSpan="3" Grid.ColumnSpan="2"
+ Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <local:UCBoardLine Grid.Column="2"  Grid.Row="5" Grid.RowSpan="4" Grid.ColumnSpan="2" />
+        <local:UCBoardLine Grid.Column="2"  Grid.Row="1"  Grid.ColumnSpan="2" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
+            <local:UCBoardLine.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardLine.RenderTransform>
+        </local:UCBoardLine>
+        <local:UCBoardLine Grid.Column="0"  Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="5"  
+                           RenderTransformOrigin="0.25,0.07" >
+            <local:UCBoardLine.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardLine.RenderTransform>
+        </local:UCBoardLine>
+        <local:UCBoardLine Grid.Column="2"  Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="5"
+                           RenderTransformOrigin="0.88,0.23" >
+            <local:UCBoardLine.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardLine.RenderTransform>
+        </local:UCBoardLine>
+        <Label  Grid.Column="3"  Grid.Row="7"  Name="labelBack">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="LineOpenVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.RowSpan="2" Name="labelHome" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuShapeAndAngleVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <my1:UCExitButton Grid.Column="6" Grid.Row="6" Grid.RowSpan="3" />
+    </Grid>
+</UserControl>

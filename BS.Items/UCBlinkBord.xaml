@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="BS.Items.UCBlinkBord"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.Items"
+             mc:Ignorable="d" 
+             d:DesignHeight="90" d:DesignWidth="50">
+    <Grid >
+        <Image  Name="Image1"  Source="ItemsImage/red frame.png" Stretch="Fill" >
+            <Image.Style>
+                <Style>
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Image.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetProperty="(Image.Opacity)"
+							   BeginTime="0:0:0" Duration="0:0:0.2"
+							   From="1.0" To="0.0" RepeatBehavior="Forever" AutoReverse="True"/>
+
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+    </Grid>
+</UserControl>

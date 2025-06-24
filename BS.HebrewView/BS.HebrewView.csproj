@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C22888D-6AA1-4FC8-B6D6-C6D09E6FDDC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BS.HebrewView</RootNamespace>
+    <AssemblyName>BS.HebrewView</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\UCHeBingoLetter.xaml.cs">
+      <DependentUpon>UCHeBingoLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCHeLotto.xaml.cs">
+      <DependentUpon>UCHeLotto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCHeMemoryLetter.xaml.cs">
+      <DependentUpon>UCHeMemoryLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCHeMemoryWords.xaml.cs">
+      <DependentUpon>UCHeMemoryWords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCHeOpenLetter.xaml.cs">
+      <DependentUpon>UCHeOpenLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCHeWordGame.xaml.cs">
+      <DependentUpon>UCHeWordGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reading\UCBoardHeReadingEx2.xaml.cs">
+      <DependentUpon>UCBoardHeReadingEx2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCBoardHeReadingEx3.xaml.cs">
+      <DependentUpon>UCBoardHeReadingEx3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCBoardSyllables0.xaml.cs">
+      <DependentUpon>UCBoardSyllables0.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCBoardSyllables1.xaml.cs">
+      <DependentUpon>UCBoardSyllables1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReadingEx2.xaml.cs">
+      <DependentUpon>UCHeReadingEx2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReadingEx2To4.xaml.cs">
+      <DependentUpon>UCHeReadingEx2To4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReadingEx3.xaml.cs">
+      <DependentUpon>UCHeReadingEx3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReadingEx3To4.xaml.cs">
+      <DependentUpon>UCHeReadingEx3To4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReadingSyllables.xaml.cs">
+      <DependentUpon>UCHeReadingSyllables.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReading2.xaml.cs">
+      <DependentUpon>UCHeReading2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReading3.xaml.cs">
+      <DependentUpon>UCHeReading3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReadingSyllablesEx.xaml.cs">
+      <DependentUpon>UCHeReadingSyllablesEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReadingSyllablesEx0.xaml.cs">
+      <DependentUpon>UCHeReadingSyllablesEx0.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reading\UCHeReadingSyllablesEx1.xaml.cs">
+      <DependentUpon>UCHeReadingSyllablesEx1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCBoardRecognaseLeters.xaml.cs">
+      <DependentUpon>UCBoardRecognaseLeters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCKnowLetter.xaml.cs">
+      <DependentUpon>UCKnowLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCKnowLetterMenu.xaml.cs">
+      <DependentUpon>UCKnowLetterMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCKnowYourName.xaml.cs">
+      <DependentUpon>UCKnowYourName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCRecognaseLeters1.xaml.cs">
+      <DependentUpon>UCRecognaseLeters1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCRecognaseLeters2.xaml.cs">
+      <DependentUpon>UCRecognaseLeters2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCRecognaseLeters3.xaml.cs">
+      <DependentUpon>UCRecognaseLeters3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sentences\UCSentences.xaml.cs">
+      <DependentUpon>UCSentences.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Writing\UCBoardWritingLetter.xaml.cs">
+      <DependentUpon>UCBoardWritingLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Writing\UCLernVehicles.xaml.cs">
+      <DependentUpon>UCLernVehicles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Writing\UCLernWords.xaml.cs">
+      <DependentUpon>UCLernWords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Writing\UCLernWordsBoard.xaml.cs">
+      <DependentUpon>UCLernWordsBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Writing\UCWritingLetter.xaml.cs">
+      <DependentUpon>UCWritingLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Writing\UCWritingLetters.xaml.cs">
+      <DependentUpon>UCWritingLetters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Writing\UCWritingName.xaml.cs">
+      <DependentUpon>UCWritingName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Writing\UCWritingWords.xaml.cs">
+      <DependentUpon>UCWritingWords.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Game\UCHeBingoLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCHeLotto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCHeMemoryLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCHeMemoryWords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCHeOpenLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCHeWordGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCBoardHeReadingEx2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCBoardHeReadingEx3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCBoardSyllables0.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCBoardSyllables1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReadingEx2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReadingEx2To4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReadingEx3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReadingEx3To4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReadingSyllables.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReading2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReading3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReadingSyllablesEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReadingSyllablesEx0.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reading\UCHeReadingSyllablesEx1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCBoardRecognaseLeters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCKnowLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCKnowLetterMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCKnowYourName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCRecognaseLeters1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCRecognaseLeters2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCRecognaseLeters3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sentences\UCSentences.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Writing\UCBoardWritingLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Writing\UCLernVehicles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Writing\UCLernWords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Writing\UCLernWordsBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Writing\UCWritingLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Writing\UCWritingLetters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Writing\UCWritingName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Writing\UCWritingWords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeBingoLetter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeMemoryLetter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeOpenLetter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeWordGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCKnowLetterMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCKnowYourName.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCRecognaseLeters1.jpg" />
+    <Resource Include="HebrewImage\UCRecognaseLeters2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCRecognaseLeters3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCWritingName.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCWritingLetter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeReading2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.BingoBoard\BS.BingoBoard.csproj">
+      <Project>{46679341-644f-4c0a-9762-799643677225}</Project>
+      <Name>BS.BingoBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.MultipleMice\MultipleMice.csproj">
+      <Project>{5d7a3ad3-0146-48ba-930f-5525e99fa307}</Project>
+      <Name>MultipleMice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.HebrewVM\CL.BS.HebrewVM.csproj">
+      <Project>{B47045DE-031E-445C-B571-5CF145C98E8F}</Project>
+      <Name>CL.BS.HebrewVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0b6191c5-6621-4dc6-8d7f-06cb3bd05bc3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCBoardWritingLetter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeReadingSyllablesEx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCBoardSyllables0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeReadingSyllablesEx0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeReadingEx3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeReadingEx2To4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCLernWords.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\WordsMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeLotto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HebrewImage\UCHeMemoryWords.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

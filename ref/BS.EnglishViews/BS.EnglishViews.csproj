@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCA47214-2F45-4A4B-A332-F12156011433}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BS.EnglishViews</RootNamespace>
+    <AssemblyName>BS.EnglishViews</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Notions\UCEnAnimals.xaml.cs">
+      <DependentUpon>UCEnAnimals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnCalendar.xaml.cs">
+      <DependentUpon>UCEnCalendar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnClock.xaml.cs">
+      <DependentUpon>UCEnClock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnColor.xaml.cs">
+      <DependentUpon>UCEnColor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnColorMenu.xaml.cs">
+      <DependentUpon>UCEnColorMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnDaysOfTheWeek.xaml.cs">
+      <DependentUpon>UCEnDaysOfTheWeek.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnFamily.xaml.cs">
+      <DependentUpon>UCEnFamily.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnNumbers.xaml.cs">
+      <DependentUpon>UCEnNumbers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnOppositesExercise.xaml.cs">
+      <DependentUpon>UCEnOppositesExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnOppositesLern.xaml.cs">
+      <DependentUpon>UCEnOppositesLern.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnPrepositionsLern.xaml.cs">
+      <DependentUpon>UCEnPrepositionsLern.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notions\UCEnPrepositionsExercise.xaml.cs">
+      <DependentUpon>UCEnPrepositionsExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCEnKnowLetter.xaml.cs">
+      <DependentUpon>UCEnKnowLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCEnLetterRecognition1.xaml.cs">
+      <DependentUpon>UCEnLetterRecognition1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCEnLetterRecognition2.xaml.cs">
+      <DependentUpon>UCEnLetterRecognition2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCEnLetterRecognition_3.xaml.cs">
+      <DependentUpon>UCEnLetterRecognition_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recognition\UCEnLettersKnow.xaml.cs">
+      <DependentUpon>UCEnLettersKnow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\UCEnTextBig.xaml.cs">
+      <DependentUpon>UCEnTextBig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\UCEnTextOpposites.xaml.cs">
+      <DependentUpon>UCEnTextOpposites.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\UCEnTextPrepositions.xaml.cs">
+      <DependentUpon>UCEnTextPrepositions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\UCEnTextSmall.xaml.cs">
+      <DependentUpon>UCEnTextSmall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\UCEnWriteLetter.xaml.cs">
+      <DependentUpon>UCEnWriteLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\UCEnWritingLettersMenu.xaml.cs">
+      <DependentUpon>UCEnWritingLettersMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\UCWritingEnMenu.xaml.cs">
+      <DependentUpon>UCWritingEnMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\UCWritingEnName.xaml.cs">
+      <DependentUpon>UCWritingEnName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Words\UCEnPronunciation.xaml.cs">
+      <DependentUpon>UCEnPronunciation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Words\UCEnSyllable.xaml.cs">
+      <DependentUpon>UCEnSyllable.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\UCEnBingoLetter.xaml.cs">
+      <DependentUpon>UCEnBingoLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCEnBingoOpenLetter.xaml.cs">
+      <DependentUpon>UCEnBingoOpenLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCEnLotto.xaml.cs">
+      <DependentUpon>UCEnLotto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCEnMemoryLetter.xaml.cs">
+      <DependentUpon>UCEnMemoryLetter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game\UCEnWordsGame.xaml.cs">
+      <DependentUpon>UCEnWordsGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Game\UCEnBingoLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCEnBingoOpenLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCEnLotto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCEnMemoryLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game\UCEnWordsGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnAnimals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnCalendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnClock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnColor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnColorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnDaysOfTheWeek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnFamily.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnNumbers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnOppositesExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnOppositesLern.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnPrepositionsLern.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notions\UCEnPrepositionsExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCEnKnowLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCEnLetterRecognition1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCEnLetterRecognition2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCEnLetterRecognition_3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recognition\UCEnLettersKnow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Text\UCEnTextBig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Text\UCEnTextOpposites.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Text\UCEnTextPrepositions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Text\UCEnTextSmall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Text\UCEnWriteLetter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Text\UCEnWritingLettersMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Text\UCWritingEnMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Text\UCWritingEnName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Words\UCEnPronunciation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Words\UCEnSyllable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnBingoOpenLetter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnBingoLetter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnLotto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnMemoryLetter.jpg" />
+    <Resource Include="EnglishImage\UCEnMemoryLetterOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnWordsGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\EnLetterRecognition2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnLetterRecognition1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnLetterRecognition3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnLettersKnow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnTextSmall.jpg" />
+    <Resource Include="EnglishImage\UCEnTextBig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnTextOpposites.jpg" />
+    <Resource Include="EnglishImage\UCEnTextPrepositions.jpg" />
+    <Resource Include="EnglishImage\UCWritingEnMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnPronunciation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnCalendar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnDaysOfTheWeek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnFamily.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnColorMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnClock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\mahog dakot.png" />
+    <Resource Include="EnglishImage\mahog shaot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EnglishImage\UCEnWriteLetter.jpg" />
+    <Resource Include="EnglishImage\UCEnWritingLettersMenu.jpg" />
+    <Resource Include="EnglishImage\UCWritingEnName.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

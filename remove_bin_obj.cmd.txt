@@ -1,0 +1,80 @@
+@echo off
+echo Removing all bin and obj folders from Git tracking...
+
+REM BIN folders
+git rm -r --cached BS.BaseWin\bin
+git rm -r --cached BS.BingoBoard\bin
+git rm -r --cached BS.CheckersView\bin
+git rm -r --cached BS.EnglishViews\bin
+git rm -r --cached BS.GameViews\bin
+git rm -r --cached BS.HebrewView\bin
+git rm -r --cached BS.Items\bin
+git rm -r --cached BS.JudaismView\bin
+git rm -r --cached BS.MathLearningView\bin
+git rm -r --cached BS.MenuViews\bin
+git rm -r --cached BS.MultipleMice\bin
+git rm -r --cached BS.NotionsView\bin
+git rm -r --cached BS.ShapesView\bin
+git rm -r --cached BS.UserInformationView\bin
+git rm -r --cached BSroot\bin
+git rm -r --cached BSroot\WpfBrainStation\bin
+git rm -r --cached CL.BS.Accessories\bin
+git rm -r --cached CL.BS.Common\bin
+git rm -r --cached CL.BS.Contract\bin
+git rm -r --cached CL.BS.Database\bin
+git rm -r --cached CL.BS.EnglishManager\bin
+git rm -r --cached CL.BS.EnglishVM\bin
+git rm -r --cached CL.BS.GameManager\bin
+git rm -r --cached CL.BS.GameVM\bin
+git rm -r --cached CL.BS.HebrewManager\bin
+git rm -r --cached CL.BS.HebrewVM\bin
+git rm -r --cached CL.BS.JudaismManager\bin
+git rm -r --cached CL.BS.JudaismVM\bin
+git rm -r --cached CL.BS.MathLearningManager\bin
+git rm -r --cached CL.BS.MathLearningVM\bin
+git rm -r --cached CL.BS.MEF\bin
+git rm -r --cached CL.BS.MenuVM\bin
+git rm -r --cached CL.BS.Model\bin
+git rm -r --cached CL.BS.NotionsManager\bin
+git rm -r --cached CL.BS.NotionsVM\bin
+git rm -r --cached CL.BS.ShapesManager\bin
+git rm -r --cached CL.BS.ShapesVM\bin
+git rm -r --cached CL.BS.UserInformationVM\bin
+git rm -r --cached CL.BS.VMCommon\bin
+git rm -r --cached Localization\bin
+git rm -r --cached Project1\bin
+git rm -r --cached ref\BS.EnglishViews\bin
+git rm -r --cached ref\BS.HebrewView\bin
+git rm -r --cached ref\BS.Items\bin
+git rm -r --cached ref\BS.MathLearningView\bin
+git rm -r --cached ref\BS.MenuViews\bin
+git rm -r --cached ref\BS.NotionsView\bin
+git rm -r --cached ref\BS.ShapesView\bin
+git rm -r --cached ref\BSroot\bin
+git rm -r --cached ref\BSroot\WpfBrainStation\bin
+git rm -r --cached ref\CL.BS.Accessories\bin
+git rm -r --cached ref\CL.BS.Common\bin
+git rm -r --cached ref\CL.BS.Contract\bin
+git rm -r --cached ref\CL.BS.Database\bin
+git rm -r --cached ref\CL.BS.EnglishManager\bin
+git rm -r --cached ref\CL.BS.EnglishVM\bin
+git rm -r --cached ref\CL.BS.HebrewVM\bin
+git rm -r --cached ref\CL.BS.MathLearningManager\bin
+git rm -r --cached ref\CL.BS.MathLearningVM\bin
+git rm -r --cached ref\CL.BS.MEF\bin
+git rm -r --cached ref\CL.BS.MenuVM\bin
+git rm -r --cached ref\CL.BS.NotionsManager\bin
+git rm -r --cached ref\CL.BS.NotionsVM\bin
+git rm -r --cached ref\CL.BS.ShapesManager\bin
+git rm -r --cached ref\CL.BS.ShapesVM\bin
+git rm -r --cached ref\CL.BS.VMCommon\bin
+git rm -r --cached ref\Localization\bin
+git rm -r --cached ref\WpfBrainStation\bin
+git rm -r --cached UserInformationManager\bin
+git rm -r --cached WpfBrainStation\bin
+
+REM OBJ folders
+git rm -r --cached obj\Debug
+git rm -r --cached obj\Debug\netstandard1.4
+
+echo Done!

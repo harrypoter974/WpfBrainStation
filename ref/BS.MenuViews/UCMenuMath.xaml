@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="BS.MenuViews.UCMenuMath"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews"
+             mc:Ignorable="d" 
+        d:DesignHeight="900" d:DesignWidth="1000"   >
+  
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenuMath.jpg"/>
+    </UserControl.Background>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*" />
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="112*" />
+            <RowDefinition Height="87*" />
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="18*" />
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="18*" />
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="105*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="22*" />
+            <RowDefinition Height="38*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*" />
+            <ColumnDefinition Width="11*" />
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="165*" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="245*" />
+            <ColumnDefinition Width="32*" />
+            <ColumnDefinition Width="15*" />
+        </Grid.ColumnDefinitions>
+        <Label  Name="labelHome">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}"  CommandParameter="MenuLernVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label Content=""  Grid.Column="11" Grid.ColumnSpan="4"  Grid.Row="9" Grid.RowSpan="3" Name="labelRecognase" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathRecognaz10AVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelArreyMum" Grid.Column="11" Grid.Row="17"  Grid.ColumnSpan="4" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathAddVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.ColumnSpan="9"  Grid.Column="1" Grid.Row="9" Name="labelCoper"   Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathComperVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="11"  Grid.ColumnSpan="4"  Grid.Row="13" Name="labelWrate" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="WritingNumbersOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label Grid.Column="1" Grid.Row="17" Name="labelComplex" Grid.ColumnSpan="9" Grid.RowSpan="3"            >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathAddVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4" Grid.ColumnSpan="11" Grid.Row="21"   Name="labelGame" Margin="0,0,229,0" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuMathGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="label4Arithmetic"  Grid.Column="1"  Grid.Row="13" Grid.ColumnSpan="9"  Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="Menu4ArithmeticVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LCloseHalp" Grid.Column="7" Grid.Row="2"  Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathAddVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHelp" Grid.Column="4"  Grid.Row="5" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathAddVM"/>
+            </Label.InputBindings>
+        </Label>
+
+    </Grid>
+</UserControl>

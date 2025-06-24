@@ -1,0 +1,33 @@
+﻿<Window x:Class="BS.Items.WinMiceKiller"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BS.Items"
+        mc:Ignorable="d"
+        Title="WinMiceKiller" Height="450" Width="800" FontSize="34">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RadioButton Margin="10,5,0,0" GroupName="MCSites" Background="Yellow"  Grid.Row="0">
+            <RadioButton.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding KillMice}" CommandParameter="0" />
+            </RadioButton.InputBindings> עכבר 1</RadioButton>
+        <RadioButton Margin="10,5,0,0" GroupName="MCSites" Background="Yellow"  Grid.Row="1">
+            <RadioButton.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding KillMice}" CommandParameter="1" />
+            </RadioButton.InputBindings> עכבר 2</RadioButton>
+        <RadioButton Margin="10,5,0,0" GroupName="MCSites" Background="Yellow"  Grid.Row="2">
+            <RadioButton.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding KillMice}" CommandParameter="2" />
+            </RadioButton.InputBindings> עכבר 3</RadioButton>
+        <RadioButton Margin="10,5,0,0" GroupName="MCSites" Background="Yellow"  Grid.Row="3">
+            <RadioButton.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding KillMice}" CommandParameter="3" />
+            </RadioButton.InputBindings> עכבר 4</RadioButton>
+    </Grid>
+</Window>

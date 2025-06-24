@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="BS.MathLearningView.Game.UCSudoku"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MathLearningView.Game"
+             xmlns:my="clr-namespace:BS.Items;assembly=BS.Items"          
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:boardVM="clr-namespace:CL.BS.MathLearningVM.VM.Game;assembly=CL.BS.MathLearningVM"   
+             mc:Ignorable="d" 
+               d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <!--<ImageBrush ImageSource="C:\brinStation\Brain Station\תמונות\תמונות 31\suduku heshbon2.jpg" />-->
+        <ImageBrush ImageSource="/BS.MathLearningView;component/MathImage/UCSudoku.jpg"/>
+    </UserControl.Background>
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type  boardVM:SBord4x4VM}">
+            <local:UCBord4x4/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type  boardVM:SBord6x6VM}">
+            <local:UCBord9x9/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="110*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="278*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="32*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="243*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="136*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.ColumnSpan="4"/>
+        <Label Name="labelHome"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GHome}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+    <ContentControl Content="{Binding SudokuBord}" Grid.Column="{Binding Column}" 
+        Grid.Row="{Binding Row}" Grid.ColumnSpan="{Binding ColumnSpan}" Grid.RowSpan="{Binding RowSpan}"/>
+        <ContentControl Content="{Binding SudokuBordR}" Grid.Column="{Binding ColumnR}" 
+                        Grid.Row="{Binding RowR}"  Grid.ColumnSpan="{Binding ColumnSpanR}" Grid.RowSpan="{Binding RowSpanR}"/>
+
+
+        <Label Grid.Row="9" Grid.Column="11" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ShowAnswerBut}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ShowAnswer}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="UCNewAnswerButton1" Grid.Row="9" Grid.Column="14" Grid.ColumnSpan="2"  Grid.RowSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding NewGameBut}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Image x:Name="imageGirlMeseg" Grid.Row="2" Stretch="Fill" Grid.Column="10" Grid.ColumnSpan="4" Grid.RowSpan="2" />
+   
+    </Grid>
+</UserControl>

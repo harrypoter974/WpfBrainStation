@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfBrainStation.WindowBase"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBrainStation"
+        mc:Ignorable="d"
+        Title="WindowBase"  FontFamily="Times New Roman"  Loaded="Window_Loaded"  Closed="Window_Closed"        
+    WindowState="Maximized" WindowStyle="None" LocationChanged="Window_LocationChanged" 
+    ResizeMode="NoResize"  KeyDown="Window_KeyDown" 
+        Icon="cube.ico"    
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"      
+         
+        Height="{DynamicResource {x:Static SystemParameters.FullPrimaryScreenHeight}}"
+        Width="{DynamicResource {x:Static SystemParameters.FullPrimaryScreenWidth}}" >
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DictionaryPage.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="97*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <ContentControl    Content="{Binding CurStep}" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <MediaElement x:Name="mediaElement" Visibility="Collapsed" LoadedBehavior="Play"  Source="{Binding Url}" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <!--<Label>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoBack}" />
+            </Label.InputBindings>
+        </Label>-->
+    </Grid>
+</Window>

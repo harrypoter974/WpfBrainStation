@@ -1,0 +1,172 @@
+﻿<UserControl x:Class="BS.GameViews.UCBingoShapes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.GameViews"
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+              xmlns:board="clr-namespace:BS.BingoBoard.View;assembly=BS.BingoBoard"
+             xmlns:boardVM="clr-namespace:BS.BingoBoard.VM;assembly=BS.BingoBoard"
+             mc:Ignorable="d" 
+            d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="GameImage/UCBingoShapes.jpg"/>
+    </UserControl.Background>
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type  boardVM:BingoVocabularyBoardVM}">
+            <board:UCMemoryVocabularyBoard/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="16*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label   Grid.ColumnSpan="3" Grid.RowSpan="4">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuHeGeneralGameVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:NUCSpeaker Grid.ColumnSpan="7" Grid.RowSpan="6" 
+HorizontalAlignment="Left"  Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" />
+
+
+        <Label  Grid.Column="31"    Grid.Row="26" Grid.ColumnSpan="3" 
+                x:Name="labelStart" IsEnabled="{Binding gameRun}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding NewGame}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="27"   Grid.Row="26" Grid.ColumnSpan="3"  x:Name="UCNewAnswerButton1" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ExitButBackground}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+
+
+        <board:UCMemoryVocabularyBoard  Content="{Binding Board0}" Visibility="{Binding BoardVisibility0}"
+ Grid.ColumnSpan="8" Grid.Column="10" Grid.Row="1" Grid.RowSpan="17" RenderTransformOrigin="0.5,0.5">
+            <board:UCMemoryVocabularyBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCMemoryVocabularyBoard.RenderTransform>
+        </board:UCMemoryVocabularyBoard>
+
+        <board:UCMemoryVocabularyBoard Grid.ColumnSpan="13" Grid.Column="0" Grid.Row="10" Grid.RowSpan="15"   
+ Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" RenderTransformOrigin="0.4,0.45" 
+               Content="{Binding Board1}" Visibility="{Binding BoardVisibility1}">
+            <board:UCMemoryVocabularyBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCMemoryVocabularyBoard.RenderTransform>
+        </board:UCMemoryVocabularyBoard>
+        <board:UCMemoryVocabularyBoard Grid.ColumnSpan="24" Grid.Column="18" Grid.Row="5" Grid.RowSpan="15"
+RenderTransformOrigin="0.6,0.48"  Height="{Binding BoardHeight}" Width="{Binding BoardWidth}"
+               Content="{Binding Board2}" Visibility="{Binding BoardVisibility2}" >
+            <board:UCMemoryVocabularyBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCMemoryVocabularyBoard.RenderTransform>
+        </board:UCMemoryVocabularyBoard>
+
+        <board:UCMemoryVocabularyBoard Content="{Binding Board3}" Visibility="{Binding BoardVisibility3}"
+         Grid.ColumnSpan="8 " Grid.Column="13" Grid.Row="17" Grid.RowSpan="10" />
+        <Items:UCTimerControl Grid.ColumnSpan="10" Grid.Column="24" 
+                              Grid.Row="24" Width="100" Height="100" HorizontalAlignment="Right"/>
+
+        <Items:UCTimer x:Name="UCTimer1" Grid.Column="14" 
+                       Grid.Row="14" Grid.ColumnSpan="3" Grid.RowSpan="5"/>
+
+    </Grid>
+</UserControl>

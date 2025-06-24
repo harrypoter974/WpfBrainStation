@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="BS.MathLearningView.Exercise.UCMathExRecognaz1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MathLearningView.Exercise"
+             xmlns:my1="clr-namespace:BS.Items;assembly=BS.Items"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             mc:Ignorable="d" 
+               d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <!--<ImageBrush ImageSource="C:\brinStation\Tests\WpfBrainStation\ref\WpfBrainStation\Resources\Math\Recognaz\Recognaz10.jpg"/>-->
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="407*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="202*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="564*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="34*"/>
+        </Grid.RowDefinitions>
+        <my1:UCSpeaker Grid.ColumnSpan="2" Grid.RowSpan="4"
+HorizontalAlignment="Left" Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"/>
+        <Label  x:Name="UCNewAnswerButton1" Grid.Column="12" Grid.Row="11" Grid.RowSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LToLevel2"  Grid.Column="10" Grid.Row="12">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MathExRecognaz2VM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LToLevel3"  Grid.Column="9" Grid.Row="12" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MathArray1VM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LToLevel5" Grid.Column="7" Grid.Row="12" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MathArray3VM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LToLevel4"  Grid.Column="8" Grid.Row="12" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MathBlunArrayVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labelHome" Grid.RowSpan="3" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuMathPrefaceVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LToLern0"  Grid.Column="3"  Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MathRecognaz10BVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <TextBlock x:Name="TBNum" Grid.Column="2" FontWeight="Bold" FontSize="70" Grid.Row="9" TextAlignment="Center" 
+                   VerticalAlignment="Center" Text="{Binding TAnswer}"  Grid.RowSpan="4" Grid.ColumnSpan="3" />
+
+        <Image x:Name="imageGirlMesseg" Grid.Column="6"  Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="4" Source="{Binding messagePic}" />
+    </Grid>
+</UserControl>

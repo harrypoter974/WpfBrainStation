@@ -1,0 +1,103 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews"
+         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"         
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+    x:Class="BS.MenuViews.UCMenu4Arithmetic"
+             mc:Ignorable="d" 
+               d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenu4Arithmetic.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="235*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="317*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="270*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="185*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="75*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelHome" Grid.ColumnSpan="2" Grid.RowSpan="2"   >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding HomeBut}"  Stretch="None"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GOHome}" CommandParameter="MenuMathVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label x:Name="LAdd"   Background="{Binding BackgroundBut0}"  
+               Grid.Column="3" Grid.Row="5" Grid.RowSpan="3" Grid.ColumnSpan="6" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuAddVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LSub"  Background="{Binding BackgroundBut1}"    Grid.Column="3" 
+               Grid.Row="10" Grid.RowSpan="3" Grid.ColumnSpan="6" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuSubVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LMoltipol" Background="{Binding BackgroundBut2}"
+               Grid.Column="3" Grid.Row="14" Grid.RowSpan="4" Grid.ColumnSpan="6" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuMoltipolVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LSplite"  Background="{Binding BackgroundBut3}" 
+               Grid.Column="3" Grid.Row="20" Grid.RowSpan="4" Grid.ColumnSpan="6" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuSpliteVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+      
+        <Items:NUCBlueUCSpeaker   VerticalAlignment="Top"  Margin="{Binding SpeakerMargin}" Grid.RowSpan="3"
+         Grid.ColumnSpan="5" HorizontalAlignment="Left"/>
+
+    </Grid>
+</UserControl>

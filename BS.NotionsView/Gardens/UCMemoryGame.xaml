@@ -1,0 +1,1137 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.Gardens"    
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             x:Class="BS.NotionsView.Gardens.UCMemoryGame"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1000" FontSize="50" FontWeight="Bold">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.NotionsView;component/NotionsImage/UCMemoryGame.jpg"/>
+        <!---->
+    </UserControl.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Items:UCTimer Grid.ColumnSpan="2" Grid.Column="15" Grid.RowSpan="5" Grid.Row="15
+                       " Visibility="{Binding TimerVisibility}"  />
+        <Items:NUCSpeaker Grid.ColumnSpan="4" Grid.RowSpan="5"
+HorizontalAlignment="Left"  Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"/>
+        <Border   Grid.Column="12"  Grid.Row="9" Grid.RowSpan="4"  >
+            <Border  RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding Image0}" Stretch="Fill"/>
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle0}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <TextBlock Text="{Binding Text0}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Border>
+        <Border  Grid.Column="16"   Grid.Row="9" Grid.RowSpan="4" Grid.ColumnSpan="2" >
+            <Border  RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding Image1}" Stretch="Fill"/>
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle1}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <TextBlock Text="{Binding Text1}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Border>
+        <Border  Grid.Column="13"   Grid.Row="13"  Grid.RowSpan="3"  >
+            <Border  RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding Image2}" Stretch="Fill"/>
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle2}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <TextBlock Text="{Binding Text2}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Border>
+        <Border  Grid.Column="19"  Grid.Row="13"      Grid.RowSpan="3"  >
+            <Border  RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding Image3}" Stretch="Fill"/>
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle3}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <TextBlock Text="{Binding Text3}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Border>
+        <Border  Grid.Column="20"   Grid.Row="19"  Grid.RowSpan="3" Grid.ColumnSpan="2"   >
+            <Border  RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding Image4}" Stretch="Fill"/>
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle4}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <TextBlock Text="{Binding Text4}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Border>
+        <Border  Grid.Column="12"  Grid.Row="19"   Grid.ColumnSpan="1"  Grid.RowSpan="3" >
+            <Border  RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding Image5}" Stretch="Fill"/>
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle5}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <TextBlock Text="{Binding Text5}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Border>
+        <Border   Grid.Column="18" Grid.Row="22" Grid.RowSpan="8">
+            <Border  RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding Image6}" Stretch="Fill"/>
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle6}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <TextBlock Text="{Binding Text6}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Border>
+        <Border  Grid.Column="14"   Grid.Row="22"  Grid.RowSpan="8" Grid.ColumnSpan="2" >
+            <Border  RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding Image7}" Stretch="Fill"/>
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Angle7}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <TextBlock Text="{Binding Text7}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
+        </Border>
+        <Label x:Name="LHome" Grid.RowSpan="3"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuMemoryVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label  Grid.Column="29" Grid.Row="38"  Grid.ColumnSpan="3" Grid.RowSpan="2"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ExitButBackground}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Image Grid.Column="28" Grid.Row="24"  Grid.ColumnSpan="10" Grid.RowSpan="7"
+               Source="{Binding BackgroundGrope}" Stretch="Fill"/>
+        <Label Grid.Column="28" Grid.Row="24"  Grid.ColumnSpan="10" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetGrope}" CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.ColumnSpan="10" Grid.Column="28"  Grid.Row="25" Grid.RowSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetGrope}" CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.ColumnSpan="10" Grid.Column="28"  Grid.Row="27" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetGrope}" CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="28" Grid.Row="28"  Grid.ColumnSpan="10"  Grid.RowSpan="3">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetGrope}" CommandParameter="3" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label Grid.Column="29"  Grid.Row="34" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding NumCardBut4}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetCardNum}" CommandParameter="4" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="31"  Grid.Row="34" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding NumCardBut3}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetCardNum}" CommandParameter="3" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="33"  Grid.Row="34" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding NumCardBut2}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetCardNum}" CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="35"  Grid.Row="34">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding NumCardBut1}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetCardNum}" CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="36"  Grid.Row="34" Grid.ColumnSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding NumCardBut0}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetCardNum}" CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <MediaElement x:Name="MediaElement1"   LoadedBehavior="{Binding IsPlay}"
+                      Volume="{Binding Volume}"
+                      Source="{Binding UrlPlay}" Visibility="Collapsed">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MediaEnded">
+                    <i:InvokeCommandAction Command="{Binding StopPlay}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </MediaElement>
+        <Label  Grid.Column="33" Grid.Row="38" Grid.RowSpan="2" Grid.ColumnSpan="4" IsEnabled="{Binding gameRun}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding NewGame}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="25"  Grid.Row="38"  Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding OpenMenu}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding OpenMenuBut}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.ColumnSpan="4" Grid.Column="21" Grid.Row="6"  Grid.RowSpan="4"   IsEnabled="{Binding gameRun}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding OpenHelp}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="8" Grid.Row="3" Grid.RowSpan="2"   IsEnabled="{Binding gameRun}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding OpenHelp}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+
+        <Image x:Name="image00" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="5" 
+               Source="{Binding TBSoldier00}" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image01" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="5" Grid.RowSpan="5"  
+               Source="{Binding TBSoldier01}" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image02" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="7" Grid.RowSpan="7"  
+               Source="{Binding TBSoldier02}" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image03" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="10" Grid.RowSpan="2" 
+               Source="{Binding TBSoldier03}" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image04" Grid.Column="8" Grid.ColumnSpan="2"  Grid.Row="11" Grid.RowSpan="2"
+               Source="{Binding TBSoldier04}" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Items:UCBlinkBord  Grid.Column="8" Grid.Row="2" Grid.ColumnSpan="2"  Grid.RowSpan="10"
+                            Visibility="{Binding BaseWinBlink0}"/>
+
+        <Image x:Name="image10" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="32" Grid.RowSpan="4"  
+               Source="{Binding TBSoldier10}" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Left">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image11" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="32" Grid.RowSpan="4" 
+               Source="{Binding TBSoldier11}" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Left">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image12" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="32" Grid.RowSpan="4"  
+               Source="{Binding TBSoldier12}" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Left">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image13" Grid.Column="6" Grid.ColumnSpan="4" Grid.Row="32" Grid.RowSpan="4" 
+               Source="{Binding TBSoldier13}" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Left">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image14" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="32" Grid.RowSpan="4" 
+               Source="{Binding TBSoldier14}" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Left">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Items:UCBlinkBord  Grid.Column="2" Grid.Row="32" Grid.ColumnSpan="7"  Grid.RowSpan="4"  
+                            Visibility="{Binding BaseWinBlink1}"/>
+
+        <Image x:Name="image20" Grid.Column="30" Grid.ColumnSpan="6" Grid.Row="6" Grid.RowSpan="2" 
+               Source="{Binding TBSoldier20}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image21" Grid.Column="27" Grid.ColumnSpan="7" Grid.Row="6" Grid.RowSpan="2"
+               Source="{Binding TBSoldier21}" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Right">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image22" Grid.Column="25" Grid.ColumnSpan="5" Grid.Row="6" Grid.RowSpan="2" 
+               Source="{Binding TBSoldier22}" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Right">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image23" Grid.Column="23" Grid.ColumnSpan="4" Grid.Row="6" Grid.RowSpan="2" 
+               Source="{Binding TBSoldier23}" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Right">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image24" Grid.Column="22" Grid.ColumnSpan="4" Grid.Row="6" Grid.RowSpan="2" 
+               Source="{Binding TBSoldier24}" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Right">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Items:UCBlinkBord  Grid.Column="23" Grid.Row="6" Grid.ColumnSpan="13"  Grid.RowSpan="2" 
+                            Visibility="{Binding BaseWinBlink2}"/>
+
+        <Image x:Name="image30" Grid.Column="23"  Grid.Row="33" Grid.RowSpan="6"  Source="{Binding TBSoldier30}" VerticalAlignment="Bottom"/>
+        <Image x:Name="image31" Grid.Column="23"   Grid.Row="29" Grid.RowSpan="8" Source="{Binding TBSoldier31}" VerticalAlignment="Bottom"/>
+        <Image x:Name="image32" Grid.Column="23"   Grid.Row="26" Grid.RowSpan="7" Source="{Binding TBSoldier32}" VerticalAlignment="Bottom"/>
+        <Image x:Name="image33" Grid.Column="23"   Grid.Row="23" Grid.RowSpan="6" Source="{Binding TBSoldier33}" VerticalAlignment="Bottom"/>
+        <Image x:Name="image34" Grid.Column="23"   Grid.Row="21" Grid.RowSpan="5" Source="{Binding TBSoldier34}" VerticalAlignment="Bottom"/>
+        <Items:UCBlinkBord  Grid.Column="23" Grid.Row="23"   Grid.RowSpan="16"  Visibility="{Binding BaseWinBlink3}"/>
+
+        <TextBlock TextAlignment="Center" Grid.Column="1"  Grid.Row="14" Grid.ColumnSpan="4"
+                   Text="{Binding TextQuestion0}" Grid.RowSpan="2" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion0}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="10" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="5"  Grid.Row="14" Text="{Binding TextQuestion1}"
+  Grid.ColumnSpan="4" Grid.RowSpan="2"  HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion1}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="11" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="1"  Grid.Row="17"  Grid.ColumnSpan="4" 
+                   Grid.RowSpan="2" Text="{Binding TextQuestion2}" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion2}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="12" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="5"  Grid.Row="17"  Grid.ColumnSpan="4"
+                   Grid.RowSpan="2" Text="{Binding TextQuestion3}" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion3}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="13" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="1"  Grid.Row="20"  Grid.ColumnSpan="4" 
+                   Grid.RowSpan="2" Text="{Binding TextQuestion4}" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion4}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="14" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="5"  Grid.Row="20"  Grid.ColumnSpan="4"
+                   Grid.RowSpan="2" Text="{Binding TextQuestion5}" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion5}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="15" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="23"   Grid.ColumnSpan="4" 
+                   Grid.RowSpan="7" Text="{Binding TextQuestion6}" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion6}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="16" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="5"  Grid.Row="23"  Grid.ColumnSpan="4" Grid.RowSpan="7" 
+                   Text="{Binding TextQuestion7}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion7}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="17" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+
+        <TextBlock TextAlignment="Center" Grid.Column="23"  Grid.Row="9" Grid.ColumnSpan="7"
+                   Grid.RowSpan="3" Text="{Binding TextQuestion0}" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion0}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="20" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="29"  Grid.Row="9" Grid.ColumnSpan="7" 
+                   Grid.RowSpan="3" Text="{Binding TextQuestion1}" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion1}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="21" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="23"  Grid.Row="13"  Grid.ColumnSpan="7"
+                   Grid.RowSpan="2" Text="{Binding TextQuestion2}" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion2}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="22" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center"  Grid.Column="29"  Grid.Row="13"  Grid.ColumnSpan="7"
+                   Grid.RowSpan="2" Text="{Binding TextQuestion3}" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion3}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="23" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center"  Grid.Column="23"  Grid.Row="16"  Grid.ColumnSpan="7" 
+                   Grid.RowSpan="2" Text="{Binding TextQuestion4}" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion4}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="24" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center"  Grid.Column="29" Grid.Row="16"  Grid.ColumnSpan="7" 
+                   Grid.RowSpan="2" Text="{Binding TextQuestion5}" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion5}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="25" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center"  Grid.Column="23" Grid.Row="19" Grid.ColumnSpan="7" 
+                   Grid.RowSpan="2" Text="{Binding TextQuestion6}" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"  RenderTransformOrigin="0.5,0.5" Height="70" Width="70">  
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion6}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="26" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center"  Grid.Column="29"  Grid.Row="19" Grid.ColumnSpan="7"
+                   Grid.RowSpan="2" Text="{Binding TextQuestion7}" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion7}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="27" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+
+        <TextBlock TextAlignment="Center" Grid.Column="11" Text="{Binding TextQuestion0}" Grid.Row="1" 
+                   Grid.RowSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion0}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="00" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="12"  Grid.Row="1"  Grid.RowSpan="7"
+                   Text="{Binding TextQuestion1}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion1}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="01" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="13"  Grid.Row="1" Text="{Binding TextQuestion2}" 
+                   Grid.RowSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center"  
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion2}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="02" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="14"  Grid.Row="1" Text="{Binding TextQuestion3}" 
+                   Grid.ColumnSpan="2" Grid.RowSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion3}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="03" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="16" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="7"
+                   Text="{Binding TextQuestion4}" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion4}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="04" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="18"  Grid.Row="1" Text="{Binding TextQuestion5}"
+                   Grid.RowSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion5}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="05" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="19" Grid.Row="1" Grid.RowSpan="7"
+                   Text="{Binding TextQuestion6}" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion6}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="06" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="20"  Grid.Row="1" Text="{Binding TextQuestion7}" 
+                   Grid.RowSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   RenderTransformOrigin="0.5,0.5" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion7}"/>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="07" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+
+        <TextBlock TextAlignment="Center" Grid.Column="11"  Grid.Row="32" Text="{Binding TextQuestion0}" 
+                   Grid.RowSpan="8" HorizontalAlignment="Center" VerticalAlignment="Center"   Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion0}"/>
+            </TextBlock.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="30" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="12"  Grid.Row="32" Grid.RowSpan="8" 
+                   Text="{Binding TextQuestion1}"  HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion1}"/>
+            </TextBlock.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="31" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="13"  Grid.Row="32"
+                   Text="{Binding TextQuestion2}" Grid.RowSpan="8" HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion2}"/>
+            </TextBlock.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="32" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="14"  Grid.Row="32"
+                   Text="{Binding TextQuestion3}" Grid.RowSpan="8" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"  Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion3}"/>
+            </TextBlock.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="33" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="16"  Grid.Row="32" Text="{Binding TextQuestion4}"
+                   Grid.ColumnSpan="2" Grid.RowSpan="8" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion4}"/>
+            </TextBlock.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="34" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="18" Text="{Binding TextQuestion5}" Grid.Row="32" 
+                   Grid.RowSpan="8" HorizontalAlignment="Center" VerticalAlignment="Center"  Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion5}"/>
+            </TextBlock.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="35" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="19" Grid.Row="32"  Text="{Binding TextQuestion6}"
+                   Grid.RowSpan="8" HorizontalAlignment="Center" VerticalAlignment="Center"  Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion6}"/>
+            </TextBlock.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="36" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <TextBlock TextAlignment="Center" Grid.Column="20" Text="{Binding TextQuestion7}" Grid.Row="32" 
+                   Grid.RowSpan="8" HorizontalAlignment="Center" VerticalAlignment="Center"  Height="70" Width="70">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="{Binding ImageQuestion7}"/>
+            </TextBlock.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TapAnswer}" CommandParameter="37" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+    </Grid>
+</UserControl>

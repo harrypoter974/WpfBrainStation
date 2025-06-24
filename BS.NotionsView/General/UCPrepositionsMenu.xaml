@@ -1,0 +1,70 @@
+﻿<UserControl xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"  x:Class="BS.NotionsView.General.UCPrepositionsMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.General"
+             mc:Ignorable="d" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+            d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.NotionsView;component/NotionsImage/PrepositionsMenu.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="701*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="61*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="314*"/>
+            <ColumnDefinition Width="148*"/>
+            <ColumnDefinition Width="148*"/>
+            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="105*"/>
+        </Grid.ColumnDefinitions>
+        <Label  Grid.ColumnSpan="2"  Grid.RowSpan="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding HomeBut}"  Stretch="None"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ExitingGame}"
+                              CommandParameter="MenuHeGeneralRulesWeightedVM"/>
+                <MouseBinding MouseAction="RightClick"  Command="{Binding LookHome}" />
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="3" Grid.Row="5" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="HePrepositionsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4" Grid.Row="5" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToPage}" CommandParameter="PrepositionsLearnVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="6" Grid.Row="2" />
+        <Label  Grid.Column="7" Grid.Row="2" />
+        <Label  Grid.Column="8" Grid.Row="2" />
+
+        <MediaElement x:Name="MediaElement1"   LoadedBehavior="{Binding IsPlay}"
+                      Volume="{Binding Volume}"
+                      Source="{Binding UrlPlay}" Visibility="Collapsed">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MediaEnded">
+                    <i:InvokeCommandAction Command="{Binding StopPlay}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </MediaElement>
+    </Grid>
+</UserControl>

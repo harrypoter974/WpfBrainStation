@@ -1,0 +1,42 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.GameViews"
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" x:Class="BS.GameViews.XUCMemoryView"
+             mc:Ignorable="d" 
+                d:DesignHeight="900" d:DesignWidth="1000">
+    <!--<UserControl.Background>
+        <ImageBrush ImageSource="C:\brinStation\Brain Station\WpfBrainStation\ref\WpfBrainStation\Resources\Game\UCPuzzle25\UCPuzzle25_6.jpg"/>
+    </UserControl.Background>-->
+    <UserControl.Background>
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="189*"/>
+        </Grid.ColumnDefinitions>
+
+        <Items:NUCSpeaker Grid.ColumnSpan="2" Grid.RowSpan="3"
+Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Grid.Column="1"  Grid.Row="1">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SwitchBack}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labelHome"   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="MenuGameVM"/>
+            </Label.InputBindings>
+        </Label>
+    </Grid>
+</UserControl>

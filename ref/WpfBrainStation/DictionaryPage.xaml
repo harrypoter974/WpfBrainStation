@@ -1,0 +1,423 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:view="clr-namespace:BS.MenuViews;assembly=BS.MenuViews"              
+                    xmlns:viewEnGame="clr-namespace:BS.EnglishViews.Game;assembly=BS.EnglishViews"
+                    xmlns:viewEnRecognition="clr-namespace:BS.EnglishViews.Recognition;assembly=BS.EnglishViews"
+                    xmlns:viewEnText="clr-namespace:BS.EnglishViews.Text;assembly=BS.EnglishViews"
+                    xmlns:viewEnNotions="clr-namespace:BS.EnglishViews.Notions;assembly=BS.EnglishViews"  
+                   xmlns:viewEnWords="clr-namespace:BS.EnglishViews.Words;assembly=BS.EnglishViews"
+                    xmlns:viewHeGame="clr-namespace:BS.HebrewView.Game;assembly=BS.HebrewView"
+                    xmlns:viewMathAdd="clr-namespace:BS.MathLearningView.Add;assembly=BS.MathLearningView"
+                    xmlns:viewMathComper="clr-namespace:BS.MathLearningView.Comper;assembly=BS.MathLearningView"
+                    xmlns:viewMathRecognaz="clr-namespace:BS.MathLearningView.Exercise;assembly=BS.MathLearningView"
+                    xmlns:viewMathSplite="clr-namespace:BS.MathLearningView.Splite;assembly=BS.MathLearningView"
+                    xmlns:viewMathSub="clr-namespace:BS.MathLearningView.Sub;assembly=BS.MathLearningView"
+                    xmlns:viewMathGame="clr-namespace:BS.MathLearningView.Game;assembly=BS.MathLearningView"
+                    xmlns:viewWritingNumbers="clr-namespace:CL.BS.MathLearningVM.WritingNumbers;assembly=CL.BS.MathLearningVM"
+                    xmlns:viewShapesAngle="clr-namespace:BS.ShapesView.Angle;assembly=BS.ShapesView"                
+                    xmlns:viewShapeLine1="clr-namespace:BS.ShapesView.Line;assembly=BS.ShapesView"
+                    xmlns:viewShapeCircles="clr-namespace:BS.ShapesView.Circles;assembly=BS.ShapesView"
+                    xmlns:viewShapeRect="clr-namespace:BS.ShapesView.Rect;assembly=BS.ShapesView"
+                    xmlns:viewShapeShape="clr-namespace:BS.ShapesView.Shape;assembly=BS.ShapesView"
+                    xmlns:viewShapeGame="clr-namespace:BS.ShapesView.Game;assembly=BS.ShapesView"
+                    xmlns:viewShapeTringel="clr-namespace:BS.ShapesView.Tringel;assembly=BS.ShapesView"
+                    xmlns:viewHeRecognition="clr-namespace:BS.HebrewView.Recognition;assembly=BS.HebrewView"
+                    xmlns:viewNotionsAnimals="clr-namespace:BS.NotionsView.NotionsImage.Animals;assembly=BS.NotionsView"
+                    xmlns:viewNotionsClock="clr-namespace:BS.NotionsView.Clock;assembly=BS.NotionsView"
+                    xmlns:viewNotionsColors="clr-namespace:BS.NotionsView.Colors;assembly=BS.NotionsView"
+                    
+                    xmlns:vm="clr-namespace:CL.BS.HebrewVM.Game.BS.MenuVM;assembly=CL.BS.MenuVM"
+                    xmlns:vmEnGame="clr-namespace:CL.BS.HebrewVM.Game.BS.EnglishVM.Game;assembly=CL.BS.EnglishVM"
+                    xmlns:vmEnRecognition="clr-namespace:CL.BS.HebrewVM.Game.BS.EnglishVM.Recognition;assembly=CL.BS.EnglishVM"
+                    xmlns:vmEnText="clr-namespace:CL.BS.EnglishVM.Text;assembly=CL.BS.EnglishVM"
+                    xmlns:vmEnNotions="clr-namespace:CL.BS.EnglishVM.Notions;assembly=CL.BS.EnglishVM"
+                    xmlns:vmEnWords="clr-namespace:CL.BS.EnglishVM.Words;assembly=CL.BS.EnglishVM"
+                    xmlns:vmHeGame="clr-namespace:CL.BS.HebrewVM.Game;assembly=CL.BS.HebrewVM"
+                    xmlns:vmHeRecognition="clr-namespace:CL.BS.HebrewVM.VM.Recognition;assembly=CL.BS.HebrewVM"
+                    xmlns:vmMathComper="clr-namespace:BS.MathLearningView.Comper;assembly=BS.MathLearningView"
+                    xmlns:vmMathRecognaz="clr-namespace:CL.BS.MathLearningVM.Recognaz;assembly=CL.BS.MathLearningVM"
+                    xmlns:vmMathSplite="clr-namespace:CL.BS.MathLearningVM.Splite;assembly=CL.BS.MathLearningVM"
+                    xmlns:vmMathSub="clr-namespace:BS.MathLearningView.Sub;assembly=BS.MathLearningView"
+                    xmlns:vmMathGame="clr-namespace:CL.BS.MathLearningVM.VM.Game;assembly=CL.BS.MathLearningVM"
+                    xmlns:vmWritingNumbers="clr-namespace:CL.BS.MathLearningVM.WritingNumbers;assembly=CL.BS.MathLearningVM"
+                    xmlns:vmShapesAngle="clr-namespace:CL.BS.ShapesVM.VM.Angle;assembly=CL.BS.ShapesVM"
+                    xmlns:vmShapeLine="clr-namespace:CL.BS.ShapesVM.VM.Line;assembly=CL.BS.ShapesVM"
+                    xmlns:vmShapeCircles="clr-namespace:CL.BS.ShapesVM.VM.Circles;assembly=CL.BS.ShapesVM"
+                    xmlns:vmShapeRect="clr-namespace:CL.BS.ShapesVM.VM.Rect;assembly=CL.BS.ShapesVM"
+                    xmlns:vmShapeShape="clr-namespace:CL.BS.ShapesVM.VM.Shape;assembly=CL.BS.ShapesVM" 
+                    xmlns:vmShapeGame="clr-namespace:CL.BS.ShapesVM.VM.Game;assembly=CL.BS.ShapesVM"
+                    xmlns:vmShapeTringel="clr-namespace:CL.BS.ShapesVM.VM.Tringel;assembly=CL.BS.ShapesVM"
+                    xmlns:vmNotionsAnimals="clr-namespace:CL.BS.NotionsVM.VM.Animals;assembly=CL.BS.NotionsVM"
+                    xmlns:vmNotionsClock="clr-namespace:CL.BS.NotionsVM.VM.Clock;assembly=CL.BS.NotionsVM"
+                    xmlns:vmNotionsColors="clr-namespace:CL.BS.NotionsVM.VM.Colors;assembly=CL.BS.NotionsVM"
+                    xmlns:local="clr-namespace:WpfBrainStation">
+    <DataTemplate DataType="{x:Type  vm:Menu4ArithmeticVM}">
+        <view:UCMenu4Arithmetic/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuDataUserVM}">
+        <view:UCMenuDataUser1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuEnGameVM}">
+        <view:UCMenuEnGame/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuEnGeneralVM}">
+        <view:UCMenuEnGeneral/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuHeReadingVM}">
+        <view:UCMenuHeReading/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuEnWordsVM}">
+        <view:UCMenuEnWords/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuEnglishVM}">
+        <view:UCMenuEnglish1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuGeographyVM}">
+        <view:UCMenuGeography/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuGameVM}">
+        <view:UCMenuGame1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuHebrewVM}">
+        <view:UCMenuHebrew1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuHeGameVM}">
+        <view:UCMenuHeGame/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuHeGeneralGameVM}">
+        <view:UCMenuHeGeneralGame/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuHeGeneralVM}">
+        <view:UCMenuHeGeneral1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuLernVM}">
+        <view:UCMenuLern1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuMathVM}">
+        <view:UCMenuMath/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuMathGameVM}">
+        <view:UCMenuMathGame/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuMoneyVM}">
+        <view:UCMenuMoney/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuOpenVM}">
+        <view:UCMenuOpen1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuPrintVM}">
+        <view:UCMenuPrint/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuPuzzlesVM}">
+        <view:UCMenuPuzzles/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuRiddlesVM}">
+        <view:UCMenuRiddles1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MenuShapeVM}">
+        <view:UCMenuShape1/>
+    </DataTemplate>
+
+   <DataTemplate DataType="{x:Type vmEnGame:EnBingoLetterVM}">
+        <viewEnGame:UCEnBingoLetter/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnGame:EnBingoOpenLetterVM}">
+        <viewEnGame:UCEnBingoOpenLetter/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnGame:EnLottoVM}">
+        <viewEnGame:UCEnLotto/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnGame:EnMemoryLetterVM}">
+        <viewEnGame:UCEnMemoryLetter/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnGame:EnWordsGameVM}">
+        <viewEnGame:UCEnWordsGame/>
+    </DataTemplate>    
+    <DataTemplate DataType="{x:Type vmEnRecognition:EnKnowLetterVM}">
+        <viewEnRecognition:UCEnKnowLetter/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnRecognition:EnLetterRecognition1VM}">
+        <viewEnRecognition:UCEnLetterRecognition1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnRecognition:EnLetterRecognition2VM}">
+        <viewEnRecognition:UCEnLetterRecognition2/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnRecognition:EnLetterRecognition3VM}">
+        <viewEnRecognition:UCEnLetterRecognition_3/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnRecognition:EnLettersKnowVM}">
+        <viewEnRecognition:UCEnLettersKnow/>
+    </DataTemplate>   
+     <DataTemplate DataType="{x:Type vmEnText:EnTextBigVM}">
+        <viewEnText:UCEnTextBig/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnText:EnTextSmallVM}">
+        <viewEnText:UCEnTextSmall/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnText:EnTextOppositesVM}">
+        <viewEnText:UCEnTextOpposites/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnText:EnTextPrepositionsVM}">
+        <viewEnText:UCEnTextPrepositions/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnText:WritingEnMenuVM}">
+        <viewEnText:UCWritingEnMenu/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnAnimalsVM}">
+        <viewEnNotions:UCEnAnimals/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnCalendarVM }">
+        <viewEnNotions:UCEnCalendar/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnDaysOfTheWeekVM}">
+        <viewEnNotions:UCEnDaysOfTheWeek/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnFamilyVM}">
+        <viewEnNotions:UCEnFamily/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnNumbersVM}">
+        <viewEnNotions:UCEnNumbers/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnColorMenuVM}">
+        <viewEnNotions:UCEnColorMenu/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnColorVM}">
+        <viewEnNotions:UCEnColor/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnClockVM}">
+        <viewEnNotions:UCEnClock/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnOppositesExerciseVM}">
+        <viewEnNotions:UCEnOppositesExercise/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnOppositesLernVM}">
+        <viewEnNotions:UCEnOppositesLern/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnPrepositionsExerciseVM}">
+        <viewEnNotions:UCEnOppositesExercise/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnNotions:EnPrepositionsLernVM}">
+        <viewEnNotions:UCEnPrepositionsLern/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnText:EnWriteLetterVM}">
+        <viewEnText:UCEnWriteLetter/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnText:EnWritingLettersMenuVM}">
+        <viewEnText:UCEnWritingLettersMenu/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnText:WritingEnNameVM}">
+        <viewEnText:UCWritingEnName/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnWords:EnPronunciationVM}">
+        <viewEnWords:UCEnPronunciation/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmEnWords:EnSyllableVM}">
+        <viewEnWords:UCEnSyllable/>
+    </DataTemplate>
+        
+    <DataTemplate DataType="{x:Type vmHeGame:HeBingoLetterVM}">
+        <viewHeGame:UCHeBingoLetter/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmHeGame:HeMemoryLetterVM}">
+        <viewHeGame:UCHeMemoryLetter/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmHeGame:HeOpenLetterVM}">
+        <viewHeGame:UCHeOpenLetter/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmHeGame:HeWordGameVM}">
+        <viewHeGame:UCHeWordGame/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmHeRecognition:KnowLetterMenuVM}">
+        <viewHeRecognition:UCKnowLetterMenu/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmHeRecognition:KnowLetterVM}">
+        <viewHeRecognition:UCKnowLetter/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmHeRecognition:KnowYourNameVM}">
+        <viewHeRecognition:UCKnowYourName/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmHeRecognition:RecognaseLeters1VM}">
+        <viewHeRecognition:UCRecognaseLeters1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmHeRecognition:RecognaseLeters2VM}">
+        <viewHeRecognition:UCRecognaseLeters2/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmHeRecognition:RecognaseLeters3VM}">
+        <viewHeRecognition:UCRecognaseLeters3/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vmMathComper:UCMathComper}">
+        <viewMathComper:UCMathComper/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathRecognaz:MathArray1VM}">
+        <viewMathRecognaz:UCMathArray1/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathRecognaz:MathArray2VM}">
+        <viewMathRecognaz:UCMathArray2/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathRecognaz:MathBlunArrayVM}">
+        <viewMathRecognaz:UCMathBlunArray/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathRecognaz:MathExRecognaz1VM}">
+        <viewMathRecognaz:UCMathExRecognaz1/>
+    </DataTemplate>  
+    <DataTemplate DataType="{x:Type vmMathRecognaz:MathExRecognaz2VM}">
+        <viewMathRecognaz:UCMathExRecognaz2/>
+    </DataTemplate>
+      <DataTemplate DataType="{x:Type vmMathRecognaz:MathExRecognaz10VM}">
+        <viewMathRecognaz:UCMathExRecognaz10/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathRecognaz:MathRecognaz100AVM}">
+        <viewMathRecognaz:UCMathRecognazOpen100A/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathRecognaz:MathRecognaz100BVM}">
+        <viewMathRecognaz:UCMathRecognazOpen100B/>
+    </DataTemplate>
+       <DataTemplate DataType="{x:Type vmMathRecognaz:MathRecognaz100CVM}">
+        <viewMathRecognaz:UCMathRecognazOpen100C/>
+    </DataTemplate> 
+    <DataTemplate DataType="{x:Type vmMathRecognaz:MathRecognaz10AVM}">
+        <viewMathRecognaz:UCMathRecognazOpen10A/>
+    </DataTemplate> 
+    <DataTemplate DataType="{x:Type vmMathRecognaz:MathRecognaz10BVM}">
+        <viewMathRecognaz:UCMathRecognazOpen10B/>
+    </DataTemplate> 
+    <DataTemplate DataType="{x:Type vmMathRecognaz:NumberStructureExerciseVM}">
+        <viewMathRecognaz:UCNumberStructureExercise/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathRecognaz:NumberStructureLernVM}">
+        <viewMathRecognaz:UCNumberStructureLern/>
+    </DataTemplate>
+    
+    
+    <DataTemplate DataType="{x:Type vmMathSub:UCMathSub}">
+        <viewMathSub:UCMathSub/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathSub:UCMathSubFracture}">
+        <viewMathSub:UCMathSubFracture/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathGame:BingoMathVM}">
+        <viewMathGame:UCBingoMath/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathGame:BingoNumVM}">
+        <viewMathGame:UCBingoNum/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathGame:MathDoubleMatchVM}">
+        <viewMathGame:UCMathDoubleMatch/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathGame:MathMatchVM}">
+        <viewMathGame:UCMathMatch/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathGame:MathMatchMenuVM}">
+        <viewMathGame:UCMathMatchMenu/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathGame:MathMemoryNumVM}">
+        <viewMathGame:UCMathMemoryNum/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathGame:SudokuVM}">
+        <viewMathGame:UCSudoku/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vmMathSplite:MathSplit2VM}">
+        <viewMathSplite:UCMathSplit2/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmMathSplite:MathSpliteFractureVM}">
+        <viewMathSplite:UCMathSpliteFracture/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vmShapesAngle:AngleLineVM}">
+        <viewShapesAngle:UCAngleLine/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapesAngle:AngleMachVM}">
+        <viewShapesAngle:UCAngleMach/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapesAngle:AngleOpenVM}">
+        <viewShapesAngle:UCAngleOpen/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeCircles:CirclesOpenVM}">
+        <viewShapeCircles:UCCirclesOpen/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeCircles:CirclesExerciseVM}">
+        <viewShapeCircles:UCCirclesExercise/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeLine:LineOpenVM}">
+        <viewShapeLine1:UCLineOpen/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeLine:LineMachVM}" >
+        <viewShapeLine1:UCLineMach/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeLine:LineExerciseVM}">
+        <viewShapeLine1:UCLineExercise/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeRect:RectOpenVM}">
+        <viewShapeRect:UCRectOpen/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeRect:RectExerciseVM}">
+        <viewShapeRect:UCRectExercise/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeRect:RectMachVM}">
+        <viewShapeRect:UCRectMach/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeShape:ShapeOpenVM}">
+        <viewShapeShape:UCShapeOpen/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeShape:ShapeExerciseVM}">
+        <viewShapeShape:UCShapeExercise/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vmShapeTringel:TringelOpenVM}">
+        <viewShapeTringel:UCTringelOpen/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeTringel:TringelExerciseVM}">
+        <viewShapeTringel:UCTringelExercise/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeTringel:TringelMachVM}">
+        <viewShapeTringel:UCTringelMach/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmShapeGame:ShapeGameVM}">
+        <viewShapeGame:UCShapeGame/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vmNotionsClock:ClockBingoAnalogVM}">
+        <viewNotionsClock:UCClockBingoAnalog/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmNotionsClock:ClockBingoDigitalVM}">
+        <viewNotionsClock:UCClockBingoDigital/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmNotionsClock:ClockCompassesVM}">
+    <viewNotionsClock:UCClockCompasses/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmNotionsClock:ClockDigitsVM}">
+        <viewNotionsClock:UCClockDigits/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmNotionsClock:ClockExerciseCompassesVM}">
+        <viewNotionsClock:UCClockExerciseCompasses/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmNotionsClock:ClockExerciseDigitalVM}">
+        <viewNotionsClock:UCClockExerciseDigital/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vmNotionsClock:ClockMenuVM}">
+        <viewNotionsClock:UCClockMenu/>
+    </DataTemplate>
+    <DataTemplate  DataType="{x:Type vmNotionsAnimals:AnimalsBingoVM}">
+        <viewNotionsAnimals:UCAnimalsBingo/>
+    </DataTemplate>
+    <DataTemplate  DataType="{x:Type vmNotionsAnimals:AnimalsLernVM}">
+        <viewNotionsAnimals:UCAnimalsLern/>
+    </DataTemplate>
+    <DataTemplate  DataType="{x:Type vmNotionsAnimals:AnimalsMemoryVM}">
+        <viewNotionsAnimals:UCAnimalsMemory/>
+    </DataTemplate>
+     <DataTemplate  DataType="{x:Type vmNotionsColors:ColorsLearnGroupVM}">
+            <viewNotionsColors:UCColorsLearnGroup/>
+    </DataTemplate>
+    <DataTemplate  DataType="{x:Type vmNotionsColors:ColorsMenuVM}">
+        <viewNotionsColors:UCColorsMenu/>
+    </DataTemplate>
+    <DataTemplate  DataType="{x:Type vmNotionsColors:ExerciseColorsVM}">
+        <viewNotionsColors:UCExerciseColors/>
+    </DataTemplate>
+    <DataTemplate  DataType="{x:Type vmNotionsColors:ExerciseGroupColorsVM}">
+        <viewNotionsColors:UCExerciseGroupColors/>
+    </DataTemplate>
+</ResourceDictionary>

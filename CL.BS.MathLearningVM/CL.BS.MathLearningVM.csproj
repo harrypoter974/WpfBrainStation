@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFD6427A-6F68-4EFE-A0BD-69E99FDD70BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CL.BS.MathLearningVM</RootNamespace>
+    <AssemblyName>CL.BS.MathLearningVM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BS.BingoBoard, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\BS.BingoBoard.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VM\Add\MathAddComplex2VM.cs" />
+    <Compile Include="VM\Add\MathAddComplexVM.cs" />
+    <Compile Include="VM\Add\MathAddFracture2VM.cs" />
+    <Compile Include="VM\Add\MathAddFractureVM.cs" />
+    <Compile Include="VM\Add\MathAddVM.cs" />
+    <Compile Include="VM\BaseAddEndSub1.cs" />
+    <Compile Include="VM\BaseCalculationVM.cs" />
+    <Compile Include="VM\BaseFractureVM.cs" />
+    <Compile Include="VM\Comper\BaseMathComperVM.cs" />
+    <Compile Include="VM\Comper\BordComperVM.cs" />
+    <Compile Include="VM\Comper\LernComperVM.cs" />
+    <Compile Include="VM\Comper\MathComperVM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VM\Comper\MathComperVM1.cs" />
+    <Compile Include="VM\Comper\MathComperVM2.cs" />
+    <Compile Include="VM\Comper\MathComperVM3.cs" />
+    <Compile Include="VM\Comper\MenuComperVM.cs" />
+    <Compile Include="VM\Exercise\BoardArrayVM.cs" />
+    <Compile Include="VM\Exercise\BoardExercise1VM.cs" />
+    <Compile Include="VM\Exercise\BoardExercise2VM.cs" />
+    <Compile Include="VM\Exercise\BoardExerciseFractureVM.cs" />
+    <Compile Include="VM\Exercise\MathArray4VM.cs" />
+    <Compile Include="VM\Exercise\MathComplexVM.cs" />
+    <Compile Include="VM\Exercise\MathExercise2VM.cs" />
+    <Compile Include="VM\Exercise\MathVariableVM.cs" />
+    <Compile Include="VM\Exercise\BoardVariableVM.cs" />
+    <Compile Include="VM\Game\BaseSudokuBord.cs" />
+    <Compile Include="VM\Game\BingoMathVM.cs" />
+    <Compile Include="VM\Game\BingoNumLanVM.cs" />
+    <Compile Include="VM\Game\BingoNumVM.cs" />
+    <Compile Include="VM\Game\BingoQuestionsVM.cs" />
+    <Compile Include="VM\Game\BoardMathMatchVM.cs" />
+    <Compile Include="VM\Game\LaddersAndRopesMathVM.cs" />
+    <Compile Include="VM\Game\MathMemoryMathVM.cs" />
+    <Compile Include="VM\Game\MathMemoryNumLanVM.cs" />
+    <Compile Include="VM\Game\SBord4x4VM.cs" />
+    <Compile Include="VM\Game\SBord6x6VM.cs" />
+    <Compile Include="VM\Game\MathDoubleMatchVM.cs" />
+    <Compile Include="VM\Game\MathMatchMenuVM.cs" />
+    <Compile Include="VM\Game\MathMatchVM.cs" />
+    <Compile Include="VM\Game\MathMemoryNumVM.cs" />
+    <Compile Include="VM\Game\Sudoku4Player9x9VM.cs" />
+    <Compile Include="VM\Game\Sudoku4PlayerVM.cs" />
+    <Compile Include="VM\Game\SudokuVM.cs" />
+    <Compile Include="VM\Game\BaseSudukuBoardVM.cs" />
+    <Compile Include="VM\Game\SudukuBoard4x4VM.cs" />
+    <Compile Include="VM\Game\SudukuBoard9x9VM.cs" />
+    <Compile Include="VM\Moltipol\MathMaltipolComplex2VM.cs" />
+    <Compile Include="VM\Moltipol\MathMaltipolComplexVM.cs" />
+    <Compile Include="VM\Moltipol\MathMoltipol1VM.cs" />
+    <Compile Include="VM\Moltipol\MathMoltipol2VM.cs" />
+    <Compile Include="VM\Moltipol\MathMoltipolFracture2VM.cs" />
+    <Compile Include="VM\Moltipol\MathMoltipolFractureVM.cs" />
+    <Compile Include="VM\Moltipol\PowerVM.cs" />
+    <Compile Include="VM\Recognaz\BoardMathArray2VM.cs" />
+    <Compile Include="VM\Recognaz\BoardMathExRecognaz10VM.cs" />
+    <Compile Include="VM\Recognaz\BoardPairExerciseVM.cs" />
+    <Compile Include="VM\Recognaz\BordMathArray1VM.cs" />
+    <Compile Include="VM\Recognaz\BordMathBlunArrayVM.cs" />
+    <Compile Include="VM\Recognaz\BordMathRecognaz2VM.cs" />
+    <Compile Include="VM\Recognaz\MathArray1VM.cs" />
+    <Compile Include="VM\Recognaz\MathArray2VM.cs" />
+    <Compile Include="VM\Recognaz\MathArray3VM.cs" />
+    <Compile Include="VM\Recognaz\MathBlunArrayVM.cs" />
+    <Compile Include="VM\Recognaz\MathExRecognaz10VM.cs" />
+    <Compile Include="VM\Recognaz\MathExRecognaz1VM.cs" />
+    <Compile Include="VM\Recognaz\MathExRecognaz2VM.cs" />
+    <Compile Include="VM\Recognaz\MathRecognaz100AVM.cs" />
+    <Compile Include="VM\Recognaz\MathRecognaz100BVM.cs" />
+    <Compile Include="VM\Recognaz\MathRecognaz100CVM.cs" />
+    <Compile Include="VM\Recognaz\MathRecognaz10AVM.cs" />
+    <Compile Include="VM\Recognaz\MathRecognaz10BVM.cs" />
+    <Compile Include="VM\Recognaz\NumberStructureExerciseVM.cs" />
+    <Compile Include="VM\Recognaz\NumberStructureExerciseVM1.cs" />
+    <Compile Include="VM\Recognaz\NumberStructureLern1VM.cs" />
+    <Compile Include="VM\Recognaz\NumberStructureLernVM.cs" />
+    <Compile Include="VM\Recognaz\OpenMathRecognaz.cs" />
+    <Compile Include="VM\Recognaz\PairExerciseVM.cs" />
+    <Compile Include="VM\Recognaz\PairLernVM.cs" />
+    <Compile Include="VM\Splite\MathSplit1VM.cs" />
+    <Compile Include="VM\Splite\MathSplit2VM.cs" />
+    <Compile Include="VM\Splite\MathSpliteComplex2VM.cs" />
+    <Compile Include="VM\Splite\MathSpliteComplexVM.cs" />
+    <Compile Include="VM\Splite\MathSpliteFracture2VM.cs" />
+    <Compile Include="VM\Splite\MathSpliteFractureVM.cs" />
+    <Compile Include="VM\Splite\RootVM.cs" />
+    <Compile Include="VM\Sub\MathSubComplex2VM.cs" />
+    <Compile Include="VM\Sub\MathSubComplexVM.cs" />
+    <Compile Include="VM\Sub\MathSubFracture2VM.cs" />
+    <Compile Include="VM\Sub\MathSubFractureVM.cs" />
+    <Compile Include="VM\Sub\MathSubVM.cs" />
+    <Compile Include="VM\WritingNumbers\BordWritingNumberVM.cs" />
+    <Compile Include="VM\WritingNumbers\WritingNumbersOpenVM.cs" />
+    <Compile Include="VM\WritingNumbers\WritingNumVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.MultipleMice\MultipleMice.csproj">
+      <Project>{5D7A3AD3-0146-48BA-930F-5525E99FA307}</Project>
+      <Name>MultipleMice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Database\CL.BS.Database.csproj">
+      <Project>{4414B806-0F49-4CE7-87DF-309D7C6C3174}</Project>
+      <Name>CL.BS.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MathLearningManager\CL.BS.MathLearningManager.csproj">
+      <Project>{72a640d3-80ff-47aa-be3c-810b5d1701c2}</Project>
+      <Name>CL.BS.MathLearningManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MEF\CL.BS.MEF.csproj">
+      <Project>{681bfcfc-6b4b-4800-abae-441f4c4bb0c2}</Project>
+      <Name>CL.BS.MEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0B6191C5-6621-4DC6-8D7F-06CB3BD05BC3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

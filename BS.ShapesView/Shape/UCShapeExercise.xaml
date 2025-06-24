@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="BS.ShapesView.Shape.UCShapeExercise"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.ShapesView.Shape"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+                  d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.ShapesView;component/ShapesImage/UCShapeExercise.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="400*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="355*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="348*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="182*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+
+        <Items:NUCSpeaker  Grid.RowSpan="3" Grid.ColumnSpan="2" 
+Margin="{Binding SpeakerMargin}" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Label x:Name="labelHome" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuShapeAndAngleVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LToLern" Grid.Column="6"  Grid.Row="6"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="ShapeOpenVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <local:UCBoardShape Grid.Column="3"  Grid.Row="3" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
+        <local:UCBoardShape Grid.Column="2"  Grid.Row="1" Grid.RowSpan="3"  Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+            <local:UCBoardShape.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardShape.RenderTransform>
+        </local:UCBoardShape>
+        <local:UCBoardShape Grid.Column="3" Grid.ColumnSpan="4" Grid.RowSpan="4" Grid.Row="1" 
+                            RenderTransformOrigin="0.78,0.09" >
+            <local:UCBoardShape.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardShape.RenderTransform>
+        </local:UCBoardShape>
+        <local:UCBoardShape Grid.ColumnSpan="4"  Grid.Row="2" Grid.RowSpan="4"  
+                            RenderTransformOrigin="0.23,0.19" >
+            <local:UCBoardShape.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardShape.RenderTransform>
+        </local:UCBoardShape>
+        <Items:UCExitButton Grid.Column="8" Grid.Row="5" Grid.RowSpan="3" />
+    </Grid>
+</UserControl>

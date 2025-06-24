@@ -1,0 +1,150 @@
+﻿<UserControl x:Class="BS.MenuViews.Control.UCMenuControl4Arithmetic"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews.Control"
+             mc:Ignorable="d" 
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+                     d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MenuViews;component/MenuImage/UCMenuControl4Arithmetic.jpg"/>
+    </UserControl.Background>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="238*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="315*"/>
+            <ColumnDefinition Width="331*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="330*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="2"  Grid.Row="2"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MathAddVM"/>
+            </Label.InputBindings>
+        </Label>  
+        <Label Grid.Column="2" Grid.Row="4" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MathSubVM"/>
+            </Label.InputBindings>
+        </Label>    
+        <Label Grid.Column="2" Grid.Row="6"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MathMoltipol1VM"/>
+            </Label.InputBindings>
+        </Label>   
+        <Label Grid.Column="2"  Grid.Row="8" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MathSplit1VM"/>
+            </Label.InputBindings>
+        </Label> 
+        <Label Grid.Column="2"  Grid.Row="10"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MenuMathStructureVM,"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="2"  Grid.Row="12" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MenuMathSummaryVM"/>
+            </Label.InputBindings>
+        </Label>
+        
+        <Label Grid.Column="4"  Grid.Row="2"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MathAddVM"/>
+            </Label.InputBindings>
+        </Label>
+ 
+        <Label Grid.Column="4"  Grid.Row="4" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MathSubVM"/>
+            </Label.InputBindings>
+        </Label>
+    
+        <Label Grid.Column="4" Grid.Row="6"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MathMoltipol1VM"/>
+            </Label.InputBindings>
+        </Label>
+   
+        <Label Grid.Column="4" Grid.Row="8" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MathSplit1VM"/>
+            </Label.InputBindings>
+        </Label>
+    
+        <Label Grid.Column="4"  Grid.Row="10" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuMathStructureVM,NumberStructureLernVM,NumberStructureLern1VM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="4"  Grid.Row="12" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MenuMathSummaryVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="9"  Grid.Row="22"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="NumberStructureLern1VM"/>
+            </Label.InputBindings>
+        </Label>
+        
+        <Label Grid.Column="6"  Grid.Row="2"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut0}"/>
+            </Label.Background>
+        </Label>
+        <Label Grid.Column="6"  Grid.Row="4" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut1}"/>
+            </Label.Background>
+        </Label>
+        <Label Grid.Column="6" Grid.Row="6"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut2}"/>
+            </Label.Background>
+        </Label>
+        <Label Grid.Column="6" Grid.Row="8" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut3}"/>
+            </Label.Background>
+        </Label>
+        <Label Grid.Column="6" Grid.Row="10">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut4}"/>
+            </Label.Background>
+        </Label>
+        <Label Grid.Column="6" Grid.Row="12">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut5}"/>
+            </Label.Background>
+        </Label>
+      
+        <Label >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="MenuControlCoreVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Items:NUCBlueUCSpeaker   VerticalAlignment="Top"  Margin="{Binding SpeakerMargin}" Grid.RowSpan="3"
+         Grid.ColumnSpan="5" HorizontalAlignment="Left"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,36 @@
+﻿<UserControl xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"  x:Class="BS.BingoBoard.View.UCTrafficLightsBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.BingoBoard.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="257" d:DesignWidth="234">
+    <UserControl.Background>
+        <!--<ImageBrush ImageSource="C:\Users\User\Documents\Brain Station\תמונות\תמונות 33\DOV_301221\Hitmatzut baMirhav_Mishakim\4 steps_Green.png"/>-->
+        <ImageBrush ImageSource="{Binding BackgroundBoard}"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="158*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image0" Grid.Column="1" Grid.Row="4" Grid.RowSpan="2" Source="{Binding TBSoldier0}" />
+        <Image x:Name="image1" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" Source="{Binding TBSoldier1}" />
+        <Image x:Name="image2" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Source="{Binding TBSoldier2}" />
+        <Image x:Name="image3" Grid.Column="1"  Grid.RowSpan="3" Source="{Binding TBSoldier3}" />
+        <Image x:Name="image4" Grid.Column="1"               Source="{Binding TBSoldier4}" VerticalAlignment="Bottom" Grid.RowSpan="2"  />
+        <Items:UCBlinkBord  Grid.ColumnSpan="3"  Grid.RowSpan="7"  Visibility="{Binding BaseWinBlink}"/>
+    </Grid>
+</UserControl>

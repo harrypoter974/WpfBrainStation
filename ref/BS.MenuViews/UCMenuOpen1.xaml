@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="BS.MenuViews.UCMenuOpen1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews"
+             mc:Ignorable="d" 
+       d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenuOpen.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="246*" />
+            <RowDefinition Height="452*" />
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="35*" />
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="38*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="26*" />
+            <ColumnDefinition Width="66*" />
+            <ColumnDefinition Width="58*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="78*" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="78*" />
+            <ColumnDefinition Width="86*" />
+            <ColumnDefinition Width="80*" />
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="79*" />
+            <ColumnDefinition Width="9*" />
+            <ColumnDefinition Width="80*" />
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="42*" />
+            <ColumnDefinition Width="23*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" Grid.Row="6" x:Name="labelClose"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding Close}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="1" Grid.Row="5"  x:Name="labelRestart" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding Restart}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="10" Grid.Row="5" Grid.RowSpan="2"  x:Name="LLern" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuLernVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="12" Grid.Row="5" Grid.RowSpan="2" x:Name="LDataEntry" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuDataUserVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="6"  Grid.Row="5" Grid.RowSpan="2" x:Name="LInstructions" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LPermissions"  Grid.Column="14" Grid.Row="5"  Grid.RowSpan="2"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LRydel" Grid.Column="8" Grid.Row="5" Grid.RowSpan="2"   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuRiddlesVM"/>
+            </Label.InputBindings>
+
+        </Label>
+        <Label x:Name="LGame"  Grid.Column="9" Grid.Row="5" Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuGameVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label x:Name="labelDone"     Grid.Column="15" Grid.Row="2" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToDone}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelUp"       Grid.Column="18" Grid.Row="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToUp}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelSpeaker" Grid.Column="17"  Grid.Row="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToSpeaker}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelArabe" Grid.Column="17"  Grid.Row="5"  Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToArabe}"/>
+            </Label.InputBindings>
+        </Label>
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

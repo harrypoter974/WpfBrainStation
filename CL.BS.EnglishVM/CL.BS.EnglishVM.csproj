@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33B7F26B-1D97-4F10-A246-0001A416BE1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CL.BS.EnglishVM</RootNamespace>
+    <AssemblyName>CL.BS.EnglishVM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VM\Game\EnBingoLetterVM.cs" />
+    <Compile Include="VM\Game\EnBingoOpenLetterVM.cs" />
+    <Compile Include="VM\Game\EnLottoVM.cs" />
+    <Compile Include="VM\Game\EnMemoryLetterVM.cs" />
+    <Compile Include="VM\Game\EnMemoryWordsVM.cs" />
+    <Compile Include="VM\Game\EnWordsGameVM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VM\Notions\EnAnimalsVM.cs" />
+    <Compile Include="VM\Notions\EnCalendarVM.cs" />
+    <Compile Include="VM\Notions\EnClockVM.cs" />
+    <Compile Include="VM\Notions\EnColorMenuVM.cs" />
+    <Compile Include="VM\Notions\EnColorVM.cs" />
+    <Compile Include="VM\Notions\EnDaysOfTheWeekVM.cs" />
+    <Compile Include="VM\Notions\EnExerciseColorsVM.cs" />
+    <Compile Include="VM\Notions\EnFamilyVM.cs" />
+    <Compile Include="VM\Notions\EnNumbersVM.cs" />
+    <Compile Include="VM\Notions\EnOppositesExerciseVM.cs" />
+    <Compile Include="VM\Notions\EnOppositesLernVM.cs" />
+    <Compile Include="VM\Notions\EnOppositesMenuVM.cs" />
+    <Compile Include="VM\Notions\EnPrepositionsExerciseVM.cs" />
+    <Compile Include="VM\Notions\EnPrepositionsLernVM.cs" />
+    <Compile Include="VM\Notions\EnPrepositionsMenu.cs" />
+    <Compile Include="VM\Recognition\BoardEnLetterRecognitionVM.cs" />
+    <Compile Include="VM\Recognition\EnKnowLetterVM.cs" />
+    <Compile Include="VM\Recognition\EnLetterRecognition1VM.cs" />
+    <Compile Include="VM\Recognition\EnLetterRecognition2VM.cs" />
+    <Compile Include="VM\Recognition\EnLetterRecognition3VM.cs" />
+    <Compile Include="VM\Recognition\EnLettersKnowVM.cs" />
+    <Compile Include="VM\Text\BaseTextVM.cs" />
+    <Compile Include="VM\Text\BoardEnWritingLetterVM.cs" />
+    <Compile Include="VM\Text\EnTextBigVM.cs" />
+    <Compile Include="VM\Text\EnTextOppositesVM.cs" />
+    <Compile Include="VM\Text\EnTextPrepositionsVM.cs" />
+    <Compile Include="VM\Text\EnTextSmallVM.cs" />
+    <Compile Include="VM\Text\EnWriteLetterVM.cs" />
+    <Compile Include="VM\Text\EnWritingLettersMenuVM.cs" />
+    <Compile Include="VM\Text\WritingEnMenuVM.cs" />
+    <Compile Include="VM\Text\WritingEnNameVM.cs" />
+    <Compile Include="VM\Words\BaseWordsVM.cs" />
+    <Compile Include="VM\Words\EnPronunciationVM.cs" />
+    <Compile Include="VM\Words\EnSyllableVM.cs" />
+    <Compile Include="VM\Words\LernEnWordsBoardVM.cs" />
+    <Compile Include="VM\Words\WritingEnWordsVM.cs" />
+    <Compile Include="VM\Words\WritingEnWordDayVM.cs" />
+    <Compile Include="VM\Words\WritingEnWordNumVM.cs" />
+    <Compile Include="VM\Words\WritingEnWordSeasonsVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.BingoBoard\BS.BingoBoard.csproj">
+      <Project>{46679341-644f-4c0a-9762-799643677225}</Project>
+      <Name>BS.BingoBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.MultipleMice\MultipleMice.csproj">
+      <Project>{5d7a3ad3-0146-48ba-930f-5525e99fa307}</Project>
+      <Name>MultipleMice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Database\CL.BS.Database.csproj">
+      <Project>{4414B806-0F49-4CE7-87DF-309D7C6C3174}</Project>
+      <Name>CL.BS.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.EnglishManager\CL.BS.EnglishManager.csproj">
+      <Project>{02b10955-59bb-4ba7-b6c5-16a61887846b}</Project>
+      <Name>CL.BS.EnglishManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.HebrewManager\CL.BS.HebrewManager.csproj">
+      <Project>{C493CC4C-F4D8-4514-8989-46FD0392A969}</Project>
+      <Name>CL.BS.HebrewManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MEF\CL.BS.MEF.csproj">
+      <Project>{681bfcfc-6b4b-4800-abae-441f4c4bb0c2}</Project>
+      <Name>CL.BS.MEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0b6191c5-6621-4dc6-8d7f-06cb3bd05bc3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

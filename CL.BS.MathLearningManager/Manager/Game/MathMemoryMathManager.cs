@@ -1,0 +1,47 @@
+﻿using CL.BS.Contract;
+using CL.BS.MathLearningManager.Engine.Game;
+using CL.BS.MathLearningManager.Interface.Game;
+using CL.BS.Model;
+using CL.BS.VMCommon;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CL.BS.MathLearningManager.Manager.Game
+{
+    #region MEF
+    [System.ComponentModel.Composition.Export(typeof(IManager))]
+    #endregion MEF
+    public class MathMemoryMathManager : IManager, IMathMemoryMathManager
+    {
+        string IManager.ManagerName => "MathMemoryMathManager";
+        private MathMemoryMathEngine _logic = new MathMemoryMathEngine();
+
+        bool IMemoryManager.EndGame(bool T)
+        {
+            return _logic.EndGame();
+        }
+
+        List<GameObject>[] IMemoryManager.GetNewGame(int v)
+        {
+            return _logic.NewGame(v);
+        }
+
+        string IMemoryManager.GetQuestion()
+        {
+            return _logic.GetQuestion();
+        }
+
+        void IMathMemoryMathManager.SetOperator(object obj)
+        {
+            _logic.SetOperator(obj);
+        }
+
+        void IMathMemoryMathManager.SetLimit(object obj)
+        {
+            _logic.SetLimit(obj);
+        }
+    }
+}

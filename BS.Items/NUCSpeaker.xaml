@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="BS.Items.NUCSpeaker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:BS.Items"
+             mc:Ignorable="d"  
+             Height="39" Width="94">
+    <!--<UserControl.Background>
+        <ImageBrush ImageSource="ItemsImage/NUCSpeaker.png" />
+    </UserControl.Background>-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="3" Source="ItemsImage/NUCSpeaker.png"/>
+        <Label  Grid.ColumnSpan="4" Grid.Column="2" Grid.RowSpan="3"  >
+            <Label.Background>
+                <ImageBrush  ImageSource="{Binding SpeakerButton}" Stretch="Fill" />
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ButSpeaker}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.RowSpan="3" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SetVolume}" CommandParameter="-"/>
+            </Label.InputBindings>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseUp">
+                    <i:InvokeCommandAction Command="{Binding StopSetVolume}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="5"  Grid.RowSpan="3" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SetVolume}" CommandParameter="+"/>
+            </Label.InputBindings>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseUp">
+                    <i:InvokeCommandAction Command="{Binding StopSetVolume}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+      
+        <TextBlock x:Name="textBlock" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding ValueText}"  Visibility="{Binding SpeakerVisibility}"                       
+                       VerticalAlignment="Center" Foreground="Green"  FontWeight="Bold" FontSize="13"  Grid.RowSpan="3" HorizontalAlignment="Center"/>
+        <MediaElement x:Name="MediaElement1"   LoadedBehavior="{Binding IsPlay}"
+                      Volume="{Binding Volume}"
+                      Source="{Binding UrlPlay}" Visibility="Collapsed" Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MediaEnded">
+                    <i:InvokeCommandAction Command="{Binding StopPlay}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </MediaElement>
+    </Grid>
+</UserControl>

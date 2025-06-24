@@ -1,0 +1,68 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews.GeneralGame"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    x:Class="BS.MenuViews.GeneralGame.UCMenuHeGeneralShapes"
+             mc:Ignorable="d"          
+             d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MenuViews;component/MenuImage/UCMenuHeGeneralShapes.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="315*"/>
+            <RowDefinition Height="135*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="135*"/>
+            <RowDefinition Height="210*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="226*"/>
+            <ColumnDefinition Width="483*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+
+      <Label  Grid.Column="5"  Grid.Row="1" />
+        <Label  Grid.Column="6"  Grid.Row="1" />
+        <Label  Grid.Column="7"  Grid.Row="1" />
+
+        <Label  Grid.Column="3"  Grid.Row="3"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToBingo}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3"  Grid.Row="5"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToMemory}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labelHome" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding HomeBut}"  Stretch="None"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GOHome}" CommandParameter="MenuShapesVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:NUCBlueUCSpeaker   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="{Binding SpeakerMargin}"
+        Grid.RowSpan="3"  Grid.ColumnSpan="3"/>
+    </Grid>
+</UserControl>

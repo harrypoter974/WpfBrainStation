@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="BS.ShapesView.Circles.UCBoardCircles"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"    
+             xmlns:local="clr-namespace:BS.ShapesView.Circles"
+             mc:Ignorable="d" 
+             Height="{Binding BoardHeight}" Width="{Binding BoardWidth}"    >
+    <!--  d:DesignHeight="507" d:DesignWidth="736"  -->
+    <UserControl.Background>
+        <ImageBrush ImageSource="{Binding BackgroundPic}" Stretch="Fill"/>
+        <!--<ImageBrush ImageSource="C:\Brain_Station\WpfBrainStationBrachoot\WpfBrainStation\Resources\Shapes\Circles\CircleA0.png"/>-->
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="681*"/>
+            <ColumnDefinition Width="55*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="446*"/>
+            <RowDefinition Height="61*"/>
+        </Grid.RowDefinitions>
+        <Label  Grid.Column="1" Grid.Row="1" x:Name="UCAnswerButton1">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+    </Grid>
+</UserControl>

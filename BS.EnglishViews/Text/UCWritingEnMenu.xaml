@@ -1,0 +1,53 @@
+﻿<UserControl xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"  x:Class="BS.EnglishViews.Text.UCWritingEnMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.EnglishViews.Text"
+             mc:Ignorable="d" 
+                d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.EnglishViews;component/EnglishImage/UCWritingEnMenu.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="808*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="780*"/>
+        </Grid.RowDefinitions>
+        <Items:UCSpeaker Grid.ColumnSpan="4" Grid.RowSpan="3"
+HorizontalAlignment="Left" Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"/>
+        <Label x:Name="labelPrepositions" Grid.Row="3"  Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="EnTextPrepositionsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelOpposites" Grid.Row="4"  Grid.ColumnSpan="3"    >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="EnTextOppositesVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelText"      Grid.Row="5"  Grid.ColumnSpan="3"    >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="EnTextSmallVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelHome"      Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="MenuEnWordsVM"/>
+            </Label.InputBindings>
+        </Label>
+
+
+    </Grid>
+</UserControl>

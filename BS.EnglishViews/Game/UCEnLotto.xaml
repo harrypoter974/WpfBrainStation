@@ -1,0 +1,168 @@
+﻿<UserControl x:Class="BS.EnglishViews.Game.UCEnLotto"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"             
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             mc:Ignorable="d" 
+    xmlns:board="clr-namespace:BS.BingoBoard.View;assembly=BS.BingoBoard"
+        xmlns:boardVM="clr-namespace:BS.BingoBoard.VM;assembly=BS.BingoBoard"             
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+            d:DesignHeight="900" d:DesignWidth="1000" FontSize="60" FontFamily="Times New Roman"
+             FontWeight="Bold"   >
+    <UserControl.Background>
+        <!--<ImageBrush ImageSource="C:\brinStation\Brain Station\תמונות\תמונות 31\_DOV_131119\Loto English_4.jpg" />-->
+        <ImageBrush ImageSource="/BS.EnglishViews;component/EnglishImage/UCEnLotto.jpg" />
+    </UserControl.Background>
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type  boardVM:LottoBoardVM}">
+            <board:UCMouseLottoBoard/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="135*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="91*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="123*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="28*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="137*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="86*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <!--<Label x:Name="LLetterNum3"  Grid.Column="15" Grid.ColumnSpan="2"  Grid.Row="8" Grid.RowSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding NumLetterBut0}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SetLettersNum}" CommandParameter="0"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LLetterNum4"  Grid.Column="18"  Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding NumLetterBut1}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SetLettersNum}" CommandParameter="1"/>
+            </Label.InputBindings>
+        </Label>-->
+        <Label Grid.Column="13" Grid.Row="8" Grid.RowSpan="3" Grid.ColumnSpan="10" Background="#FF3EAC4B" />
+
+        <board:UCMouseLottoBoard Content="{Binding Board0}"   Grid.ColumnSpan="4"   Grid.Column="7" Grid.Row="1" Grid.RowSpan="12" RenderTransformOrigin="0.5,0.5" >
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </board:UCMouseLottoBoard>
+        <Border Grid.ColumnSpan="8" Grid.Column="1" Grid.Row="11" Grid.RowSpan="13" >
+            <board:UCMouseLottoBoard Content="{Binding Board1}" Width="{Binding BoardWidth}" Height="{Binding BoardHeight}"  RenderTransformOrigin="0.43,0.01" >
+                <ContentControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ContentControl.RenderTransform>
+            </board:UCMouseLottoBoard>
+        </Border>
+        <Border Grid.ColumnSpan="20" Grid.Column="12" Grid.Row="5" Grid.RowSpan="13"  >
+            <board:UCMouseLottoBoard Content="{Binding Board2}" Width="{Binding BoardWidth}" Height="{Binding BoardHeight}" Visibility="{Binding BoardVisibility2}" RenderTransformOrigin="0.62,0.42">
+                <ContentControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ContentControl.RenderTransform>
+            </board:UCMouseLottoBoard>
+        </Border>
+        <board:UCMouseLottoBoard   Grid.ColumnSpan="4" Grid.Column="8" Grid.Row="16" Grid.RowSpan="5" Content="{Binding Board3}"  Visibility="{Binding BoardVisibility3}"/>
+
+        
+
+        <Label Grid.Column="21" Grid.Row="20" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding NewGame}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="LBackgroundAnswerButton" Grid.Column="19" Grid.Row="20" Grid.RowSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ExitButBackground}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labelHome" Grid.RowSpan="4" Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuEnGameVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <!--<Rectangle Grid.Column="3"   Grid.RowSpan="5"  Grid.ColumnSpan="3" Fill="#FF007C46"
+                   Visibility="{Binding SpeakerVisibility}" Margin="0,0,7,0"/>
+        <Items:UCSpeaker  Grid.Column="2" Grid.RowSpan="5" 
+        Margin="0,10,0,0"   VerticalAlignment="Top"  HorizontalAlignment="Left" Grid.ColumnSpan="4"  />-->
+        <Items:NUCSpeaker Grid.ColumnSpan="6" Grid.RowSpan="5"
+Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <Items:UCTimer x:Name="UCTimer1" Grid.Column="9" Grid.Row="14"  Grid.ColumnSpan="1"/>
+        <Items:UCTimerControl Grid.ColumnSpan="8" Grid.Column="16"  Grid.Row="17" Grid.RowSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+
+    </Grid>
+</UserControl>

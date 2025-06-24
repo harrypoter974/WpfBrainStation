@@ -1,0 +1,71 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.Animals"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" x:Class="BS.NotionsView.Animals.UCAnimalsGameMenu1"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.NotionsView;component/NotionsImage/UCAnimalsGameMenu.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="240*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="21*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="121*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="230*"/>
+        </Grid.RowDefinitions>
+        <Label >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="MenuHeGeneralGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="5" Grid.Row="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="AnimalsLernVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="6" Grid.Row="2"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="AnimalsLernVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="2"  Grid.Row="6" Grid.ColumnSpan="6" Grid.RowSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="AnimalsBingoVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="2"  Grid.Row="10" Grid.ColumnSpan="6" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="AnimalsMemoryVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Items:NUCSpeaker Grid.ColumnSpan="5" Grid.RowSpan="3" 
+HorizontalAlignment="Left"  Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" />
+    </Grid>
+</UserControl>

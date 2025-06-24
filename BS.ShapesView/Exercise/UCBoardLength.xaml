@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="BS.ShapesView.Exercise.UCBoardLength"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.ShapesView.Exercise"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d"         
+        d:DesignHeight="483" d:DesignWidth="481"    Height="{Binding BoardHeight}" Width="{Binding BoardWidth}"     >
+    <!--       -->
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.ShapesView;component/ShapesImage/UCBoardLength.png"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="378*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="190*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="UCNewAnswerButton1" Grid.Column="4" Grid.Row="5" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <TextBlock Grid.Row="3" Grid.Column="1"  Grid.ColumnSpan="5" Text="{Binding BackgroundPic}"
+                   TextAlignment="Center" FontSize="40" FontWeight="Bold"/>
+
+        <Label  Grid.Column="1"  Grid.Row="5" Grid.ColumnSpan="2"/>
+        <Items:UCTMathKeyboard  Grid.ColumnSpan="5" Grid.Column="1"  Grid.Row="1" />
+        <Image  Grid.Column="2" Source="{Binding HappySmily}" Grid.ColumnSpan="3" Grid.Row="7"/>
+       <Canvas Grid.Row="2" Grid.RowSpan="5">
+            <Image Canvas.Left="40" Canvas.Top="20"  Width="120" Height="120"
+                   Source="/BS.ShapesView;component/ShapesImage/mouse.png" RenderTransformOrigin="0.5,0.5">
+                <!--<Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>-->
+            </Image>
+            <Image Canvas.Left="{Binding Lengt}" Canvas.Top="20" Width="120" Height="120"
+                   Source="/BS.ShapesView;component/ShapesImage/Line.png"/>
+        </Canvas>
+    </Grid>
+</UserControl>

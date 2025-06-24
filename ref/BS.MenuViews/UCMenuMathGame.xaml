@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="BS.MenuViews.UCMenuMathGame"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenuMathGame.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="237*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="404*"/>
+            <ColumnDefinition Width="278*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="162*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelHome" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuMathVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LBingoNum"  Grid.Column="2" Grid.Row="4"  Grid.ColumnSpan="3" Grid.RowSpan="3"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="BingoNumVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LMathMemoryNum"  Grid.Column="2" Grid.Row="8" Grid.ColumnSpan="3" Grid.RowSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathMemoryNumVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LBingoMath"   Grid.Column="2" Grid.Row="12" Grid.ColumnSpan="3" Grid.RowSpan="3"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="BingoMathVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LMathMatchMenu"    Grid.Column="2" Grid.Row="16" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathMatchMenuVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LSudoku"    Grid.Column="2" Grid.Row="18" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="SudokuVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label x:Name="LHelpBingoLetter"  Grid.Column="3" Grid.Row="5"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHelpMemoryLetter"  Grid.Column="3" Grid.Row="9" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHelpOpenLetter"    Grid.Column="3" Grid.Row="13"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHelpBingoWord"     Grid.Column="3" Grid.Row="17"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LCloseHelp" Grid.Column="5" Grid.Row="2" Grid.ColumnSpan="3"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="BS.MenuViews.UCMenuCongratulationsJoy"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews"
+                    xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+             mc:Ignorable="d" 
+                      d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenuCongratulationsJoy.jpg"/>
+    </UserControl.Background>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="164*"/>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="180*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="753*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+        <Label  Name="labelHome" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding HomeBut}"  Stretch="None"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GOHome}" CommandParameter="MenuCongratulationsVM"/>
+                <MouseBinding MouseAction="RightClick"  Command="{Binding LookHome}" />
+            </Label.InputBindings>
+        </Label>
+
+       <Items:UCBlueUCSpeaker  Grid.ColumnSpan="4" Grid.RowSpan="3" HorizontalAlignment="Left" 
+ Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" x:Name="uCSpeaker1"  />
+        <Label  Grid.Column="7" Grid.Row="3"   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding OpenFood}"  CommandParameter="2"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6" Grid.Row="3"   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding OpenFood}"  CommandParameter="1"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="5" Grid.Row="3"   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding OpenFood}"  CommandParameter="0"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4" Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding OpenFood}"  CommandParameter="3"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="3" Grid.Row="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding OpenFood}"  CommandParameter="4"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding OpenFood}"  CommandParameter="5"/>
+            </Label.InputBindings>
+        </Label>
+    </Grid>
+</UserControl>

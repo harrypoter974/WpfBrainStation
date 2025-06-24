@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{962E8F2E-65BC-4E91-9DB4-92E5AA33F02F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BS.NotionsView</RootNamespace>
+    <AssemblyName>BS.NotionsView</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animals\UCAnimalsLern.xaml.cs">
+      <DependentUpon>UCAnimalsLern.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\UCAnimalsBingo.xaml.cs">
+      <DependentUpon>UCAnimalsBingo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\UCAnimalsMemory.xaml.cs">
+      <DependentUpon>UCAnimalsMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockBingoAnalog.xaml.cs">
+      <DependentUpon>UCClockBingoAnalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockBingoDigital.xaml.cs">
+      <DependentUpon>UCClockBingoDigital.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockCompasses.xaml.cs">
+      <DependentUpon>UCClockCompasses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockDigits.xaml.cs">
+      <DependentUpon>UCClockDigits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockExerciseCompasses.xaml.cs">
+      <DependentUpon>UCClockExerciseCompasses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockExerciseDigital.xaml.cs">
+      <DependentUpon>UCClockExerciseDigital.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\UCClockMenu.xaml.cs">
+      <DependentUpon>UCClockMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCColorsLearnGroup.xaml.cs">
+      <DependentUpon>UCColorsLearnGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCColorsMenu.xaml.cs">
+      <DependentUpon>UCColorsMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCExerciseColors.xaml.cs">
+      <DependentUpon>UCExerciseColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\UCExerciseGroupColors.xaml.cs">
+      <DependentUpon>UCExerciseGroupColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802E63B-AB77-4DB8-ADA4-A2700D8160D2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Animals\UCAnimalsLern.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animals\UCAnimalsBingo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animals\UCAnimalsMemory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockBingoAnalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockBingoDigital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockCompasses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockDigits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockExerciseCompasses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockExerciseDigital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clock\UCClockMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCColorsLearnGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCColorsMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCExerciseColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Colors\UCExerciseGroupColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCClockBingoAnalog.jpg" />
+    <Resource Include="NotionsImage\UCClockBingoDigital.jpg" />
+    <Resource Include="NotionsImage\UCClockCompasses.jpg" />
+    <Resource Include="NotionsImage\UCClockDigits.jpg" />
+    <Resource Include="NotionsImage\UCClockExerciseCompasses.jpg" />
+    <Resource Include="NotionsImage\UCClockExerciseDigital.jpg" />
+    <Resource Include="NotionsImage\UCClockMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCAnimalsBingo.jpg" />
+    <Resource Include="NotionsImage\UCAnimalsMemory.jpg" />
+    <Resource Include="NotionsImage\UCAnimalsMemoryOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\mahog dakot.png" />
+    <Resource Include="NotionsImage\mahog shaot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCColorsMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NotionsImage\UCExerciseGroupColors.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

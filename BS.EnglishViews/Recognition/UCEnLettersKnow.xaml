@@ -1,0 +1,368 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.EnglishViews.Recognition"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    x:Class="BS.EnglishViews.Recognition.UCEnLettersKnow"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.EnglishViews;component/EnglishImage/UCEnLettersKnow.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="72*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="21*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="131*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="132*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="132*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+
+        <Items:NUCSpeaker Grid.ColumnSpan="8"
+  HorizontalAlignment="Left" Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"/>
+        <Label x:Name="labelHome"  Grid.ColumnSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuEnglishVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+
+        <Label x:Name="labeA"  Grid.Column="1"  Grid.Row="6" Grid.ColumnSpan="3"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="a"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeA}"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labeB" Grid.Column="5"   Grid.Row="6"   >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeB}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="b"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label   x:Name="labeC" Grid.Column="7"   Grid.Row="6"   >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeC}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="c"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labeD" Grid.Column="9"   Grid.Row="6"  Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeD}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="d"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labeE" Grid.Column="13"  Grid.Row="6"   >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeE}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="e"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+      <Label  x:Name="labeF" Grid.Column="15"  Grid.Row="6"  Grid.ColumnSpan="2"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeF}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="f"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeG" Grid.Column="18"  Grid.Row="6"  Grid.ColumnSpan="4" Grid.RowSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeG}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="g"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeH" Grid.Column="1"  Grid.Row="9"  Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeH}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="h"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labeI" Grid.Column="5"   Grid.Row="9"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeI}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="i"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labeJ" Grid.Column="7"   Grid.Row="9" Grid.RowSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeJ}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="j"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeK" Grid.Column="9"  Grid.Row="9" Grid.ColumnSpan="3">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeK}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="k"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeL" Grid.Column="13"  Grid.Row="9"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeL}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="l"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeM" Grid.Column="14"  Grid.Row="9" Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeM}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="m"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labeN" Grid.Column="18"  Grid.Row="9" Grid.ColumnSpan="4" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeN}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="n"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labeO" Grid.Column="1"  Grid.Row="12" Grid.ColumnSpan="3"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeO}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="o"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeP" Grid.Column="5"   Grid.Row="12" Grid.RowSpan="2"   >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeP}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="p"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeQ" Grid.Column="7"   Grid.Row="12" Grid.RowSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeQ}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="q"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeR" Grid.Column="9"  Grid.Row="12"  Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeR}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="r"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labeS" Grid.Column="13"  Grid.Row="12" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeS}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="s"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeT" Grid.Column="15"  Grid.Row="12" Grid.ColumnSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeT}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="t"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeU" Grid.Column="18"  Grid.Row="12" Grid.ColumnSpan="4" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeU}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="u"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labeV" Grid.Column="5"   Grid.Row="15" Grid.RowSpan="3"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeV}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="v"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="labeW" Grid.Column="7" Grid.Row="15" Grid.RowSpan="3">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeW}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="w"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeX" Grid.Column="9"  Grid.Row="15" Grid.RowSpan="3"  Grid.ColumnSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeX}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="x"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeY" Grid.Column="12"  Grid.Row="15" Grid.RowSpan="4" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeY}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="y"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="labeZ" Grid.Column="15"  Grid.Row="15" Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding labeZ}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayLetter}" CommandParameter="z"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Image x:Name="imageMessage" Grid.ColumnSpan="4" Grid.Column="15"
+               Source="{Binding messagePic}" Grid.Row="3"  Stretch="Fill" Grid.RowSpan="2" />
+
+
+        <Label Grid.Column="18" Grid.Row="17"  Grid.RowSpan="3">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding StopPlayAllLetter}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding StopPlayAllNumBut}"/>
+            </Label.Background>
+        </Label>
+        <Label Grid.Column="20" Grid.Row="17" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding PlayAllLetter}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding PlayAllNumBut}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="18"  Grid.Row="16" Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="EnLetterRecognition3VM"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+    </Grid>
+</UserControl>

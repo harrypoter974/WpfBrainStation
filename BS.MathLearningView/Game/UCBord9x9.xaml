@@ -1,0 +1,127 @@
+﻿<UserControl x:Class="BS.MathLearningView.Game.UCBord9x9"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MathLearningView.Game"
+             mc:Ignorable="d" 
+       d:DesignHeight="500" d:DesignWidth="500" FontWeight="Bold">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MathLearningView;component/MathImage/UCBord9x9.jpg"/>
+        <!--<ImageBrush ImageSource="C:\brinStation\no_cam\bordGame81\WpfComposite\bin\Debug\Resources\Game\Sudoku\Bord9x9C.png" />-->
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="54*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="53*" />
+            <RowDefinition Height="53*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="54*" />
+            <RowDefinition Height="53*" />
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="53*" />
+            <ColumnDefinition Width="52*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="53*" />
+            <ColumnDefinition Width="53*" />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="52*" />
+            <ColumnDefinition Width="53*" />
+            <ColumnDefinition Width="53*" />
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1"               Name="tb00" Text="{Binding TB00}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   Grid.Row="1"   />
+        <TextBlock Grid.Column="2"               Name="tb01" Text="{Binding TB01}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   Grid.Row="1"   />
+        <TextBlock Grid.Column="3"               Name="tb02" Text="{Binding TB02}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   Grid.Row="1"   />
+        <TextBlock Grid.Column="5"               Name="tb03" Text="{Binding TB03}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   Grid.Row="1"   />
+        <TextBlock Grid.Column="6"               Name="tb04" Text="{Binding TB04}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   Grid.Row="1"   />
+        <TextBlock Grid.Column="7"               Name="tb05" Text="{Binding TB05}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   Grid.Row="1"  />
+        <TextBlock Grid.Column="9"               Name="tb06" Text="{Binding TB06}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  Grid.Row="1" />
+        <TextBlock Grid.Column="10"              Name="tb07" Text="{Binding TB07}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" Grid.Row="1"   />
+        <TextBlock Grid.Column="11"              Name="tb08" Text="{Binding TB08}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  Grid.Row="1"  />
+        <TextBlock  Grid.Column="1" Grid.Row="2" Name="tb10" Text="{Binding TB10}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="2" Grid.Row="2" Name="tb11" Text="{Binding TB11}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="3" Grid.Row="2" Name="tb12" Text="{Binding TB12}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="5" Grid.Row="2" Name="tb13" Text="{Binding TB13}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="6" Grid.Row="2" Name="tb14" Text="{Binding TB14}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="7" Grid.Row="2" Name="tb15" Text="{Binding TB15}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="9" Grid.Row="2" Name="tb16" Text="{Binding TB16}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="10" Grid.Row="2" Name="tb17" Text="{Binding TB17}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="11" Grid.Row="2" Name="tb18" Text="{Binding TB18}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="1" Grid.Row="3" Name="tb20" Text="{Binding TB20}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="2" Grid.Row="3" Name="tb21" Text="{Binding TB21}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="3" Grid.Row="3" Name="tb22" Text="{Binding TB22}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="5" Grid.Row="3" Name="tb23" Text="{Binding TB23}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="6" Grid.Row="3" Name="tb24" Text="{Binding TB24}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="7" Grid.Row="3" Name="tb25" Text="{Binding TB25}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="9" Grid.Row="3" Name="tb26" Text="{Binding TB26}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="10" Grid.Row="3" Name="tb27" Text="{Binding TB27}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="11" Grid.Row="3" Name="tb28" Text="{Binding TB28}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="1" Grid.Row="5" Name="tb30" Text="{Binding TB30}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"     />
+        <TextBlock  Grid.Column="2" Grid.Row="5" Name="tb31" Text="{Binding TB31}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"     />
+        <TextBlock  Grid.Column="3" Grid.Row="5" Name="tb32" Text="{Binding TB32}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"     />
+        <TextBlock  Grid.Column="5" Grid.Row="5" Name="tb33" Text="{Binding TB33}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="6" Grid.Row="5" Name="tb34" Text="{Binding TB34}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"     />
+        <TextBlock  Grid.Column="7" Grid.Row="5" Name="tb35" Text="{Binding TB35}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="9" Grid.Row="5" Name="tb36" Text="{Binding TB36}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="10" Grid.Row="5" Name="tb37" Text="{Binding TB37}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="11" Grid.Row="5" Name="tb38" Text="{Binding TB38}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="1" Grid.Row="6" Name="tb40" Text="{Binding TB40}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="2" Grid.Row="6" Name="tb41" Text="{Binding TB41}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="3" Grid.Row="6" Name="tb42" Text="{Binding TB42}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="5" Grid.Row="6" Name="tb43" Text="{Binding TB43}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="6" Grid.Row="6" Name="tb44" Text="{Binding TB44}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="7" Grid.Row="6" Name="tb45" Text="{Binding TB45}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="9" Grid.Row="6" Name="tb46" Text="{Binding TB46}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="10" Grid.Row="6" Name="tb47" Text="{Binding TB47}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="11" Grid.Row="6" Name="tb48" Text="{Binding TB48}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="1" Grid.Row="7" Name="tb50" Text="{Binding TB50}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"     />
+        <TextBlock  Grid.Column="2" Grid.Row="7" Name="tb51" Text="{Binding TB51}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"     />
+        <TextBlock  Grid.Column="3" Grid.Row="7" Name="tb52" Text="{Binding TB52}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"     />
+        <TextBlock  Grid.Column="5" Grid.Row="7" Name="tb53" Text="{Binding TB53}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="6" Grid.Row="7" Name="tb54" Text="{Binding TB54}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"     />
+        <TextBlock  Grid.Column="7" Grid.Row="7" Name="tb55" Text="{Binding TB55}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="9" Grid.Row="7" Name="tb56" Text="{Binding TB56}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="10" Grid.Row="7" Name="tb57" Text="{Binding TB57}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="11" Grid.Row="7" Name="tb58" Text="{Binding TB58}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"      />
+        <TextBlock  Grid.Column="1" Grid.Row="9" Name="tb60" Text="{Binding TB60}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="2" Grid.Row="9" Name="tb61" Text="{Binding TB61}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="3" Grid.Row="9" Name="tb62" Text="{Binding TB62}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="5" Grid.Row="9" Name="tb63" Text="{Binding TB63}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="6" Grid.Row="9" Name="tb64" Text="{Binding TB64}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="7" Grid.Row="9" Name="tb65" Text="{Binding TB65}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock  Grid.Column="9" Grid.Row="9" Name="tb66" Text="{Binding TB66}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="10" Grid.Row="9" Name="tb67" Text="{Binding TB67}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="11" Grid.Row="9" Name="tb68" Text="{Binding TB68}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="1"  Grid.Row="10" Name="tb70" Text="{Binding TB70}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="2"  Grid.Row="10" Name="tb71" Text="{Binding TB71}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="3"  Grid.Row="10" Name="tb72" Text="{Binding TB72}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="5"  Grid.Row="10" Name="tb73" Text="{Binding TB73}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="6"  Grid.Row="10" Name="tb74" Text="{Binding TB74}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="7"  Grid.Row="10" Name="tb75" Text="{Binding TB75}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"    />
+        <TextBlock  Grid.Column="9" Grid.Row="10" Name="tb76" Text="{Binding TB76}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock  Grid.Column="10" Grid.Row="10" Name="tb77" Text="{Binding TB77}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock  Grid.Column="11" Grid.Row="10" Name="tb78" Text="{Binding TB78}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="1"  Grid.Row="11" Name="tb80" Text="{Binding TB80}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="2"  Grid.Row="11" Name="tb81" Text="{Binding TB81}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="3"  Grid.Row="11" Name="tb82" Text="{Binding TB82}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="5"  Grid.Row="11" Name="tb83" Text="{Binding TB83}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="6"  Grid.Row="11" Name="tb84" Text="{Binding TB84}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+        <TextBlock  Grid.Column="7"  Grid.Row="11" Name="tb85" Text="{Binding TB85}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"  />
+        <TextBlock  Grid.Column="9" Grid.Row="11" Name="tb86" Text="{Binding TB86}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock  Grid.Column="10" Grid.Row="11" Name="tb87" Text="{Binding TB87}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal" />
+        <TextBlock  Grid.Column="11" Grid.Row="11" Name="tb88" Text="{Binding TB88}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Normal"   />
+
+    </Grid>
+</UserControl>

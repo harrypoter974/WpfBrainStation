@@ -1,0 +1,153 @@
+﻿<UserControl x:Class="BS.EnglishViews.Game.UCEnLotto"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.EnglishViews.Game"
+             mc:Ignorable="d" 
+            d:DesignHeight="900" d:DesignWidth="1000" FontSize="60" FontFamily="Times New Roman"   FontWeight="Bold"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.EnglishViews;component/EnglishImage/UCEnLotto.jpg" />
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="LTime1" Grid.Column="12"  Grid.Row="6" />
+        <Label x:Name="LTime2" Grid.Column="13"  Grid.Row="6"/>
+        <Label x:Name="LTime3" Grid.Column="15"  Grid.Row="6" Grid.ColumnSpan="2" />
+        <Label x:Name="LTime4" Grid.Column="18"  Grid.Row="6" Grid.ColumnSpan="3" />
+        <Label x:Name="LLetterNum3"  Grid.Column="15" Grid.ColumnSpan="2"  Grid.Row="8" Grid.RowSpan="2"/>
+        <Label x:Name="LLetterNum4"  Grid.Column="18"  Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        <Label x:Name="LPleyer1" Grid.Column="12"  Grid.Row="3" Grid.RowSpan="2"/>
+        <Label x:Name="LPleyer2" Grid.Column="13"  Grid.Row="3" Grid.RowSpan="2" />
+        <Label x:Name="LPleyer3" Grid.Column="15"  Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Label x:Name="LPleyer4" Grid.Column="18"  Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        <Label x:Name="LBackgroundAnswerButton" Grid.Column="13" Grid.Row="20" Grid.ColumnSpan="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AnswerBut}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelHome" Grid.RowSpan="4" Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuEnGameVM"/>
+            </Label.InputBindings>
+        </Label> 
+        <Image Name="image1" Grid.Column="8"  Grid.Row="16" Grid.RowSpan="2" />
+        <Border Grid.Column="8" Grid.Row="11" Grid.RowSpan="2" >
+            <Image x:Name="image2" >
+                <Image.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </Image.LayoutTransform>
+            </Image>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="14">
+            <Image x:Name="image3" >
+                <Image.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Image.LayoutTransform>
+            </Image>
+        </Border>
+        <Border Grid.ColumnSpan="3" Grid.Column="11" Grid.Row="14"  >
+            <Image x:Name="image4" >
+                <Image.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </Image.LayoutTransform>
+            </Image>
+        </Border>
+        <Label Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" />
+        <Label x:Name="UCTimer1" Grid.Column="8" Grid.Row="14" />
+        <Border Grid.ColumnSpan="7" Grid.Column="16" Grid.Row="12" Grid.RowSpan="5">
+            <Image  x:Name="imageCard3" Visibility="Hidden"  Stretch="Fill">
+                <Image.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Image.LayoutTransform>
+            </Image>
+        </Border>
+        <Border Grid.ColumnSpan="7" Grid.Column="16" Grid.Row="12" Grid.RowSpan="5">
+            <TextBlock Name="TBCard3" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270"/>
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.ColumnSpan="3" Grid.Column="1"  Grid.Row="12" Grid.RowSpan="5">
+            <Image  x:Name="imageCard4" Visibility="Hidden"  Stretch="Fill">
+                <Image.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </Image.LayoutTransform>
+            </Image>
+        </Border>
+        <Border Grid.ColumnSpan="3" Grid.Column="1"  Grid.Row="12" Grid.RowSpan="5">
+            <TextBlock Name="TBCard4" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90"/>
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Image x:Name="imageCard1" Grid.ColumnSpan="3" Grid.Column="7" Grid.Row="19" Grid.RowSpan="3"  Visibility="Hidden" Stretch="Fill"/>
+        <TextBlock Name="TBCard1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="7" Grid.Row="19" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
+        <Image x:Name="imageCard2" Grid.ColumnSpan="3" Grid.Column="7" Grid.Row="2" Grid.RowSpan="7"  Visibility="Hidden" Stretch="Fill"/>
+        <TextBlock Name="TBCard2" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="7" Grid.Row="2" Grid.RowSpan="7" Grid.ColumnSpan="3">
+            <TextBlock.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+        <Rectangle Name="Rectangle2" Visibility="Hidden"  Grid.ColumnSpan="5" Grid.Column="6" Fill="#FF41AD48" Grid.Row="1" Grid.RowSpan="13" Margin="30,1,15,0"/>
+        <Rectangle Name="Rectangle4" Visibility="Hidden" Grid.ColumnSpan="6" Grid.Column="1" Fill="#FF41AD48" Grid.Row="12" Grid.RowSpan="6"/>
+        <Rectangle Name="Rectangle3" Visibility="Hidden" Grid.ColumnSpan="14" Grid.Column="10" Fill="#FF41AD48" Grid.Row="11" Grid.RowSpan="6"  />
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

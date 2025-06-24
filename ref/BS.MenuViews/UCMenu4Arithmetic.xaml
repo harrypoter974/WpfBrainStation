@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="BS.MenuViews.UCMenu4Arithmetic"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews"
+             mc:Ignorable="d" 
+               d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenu4Arithmetic.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="235*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="317*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="280*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="185*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="61*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelHome" Height="50" VerticalAlignment="Top"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuMathVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LAdd"      Grid.Column="2" Grid.Row="4" Grid.RowSpan="3" Grid.ColumnSpan="6" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathAddVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LSub"      Grid.Column="2" Grid.Row="8" Grid.RowSpan="3" Grid.ColumnSpan="6" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathSubVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LMoltipol"  Grid.Column="2" Grid.Row="12" Grid.RowSpan="3" Grid.ColumnSpan="6" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathMoltipolVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LSplite"    Grid.Column="2" Grid.Row="16" Grid.RowSpan="3" Grid.ColumnSpan="6" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MathSplit1VM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHelp0" Grid.Column="3" Grid.Row="5"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHelp1" Grid.Column="3" Grid.Row="9"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHelp2" Grid.Column="3" Grid.Row="13" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LHelp3" Grid.Column="3" Grid.Row="17" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LClose" Grid.Column="4" Grid.Row="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="lSettings"  Grid.Column="6"  Grid.Row="5">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label                     Grid.Column="6"  Grid.Row="9">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label                     Grid.Column="6"  Grid.Row="13">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+        <Label                     Grid.Column="6"  Grid.Row="17">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ToHome}" CommandParameter=""/>
+            </Label.InputBindings>
+        </Label>
+
+    </Grid>
+</UserControl>

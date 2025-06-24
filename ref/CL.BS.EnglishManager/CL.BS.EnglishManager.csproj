@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02B10955-59BB-4BA7-B6C5-16A61887846B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CL.BS.EnglishManager</RootNamespace>
+    <AssemblyName>CL.BS.EnglishManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engen\Game\EnBingoLetterEngen.cs" />
+    <Compile Include="Engen\Game\EnBingoOpenLetterEngen.cs" />
+    <Compile Include="Engen\Game\EnLottoEngen.cs" />
+    <Compile Include="Engen\Game\EnMemoryLetterEngen.cs" />
+    <Compile Include="Engen\Game\EnWordsGameEngen.cs" />
+    <Compile Include="Engen\Notions\EnAnimalsEngen.cs" />
+    <Compile Include="Engen\Notions\EnCalendarEngen.cs" />
+    <Compile Include="Engen\Notions\EnColorEngen.cs" />
+    <Compile Include="Engen\Notions\EnDaysOfTheWeekEngen.cs" />
+    <Compile Include="Engen\Notions\EnFamilyEngen.cs" />
+    <Compile Include="Engen\Notions\EnNumbersEngen.cs" />
+    <Compile Include="Engen\Notions\EnOppositesExerciseEngen.cs" />
+    <Compile Include="Engen\Notions\EnOppositesLernEngen.cs" />
+    <Compile Include="Engen\Notions\EnPrepositionsExerciseEngen.cs" />
+    <Compile Include="Engen\Notions\EnPrepositionsLernEngen.cs" />
+    <Compile Include="Engen\Recognition\EnLetterRecognition1Engen.cs" />
+    <Compile Include="Engen\Recognition\EnLetterRecognition2Engen.cs" />
+    <Compile Include="Engen\Recognition\EnLetterRecognition3Engen.cs" />
+    <Compile Include="Engen\Recognition\EnLettersKnowEngen.cs" />
+    <Compile Include="Engen\Recognition\KnowLetterEngen.cs" />
+    <Compile Include="Engen\Text\EnTextBigEngen.cs" />
+    <Compile Include="Engen\Text\EnTextOppositesEngen.cs" />
+    <Compile Include="Engen\Text\EnTextPrepositionsEngen.cs" />
+    <Compile Include="Engen\Text\EnTextSmallEngen.cs" />
+    <Compile Include="Engen\Text\EnWriteLetterEngen.cs" />
+    <Compile Include="Engen\Text\EnWritingLettersMenuEngen.cs" />
+    <Compile Include="Engen\Text\WritingEnMenuEngen.cs" />
+    <Compile Include="Engen\Text\WritingEnNameEngen.cs" />
+    <Compile Include="Engen\Words\EnSyllableEngen.cs" />
+    <Compile Include="Interface\Game\IEnWordsGameManager.cs" />
+    <Compile Include="Interface\Game\IEnBingoLetterManager.cs" />
+    <Compile Include="Interface\Game\IEnBingoOpenLetter.cs" />
+    <Compile Include="Interface\Game\IEnLottoManager.cs" />
+    <Compile Include="Interface\Game\IEnMemoryLetterManager.cs" />
+    <Compile Include="Interface\Notions\IEnAnimalsManager.cs" />
+    <Compile Include="Interface\Notions\IEnCalendarManager.cs" />
+    <Compile Include="Interface\Notions\IEnColorManager.cs" />
+    <Compile Include="Interface\Notions\IEnDaysOfTheWeekManager.cs" />
+    <Compile Include="Interface\Notions\IEnFamilyManager.cs" />
+    <Compile Include="Interface\Notions\IEnNumbersManager.cs" />
+    <Compile Include="Interface\Notions\IEnOppositesExerciseManager.cs" />
+    <Compile Include="Interface\Notions\IEnOppositesLernManager.cs" />
+    <Compile Include="Interface\Notions\IEnPrepositionsExerciseManager.cs" />
+    <Compile Include="Interface\Notions\IEnPrepositionsLernManager.cs" />
+    <Compile Include="Interface\Recognition\IEnLetterRecognition1Manager.cs" />
+    <Compile Include="Interface\Recognition\IEnLetterRecognition2Manager.cs" />
+    <Compile Include="Interface\Recognition\IEnLetterRecognition3Manager.cs" />
+    <Compile Include="Interface\Recognition\IEnLettersKnowManager.cs" />
+    <Compile Include="Interface\Text\IEnTextBigManager.cs" />
+    <Compile Include="Interface\Text\IEnTextOppositesManager.cs" />
+    <Compile Include="Interface\Text\IEnTextPrepositionsManager.cs" />
+    <Compile Include="Interface\Text\IEnTextSmallManager.cs" />
+    <Compile Include="Interface\Text\IEnWriteLetterManager.cs" />
+    <Compile Include="Interface\Text\IEnWritingLettersMenuManager.cs" />
+    <Compile Include="Interface\Text\IWritingEnMenuManager.cs" />
+    <Compile Include="Interface\Text\IWritingEnNameManager.cs" />
+    <Compile Include="Interface\Words\IEnSyllableManager.cs" />
+    <Compile Include="Manager\Game\EnBingoLetterManager.cs" />
+    <Compile Include="Manager\Game\EnBingoOpenLetterManager.cs" />
+    <Compile Include="Manager\Game\EnLottoManager.cs" />
+    <Compile Include="Manager\Game\EnMemoryLetterManager.cs" />
+    <Compile Include="Manager\Game\EnWordsGameManager.cs" />
+    <Compile Include="Manager\Notions\EnAnimalsManager.cs" />
+    <Compile Include="Manager\Notions\EnCalendarManager.cs" />
+    <Compile Include="Manager\Notions\EnColorManager.cs" />
+    <Compile Include="Manager\Notions\EnDaysOfTheWeekManager.cs" />
+    <Compile Include="Manager\Notions\EnFamilyManager.cs" />
+    <Compile Include="Manager\Notions\EnNumbersManager.cs" />
+    <Compile Include="Manager\Notions\EnOppositesExerciseManager.cs" />
+    <Compile Include="Manager\Notions\EnOppositesLernManager.cs" />
+    <Compile Include="Manager\Notions\EnPrepositionsExerciseManager.cs" />
+    <Compile Include="Manager\Notions\EnPrepositionsLernManager.cs" />
+    <Compile Include="Manager\Recognition\EnLetterRecognition1Manager.cs" />
+    <Compile Include="Manager\Recognition\EnLetterRecognition2Manager.cs" />
+    <Compile Include="Manager\Recognition\EnLetterRecognition3Manager.cs" />
+    <Compile Include="Manager\Recognition\EnLettersKnowManager.cs" />
+    <Compile Include="Manager\Text\EnTextBigManager.cs" />
+    <Compile Include="Manager\Text\EnTextOppositesManager.cs" />
+    <Compile Include="Manager\Text\EnTextPrepositionsManager.cs" />
+    <Compile Include="Manager\Text\EnTextSmallManager.cs" />
+    <Compile Include="Manager\Text\EnWriteLetterManager.cs" />
+    <Compile Include="Manager\Text\EnWritingLettersMenuManager.cs" />
+    <Compile Include="Manager\Text\WritingEnMenuManager.cs" />
+    <Compile Include="Manager\Text\WritingEnNameManager.cs" />
+    <Compile Include="Manager\Words\EnSyllableManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MEF\CL.BS.MEF.csproj">
+      <Project>{681bfcfc-6b4b-4800-abae-441f4c4bb0c2}</Project>
+      <Name>CL.BS.MEF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,129 @@
+﻿<UserControl  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.JudaismView"             
+              xmlns:board="clr-namespace:BS.BingoBoard.View;assembly=BS.BingoBoard"
+             xmlns:boardVM="clr-namespace:BS.BingoBoard.VM;assembly=BS.BingoBoard"
+               xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+              x:Class="BS.JudaismView.UCJudaismCongratulationsBingo"
+             mc:Ignorable="d" 
+              d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type boardVM:JudaismCongratulationsBingoBoardVM}">
+            <board:UCJudaismCongratulationsBingoBoard/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.JudaismView;component/JudaismImage/UCJudaismCongratulationsBingo.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="233*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="175*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="205*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="201*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.RowSpan="2" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" 
+                              CommandParameter="MenuCongratulationsGameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <board:UCJudaismCongratulationsBingoBoard Grid.Column="3" 
+ Content="{Binding Board0}" Visibility="{Binding BoardVisibility0}" Grid.Row="1" Grid.ColumnSpan="5"
+                                                  Grid.RowSpan="7" RenderTransformOrigin="0.5,0.5">
+            <board:UCJudaismCongratulationsBingoBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCJudaismCongratulationsBingoBoard.RenderTransform>
+        </board:UCJudaismCongratulationsBingoBoard><!---->
+         <board:UCJudaismCongratulationsBingoBoard Height="{Binding BoardHeight}" Width="{Binding BoardWidth}"
+ Content="{Binding Board1}"  Visibility="{Binding BoardVisibility1}"  Grid.Column="1"  
+  Grid.Row="3"  Grid.ColumnSpan="4" Grid.RowSpan="11" RenderTransformOrigin="0.5,0.5">
+            <board:UCJudaismCongratulationsBingoBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCJudaismCongratulationsBingoBoard.RenderTransform>
+        </board:UCJudaismCongratulationsBingoBoard>
+        <board:UCJudaismCongratulationsBingoBoard   Height="{Binding BoardHeight}"
+ Width="{Binding BoardWidth}"  Content="{Binding Board2}" Visibility="{Binding BoardVisibility2}"
+Grid.Column="9"  Grid.Row="2" Grid.ColumnSpan="6" Grid.RowSpan="7" RenderTransformOrigin="0.5,0.5" >
+            <board:UCJudaismCongratulationsBingoBoard.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCJudaismCongratulationsBingoBoard.RenderTransform>
+        </board:UCJudaismCongratulationsBingoBoard>
+        <board:UCJudaismCongratulationsBingoBoard Content="{Binding Board3}"  
+ Visibility="{Binding BoardVisibility3}" Grid.Column="5"  Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="7" />
+       <Items:UCTimer Grid.Column="6"  Grid.Row="5" Grid.RowSpan="3" />
+
+        <Label   Grid.Column="11" Grid.Row="10"  x:Name="AnswerButton"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ExitButBackground}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AnswerBut}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelStart" Grid.Column="13" Grid.Row="10" IsEnabled="{Binding gameRun}">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding NewGame}"/>
+            </Label.InputBindings>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
+            </Label.Background>
+        </Label>
+
+        <MediaElement x:Name="MediaElement1"   LoadedBehavior="{Binding IsPlay}"
+                      Volume="{Binding Volume}"
+                      Source="{Binding UrlPlay}" Visibility="Collapsed">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MediaEnded">
+                    <i:InvokeCommandAction Command="{Binding StopPlay}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </MediaElement>
+        <Items:UCTimerControl Grid.Column="10" HorizontalAlignment="Right" Margin="20" 
+                              Grid.Row="9" VerticalAlignment="Bottom" Grid.ColumnSpan="4" Width="125"/><!---->
+    </Grid>
+</UserControl>

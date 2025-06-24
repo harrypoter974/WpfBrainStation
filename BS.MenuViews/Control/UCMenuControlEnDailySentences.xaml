@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="BS.MenuViews.Control.UCMenuControlEnDailySentences"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews.Control"
+             mc:Ignorable="d"  
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+                     d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MenuViews;component/MenuImage/UCMenuControlEnDailySentences.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="235*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="314*"/>
+            <ColumnDefinition Width="332*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="165*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="389*"/>
+        </Grid.RowDefinitions>
+        <Label                                 >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="MenuControlEnglishVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="MorningVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="4" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="GardenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="6" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="HomeVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="8" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="EveningVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="10">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AddPage}" CommandParameter="DailyWordsVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="4"  Grid.Row="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="MorningVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="4" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="GardenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="6" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="HomeVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="8" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="EveningVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4"  Grid.Row="10">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding RemovePage}" CommandParameter="DailyWordsVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label  Grid.Column="6"  Grid.Row="2"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut0}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="4"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut1}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="6"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut2}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="8"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut3}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="10" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundBut4}"/>
+            </Label.Background>
+        </Label>
+        <Items:NUCBlueUCSpeaker   VerticalAlignment="Top"  Margin="{Binding SpeakerMargin}" Grid.RowSpan="3"
+         Grid.ColumnSpan="5" HorizontalAlignment="Left"/>
+    </Grid>
+</UserControl>

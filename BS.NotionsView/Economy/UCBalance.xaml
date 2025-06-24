@@ -1,0 +1,302 @@
+﻿<UserControl x:Class="BS.NotionsView.Economy.UCBalance"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.Economy"
+              xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"             
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d"
+             d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+        <!--<ImageBrush ImageSource="C:\Brain_Station\WpfBrainStationBrachoot\WpfBrainStation\Resources\Notions\Economy\balance1.jpg"/>-->
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="268*"/>
+            <ColumnDefinition Width="265*"/>
+            <ColumnDefinition Width="106*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="18*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="29*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuConsumptionVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Items:NUCSpeaker Grid.ColumnSpan="3" Grid.RowSpan="3" 
+HorizontalAlignment="Left"  Margin="{Binding SpeakerMargin}"  VerticalAlignment="Top"/>
+        <Label  Grid.Column="12"   Grid.Row="21" Grid.ColumnSpan="2" Grid.RowSpan="5" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding AnswerButBackground}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Image Grid.Column="13" Grid.Row="19" Grid.ColumnSpan="3"  Source="{Binding HappySmily}"/>
+        <Image Grid.Column="6" Grid.RowSpan="5" Source="{Binding WeightText}" 
+  VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="{Binding BoxRow}" Margin="0,0,0,11" 
+ />
+        <ListBox Grid.Row="{Binding ListRow}" Grid.Column="4" Grid.RowSpan="5" BorderBrush="Transparent" 
+              VerticalAlignment="Bottom"  HorizontalAlignment="Center" Background="Transparent"
+                 ItemsSource="{Binding LstProduct, Mode=TwoWay }"   >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate >
+                <DataTemplate >
+                    <StackPanel Height="200" >
+                        <StackPanel.Resources>
+                            <Style TargetType="Button">
+                                <Setter Property="LayoutTransform">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="180"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </StackPanel.Resources>
+
+                        <!-- rotate the stack panel -->
+                        <StackPanel.LayoutTransform>
+                            <RotateTransform Angle="180"/>
+                        </StackPanel.LayoutTransform>
+                        <Image VerticalAlignment="Bottom" Source="{Binding Background}" Stretch="None" 
+                               RenderTransformOrigin="0.5,0.5"  >
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Items:UCExitButton  Grid.Column="15" Grid.Row="22" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <Image  Grid.Column="{Binding Column}"  Grid.Row="{Binding Row }"  Width="200" Height="220"
+Grid.ColumnSpan="6"  Grid.RowSpan="26" HorizontalAlignment="Left" VerticalAlignment="Top"  Source="{Binding PicCard}" Visibility="{Binding VisibilityCard}" Stretch="None"
+                ></Image>
+        <!--<Items:UCTransparentCard  Grid.Column="{Binding Column}"  Grid.Row="{Binding Row }"  Width="50" Height="100"
+Grid.ColumnSpan="6"  Grid.RowSpan="26" HorizontalAlignment="Left" VerticalAlignment="Top"></Items:UCTransparentCard>-->
+        <Label  Grid.Column="2"  Grid.Row="2"                                     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding MouseDown}" CommandParameter="2_2_0" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="2_2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="4"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding MouseDown}" CommandParameter="2_4_1" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="2_4" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="6"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding MouseDown}" CommandParameter="2_6_2" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="2_6" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="2"  Grid.Row="8"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding MouseDown}" CommandParameter="2_8_3" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="2_8" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="2" Grid.Row="10" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding MouseDown}" CommandParameter="2_10_4" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="2_10" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="2" Grid.Row="12"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding MouseDown}" CommandParameter="2_12_5" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="2_12" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="2" Grid.Row="14"     Grid.RowSpan="3"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding MouseDown}" CommandParameter="2_14_6" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="2_14" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="1" Grid.Row="18" Grid.RowSpan="6" Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding MouseDown}" CommandParameter="2_18_7" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="2_18" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label  Grid.Column="3"  Grid.Row="2"  Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="3_2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3"  Grid.Row="4"  Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="3_4" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3"  Grid.Row="6"  Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="3_6" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3"  Grid.Row="8"  Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="3_8" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3" Grid.Row="10"  Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="3_10" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3" Grid.Row="12"  Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="3_12" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3" Grid.Row="14"   Grid.RowSpan="4" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="3_14" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="3" Grid.Row="18" Grid.RowSpan="5"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchMove">
+                    <i:InvokeCommandAction Command="{Binding MouseMove}" CommandParameter="3_18" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label x:Name="label" Grid.Column="4"   Grid.Row="2"  Grid.RowSpan="19">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchUp">
+                    <i:InvokeCommandAction Command="{Binding MouseUp}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label   Grid.Column="8"  Grid.Row="23">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LevelBut1}"/>
+            </Label.Background>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TouchDown">
+                        <i:InvokeCommandAction Command="{Binding ChangeLevel}" CommandParameter="1" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="10"  Grid.Row="23">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LevelBut0}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ChangeLevel}" CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+    </Grid>
+</UserControl>

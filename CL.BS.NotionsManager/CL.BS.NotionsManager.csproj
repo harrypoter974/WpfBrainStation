@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE9E2A19-C496-4BFF-9111-28E02C78E0E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CL.BS.NotionsManager</RootNamespace>
+    <AssemblyName>CL.BS.NotionsManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CL.BS.GameManager">
+      <HintPath>..\..\WpfBrainStation\Release\CL.BS.GameManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CL.BS.VMCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\CL.BS.VMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\AnimalsEngine.cs" />
+    <Compile Include="Engine\BodyEngine.cs" />
+    <Compile Include="Engine\ClockBingoEngine.cs" />
+    <Compile Include="Engine\ClockEngine.cs" />
+    <Compile Include="Engine\ClothingEngine.cs" />
+    <Compile Include="Engine\ColorsBingoEngine.cs" />
+    <Compile Include="Engine\ColorsEngine.cs" />
+    <Compile Include="Engine\ColorsMemoryEngine.cs" />
+    <Compile Include="Engine\DaysOfTheWeekEngine.cs" />
+    <Compile Include="Engine\EmotionsEngine.cs" />
+    <Compile Include="Engine\FoodEngine.cs" />
+    <Compile Include="Engine\FruitEngine.cs" />
+    <Compile Include="Engine\GardenTriviaEngine.cs" />
+    <Compile Include="Engine\HandEyeCoordinationGameEngine.cs" />
+    <Compile Include="Engine\HePrepositionsEngine.cs" />
+    <Compile Include="Engine\kitchenwareEngine.cs" />
+    <Compile Include="Engine\MemoryGameEngine.cs" />
+    <Compile Include="Engine\MusicBingoEngine.cs" />
+    <Compile Include="Engine\OppositesEngin.cs" />
+    <Compile Include="Engine\PictureToStory2Engine.cs" />
+    <Compile Include="Engine\ProfessionsEngine.cs" />
+    <Compile Include="Engine\ScaleMemoryEngine.cs" />
+    <Compile Include="Engine\ShadowGameEngine.cs" />
+    <Compile Include="Engine\ShapeEngine.cs" />
+    <Compile Include="Engine\SimonEngine.cs" />
+    <Compile Include="Engine\SortEngine.cs" />
+    <Compile Include="Engine\ToolsEngine.cs" />
+    <Compile Include="Engine\UnusualGameEngine.cs" />
+    <Compile Include="Engine\VegetablesEngine.cs" />
+    <Compile Include="Engine\VehiclesEngine.cs" />
+    <Compile Include="Engine\WhatIsMissingEngine.cs" />
+    <Compile Include="Engine\WhatShapeChariotEngine.cs" />
+    <Compile Include="Interface\IAnimalsManager.cs" />
+    <Compile Include="Interface\IBodyManager.cs" />
+    <Compile Include="Interface\IClockBingoManager.cs" />
+    <Compile Include="Interface\IClockManager.cs" />
+    <Compile Include="Interface\IClothingManager.cs" />
+    <Compile Include="Interface\IColorsBingoManager.cs" />
+    <Compile Include="Interface\IColorsManager.cs" />
+    <Compile Include="Interface\IColorsMemoryManager.cs" />
+    <Compile Include="Interface\IDaysOfTheWeekManager.cs" />
+    <Compile Include="Interface\IEmotionsGameManager.cs" />
+    <Compile Include="Interface\IEmotionsManager.cs" />
+    <Compile Include="Interface\IFoodManager.cs" />
+    <Compile Include="Interface\IGardenTriviaManager.cs" />
+    <Compile Include="Interface\IHandEyeCoordinationGameManager.cs" />
+    <Compile Include="Interface\IHeOppositesManager.cs" />
+    <Compile Include="Interface\IHePrepositionsManager.cs" />
+    <Compile Include="Interface\IFruitManager.cs" />
+    <Compile Include="Interface\IkitchenwareManager.cs" />
+    <Compile Include="Interface\IMemoryGameManager.cs" />
+    <Compile Include="Interface\IMusicBingoManager.cs" />
+    <Compile Include="Interface\IPictureToStory2Manager.cs" />
+    <Compile Include="Interface\IProfessionsManager.cs" />
+    <Compile Include="Interface\IScaleMemoryManager.cs" />
+    <Compile Include="Interface\IShadowGameManager.cs" />
+    <Compile Include="Interface\IShapeWordManager.cs" />
+    <Compile Include="Interface\ISimonManager.cs" />
+    <Compile Include="Interface\ISortManager.cs" />
+    <Compile Include="Interface\IToolsManager.cs" />
+    <Compile Include="Interface\IUnusualGameManager.cs" />
+    <Compile Include="Interface\IVegetablesManager.cs" />
+    <Compile Include="Interface\IVehiclesManager.cs" />
+    <Compile Include="Interface\IWhatIsMissingManager.cs" />
+    <Compile Include="Interface\IWhatShapeChariotManager.cs" />
+    <Compile Include="Manager\AnimalsManager.cs" />
+    <Compile Include="Manager\BodyManager.cs" />
+    <Compile Include="Manager\ClockBingoManager.cs" />
+    <Compile Include="Manager\ClockManager.cs" />
+    <Compile Include="Manager\ClothingManager.cs" />
+    <Compile Include="Manager\ColorsBingoManager.cs" />
+    <Compile Include="Manager\ColorsManager.cs" />
+    <Compile Include="Manager\ColorsMemoryManager.cs" />
+    <Compile Include="Manager\DaysOfTheWeekManager.cs" />
+    <Compile Include="Manager\EmotionsGameManager.cs" />
+    <Compile Include="Manager\EmotionsManager.cs" />
+    <Compile Include="Manager\FoodManager.cs" />
+    <Compile Include="Manager\FruitManager.cs" />
+    <Compile Include="Manager\GardenTriviaManager.cs" />
+    <Compile Include="Manager\HandEyeCoordinationGameManager.cs" />
+    <Compile Include="Manager\HeOppositesManager.cs" />
+    <Compile Include="Manager\HePrepositionsManager.cs" />
+    <Compile Include="Manager\kitchenwareManager.cs" />
+    <Compile Include="Manager\MemoryGameManager.cs" />
+    <Compile Include="Manager\MusicBingoManager.cs" />
+    <Compile Include="Manager\PictureToStory2Manager.cs" />
+    <Compile Include="Manager\ProfessionsManager.cs" />
+    <Compile Include="Manager\ScaleMemoryManager.cs" />
+    <Compile Include="Manager\ShadowGameManager.cs" />
+    <Compile Include="Manager\ShapeWordManager.cs" />
+    <Compile Include="Manager\SimonManager.cs" />
+    <Compile Include="Manager\SortManager.cs" />
+    <Compile Include="Manager\ToolsManager.cs" />
+    <Compile Include="Manager\UnusualGameManager.cs" />
+    <Compile Include="Manager\VegetablesManager.cs" />
+    <Compile Include="Manager\VehiclesManager.cs" />
+    <Compile Include="Manager\WhatIsMissingManager.cs" />
+    <Compile Include="Manager\WhatShapeChariotManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.MultipleMice\MultipleMice.csproj">
+      <Project>{5D7A3AD3-0146-48BA-930F-5525E99FA307}</Project>
+      <Name>MultipleMice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MEF\CL.BS.MEF.csproj">
+      <Project>{681bfcfc-6b4b-4800-abae-441f4c4bb0c2}</Project>
+      <Name>CL.BS.MEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0B6191C5-6621-4DC6-8D7F-06CB3BD05BC3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

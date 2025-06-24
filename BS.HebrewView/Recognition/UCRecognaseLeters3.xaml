@@ -1,0 +1,186 @@
+﻿<UserControl x:Class="BS.HebrewView.Recognition.UCRecognaseLeters3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.HebrewView.Recognition"             
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             mc:Ignorable="d" 
+              d:DesignHeight="1080" d:DesignWidth="1920" >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.HebrewView;component/HebrewImage/UCRecognaseLeters3.jpg" />
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="363*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="284*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="18*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="170*"/>
+            <RowDefinition Height="230*"/>
+            <RowDefinition Height="127*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush />
+        </Grid.Background>
+        <Grid.InputBindings>
+            <MouseBinding MouseAction="LeftClick"  Command="{Binding CloseSpeaker}"/>
+        </Grid.InputBindings>
+        <Label x:Name="UCNewAnswerButton1" Grid.Column="13"  Grid.Row="17" Grid.RowSpan="4">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}" 
+                                           />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:UCSpeaker  Grid.RowSpan="5" Margin="{Binding SpeakerMargin}"
+HorizontalAlignment="Left"   VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelHome"  Grid.RowSpan="4" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MenuHebrewVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LLevel1" Grid.Column="11" Grid.RowSpan="3" Grid.Row="18" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="RecognaseLeters1VM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label x:Name="LLern1"  Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="KnowLetterVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label x:Name="LLevel2" Grid.Column="10" Grid.RowSpan="3" Grid.Row="18">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="RecognaseLeters2VM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <ListBox Grid.Column="1" Grid.Row="9" Name="WrapPanel1" HorizontalAlignment="Center" Grid.ColumnSpan="13"
+                   BorderBrush="#FF41AD48" Background="#FF41AD48"   ItemsSource="{Binding LstProduct}" >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Height="148" Width="187">
+                        <Border Width="117"  Height="148" Margin="30,0">
+                            <Border.Background>
+                                      
+                            <ImageBrush ImageSource="{Binding Background}"/>
+                            </Border.Background>
+                        <TextBlock Text="{Binding Text}" Foreground="{Binding Uid}"
+                    FontSize="{Binding FontSize}"  FontFamily="Times New Roman" FontWeight ="Bold" 
+                               TextAlignment="Center" VerticalAlignment="Center">
+                        </TextBlock>
+                        </Border>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <!--<Items:UCButCardOrWrote x:Name="UCButCardOrWrote" Visibility="Hidden" Grid.Column="10" Grid.Row="18" MouseDown="UCButCardOrWrote_MouseDown"/>
+        <Items:UCButNotice Grid.Column="13"  Grid.Row="19" />-->
+        <Image x:Name="imageGerlMeseg" Grid.Column="9" Source="{Binding messagePic}" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" />
+        <Label Grid.Column="2" Grid.Row="11" Grid.ColumnSpan="6" Grid.RowSpan="9">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding SetDomainBack}" />
+            </Label.Background>
+        </Label>
+        <Label Grid.Column="3"  Grid.Row="14" Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetDomain}"   CommandParameter="6"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="4"  Grid.Row="13"  Grid.ColumnSpan="2"  Grid.RowSpan="2"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetDomain}"  CommandParameter="4" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="4"  Grid.Row="15" Grid.ColumnSpan="2"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetDomain}"  CommandParameter="5" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="6"  Grid.Row="12"  Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetDomain}"  CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="6"  Grid.Row="13"   Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetDomain}"  CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="6"  Grid.Row="15"  Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetDomain}"  CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="6"  Grid.Row="16"  Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetDomain}"  CommandParameter="3" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+    </Grid>
+</UserControl>

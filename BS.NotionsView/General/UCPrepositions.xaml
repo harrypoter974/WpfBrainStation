@@ -1,0 +1,167 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.General"
+              xmlns:board="clr-namespace:BS.BingoBoard.View;assembly=BS.BingoBoard"
+             xmlns:boardVM="clr-namespace:BS.BingoBoard.VM;assembly=BS.BingoBoard"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             xmlns:Prepositions="clr-namespace:BS.BingoBoard.View.Prepositions"
+    x:Class="BS.NotionsView.General.UCPrepositions"
+             mc:Ignorable="d" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type boardVM:TrafficLightsBoardVM}">
+            <board:UCTrafficLightsBoard/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.NotionsView;component/NotionsImage/UCPrepositions.png"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="104*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="306*"/>
+            <ColumnDefinition Width="138*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="180*"/>
+            <RowDefinition Height="330*"/>
+            <RowDefinition Height="115*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="121*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+
+        <Items:UCSpeaker Grid.RowSpan="4" Grid.ColumnSpan="5"
+ Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"  HorizontalAlignment="Left"/>
+        <Label x:Name="labelHome"   Grid.RowSpan="3"  Grid.ColumnSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="PrepositionsMenuVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+
+        <Label x:Name="UCNewAnswerButton1"  Grid.Column="12" Grid.Row="9" Grid.RowSpan="3" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ExitButBackground}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="14"  Grid.Row="9"  Grid.RowSpan="3"  IsEnabled="{Binding NotGameRun}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding StartGame}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelPlay" Grid.Column="15"  Grid.Row="12">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding RePlay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label x:Name="labelMesege" Grid.Column="9" Grid.Row="10" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding OpenInstructions}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="15" Grid.Row="12">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding OpenInstructions}" CommandParameter="Colse" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+    
+     
+        <board:UCTrafficLightsBoard3 Grid.Column="6" Grid.Row="1" Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5"
+Visibility="{Binding BoardVisibility2}" Content="{Binding Board2}" >
+            <board:UCTrafficLightsBoard3.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCTrafficLightsBoard3.RenderTransform>
+        </board:UCTrafficLightsBoard3>
+        <board:UCTrafficLightsBoard3 Grid.Column="4"  Grid.Row="6"  Grid.RowSpan="6"
+  Visibility="{Binding BoardVisibility0}" Content="{Binding Board0}"/>
+        <board:UCTrafficLightsBoard3 Grid.ColumnSpan="3" Grid.Column="1"  Grid.Row="3" Grid.RowSpan="6" 
+                                     RenderTransformOrigin="0.5,0.5"
+Height="{Binding BoardHeight}" Width="{Binding BoardWidth}" Content="{Binding Board1}"
+                                     Visibility="{Binding BoardVisibility1}" >
+            <board:UCTrafficLightsBoard3.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCTrafficLightsBoard3.RenderTransform>
+        </board:UCTrafficLightsBoard3>
+        <board:UCTrafficLightsBoard3 Grid.Column="7"  Grid.Row="3" Grid.ColumnSpan="8" Grid.RowSpan="7" 
+                                     RenderTransformOrigin="0.5,0.5"
+ Height="{Binding BoardHeight}" Width="{Binding BoardWidth}"  Visibility="{Binding BoardVisibility3}"
+                                     Content="{Binding Board3}">
+            <board:UCTrafficLightsBoard3.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </board:UCTrafficLightsBoard3.RenderTransform>
+        </board:UCTrafficLightsBoard3>
+        <Items:UCTimer Grid.Column="6" Grid.Row="6" Grid.RowSpan="2"  Grid.ColumnSpan="3" HorizontalAlignment="Right"/>
+
+        <Items:UCTimerControl Grid.ColumnSpan="5" Grid.Column="10" Grid.Row="6" Grid.RowSpan="2" Width="100" Height="100"/>
+        <ContentControl    Content="{Binding BoardPrepositions}" Grid.Column="4" Grid.Row="4"
+                           Grid.RowSpan="2" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5" >
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="{Binding AnglePic}"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+    </Grid>
+</UserControl>

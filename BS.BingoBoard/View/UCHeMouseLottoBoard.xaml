@@ -1,0 +1,294 @@
+﻿<UserControl x:Class="BS.BingoBoard.View.UCHeMouseLottoBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.BingoBoard.View"
+             mc:Ignorable="d" 
+            xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+                xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+          
+             d:DesignHeight="354" d:DesignWidth="491"     FontSize="37" FontWeight="Bold" >
+
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="/BS.BingoBoard;component/BingoBoardImage/UCHeMouseLottoBoard.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="16*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="29.933*"/>
+            <RowDefinition Height="31.067*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="image" Grid.Column="10"  Grid.Row="1" Source="{Binding PicQuestion}" Grid.RowSpan="10" Grid.ColumnSpan="10" />
+        <Image Grid.Row="18" Source="{Binding TBArrow0}" Grid.ColumnSpan="2"/>
+        <Image Grid.Row="16" Source="{Binding TBArrow1}" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <Image Grid.Row="15" Source="{Binding TBArrow2}" Grid.ColumnSpan="2"/>
+        <Image Grid.Row="12" Source="{Binding TBArrow3}" Grid.ColumnSpan="2"  Grid.RowSpan="3" />
+        <Image Grid.Row="8"  Source="{Binding TBArrow4}" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+        <Image Grid.Row="7"  Source="{Binding TBArrow5}" Grid.ColumnSpan="2" />
+        <Image Grid.Row="5"  Source="{Binding TBArrow6}" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <Image Grid.Row="4"  Source="{Binding TBArrow7}" Grid.ColumnSpan="2" />
+        <Image Grid.Row="2"  Source="{Binding TBArrow8}" Grid.ColumnSpan="2"  Grid.RowSpan="2" />
+        <Image Grid.RowSpan="2"  Source="{Binding TBArrow9}"  Grid.ColumnSpan="2"/>
+        <Image x:Name="image0" Grid.Column="28" Grid.ColumnSpan="3" Grid.Row="11" Grid.RowSpan="6" Source="{Binding TBSoldier0}" VerticalAlignment="Bottom"/>
+        <Image x:Name="image1" Grid.Column="28" Grid.ColumnSpan="3" Grid.Row="7" Grid.RowSpan="8" Source="{Binding TBSoldier1}" VerticalAlignment="Bottom"/>
+        <Image x:Name="image2" Grid.Column="28" Grid.ColumnSpan="3" Grid.Row="4" Grid.RowSpan="6" Source="{Binding TBSoldier2}" VerticalAlignment="Bottom"/>
+        <Image x:Name="image3" Grid.Column="28" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="5" Source="{Binding TBSoldier3}" VerticalAlignment="Bottom"/>
+        <Image x:Name="image4" Grid.Column="28" Grid.ColumnSpan="3" Source="{Binding TBSoldier4}" VerticalAlignment="Bottom" Grid.RowSpan="4" />
+       <Items:UCBlinkBord  Grid.Column="28"  Grid.Row="1" Grid.RowSpan="16" Grid.ColumnSpan="3" Visibility="{Binding BaseWinBlink}"/>
+        <TextBlock Grid.Row="14" Grid.Column="4" Grid.RowSpan="4" Grid.ColumnSpan="22" Text="{Binding WordText}" TextAlignment="Center"/> <!---->
+
+        <Label  x:Name="Letterל"  Grid.ColumnSpan="2" Grid.Column="5" Grid.Row="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ל"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterכ"  Grid.Column="7" Grid.ColumnSpan="2"  Grid.Row="20" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="כ"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterי"  Grid.Column="9" Grid.ColumnSpan="3"   Grid.Row="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="י"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterט"  Grid.Column="12" Grid.ColumnSpan="2"   Grid.Row="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ט"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterח"  Grid.Column="14" Grid.ColumnSpan="2"  Grid.Row="20" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ח"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterז"  Grid.Column="16" Grid.ColumnSpan="2"  Grid.Row="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ז"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterו"  Grid.Column="18" Grid.ColumnSpan="3"  Grid.Row="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ו"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterה"  Grid.Column="21" Grid.ColumnSpan="2"   Grid.Row="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ה"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterד"  Grid.Column="23" Grid.ColumnSpan="2"  Grid.Row="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ד"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterג"  Grid.Column="25" Grid.ColumnSpan="2"  Grid.Row="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ג"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterב"  Grid.Column="27" Grid.ColumnSpan="3"  Grid.Row="20">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ב"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterא"  Grid.Column="30" Grid.ColumnSpan="2"  Grid.Row="20" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="א"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Label   x:Name="labelDelet"  Grid.Row="21"   Grid.RowSpan="3"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="0"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterת"  Grid.Column="13"  Grid.ColumnSpan="2"  Grid.Row="21"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ת"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterש"  Grid.Column="15" Grid.ColumnSpan="2"  Grid.Row="21"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ש"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterר"  Grid.Column="17"  Grid.ColumnSpan="2" Grid.Row="21"     >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ר"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterק"  Grid.Column="19"  Grid.ColumnSpan="3"  Grid.Row="21"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ק"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterצ" Grid.Column="22"  Grid.ColumnSpan="2" Grid.Row="21"    >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="צ"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterפ" Grid.Column="24"  Grid.ColumnSpan="2" Grid.Row="21"      >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="פ"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterע"  Grid.Column="26" Grid.ColumnSpan="3" Grid.Row="21"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ע"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterס"  Grid.Column="29"  Grid.ColumnSpan="2" Grid.Row="21"    >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ס"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterנ"   Grid.Row="20" Grid.ColumnSpan="2"   >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="נ"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterמ"   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="20" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="מ"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+
+        <Label  x:Name="Letterץ"  Grid.Column="1"  Grid.ColumnSpan="2"  Grid.Row="21"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ץ"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterף"  Grid.Column="4"  Grid.ColumnSpan="2"  Grid.Row="21"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ף"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterן"  Grid.Column="6"  Grid.ColumnSpan="2"  Grid.Row="21"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ן"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterם"  Grid.Column="8"  Grid.ColumnSpan="2"  Grid.Row="21"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ם"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  x:Name="Letterך"  Grid.Column="11"  Grid.ColumnSpan="2"  Grid.Row="21"  >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding TypeLetter}"  CommandParameter="ך"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+    </Grid>
+</UserControl>

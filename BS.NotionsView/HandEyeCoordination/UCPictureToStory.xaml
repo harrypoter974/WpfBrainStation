@@ -1,0 +1,177 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.NotionsView.HandEyeCoordination"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+    x:Class="BS.NotionsView.HandEyeCoordination.UCPictureToStory"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             mc:Ignorable="d" 
+            d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.NotionsView;component/NotionsImage/UCPictureToStory.jpg"/>
+        <!--<ImageBrush ImageSource="C:\brinStation\Brain Station\תמונות\תמונות 32\DOV_150320\Mi Tmuna le sipur\Mi Tmuna Le sipur5.jpg"/>-->
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="21*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="123*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="233*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="121*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="35*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+        </Grid.Background>
+        <Label Grid.ColumnSpan="2" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuTeamworkVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="20"  Grid.Row="11" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="15"  Grid.Row="12" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding PlayerBut0}" />
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetPlayer}" CommandParameter="0" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="16"  Grid.Row="12"   >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding PlayerBut1}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetPlayer}" CommandParameter="1" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="17"  Grid.Row="12"        >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding PlayerBut2}"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SetPlayer}" CommandParameter="2" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+
+        <Image Grid.Column="13"  Grid.Row="3" Source="{Binding messagePic}" Grid.ColumnSpan="7" />
+        <Items:NUCSpeaker  Grid.RowSpan="3"
+ Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" HorizontalAlignment="Left"  Grid.ColumnSpan="5" />
+        <Image  Grid.ColumnSpan="3" Grid.Column="7" Source="{Binding Pic40}"   Grid.Row="8"  Grid.RowSpan="3"/>
+        <Image  Grid.ColumnSpan="5"  Source="{Binding Pic41}"  Grid.Column="17"  Grid.Row="6" 
+                RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image  Grid.ColumnSpan="3"  Source="{Binding Pic42}"  Grid.Column="7"   Grid.Row="2" 
+                Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image  Grid.ColumnSpan="2" Grid.Column="1"   Source="{Binding Pic43}"  Grid.Row="6" 
+                RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Grid.ColumnSpan="2" Grid.Column="6" Source="{Binding Pic21}" Grid.Row="2"
+               Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Grid.Column="9"  Grid.Row="2" Grid.RowSpan="3" Source="{Binding Pic23}" 
+               Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Grid.Column="9"  Grid.Row="8" Grid.ColumnSpan="2" Grid.RowSpan="4" Source="{Binding Pic20}"/>
+        <Image Grid.ColumnSpan="2" Grid.Column="6" Grid.Row="8"  Grid.RowSpan="4" Source="{Binding Pic22}"/>
+        <Image  Grid.Column="4"  Grid.Row="8" Source="{Binding Pic13}" Grid.RowSpan="4"/>
+        <Image  Grid.ColumnSpan="2" Source="{Binding Pic10}" Grid.Column="12"  Grid.Row="8"  Grid.RowSpan="4"/>
+
+        <Items:UCExitButton Grid.Column="21" Grid.Row="9"  />
+    </Grid>
+</UserControl>

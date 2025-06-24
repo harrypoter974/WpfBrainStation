@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D575353C-C711-43FB-9274-B8FE7431FFD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BS.MenuViews</RootNamespace>
+    <AssemblyName>BS.MenuViews</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CL.BS.EnglishManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\CL.BS.EnglishManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CL.BS.JudaismManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\CL.BS.JudaismManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\UCMenuControHeGeneralSkill.xaml.cs">
+      <DependentUpon>UCMenuControHeGeneralSkill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControl.xaml.cs">
+      <DependentUpon>UCMenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControl4Arithmetic.xaml.cs">
+      <DependentUpon>UCMenuControl4Arithmetic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlCore.xaml.cs">
+      <DependentUpon>UCMenuControlCore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlTeamwork.xaml.cs">
+      <DependentUpon>UCMenuControlTeamwork.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlEnDailySentences.xaml.cs">
+      <DependentUpon>UCMenuControlEnDailySentences.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlEnglish.xaml.cs">
+      <DependentUpon>UCMenuControlEnglish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlEnVocabulary.xaml.cs">
+      <DependentUpon>UCMenuControlEnVocabulary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlGame.xaml.cs">
+      <DependentUpon>UCMenuControlGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlGeneral.xaml.cs">
+      <DependentUpon>UCMenuControlGeneral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlHebrew.xaml.cs">
+      <DependentUpon>UCMenuControlHebrew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlHeDailySentences.xaml.cs">
+      <DependentUpon>UCMenuControlHeDailySentences.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlHeGame.xaml.cs">
+      <DependentUpon>UCMenuControlHeGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlHeGeneralGame.xaml.cs">
+      <DependentUpon>UCMenuControlHeGeneralGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlHeVocabulary.xaml.cs">
+      <DependentUpon>UCMenuControlHeVocabulary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlMath.xaml.cs">
+      <DependentUpon>UCMenuControlMath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlSelfEditing.xaml.cs">
+      <DependentUpon>UCMenuControlSelfEditing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlShape.xaml.cs">
+      <DependentUpon>UCMenuControlShape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlVocabulary.xaml.cs">
+      <DependentUpon>UCMenuControlVocabulary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UCMenuControlWords.xaml.cs">
+      <DependentUpon>UCMenuControlWords.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralGame\UCMenuHeGeneralAnimal.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralBody.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralClothing.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralColors.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralFamily.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralFood.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralFruit.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralkitchenware.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralMusical.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralProfessionals.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralShapes.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralTools.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralVegetables.xaml.cs" />
+    <Compile Include="GeneralGame\UCMenuHeGeneralVehicles.xaml.cs" />
+    <Compile Include="Sentences\UCMenuHeGeneralDailySentences.xaml.cs" />
+    <Compile Include="UCChabad.xaml.cs">
+      <DependentUpon>UCChabad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCDownload.xaml.cs">
+      <DependentUpon>UCDownload.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCHandEyeCoordination.xaml.cs">
+      <DependentUpon>UCHandEyeCoordination.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCHasidic.xaml.cs">
+      <DependentUpon>UCHasidic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMeasurements.xaml.cs">
+      <DependentUpon>UCMenuMeasurements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuTeamwork.xaml.cs" />
+    <Compile Include="UCMenu4Arithmetic.xaml.cs">
+      <DependentUpon>UCMenu4Arithmetic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuCongratulations.xaml.cs">
+      <DependentUpon>UCMenuCongratulations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuCongratulationsGame.xaml.cs">
+      <DependentUpon>UCMenuCongratulationsGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuCongratulationsJoy.xaml.cs">
+      <DependentUpon>UCMenuCongratulationsJoy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuDataUser1.xaml.cs">
+      <DependentUpon>UCMenuDataUser1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuDistinctionInDetails.xaml.cs">
+      <DependentUpon>UCMenuDistinctionInDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuEnGame.xaml.cs">
+      <DependentUpon>UCMenuEnGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuEnGeneral.xaml.cs">
+      <DependentUpon>UCMenuEnGeneral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuEnglish1.xaml.cs">
+      <DependentUpon>UCMenuEnglish1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeGeneralRulesWeighted.xaml.cs">
+      <DependentUpon>UCMenuHeGeneralRulesWeighted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeGeneralSkill.xaml.cs">
+      <DependentUpon>UCMenuHeGeneralSkill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeReading.xaml.cs">
+      <DependentUpon>UCMenuHeReading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuGame1.xaml.cs">
+      <DependentUpon>UCMenuGame1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuGeography.xaml.cs">
+      <DependentUpon>UCMenuGeography.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHebrew1.xaml.cs">
+      <DependentUpon>UCMenuHebrew1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeGame.xaml.cs">
+      <DependentUpon>UCMenuHeGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeGeneral1.xaml.cs">
+      <DependentUpon>UCMenuHeGeneral1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHeGeneralGame.xaml.cs">
+      <DependentUpon>UCMenuHeGeneralGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuHolidays.xaml.cs">
+      <DependentUpon>UCMenuHolidays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuInstructions.xaml.cs">
+      <DependentUpon>UCMenuInstructions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuJudaism.xaml.cs">
+      <DependentUpon>UCMenuJudaism.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuJudaismAgenda.xaml.cs">
+      <DependentUpon>UCMenuJudaismAgenda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuJudaismDedication.xaml.cs">
+      <DependentUpon>UCMenuJudaismDedication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuJudaismGame.xaml.cs">
+      <DependentUpon>UCMenuJudaismGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuLern1.xaml.cs">
+      <DependentUpon>UCMenuLern1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuLernJudaism.xaml.cs">
+      <DependentUpon>UCMenuLernJudaism.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMath.xaml.cs">
+      <DependentUpon>UCMenuMath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMathGame.xaml.cs">
+      <DependentUpon>UCMenuMathGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMathPreface.xaml.cs">
+      <DependentUpon>UCMenuMathPreface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMathStructure.xaml.cs">
+      <DependentUpon>UCMenuMathStructure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMathSummary.xaml.cs">
+      <DependentUpon>UCMenuMathSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMemory.xaml.cs">
+      <DependentUpon>UCMenuMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuSplite.xaml.cs">
+      <DependentUpon>UCMenuSplite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuOpen1.xaml.cs">
+      <DependentUpon>UCMenuOpen1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuOperation.xaml.cs">
+      <DependentUpon>UCMenuOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuPrint.xaml.cs">
+      <DependentUpon>UCMenuPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuPuzzles.xaml.cs">
+      <DependentUpon>UCMenuPuzzles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuSub.xaml.cs">
+      <DependentUpon>UCMenuSub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuShape1.xaml.cs">
+      <DependentUpon>UCMenuShape1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuShapeAndAngle.xaml.cs">
+      <DependentUpon>UCMenuShapeAndAngle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuShapeExercise.xaml.cs">
+      <DependentUpon>UCMenuShapeExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuShapeGame.xaml.cs">
+      <DependentUpon>UCMenuShapeGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuSingleArrayWork.xaml.cs">
+      <DependentUpon>UCMenuSingleArrayWork.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuTime.xaml.cs">
+      <DependentUpon>UCMenuTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuVocabulary.xaml.cs">
+      <DependentUpon>UCMenuVocabulary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuVocabularyBingo.xaml.cs">
+      <DependentUpon>UCMenuVocabularyBingo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuVocabularyGame.xaml.cs">
+      <DependentUpon>UCMenuVocabularyGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuAdd.xaml.cs">
+      <DependentUpon>UCMenuAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenuMoltipol.xaml.cs">
+      <DependentUpon>UCMenuMoltipol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenu_consumption.xaml.cs">
+      <DependentUpon>UCMenu_consumption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMenu_Music.xaml.cs">
+      <DependentUpon>UCMenu_Music.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCSelfEditing.xaml.cs">
+      <DependentUpon>UCSelfEditing.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Control\UCMenuControHeGeneralSkill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControl4Arithmetic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlCore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlTeamwork.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlEnDailySentences.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlEnglish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlEnVocabulary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlGeneral.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlHebrew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlHeDailySentences.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlHeGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlHeGeneralGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlHeVocabulary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlMath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlSelfEditing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlShape.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlVocabulary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UCMenuControlWords.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralAnimal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralBody.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralClothing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralColors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralFamily.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralFood.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralFruit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralkitchenware.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralMusical.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralProfessionals.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralShapes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralTools.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralVegetables.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralGame\UCMenuHeGeneralVehicles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sentences\UCMenuHeGeneralDailySentences.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UCChabad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCDownload.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCHandEyeCoordination.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCHasidic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMeasurements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuTeamwork.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UCMenu4Arithmetic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuCongratulations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuCongratulationsGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuCongratulationsJoy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuDataUser1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuDistinctionInDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuEnGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuEnGeneral.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuEnglish1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHeGeneralRulesWeighted.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHeGeneralSkill.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UCMenuHeReading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuGame1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuGeography.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHebrew1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHeGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHeGeneral1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHeGeneralGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuHolidays.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuInstructions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuJudaism.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuJudaismAgenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuJudaismDedication.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuJudaismGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuLern1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuLernJudaism.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMathGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMathPreface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMathStructure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMathSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMemory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuSplite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuOpen1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuOperation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuPuzzles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuSub.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuShape1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuShapeAndAngle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuShapeExercise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuShapeGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuSingleArrayWork.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuVocabulary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuVocabularyBingo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuVocabularyGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenuMoltipol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenu_consumption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMenu_Music.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCSelfEditing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuSub.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuGame.jpg" />
+    <Resource Include="MenuImage\UCMenuLern.jpg" />
+    <Resource Include="MenuImage\UCMenuOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuDataUser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuShape.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuEnglish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHeGeneral.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHebrew.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MenuVM\CL.BS.MenuVM.csproj">
+      <Project>{d83ff310-6ec4-4699-b680-f161590969c1}</Project>
+      <Name>CL.BS.MenuVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localization\Localization.csproj">
+      <Project>{6c0438ef-c94d-4a3e-b14c-92575fecee6c}</Project>
+      <Name>Localization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuEnGeneral.jpg" />
+    <Resource Include="MenuImage\UCMenuPrint.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuEnGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuConsumption.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHeGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuMathGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuGeography.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuSplite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuPuzzles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHeGeneralGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuEnReading.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenu4Arithmetic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuMath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuInstructions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Languages\he.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuMusic.jpg" />
+    <Resource Include="MenuImage\UCMenuTeamwork.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuMathPreface.jpg" />
+    <Resource Include="MenuImage\UCMenuMathStructure.jpg" />
+    <Resource Include="MenuImage\UCMenuMathSummary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuShapeExercise.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuVocabulary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuTime.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCHandEyeCoordination.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuShapeGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuVocabularyGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuVocabularyBingo.jpg" />
+    <Resource Include="MenuImage\UCMenuAdd.jpg" />
+    <Resource Include="MenuImage\UCMenuMoltipol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuDistinctionInDetails.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuMemory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuOperation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuSingleArrayWork.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHeGeneralRulesWeighted.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCDownload.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuJudaism.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuCongratulations.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuCongratulationsGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHolidays.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuJudaismDedication.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuCongratulationsJoy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuJudaismAgenda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuHeGeneralAnimal.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralBody.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralClothing.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralColors.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralDailySentences.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralFamily.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralFood.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralFruit.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralkitchenware.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralMusical.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralProfessionals.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralShapes.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralSkill.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralTools.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralVegetables.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralVehicles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCChabad.jpg" />
+    <Resource Include="MenuImage\UCHasidic.jpg" />
+    <Resource Include="MenuImage\UCMenuHeGeneralRulesWeighted - Copy.jpg" />
+    <Resource Include="MenuImage\UCMenuJudaismGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuControl.jpg" />
+    <Resource Include="MenuImage\UCMenuControlCore.jpg" />
+    <Resource Include="MenuImage\UCMenuControlEnglish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuControlSelfEditing.jpg" />
+    <Resource Include="MenuImage\UCMenuControlShape.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuControlMath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuControl4Arithmetic.jpg" />
+    <Resource Include="MenuImage\UCMenuControlHebrew.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuControlGame.jpg" />
+    <Resource Include="MenuImage\UCMenuControlGeneral.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuControHeGeneralSkill.jpg" />
+    <Resource Include="MenuImage\UCMenuControlHeGame.jpg" />
+    <Resource Include="MenuImage\UCMenuControlHeGeneralGame.jpg" />
+    <Resource Include="MenuImage\UCMenuControlWords.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuControlTeamwork.jpg" />
+    <Resource Include="MenuImage\UCMenuControlEnDailySentences.jpg" />
+    <Resource Include="MenuImage\UCMenuControlEnVocabulary.jpg" />
+    <Resource Include="MenuImage\UCMenuControlHeDailySentences.jpg" />
+    <Resource Include="MenuImage\UCMenuControlHeVocabulary.jpg" />
+    <Resource Include="MenuImage\UCMenuControlVocabulary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuLernJudaism.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuShapeAndAngle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCSelfEditing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MenuImage\UCMenuMeasurements.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

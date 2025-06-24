@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="BS.HebrewView.Recognition.UCKnowYourName"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.HebrewView.Recognition"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             mc:Ignorable="d" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"  
+                d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.HebrewView;component/HebrewImage/UCKnowYourName.jpg" />
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="712*"/>
+            <ColumnDefinition Width="35*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="189*"/>
+            <RowDefinition Height="520*"/>
+            <RowDefinition Height="226*"/>
+        </Grid.RowDefinitions>
+      
+
+        <Items:UCSpeaker Grid.RowSpan="4" Grid.ColumnSpan="6"
+HorizontalAlignment="Left" Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TBName" Grid.Column="1" Grid.Row="4"  Grid.ColumnSpan="5" 
+     Text="{Binding TBName}"              FontSize="280"
+           Foreground="White" HorizontalAlignment="Center" FontWeight="Bold" />
+        <Label x:Name="labelHome"   Grid.RowSpan="3" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="KnowLetterMenuVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+  </Grid>
+</UserControl>

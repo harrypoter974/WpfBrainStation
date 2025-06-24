@@ -1,0 +1,72 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.JudaismView.Congratulations"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" x:Class="BS.JudaismView.Congratulations.UCVisionCongratulation"
+             mc:Ignorable="d" 
+                  d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <!--<ImageBrush ImageSource="C:\Brain_Station\WpfBrainStationBrachoot\WpfBrainStation\Resources\JudaismImage\Brahot\Vision/v0.jpg"/>-->
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="236*"/>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="157*"/>
+            <ColumnDefinition Width="257*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="745*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="29*"/>
+        </Grid.RowDefinitions>
+        <Image  Grid.ColumnSpan="6" Grid.RowSpan="6" Source="/BS.JudaismView;component/JudaismImage/Lightning.jpg"
+                Stretch="Fill"  Visibility="{Binding LightningVisibility}">
+            <Image.Style>
+                <Style>
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Image.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetProperty="(Image.Opacity)"
+							   BeginTime="0:0:0" Duration="0:0:0.5"
+							   From="1.0" To="0.0" RepeatBehavior="Forever" AutoReverse="True"/>
+
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Label  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}"
+                              CommandParameter="MenuCongratulationsVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="4"  Grid.Row="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ChangeBrahot}" CommandParameter="0"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="3"  Grid.Row="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ChangeBrahot}" CommandParameter="1"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Grid.Column="2"  Grid.Row="2"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ChangeBrahot}" CommandParameter="2"/>
+            </Label.InputBindings>
+        </Label>
+        <Items:UCBlueUCSpeaker Grid.ColumnSpan="3" Grid.RowSpan="3" HorizontalAlignment="Left" 
+ Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" x:Name="uCSpeaker1" />
+    </Grid>
+</UserControl>

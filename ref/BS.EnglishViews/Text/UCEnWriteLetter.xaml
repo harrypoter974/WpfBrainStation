@@ -1,0 +1,166 @@
+﻿<UserControl x:Class="BS.EnglishViews.Text.UCEnWriteLetter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.EnglishViews.Text"
+             mc:Ignorable="d" 
+          d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.EnglishViews;component/EnglishImage/UCEnWriteLetter.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="16*" />
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="44*" />
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="285*"/>
+            <RowDefinition Height="22*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="46*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="28*" />
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="34*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="27*" />
+            <ColumnDefinition Width="22*" />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="21*" />
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="18*" />
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="29*" />
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="24*" />
+            <ColumnDefinition Width="22*" />
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="9*" />
+            <ColumnDefinition Width="14*" />
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="13*" />
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="17*" />
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Border  Name="BorderImage"    Grid.Column="9" Grid.Row="5" Grid.ColumnSpan="34" Grid.RowSpan="10" >
+            <Image   Name="imageBig" Stretch="Fill"   />
+        </Border>
+
+        <Slider Grid.Column="20"   Grid.Row="16" Name="slider1"  Minimum="0.1" Maximum="1"  Value="0.6"
+                HorizontalContentAlignment="Center"  Orientation="Horizontal"
+                VerticalContentAlignment="Center" Grid.ColumnSpan="11" Grid.RowSpan="5">
+        </Slider>
+        <Label Name="labelHome" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="EnWritingLettersMenuVM"/>
+            </Label.InputBindings>
+        </Label>
+        <TextBlock Grid.Column="4" Height="23" HorizontalAlignment="Left" Name="textBlock1" VerticalAlignment="Top" Grid.Row="3" Grid.RowSpan="2" />
+        <Image x:Name="imageLetterSize" Grid.ColumnSpan="3" Grid.Column="15"   Grid.Row="18"  Stretch="Fill"  />
+        <Label Grid.Column="15" Grid.Row="18"  Name="LSize3" ContentStringFormat="2"   />
+        <Label Grid.Column="16" Grid.Row="18"  Name="LSize2" ContentStringFormat="1"   Grid.ColumnSpan="2"   />
+  
+       <Label x:Name="LLevel1"  Grid.Column="47" Grid.Row="9"  Grid.RowSpan="3" Visibility="Collapsed" Grid.ColumnSpan="2"  ContentStringFormat="1">
+            <!--<Label.Background>
+                <ImageBrush ImageSource="/WpfComposite;component/bin/Debug/Resources/Images/LevelBlue1.png"/>
+            </Label.Background>-->
+        </Label>
+        <Label x:Name="LLevel2"  Grid.Column="47" Grid.Row="12" Grid.ColumnSpan="2" Visibility="Collapsed" Grid.RowSpan="2" ContentStringFormat="3">
+            <!--<Label.Background>
+                <ImageBrush ImageSource="/WpfComposite;component/bin/Debug/Resources/Images/LevelGreen2.png"/>
+            </Label.Background>-->
+        </Label>
+        <Label x:Name="LLevel3"  Grid.Column="48" Grid.Row="14" Visibility="Hidden" ContentStringFormat="3">
+      
+        </Label>
+        <Label x:Name="UCNewAnswerButton1" Grid.Column="33"  Grid.Row="17"   Grid.RowSpan="3" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AnswerBut}"/>
+            </Label.InputBindings>
+        </Label>
+         <!--<my1:UCSpeaker Grid.Column="1"  Grid.Row="2" />
+        <my1:UCButNotice Grid.Column="35"  Grid.Row="18" Grid.ColumnSpan="4" />-->
+        <Image x:Name="imageLetterBord" Grid.ColumnSpan="37" Grid.Column="7"  Grid.Row="22" Stretch="Fill"/>
+        <Label x:Name="labelA"  Grid.Column="7"   ContentStringFormat="a" Grid.Row="22" />
+        <Label x:Name="labelB"  Grid.Column="8"   ContentStringFormat="b" Grid.Row="22" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelC"  Grid.Column="10"  ContentStringFormat="c" Grid.Row="22" />
+        <Label x:Name="labelD"  Grid.Column="11"  ContentStringFormat="d" Grid.Row="22" />
+        <Label x:Name="labelE"  Grid.Column="12"  ContentStringFormat="e" Grid.Row="22" />
+        <Label x:Name="labelF"  Grid.Column="13"  ContentStringFormat="f" Grid.Row="22" />
+        <Label x:Name="labelG"  Grid.Column="14"  ContentStringFormat="g" Grid.Row="22" />
+        <Label x:Name="labelH"  Grid.Column="15"  ContentStringFormat="h" Grid.Row="22" />
+        <Label x:Name="labelI"  Grid.Column="17"  ContentStringFormat="i" Grid.Row="22"  Grid.ColumnSpan="2" />
+        <Label x:Name="labelJ"  Grid.Column="20"  ContentStringFormat="j" Grid.Row="22" />
+        <Label x:Name="labelK"  Grid.Column="21"  ContentStringFormat="k" Grid.Row="22" />
+        <Label x:Name="labelL"  Grid.Column="22"  ContentStringFormat="l" Grid.Row="22" />
+        <Label x:Name="labelM"  Grid.Column="23"  ContentStringFormat="m" Grid.Row="22" />
+        <Label x:Name="labelN"  Grid.Column="24"  ContentStringFormat="n" Grid.Row="22" />
+        <Label x:Name="labelO"  Grid.Column="25"  ContentStringFormat="o" Grid.Row="22" />
+        <Label x:Name="labelP"  Grid.Column="26"  ContentStringFormat="p" Grid.Row="22" />
+        <Label x:Name="labelQ"  Grid.Column="27"  ContentStringFormat="q" Grid.Row="22" />
+        <Label x:Name="labelR"  Grid.Column="28"  ContentStringFormat="r" Grid.Row="22" />
+        <Label x:Name="labelS"  Grid.Column="29"  ContentStringFormat="s" Grid.Row="22"  Grid.ColumnSpan="3"  />
+        <Label x:Name="labelT"  Grid.ColumnSpan="2" Grid.Column="32" ContentStringFormat="t" Grid.Row="22" />
+        <Label x:Name="labelU"  Grid.ColumnSpan="2" Grid.Column="34" ContentStringFormat="u" Grid.Row="22" />
+        <Label x:Name="labelV"  Grid.Column="36" Grid.Row="22"  ContentStringFormat="v"/>
+        <Label x:Name="labelW"  Grid.ColumnSpan="2" Grid.Column="37" Grid.Row="22"  ContentStringFormat="w"/>
+        <Label x:Name="labelX"   Grid.Column="39" Grid.Row="22"  ContentStringFormat="x"/>
+        <Label x:Name="labelY"   Grid.Column="40" Grid.Row="22" ContentStringFormat="y" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelZ"   Grid.Column="43" Grid.Row="22"  ContentStringFormat="z"/>
+        <Label x:Name="labelName"  Grid.Column="44"  Grid.Row="22" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="WritingEnNameVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Image x:Name="imageMessage" Grid.Column="44" Grid.Row="6" Grid.RowSpan="2"/>
+
+    </Grid>
+</UserControl>

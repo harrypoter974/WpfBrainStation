@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="BS.EnglishViews.Words.UCEnPronunciation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.EnglishViews.Words"
+             mc:Ignorable="d" 
+                 d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.EnglishViews;component/EnglishImage/UCEnPronunciation.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush  ImageSource="{Binding BackgroundPic}"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="110*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="115*"/>
+            <RowDefinition Height="55*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="35*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="2"  Grid.Row="1" />
+        <Label x:Name="labelHome" Grid.ColumnSpan="2" Grid.RowSpan="2"   >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuEnglishVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LVowelA"  Grid.Column="7"  Grid.Row="3" Grid.RowSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwichPage}" CommandParameter="A"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LVowelE"  Grid.Column="8"  Grid.Row="3" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwichPage}" CommandParameter="E"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LVowelI"  Grid.Column="9"  Grid.Row="3" Grid.RowSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwichPage}" CommandParameter="I"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LVowelO"  Grid.Column="10" Grid.Row="3" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwichPage}" CommandParameter="O"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="LVowelU" Grid.Column="11"  Grid.Row="3" Grid.RowSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SwichPage}" CommandParameter="U"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label x:Name="LLetterA"  ContentStringFormat="a" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="7"    ><Label.InputBindings><MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="a"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterB"  ContentStringFormat="b" Grid.Column="5"  Grid.Row="7" Grid.ColumnSpan="2"   ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="b"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterC"  ContentStringFormat="c" Grid.Column="7"  Grid.Row="7" Grid.ColumnSpan="2"   ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="c"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterD"  ContentStringFormat="d" Grid.Column="9"  Grid.Row="7" Grid.ColumnSpan="2"   ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="d"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterE"  ContentStringFormat="e" Grid.Column="11" Grid.Row="7" Grid.ColumnSpan="2"   ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="e"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterF"  ContentStringFormat="f" Grid.Column="13" Grid.Row="7" Grid.ColumnSpan="2"   ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="f"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterG"  ContentStringFormat="g" Grid.Column="16" Grid.Row="7" Grid.ColumnSpan="2"   ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="g"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterH"  ContentStringFormat="h" Grid.Column="20" Grid.Row="7" Grid.ColumnSpan="2"   ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="h"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterI"  ContentStringFormat="i" Grid.Column="2"   Grid.Row="10" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="i"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterJ"  ContentStringFormat="j" Grid.Column="5"   Grid.Row="10"  Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="j"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterK"  ContentStringFormat="k" Grid.Column="7"   Grid.Row="10"  Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="k"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterL"  ContentStringFormat="l" Grid.Column="9"   Grid.Row="10"  Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="l"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterM"  ContentStringFormat="m" Grid.Column="11"  Grid.Row="10" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="m"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterN"  ContentStringFormat="n" Grid.Column="13"  Grid.Row="10" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="n"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterO"  ContentStringFormat="o" Grid.Column="16"  Grid.Row="10"                     ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="o"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterP"  ContentStringFormat="p" Grid.Column="20"  Grid.Row="10" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="p"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterQ"  ContentStringFormat="q" Grid.Column="2"   Grid.Row="14" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="q"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterR"  ContentStringFormat="r" Grid.Column="5"   Grid.Row="14" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="r"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterS"  ContentStringFormat="s" Grid.Column="7"   Grid.Row="14" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="s"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterT"  ContentStringFormat="t" Grid.Column="9"   Grid.Row="14" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="t"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterU"  ContentStringFormat="u" Grid.Column="11"  Grid.Row="14"                     ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="u"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterV"  ContentStringFormat="v" Grid.Column="13"  Grid.Row="14" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="v"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterW"  ContentStringFormat="w" Grid.Column="16"  Grid.Row="14" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="w"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterX"  ContentStringFormat="x" Grid.Column="20"  Grid.Row="14" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="x"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterY"  ContentStringFormat="y" Grid.Column="2"   Grid.Row="17" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="y"/> </Label.InputBindings> </Label>
+        <Label x:Name="LLetterZ"  ContentStringFormat="z" Grid.Column="5"   Grid.Row="17" Grid.ColumnSpan="2" ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding PlayLetter}" CommandParameter="z"/> </Label.InputBindings> </Label>
+
+        <Label x:Name="buttonB" ContentStringFormat="b"  Grid.Column="5"  Grid.Row="8"                     >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="b"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonC" ContentStringFormat="c" Grid.ColumnSpan="2" Grid.Column="7"  Grid.Row="8"  ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="c"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonD" ContentStringFormat="d" Grid.Column="9"  Grid.Row="8"                      ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="d"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonF" ContentStringFormat="f" Grid.Column="13" Grid.Row="8" Grid.ColumnSpan="2"  ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="f"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonH" ContentStringFormat="h" Grid.Column="20" Grid.Row="8"   Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="h"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonK" ContentStringFormat="k" Grid.Column="7" Grid.Row="12"                      ><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="k"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonL" ContentStringFormat="l" Grid.Column="9" Grid.Row="12"   Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="l"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonM" ContentStringFormat="m" Grid.Column="11" Grid.Row="12"  Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="m"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonP" ContentStringFormat="p" Grid.Column="20" Grid.Row="12"  Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="p"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonR" ContentStringFormat="r" Grid.Column="5"  Grid.Row="15"  Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="r"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonS" ContentStringFormat="S" Grid.Column="7"  Grid.Row="15"  Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="S"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonV" ContentStringFormat="v" Grid.Column="13" Grid.Row="15"  Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="v"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonY" ContentStringFormat="y" Grid.Column="2"  Grid.Row="18"  Grid.ColumnSpan="2"><Label.InputBindings> <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="y"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonN" Grid.Column="13" Grid.Row="12"  Grid.ColumnSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="n"/> </Label.InputBindings> </Label>
+        <Label x:Name="buttonT" Grid.Column="9"  Grid.Row="15"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding ShowSyllable}" CommandParameter="t"/> </Label.InputBindings> </Label>
+        <Image x:Name="imageMessage" Grid.Column="15" Grid.Row="4" Grid.ColumnSpan="6" Stretch="Fill" />
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

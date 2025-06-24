@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39B6194F-8A1B-4125-9CDA-6A56E7E453A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BS.GameViews</RootNamespace>
+    <AssemblyName>BS.GameViews</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCbilliards.xaml.cs">
+      <DependentUpon>UCbilliards.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCBingoShapes.xaml.cs">
+      <DependentUpon>UCBingoShapes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCBoard.xaml.cs">
+      <DependentUpon>UCBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCBoardVisualMemory.xaml.cs">
+      <DependentUpon>UCBoardVisualMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCCheckers.xaml.cs">
+      <DependentUpon>UCCheckers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCChess.xaml.cs">
+      <DependentUpon>UCChess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCDominoes.xaml.cs">
+      <DependentUpon>UCDominoes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCLaddersAndRopes.xaml.cs">
+      <DependentUpon>UCLaddersAndRopes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMap.xaml.cs">
+      <DependentUpon>UCMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMatchPuzzles.xaml.cs">
+      <DependentUpon>UCMatchPuzzles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCMemoryView.xaml.cs">
+      <DependentUpon>UCMemoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCBackgammon.xaml.cs">
+      <DependentUpon>UCBackgammon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCQuartets.xaml.cs">
+      <DependentUpon>UCQuartets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCVisualMemory.xaml.cs">
+      <DependentUpon>UCVisualMemory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCVisualMemoryGame.xaml.cs">
+      <DependentUpon>UCVisualMemoryGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XUCMemoryView.xaml.cs">
+      <DependentUpon>XUCMemoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCPuzzle25.xaml.cs">
+      <DependentUpon>UCPuzzle25.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCPuzzle25Board.xaml.cs">
+      <DependentUpon>UCPuzzle25Board.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCQuickThinking.xaml.cs">
+      <DependentUpon>UCQuickThinking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCTriviaBoardR.xaml.cs">
+      <DependentUpon>UCTriviaBoardR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCTriviaBoardS.xaml.cs">
+      <DependentUpon>UCTriviaBoardS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCTriviaGoView.xaml.cs">
+      <DependentUpon>UCTriviaGoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCTriviaView.xaml.cs">
+      <DependentUpon>UCTriviaView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UCbilliards.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCBingoShapes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCBoardVisualMemory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCCheckers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCChess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCDominoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCLaddersAndRopes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMatchPuzzles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCMemoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCBackgammon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCQuartets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCVisualMemory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCVisualMemoryGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XUCMemoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCPuzzle25.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCPuzzle25Board.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCQuickThinking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCTriviaBoardR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCTriviaBoardS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCTriviaGoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCTriviaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\Trivia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCTriviaBoardS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCPuzzle25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCTriviaBoardR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\TtiviaGavia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCPuzzle25Board.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\Map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\A.png" />
+    <Resource Include="GameImage\B.png" />
+    <Resource Include="GameImage\C.png" />
+    <Resource Include="GameImage\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\trapezeBlink.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCPuzzle25EG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCMatchPuzzles.jpg" />
+    <Resource Include="GameImage\UCQuickThinking.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCMemoryView.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BS.BingoBoard\BS.BingoBoard.csproj">
+      <Project>{46679341-644f-4c0a-9762-799643677225}</Project>
+      <Name>BS.BingoBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BS.Items\BS.Items.csproj">
+      <Project>{0802e63b-ab77-4db8-ada4-a2700d8160d2}</Project>
+      <Name>BS.Items</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.GameVM\CL.BS.GameVM.csproj">
+      <Project>{8224c0ea-351e-4a72-abd3-b400ff8e39be}</Project>
+      <Name>CL.BS.GameVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0b6191c5-6621-4dc6-8d7f-06cb3bd05bc3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCLaddersAndRopes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCBackgammon.jpg" />
+    <Resource Include="GameImage\UCbilliards.png" />
+    <Resource Include="GameImage\UCCheckers.jpg" />
+    <Resource Include="GameImage\UCChess.jpg" />
+    <Resource Include="GameImage\UCPuzzle1.jpg" />
+    <Resource Include="GameImage\UCPuzzle2.jpg" />
+    <Resource Include="GameImage\UCPuzzle3.jpg" />
+    <Resource Include="GameImage\UCPuzzleInstructions.jpg" />
+    <Resource Include="GameImage\UCTriviaNewView.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCVisualMemoryGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCBingoShapes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GameImage\UCBoardVisualMemory.png" />
+    <Resource Include="GameImage\UCVisualMemory.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

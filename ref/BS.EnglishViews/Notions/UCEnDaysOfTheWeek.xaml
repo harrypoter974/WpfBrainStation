@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="BS.EnglishViews.Notions.UCEnDaysOfTheWeek"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.EnglishViews.Notions"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.EnglishViews;component/EnglishImage/UCEnDaysOfTheWeek.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="103*"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="117*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="129*"/>
+            <RowDefinition Height="91*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="102*"/>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="185*"/>
+        </Grid.RowDefinitions>
+
+        <!--<Items:UCSpeaker Grid.Column="1" Grid.Row="1" />-->
+        <Label x:Name="labelHome"  Grid.RowSpan="2">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuEnGeneralVM"/>
+            </Label.InputBindings>
+
+        </Label>
+        <Label x:Name="labelSunday"      Grid.Column="4"  Grid.Row="5" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Sunday"  Command="{Binding PlayDay}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelMonday"  Grid.Column="8"  Grid.Row="5" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Monday"  Command="{Binding PlayDay}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelTuesday" Grid.Column="12" Grid.Row="5" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Tuesday"  Command="{Binding PlayDay}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelWednesday" Grid.Column="3"  Grid.Row="8" Grid.ColumnSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Wednesday"  Command="{Binding PlayDay}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelThursday" Grid.Column="6"  Grid.Row="8" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Thursday"  Command="{Binding PlayDay}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelFriday"  Grid.Column="10" Grid.Row="8" Grid.ColumnSpan="3" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Friday"  Command="{Binding PlayDay}"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelSaturday" Grid.Column="14" Grid.Row="8" Grid.ColumnSpan="4" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" CommandParameter="Saturday"  Command="{Binding PlayDay}"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label x:Name="LDaySunday"    Grid.Column="4"  Grid.Row="6" Grid.ColumnSpan="3"  Background="#FFF5F5F3" />
+        <Label x:Name="LDayMonday"    Grid.Column="8"  Grid.Row="6" Grid.ColumnSpan="3"  Background="#FFF5F5F3" />
+        <Label x:Name="LDayTuesday"   Grid.Column="12" Grid.Row="6" Grid.ColumnSpan="3"  Background="#FFF5F5F3" />
+        <Label x:Name="LDayWednesday" Grid.Column="3"  Grid.Row="9" Grid.ColumnSpan="2"  Background="#FFF5F5F3" />
+        <Label x:Name="LDayThursday"  Grid.Column="6"  Grid.Row="9" Grid.ColumnSpan="3"  Background="#FFF5F5F3" />
+        <Label x:Name="LDayFriday"    Grid.Column="10" Grid.Row="9" Grid.ColumnSpan="3"  Background="#FFF5F5F3" />
+        <Label x:Name="LDaySaturday"  Grid.Column="14" Grid.Row="9" Grid.ColumnSpan="4"  Background="#FFF5F5F3" />
+        <Image x:Name="imageMessegGerl" Grid.Column="16" Grid.Row="3"  Stretch="Fill"  />
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+
+    </Grid>
+</UserControl>

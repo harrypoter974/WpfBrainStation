@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="BS.UserInformationView.UCEndOfGroupActivityBord"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.UserInformationView"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Background>
+        <ImageBrush ImageSource="UserInformationImage/EndOfGroupActivityBord.png"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="108*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="187*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="126*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="130*"/>
+        </Grid.ColumnDefinitions>
+        <Image  Grid.Column="4"  Grid.Row="1" />
+        <Image  Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="8" />
+        <Label  Grid.Column="1" Grid.Row="3" Grid.RowSpan="4">            
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TopFeeling}" CommandParameter="0"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="4" Grid.Row="4" Grid.RowSpan="2">            
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TopFeeling}" CommandParameter="1"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="7" Grid.Row="4"                 >            
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding TopFeeling}" CommandParameter="2"/>
+            </Label.InputBindings>
+        </Label>
+
+    </Grid>
+</UserControl>

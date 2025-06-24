@@ -1,0 +1,87 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MenuViews"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items" 
+    x:Class="BS.MenuViews.UCMenuMemory"
+             mc:Ignorable="d" 
+                    d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <ImageBrush ImageSource="MenuImage/UCMenuMemory.jpg"/>
+    </UserControl.Background>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="228*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="431*"/>
+            <ColumnDefinition Width="255*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="216*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelHome" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding HomeBut}"  Stretch="None"/>
+            </Label.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GOHome}" CommandParameter="MenuGameVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label   Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Background="{Binding BackgroundBut0}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="MemoryVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label   Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Background="{Binding BackgroundBut1}" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="SimonVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="3" Grid.Row="6"  Grid.ColumnSpan="3" Background="{Binding BackgroundBut2}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="VisualMemoryVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label Grid.Column="3" Grid.Row="8"  Grid.ColumnSpan="3" Background="White">
+            <!--<i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>-->
+        </Label> 
+        <Label Grid.Column="3" Grid.Row="10"  Grid.ColumnSpan="3" Background="White">
+            <!--<i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding GoToPage}" CommandParameter="VisualMemoryVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>-->
+        </Label>
+        <Items:NUCBlueUCSpeaker  Grid.ColumnSpan="3" Grid.RowSpan="3"
+  VerticalAlignment="Top"  Margin="{Binding SpeakerMargin}" HorizontalAlignment="Left" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,397 @@
+﻿<UserControl x:Class="BS.MathLearningView.Game.UCBingoMath"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.MathLearningView.Game" 
+             xmlns:my1="clr-namespace:BS.Items;assembly=BS.Items"
+             mc:Ignorable="d" 
+              d:DesignHeight="900" d:DesignWidth="1000">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.MathLearningView;component/MathImage/UCBingoMath.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="93*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelHome"  Grid.RowSpan="4" Grid.ColumnSpan="3">
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuMathGameVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <!--<Items:UCSpeaker Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" />-->
+        <Label x:Name="LPlayer1"  ContentStringFormat="1" Grid.Column="29" Grid.Row="2" Grid.RowSpan="3" />
+        <Label x:Name="LPlayer2"  ContentStringFormat="2" Grid.Column="30" Grid.Row="2" Grid.RowSpan="3" />
+        <Label x:Name="LPlayer3"  ContentStringFormat="3" Grid.Column="31" Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="3" />
+        <Label x:Name="LPlayer4"  ContentStringFormat="4" Grid.Column="34" Grid.Row="2" Grid.RowSpan="3" />
+        <Label x:Name="LTime1"    ContentStringFormat="5" Grid.Column="29" Grid.Row="6" />
+        <Label x:Name="LTime2"    ContentStringFormat="10" Grid.Column="30" Grid.Row="6" />
+        <Label x:Name="LTime3"    ContentStringFormat="15" Grid.Column="31" Grid.Row="6"  Grid.ColumnSpan="3"/>
+        <Label x:Name="LTime4"    ContentStringFormat="20" Grid.Column="34" Grid.Row="6" />
+        <Label x:Name="LPlas" ContentStringFormat="+"  Grid.Column="20"  Grid.Row="2" Grid.RowSpan="3" />
+        <Label x:Name="LSub"  ContentStringFormat="-"  Grid.Column="21"  Grid.Row="2" Grid.RowSpan="3"  Grid.ColumnSpan="2"/>
+        <Label x:Name="LMoltipol"  ContentStringFormat="x" Grid.Column="23"  Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="2" />
+        <Label x:Name="LSplite"    ContentStringFormat="s" Grid.Column="25"  Grid.Row="2" Grid.RowSpan="3" />
+        <Label x:Name="LLimit0"   ContentStringFormat="10" Grid.Column="20" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <Label x:Name="LLimit1"   ContentStringFormat="40"  Grid.ColumnSpan="2"  Grid.Column="22"  Grid.Row="6" />
+        <Label x:Name="LLimit2"   ContentStringFormat="100"   Grid.Column="24" Grid.ColumnSpan="2" Grid.Row="6" />
+
+        <Border Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="3" Grid.RowSpan="5" >
+            <TextBlock x:Name="TBTop1" Text=""  VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBTop1" Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="3" Grid.RowSpan="5"/>
+        <Border Grid.Column="13" Grid.Row="3" Grid.RowSpan="5" >
+            <TextBlock x:Name="TBTop2" Text=""  VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBTop2" Grid.Column="13" Grid.Row="3" Grid.RowSpan="5"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="3" Grid.RowSpan="5" >
+            <TextBlock x:Name="TBTop3" Text=""  VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBTop3"  Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="3" Grid.RowSpan="5"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="8" Grid.RowSpan="2" >
+            <TextBlock x:Name="TBTop4" Text="" VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBTop4" Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="8" Grid.RowSpan="2"/>
+        <Border Grid.Column="13"  Grid.Row="8" Grid.RowSpan="2" >
+            <TextBlock x:Name="TBTop5" Text="" VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBTop5" Grid.Column="13"  Grid.Row="8" Grid.RowSpan="2"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="8" Grid.RowSpan="2" >
+            <TextBlock x:Name="TBTop6" Text=""  VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBTop6" Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="8" Grid.RowSpan="2"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="11" Grid.RowSpan="2">
+            <TextBlock x:Name="TBTop7" Text="" VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBTop7" Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="11" Grid.RowSpan="2"/>
+        <Border Grid.Column="13" Grid.Row="11" Grid.RowSpan="2">
+            <TextBlock x:Name="TBTop8" Text="" VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBTop8" Grid.Column="13" Grid.Row="11" Grid.RowSpan="2"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="11" Grid.RowSpan="2">
+            <TextBlock x:Name="TBTop9" Text="" VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBTop9" Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="11" Grid.RowSpan="2"/>
+
+        <Border Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="18" Grid.RowSpan="2">
+            <TextBlock x:Name="TBBottom1" VerticalAlignment="Center" TextAlignment="Center"/>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBBottom1" Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="18" Grid.RowSpan="2"/>
+        <Border Grid.Column="13"   Grid.Row="18" Grid.RowSpan="2">
+            <TextBlock x:Name="TBBottom2" VerticalAlignment="Center" TextAlignment="Center"/>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBBottom2" Grid.Column="13"   Grid.Row="18" Grid.RowSpan="2"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="18" Grid.RowSpan="2">
+            <TextBlock x:Name="TBBottom3" VerticalAlignment="Center" TextAlignment="Center"/>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBBottom3" Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="18" Grid.RowSpan="2"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="20">
+            <TextBlock x:Name="TBBottom4" VerticalAlignment="Center" TextAlignment="Center"/>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBBottom4" Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="20"/>
+        <Border Grid.Column="13"                     Grid.Row="20">
+            <TextBlock x:Name="TBBottom5" VerticalAlignment="Center" TextAlignment="Center"/>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBBottom5" Grid.Column="13" Grid.Row="20" />
+        <Border Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="20">
+            <TextBlock x:Name="TBBottom6" VerticalAlignment="Center" TextAlignment="Center"/>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBBottom6" Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="20"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="22" Grid.RowSpan="2">
+            <TextBlock x:Name="TBBottom7" VerticalAlignment="Center" TextAlignment="Center"/>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBBottom7" Grid.ColumnSpan="2" Grid.Column="11"  Grid.Row="22" Grid.RowSpan="2"/>
+        <Border Grid.Column="13" Grid.Row="22" Grid.RowSpan="2">
+            <TextBlock x:Name="TBBottom8" VerticalAlignment="Center" TextAlignment="Center"/>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBBottom8"  Grid.Column="13" Grid.Row="22" Grid.RowSpan="2"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="22" Grid.RowSpan="2">
+            <TextBlock x:Name="TBBottom9" VerticalAlignment="Center" TextAlignment="Center"/>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBBottom9"  Grid.ColumnSpan="2" Grid.Column="14" Grid.Row="22" Grid.RowSpan="2"/>
+
+        <Border Grid.ColumnSpan="2" Grid.Column="25" Grid.Row="12" Grid.RowSpan="3">
+            <TextBlock x:Name="TBRight1" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBRight1" Grid.ColumnSpan="2" Grid.Column="25" Grid.Row="12" Grid.RowSpan="3"/>
+        <Border Grid.ColumnSpan="6" Grid.Column="27" Grid.Row="12" Grid.RowSpan="3">
+            <TextBlock x:Name="TBRight2" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBRight2" Grid.ColumnSpan="6" Grid.Column="27" Grid.Row="12" Grid.RowSpan="3"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="34" Grid.Row="12" Grid.RowSpan="3">
+            <TextBlock x:Name="TBRight3" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBRight3" Grid.ColumnSpan="2" Grid.Column="34" Grid.Row="12" Grid.RowSpan="3"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="25" Grid.Row="15">
+            <TextBlock x:Name="TBRight4" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBRight4" Grid.ColumnSpan="2" Grid.Column="25" Grid.Row="15"/>
+        <Border Grid.ColumnSpan="6" Grid.Column="27" Grid.Row="15">
+            <TextBlock x:Name="TBRight5" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBRight5" Grid.ColumnSpan="6" Grid.Column="27" Grid.Row="15"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="34" Grid.Row="15">
+            <TextBlock x:Name="TBRight6" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBRight6" Grid.ColumnSpan="2" Grid.Column="34" Grid.Row="15"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="25" Grid.Row="16" Grid.RowSpan="3">
+            <TextBlock x:Name="TBRight7" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBRight7" Grid.ColumnSpan="2" Grid.Column="25" Grid.Row="16" Grid.RowSpan="3"/>
+        <Border Grid.ColumnSpan="6" Grid.Column="27" Grid.Row="16" Grid.RowSpan="3">
+            <TextBlock x:Name="TBRight8" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBRight8"  Grid.ColumnSpan="6" Grid.Column="27" Grid.Row="16" Grid.RowSpan="3"/>
+        <Border Grid.ColumnSpan="2" Grid.Column="34" Grid.Row="16" Grid.RowSpan="3">
+            <TextBlock x:Name="TBRight9" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBRight9" Grid.ColumnSpan="2" Grid.Column="34" Grid.Row="16" Grid.RowSpan="3"/>
+
+        <Border  Grid.ColumnSpan="3" Grid.Column="2"  Grid.Row="12" Grid.RowSpan="3" >
+            <TextBlock x:Name="TBLeft1" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBLeft1" Grid.ColumnSpan="3" Grid.Column="2"  Grid.Row="12" Grid.RowSpan="3"/>
+        <Border  Grid.Column="5" Grid.Row="12" Grid.RowSpan="3">
+            <TextBlock x:Name="TBLeft2" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBLeft2" Grid.Column="5" Grid.Row="12" Grid.RowSpan="3"/>
+        <Border Grid.Column="6" Grid.Row="12" Grid.RowSpan="3">
+            <TextBlock x:Name="TBLeft3" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBLeft3"  Grid.Column="6" Grid.Row="12" Grid.RowSpan="3"/>
+        <Border Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="15">
+            <TextBlock x:Name="TBLeft4" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBLeft4" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="15"/>
+        <Border Grid.Column="5" Grid.Row="15">
+            <TextBlock x:Name="TBLeft5" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBLeft5" Grid.Column="5" Grid.Row="15"/>
+        <Border Grid.Column="6" Grid.Row="15">
+            <TextBlock x:Name="TBLeft6" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBLeft6" Grid.Column="6" Grid.Row="15"/>
+        <Border Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="16" Grid.RowSpan="3">
+            <TextBlock x:Name="TBLeft7" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBLeft7" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="16" Grid.RowSpan="3"/>
+        <Border Grid.Column="5" Grid.Row="16" Grid.RowSpan="3">
+            <TextBlock x:Name="TBLeft8" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBLeft8" Grid.Column="5" Grid.Row="16" Grid.RowSpan="3"/>
+        <Border Grid.Column="6" Grid.Row="16" Grid.RowSpan="3">
+            <TextBlock x:Name="TBLeft9" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <my1:UCBlinkBord x:Name="UBBLeft9"  Grid.Column="6" Grid.Row="16" Grid.RowSpan="3"/>
+
+        <Border Grid.Column="17"                     Grid.Row="8" Grid.RowSpan="2" >
+            <TextBlock x:Name="TBTopQuestion" FontSize="40" VerticalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.ColumnSpan="5" Grid.Column="28" Grid.Row="20"                 >
+            <TextBlock x:Name="TBRightQuestion" Text="" FontSize="40" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <Border Grid.Column="5"                      Grid.Row="8" Grid.RowSpan="2" >
+            <TextBlock x:Name="TBLeftQuestion" FontSize="40" Text="" HorizontalAlignment="Center" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90" />
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Border>
+        <TextBlock x:Name="TBBottomQuestion" Grid.Column="9" Grid.Row="20" FontSize="40" Text=""  VerticalAlignment="Center" TextAlignment="Center"/>
+        <Label x:Name="labelStart" Grid.Column="34" Grid.Row="23" Grid.ColumnSpan="2" />
+       <Rectangle Name="Rectangle2" Visibility="Hidden"  Grid.ColumnSpan="10" Grid.Column="9" Fill="#FF41AD48"  Grid.Row="1" Grid.RowSpan="13"/>
+        <Rectangle Name="Rectangle4" Visibility="Hidden" Grid.ColumnSpan="7" Grid.Column="1" Fill="#FF41AD48" Grid.Row="7" Grid.RowSpan="15"/>
+        <Rectangle Name="Rectangle3" Visibility="Hidden" Grid.ColumnSpan="13" Grid.Column="24" Fill="#FF41AD48" Grid.Row="9" Grid.RowSpan="13"  />
+        <!--<Items:UCTimer x:Name="UCTimer1" Grid.Column="12" Grid.Row="14" Grid.RowSpan="3" Grid.ColumnSpan="3"   />-->
+        <Label x:Name="UCNewAnswerButton1"  Grid.Column="30" Grid.Row="23"  Grid.ColumnSpan="3">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AnswerBut}"/>
+            </Label.InputBindings>
+        </Label>
+     
+    </Grid>
+</UserControl>

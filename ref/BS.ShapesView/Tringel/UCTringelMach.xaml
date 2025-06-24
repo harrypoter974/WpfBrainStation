@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="BS.ShapesView.Tringel.UCTringelMach"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.ShapesView.Tringel"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="{Binding BackgroundPic}"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*" />
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="16*" />
+            <RowDefinition Height="134*"/>
+            <RowDefinition Height="203*"/>
+            <RowDefinition Height="68*" />
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="333*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="49*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*" />
+            <ColumnDefinition Width="9*" />
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="6*" />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="495*" />
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        <Label  Grid.RowSpan="3" Name="labelHome" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuShapeVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="6" Grid.Row="4"  Name="labelNext" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="TringelOpenVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Label  Grid.Column="1" Grid.Row="4"  Name="labelExercise" Grid.ColumnSpan="5" >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="TringelExerciseVM"/>
+            </Label.InputBindings>
+        </Label>
+
+        <Label Grid.Column="13" Grid.Row="11"  x:Name="uCAnswerButton1" Grid.ColumnSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AnswerBut}"/>
+            </Label.InputBindings>
+        </Label>
+       <!-- <my1:UCSpeaker  Grid.Row="2"   x:Name="uCSpeaker1"  Grid.Column="2" Grid.ColumnSpan="2"  />
+        <my1:UCButNotice Grid.Column="16" Grid.Row="11" />-->
+        <Image x:Name="imageMeseg" Grid.ColumnSpan="3" Grid.Column="12" Grid.Row="4" Grid.RowSpan="3" Stretch="Fill"/>
+        <MediaElement   Source="{Binding Url}" Visibility="Collapsed"  LoadedBehavior="Play"/>
+    </Grid>
+</UserControl>

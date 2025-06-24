@@ -1,0 +1,165 @@
+﻿<UserControl x:Class="BS.HebrewView.Reading.UCHeReadingEx3To4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.HebrewView.Reading"
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:boardVM="clr-namespace:CL.BS.HebrewVM.VM.Reading;assembly=CL.BS.HebrewVM"
+             mc:Ignorable="d"    d:DesignHeight="900" d:DesignWidth="1000"  >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.HebrewView;component/HebrewImage/UCHeReadingEx3.jpg" />
+    </UserControl.Background>
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type  boardVM:BoardHeReadingExVM}">
+            <local:UCBoardHeReadingEx3/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="253*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="18*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="234*"/>
+            <RowDefinition Height="162*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="163*"/>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="24*"/>
+        </Grid.RowDefinitions>
+        <local:UCBoardHeReadingEx3 Grid.Column="2" Grid.Row="6"  Content="{Binding Board3}" Grid.ColumnSpan="3" Grid.RowSpan="7"/>
+        <local:UCBoardHeReadingEx3 Grid.Column="2" Grid.Row="2"  Content="{Binding Board0}" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5">
+            <local:UCBoardHeReadingEx3.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardHeReadingEx3.RenderTransform>
+        </local:UCBoardHeReadingEx3>
+        <local:UCBoardHeReadingEx3 Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Row="2"  Content="{Binding Board1}"
+Height="{Binding BoardHeight}"  Width="{Binding BoardWidth}"  RenderTransformOrigin="0.32,0.09">
+            <local:UCBoardHeReadingEx3.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardHeReadingEx3.RenderTransform>
+        </local:UCBoardHeReadingEx3>
+        <local:UCBoardHeReadingEx3 Grid.Column="4"  Grid.Row="0" Grid.ColumnSpan="9" Grid.RowSpan="9" Content="{Binding Board2}"
+ Height="{Binding BoardHeight}"  Width="{Binding BoardWidth}"   RenderTransformOrigin="0.7,0.18">
+            <local:UCBoardHeReadingEx3.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:UCBoardHeReadingEx3.RenderTransform>
+        </local:UCBoardHeReadingEx3>
+        <Label >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="MenuHeReadingVM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Items:NUCSpeaker Margin="{Binding SpeakerMargin}" VerticalAlignment="Top"
+                          HorizontalAlignment="Left" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
+        <Label  Grid.Column="6"  Grid.Row="9" Grid.RowSpan="3">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding RePlay}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Label  Grid.Column="6"  Grid.Row="7">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding SwitchSituation}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding ButSwitchSituation}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="8"  Grid.Row="10" Grid.RowSpan="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding AnswerBut}"  />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+        </Label>
+        <Label  Grid.Column="11"  Grid.Row="11"        >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <i:InvokeCommandAction Command="{Binding ExitFromPage}" CommandParameter="HeReading3VM" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Label>
+        <Image  Grid.Column="3"  Grid.Row="5" Source="{Binding PicWord}"/>
+        <Image  Grid.Column="3"  Grid.Row="3" Source="{Binding PicWord}" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image  Grid.Column="1"  Grid.ColumnSpan="2" Grid.Row="3" Source="{Binding PicWord}"
+                Grid.RowSpan="3" RenderTransformOrigin="0.5,0.5" 
+                Height="{Binding PicHeight}"  Width="{Binding PicWidth}">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image  Grid.Column="5"  Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="3" 
+                Source="{Binding PicWord}"  RenderTransformOrigin="0.5,0.5"
+                Height="{Binding PicHeight}"  Width="{Binding PicWidth}">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Items:UCExitButton  Grid.Column="8" Grid.Row="7" Grid.RowSpan="1" Width="30"/>
+    </Grid>
+</UserControl>

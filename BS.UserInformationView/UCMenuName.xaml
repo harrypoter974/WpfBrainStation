@@ -1,0 +1,319 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.UserInformationView" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"              
+             xmlns:Items="clr-namespace:BS.Items;assembly=BS.Items"
+             x:Class="BS.UserInformationView.UCMenuName"
+             mc:Ignorable="d" d:DesignHeight="900" d:DesignWidth="1000"   >
+    <UserControl.Background>
+        <ImageBrush ImageSource="UserInformationImage/NameList.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*" />
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="23*" />
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="32*" />
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="32*" />
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="32*" />
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="22*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="36*" />
+            <ColumnDefinition Width="255*" />
+            <ColumnDefinition Width="31*" />
+            <ColumnDefinition Width="49*" />
+            <ColumnDefinition Width="28*" />
+            <ColumnDefinition Width="35*" />
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="151*" />
+            <ColumnDefinition Width="339*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="24*" />
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Label   x:Name="butHome"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoToPage}" CommandParameter="MenuDataUserVM"/>
+            </Label.InputBindings>
+        </Label>
+        <TextBlock x:Name="tbSelectName" Text="{Binding TextName}" Grid.Row="2" HorizontalAlignment="Right"
+           Grid.RowSpan="3" Grid.ColumnSpan="2" FontSize="28" Grid.Column="1" FontWeight="Bold" TextAlignment="Center"  />
+
+
+        <ListBox x:Name="listBox" Grid.ColumnSpan="8"   Background="Transparent" BorderBrush="Transparent"   
+                 FlowDirection="RightToLeft"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                 Grid.Column="1" Grid.Row="6"  Grid.RowSpan="42"    ItemsSource="{Binding LstName}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter Property="Foreground" Value="Orange"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="Yellow"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding SelectName}" 
+                                           CommandParameter="{Binding ElementName=listBox,  Path=SelectedItem}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Height="80"  Width ="150" Padding="5" Margin="5">
+                        <Border.Background>
+                            <ImageBrush ImageSource="UserInformationImage/beackPic.jpg"/>
+                        </Border.Background>
+                        <TextBlock  FontWeight="Bold"  Uid="{Binding Uid}"  TextAlignment="Center" FontSize="28"
+                             Text="{Binding Question}" VerticalAlignment="Center" >
+                        </TextBlock>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ListBox>
+
+        <Label x:Name="labelA"     Grid.Column="10"  Grid.Row="1" Grid.RowSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter0}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="alef"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelB"     Grid.Column="10"  Grid.Row="4" Grid.RowSpan="2"  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter1}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Bet"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelG"     Grid.Column="10"  Grid.Row="7"   >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter2}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Gimel"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelD"     Grid.Column="10"  Grid.Row="9"                  >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter3}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Dalet"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelH"     Grid.Column="10"  Grid.Row="11"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter4}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="He"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelV"     Grid.Column="10"  Grid.Row="13"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter5}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Waw"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelZ"     Grid.Column="10"  Grid.Row="15"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter6}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Zayin"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelCHT"   Grid.Column="10"  Grid.Row="17"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter7}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Heth"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelT"     Grid.Column="10"  Grid.Row="19"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter8}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Teth"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelY"     Grid.Column="10"  Grid.Row="21"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter9}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Yodh"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelCHF"   Grid.Column="10"  Grid.Row="23"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter10}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Kaph"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelL"     Grid.Column="10"  Grid.Row="25"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter11}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Lamedh"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelM"     Grid.Column="10"  Grid.Row="27"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter12}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Mem"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="label1N"    Grid.Column="10"  Grid.Row="29"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter13}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Nun"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="label1S"    Grid.Column="10"  Grid.Row="31"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter14}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Samekh"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="label1Ain"  Grid.Column="10"  Grid.Row="33"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter15}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Ayin"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelP"     Grid.Column="10"  Grid.Row="35"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter16}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Pe"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelChdy"  Grid.Column="10"  Grid.Row="37"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter17}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Tsade"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelKf"    Grid.Column="10"  Grid.Row="39"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter18}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Qoph"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelR"     Grid.Column="10"  Grid.Row="41"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter19}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Resh"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelSh"    Grid.Column="10"  Grid.Row="43"                 >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter20}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Shin"/>
+            </Label.InputBindings>
+        </Label>
+        <Label x:Name="labelTf"    Grid.Row="45"    Grid.Column="10"               >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter21}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="Taw"/>
+            </Label.InputBindings>
+        </Label>
+        <Label   Grid.Row="47"    Grid.Column="9" Grid.ColumnSpan="2" >
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding LLetter21}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding SelectLetter}" CommandParameter="nickname"/>
+            </Label.InputBindings>
+        </Label>
+        <Image x:Name="imageTitel" Grid.ColumnSpan="4" Grid.Column="4" Grid.RowSpan="3" Source="{Binding GirlTitle}"  Grid.Row="2"  Stretch="Fill"  />
+
+
+        <Items:UCBlueUCSpeaker  Grid.ColumnSpan="6" Grid.RowSpan="5" HorizontalAlignment="Left" 
+ Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" x:Name="uCSpeaker1"  />
+    </Grid>
+</UserControl>

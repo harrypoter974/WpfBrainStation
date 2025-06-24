@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="BS.EnglishViews.Text.UCEnTextBig"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.EnglishViews.Text"
+             mc:Ignorable="d" 
+            d:DesignHeight="900" d:DesignWidth="1000" >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/BS.EnglishViews;component/EnglishImage/UCEnTextBig.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="190*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="96*"/>
+            <ColumnDefinition Width="299*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="28*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="22*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel  x:Name="WrapPanel0" Grid.Column="2" Grid.Row="3"  HorizontalAlignment="Left" Grid.ColumnSpan="8" Margin="9,2,0,2" Visibility="{Binding IsChecked, ElementName=checkBox0}" />
+        <WrapPanel  x:Name="WrapPanel1" Grid.Column="2" Grid.Row="5"  HorizontalAlignment="Left" Grid.ColumnSpan="8" Margin="9,2,0,2"/>
+        <WrapPanel  x:Name="WrapPanel2" Grid.Column="2" Grid.Row="7"  HorizontalAlignment="Left" Grid.ColumnSpan="8" Margin="9,2,0,2"/>
+        <WrapPanel  x:Name="WrapPanel3" Grid.Column="2" Grid.Row="9"  HorizontalAlignment="Left" Grid.ColumnSpan="8" Margin="9,2,0,2"/>
+        <WrapPanel  x:Name="WrapPanel4" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Left" Grid.ColumnSpan="8" Margin="9,2,0,2"/>
+        <WrapPanel  x:Name="WrapPanel5" Grid.Column="2" Grid.Row="13" HorizontalAlignment="Left" Grid.ColumnSpan="8" Margin="9,2,0,2"/>
+        <WrapPanel  x:Name="WrapPanel6" Grid.Column="2" Grid.Row="15" HorizontalAlignment="Left" Grid.ColumnSpan="8" Margin="9,2,0,2" />
+        <WrapPanel  x:Name="WrapPanel7" Grid.Column="2" Grid.Row="17" HorizontalAlignment="Left" Grid.ColumnSpan="8" Margin="9,2,0,2"/>
+        <WrapPanel  x:Name="WrapPanel8" Grid.Column="2" Grid.Row="19" HorizontalAlignment="Left" Grid.ColumnSpan="8" Margin="9,2,0,2"/>
+        <Label x:Name="LPanel0" Grid.Column="1" Grid.Row="3"   Grid.ColumnSpan="9"  />
+        <Label x:Name="LPanel1" Grid.Column="1" Grid.Row="5"   Grid.ColumnSpan="9"  />
+        <Label x:Name="LPanel2" Grid.Column="1" Grid.Row="7"   Grid.ColumnSpan="9"  />
+        <Label x:Name="LPanel3" Grid.Column="1" Grid.Row="9"   Grid.ColumnSpan="9"  />
+        <Label x:Name="LPanel4" Grid.Column="1" Grid.Row="11"  Grid.ColumnSpan="9"  />
+        <Label x:Name="LPanel5" Grid.Column="1" Grid.Row="13"  Grid.ColumnSpan="9"  />
+        <Label  x:Name="labelHome"  Grid.RowSpan="2" Grid.ColumnSpan="2"  >
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding GoTo1}" CommandParameter="MenuEnReadingVM"/>
+            </Label.InputBindings>
+        </Label>
+        <Slider x:Name="slider1" Grid.Column="1"  Grid.Row="21" Grid.RowSpan="3" Minimum="0" Grid.ColumnSpan="3"
+          Value="2000" Maximum="4000" SmallChange="1" />
+        <Label x:Name="labelOpen" Grid.Column="7"  Grid.Row="21" Grid.RowSpan="2"/>
+        <Label x:Name="labelWrite" Grid.Column="9" Grid.Row="22"                 />
+        <Label x:Name="label"  Grid.Column="5" Grid.Row="22" Grid.RowSpan="2">
+            <Label.Background>
+                <ImageBrush ImageSource="{Binding BackgroundAnswerButton}"/>
+            </Label.Background>
+            <Label.InputBindings>
+                <MouseBinding MouseAction="LeftClick"  Command="{Binding AnswerBut}"/>
+            </Label.InputBindings>
+        </Label>
+
+    </Grid>
+</UserControl>

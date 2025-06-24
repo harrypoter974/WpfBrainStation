@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72A640D3-80FF-47AA-BE3C-810B5D1701C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CL.BS.MathLearningManager</RootNamespace>
+    <AssemblyName>CL.BS.MathLearningManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\Add\MathAddComplexEngine.cs" />
+    <Compile Include="Engine\Add\MathAddEngine.cs" />
+    <Compile Include="Engine\Add\MathAddFractureEngine.cs" />
+    <Compile Include="Engine\Comper\MathComperEngine.cs" />
+    <Compile Include="Engine\Exercise\EngineFunctions.cs" />
+    <Compile Include="Engine\Exercise\MathExercise2Engine.cs" />
+    <Compile Include="Engine\Exercise\MathVariableEngine.cs" />
+    <Compile Include="Engine\Game\BaseMatchEngine.cs" />
+    <Compile Include="Engine\Game\BingoMathEngine.cs" />
+    <Compile Include="Engine\Game\BingoNumEngine.cs" />
+    <Compile Include="Engine\Game\BingoQuestionsEngine.cs" />
+    <Compile Include="Engine\Game\ExternalSudokuEngine4x4.cs" />
+    <Compile Include="Engine\Game\ExternalSudokuEngine9x9.cs" />
+    <Compile Include="Engine\Game\IExternalSudokuEngine.cs" />
+    <Compile Include="Engine\Game\LaddersAndRopesMathEngine.cs" />
+    <Compile Include="Engine\Game\MathMatchEngine.cs" />
+    <Compile Include="Engine\Game\MathMemoryMathEngine.cs" />
+    <Compile Include="Engine\Game\MathMemoryNumEngine.cs" />
+    <Compile Include="Engine\Game\SudokuEngine.cs" />
+    <Compile Include="Engine\Moltipol\MathMoltipolComplexEngine.cs" />
+    <Compile Include="Engine\Moltipol\MathMoltipolEngine.cs" />
+    <Compile Include="Engine\Moltipol\MathMoltipolFractureEngine.cs" />
+    <Compile Include="Engine\Moltipol\PowerEngine.cs" />
+    <Compile Include="Engine\Recognaz\MathArray1Engine.cs" />
+    <Compile Include="Engine\Recognaz\MathArray2Engine.cs" />
+    <Compile Include="Engine\Recognaz\MathArray3Engine.cs" />
+    <Compile Include="Engine\Recognaz\MathExRecognaz10Engine.cs" />
+    <Compile Include="Engine\Recognaz\MathExRecognaz1Engine.cs" />
+    <Compile Include="Engine\Recognaz\MathExRecognaz2Engine.cs" />
+    <Compile Include="Engine\Recognaz\MathRecognaz10Engine.cs" />
+    <Compile Include="Engine\Recognaz\NumberStructureExerciseEngine.cs" />
+    <Compile Include="Engine\Recognaz\NumberStructureLernEngine.cs" />
+    <Compile Include="Engine\Splite\MathSpliteComplexEngine.cs" />
+    <Compile Include="Engine\Splite\MathSplitEngine.cs" />
+    <Compile Include="Engine\Splite\MathSpliteFractureEngine.cs" />
+    <Compile Include="Engine\Splite\RootEngine.cs" />
+    <Compile Include="Engine\Sub\MathSubComplexEngine.cs" />
+    <Compile Include="Engine\Sub\MathSubEngine.cs" />
+    <Compile Include="Engine\Sub\MathSubFractureEngine.cs" />
+    <Compile Include="Engine\WritingNumbers\WritingNumEngine.cs" />
+    <Compile Include="Interface\Add\IMathAddFractureManger.cs" />
+    <Compile Include="Interface\Add\IMathAddManager.cs" />
+    <Compile Include="Interface\Comper\IMathComperManager.cs" />
+    <Compile Include="Interface\Exercise\IMathComplexManager.cs" />
+    <Compile Include="Interface\Exercise\IMathExercise2Manager.cs" />
+    <Compile Include="Interface\Exercise\IMathFractureManager.cs" />
+    <Compile Include="Interface\Exercise\IMathVariableManager.cs" />
+    <Compile Include="Interface\Game\IBingoMathManager.cs" />
+    <Compile Include="Interface\Game\IBingoNumManager.cs" />
+    <Compile Include="Interface\Game\IBingoQuestionsManager.cs" />
+    <Compile Include="Interface\Game\ILaddersAndRopesMathManager.cs" />
+    <Compile Include="Interface\Game\IMathMatchManager.cs" />
+    <Compile Include="Interface\Game\IMathMemoryMathManager.cs" />
+    <Compile Include="Interface\Game\IMathMemoryNumManager.cs" />
+    <Compile Include="Interface\Game\ISudokuManager.cs" />
+    <Compile Include="Interface\Moltipol\IMathMoltipol1Manager.cs" />
+    <Compile Include="Interface\Moltipol\IMathMoltipol2Manager.cs" />
+    <Compile Include="Interface\Moltipol\IMathMoltipolFractureManager.cs" />
+    <Compile Include="Interface\Moltipol\IPowerManager.cs" />
+    <Compile Include="Interface\Recognaz\IMathArray1Manager.cs" />
+    <Compile Include="Interface\Recognaz\IMathArray2Manager.cs" />
+    <Compile Include="Interface\Recognaz\IMathArray3Manager.cs" />
+    <Compile Include="Interface\Recognaz\IMathBlunArrayManager.cs" />
+    <Compile Include="Interface\Recognaz\IMathExRecognaz10Manager.cs" />
+    <Compile Include="Interface\Recognaz\IMathExRecognaz1Manager.cs" />
+    <Compile Include="Interface\Recognaz\IMathExRecognaz2Manager.cs" />
+    <Compile Include="Interface\Recognaz\IMathRecognaz10Manager.cs" />
+    <Compile Include="Interface\Recognaz\INumberStructureExerciseManager.cs" />
+    <Compile Include="Interface\Recognaz\INumberStructureLernManager.cs" />
+    <Compile Include="Interface\Splite\IMathSplit1Manager.cs" />
+    <Compile Include="Interface\Splite\IMathSplit2Manager.cs" />
+    <Compile Include="Interface\Splite\IMathSpliteFractureManager.cs" />
+    <Compile Include="Interface\Splite\IRootManager.cs" />
+    <Compile Include="Interface\Sub\IMathSubFractureManager.cs" />
+    <Compile Include="Interface\Sub\IMathSubManager.cs" />
+    <Compile Include="Interface\WritingNumbers\IWritingNumManager.cs" />
+    <Compile Include="Manager\Add\MathAddComplexManager.cs" />
+    <Compile Include="Manager\Add\MathAddFractureManger.cs" />
+    <Compile Include="Manager\Add\MathAddManager.cs" />
+    <Compile Include="Manager\Comper\MathComperManager.cs" />
+    <Compile Include="Manager\Exercise\MathExercise2Manager.cs" />
+    <Compile Include="Manager\Exercise\MathVariableManager.cs" />
+    <Compile Include="Manager\Game\BingoMathManager.cs" />
+    <Compile Include="Manager\Game\BingoNumManager.cs" />
+    <Compile Include="Manager\Game\BingoQuestionsManager.cs" />
+    <Compile Include="Manager\Game\LaddersAndRopesMathManager.cs" />
+    <Compile Include="Manager\Game\MathMatchManager.cs" />
+    <Compile Include="Manager\Game\MathMemoryMathManager.cs" />
+    <Compile Include="Manager\Game\MathMemoryNumManager.cs" />
+    <Compile Include="Manager\Game\SudokuManager.cs" />
+    <Compile Include="Manager\Moltipol\MathMoltipol1Manager.cs" />
+    <Compile Include="Manager\Moltipol\MathMoltipol2Manager.cs" />
+    <Compile Include="Manager\Moltipol\MathMoltipolComplexManager.cs" />
+    <Compile Include="Manager\Moltipol\MathMoltipolFractureManager.cs" />
+    <Compile Include="Manager\Moltipol\PowerManager.cs" />
+    <Compile Include="Manager\Recognaz\MathArray1Manager.cs" />
+    <Compile Include="Manager\Recognaz\MathArray2Manager.cs" />
+    <Compile Include="Manager\Recognaz\MathArray3Manager.cs" />
+    <Compile Include="Manager\Recognaz\MathBlunArrayManager.cs" />
+    <Compile Include="Manager\Recognaz\MathExRecognaz10Manager.cs" />
+    <Compile Include="Manager\Recognaz\MathExRecognaz1Manager.cs" />
+    <Compile Include="Manager\Recognaz\MathExRecognaz2Manager.cs" />
+    <Compile Include="Manager\Recognaz\MathRecognaz10Manager.cs" />
+    <Compile Include="Manager\Recognaz\NumberStructureExerciseManager.cs" />
+    <Compile Include="Manager\Recognaz\NumberStructureLernManager.cs" />
+    <Compile Include="Manager\Splite\MathSplit1Manager.cs" />
+    <Compile Include="Manager\Splite\MathSplit2Manager.cs" />
+    <Compile Include="Manager\Splite\MathSpliteComplexManager.cs" />
+    <Compile Include="Manager\Splite\MathSpliteFractureManager.cs" />
+    <Compile Include="Manager\Splite\RootManager.cs" />
+    <Compile Include="Manager\Sub\MathSubComplexManager.cs" />
+    <Compile Include="Manager\Sub\MathSubFractureManager.cs" />
+    <Compile Include="Manager\Sub\MathSubManager.cs" />
+    <Compile Include="Manager\WritingNumbers\WritingNumManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CL.BS.Common\CL.BS.Common.csproj">
+      <Project>{8b159741-6442-4b26-a6ce-77bf7d0d70fe}</Project>
+      <Name>CL.BS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Contract\CL.BS.Contract.csproj">
+      <Project>{bcedf1ba-7729-410e-8c4a-3c253328c55c}</Project>
+      <Name>CL.BS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.MEF\CL.BS.MEF.csproj">
+      <Project>{681bfcfc-6b4b-4800-abae-441f4c4bb0c2}</Project>
+      <Name>CL.BS.MEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.Model\CL.BS.Model.csproj">
+      <Project>{0B6191C5-6621-4DC6-8D7F-06CB3BD05BC3}</Project>
+      <Name>CL.BS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CL.BS.VMCommon\CL.BS.VMCommon.csproj">
+      <Project>{8f15150f-e7dc-42b3-8556-c6f975e8c392}</Project>
+      <Name>CL.BS.VMCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

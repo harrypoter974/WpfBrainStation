@@ -1,0 +1,29 @@
+﻿<Window x:Class="CL.BS.VMCommon.Win.WinHelp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CL.BS.VMCommon.Win"
+             mc:Ignorable="d" 
+           Title="WinHelp"  Height="900" Width="1000"  WindowState="Maximized" 
+    WindowStyle="None"   ResizeMode="NoResize">
+    <!--<Window.Background>
+        <ImageBrush ImageSource="C:\brinStation\Tests\bordGameB12\WpfComposite\bin\Debug\Resources\Instructions\HalpeEnBingoLetter.jpg"/>
+    </Window.Background>-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="297*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="653*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="791*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelClose" Grid.Column="2" MouseDown="labelClose_MouseDown" Grid.Row="2"/>
+        <Label x:Name="label1"   MouseDown="labelClose_MouseDown"   />
+    </Grid>
+</Window>

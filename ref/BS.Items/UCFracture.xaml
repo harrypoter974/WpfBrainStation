@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="BS.Items.UCFracture"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BS.Items"
+             mc:Ignorable="d" 
+              d:DesignHeight="100" d:DesignWidth="300"    Foreground="#FFEB1A24"
+             Background="#FFE1F3FE" FontWeight="Bold" FontSize="32" HorizontalAlignment="Center">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WpfComposite;component/Resources/DMathTextBlock.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="LNum1"   Grid.RowSpan="2" VerticalAlignment="Center"   />
+        <Image x:Name="LNumFMone1"  Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"   />
+        <Rectangle Grid.Column="1" Grid.Row="1"  Height="3" VerticalAlignment="Top"  >
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="ItemsImage/_.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image x:Name="LNumFMechane1"  Grid.Column="1"  Grid.Row="1" VerticalAlignment="Top"   />
+        <Image x:Name="LOperator"  Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Center"  Margin="6,31,6,31"  />
+        <Image x:Name="LNum2"  Grid.Column="3" Grid.RowSpan="2" VerticalAlignment="Center"   />
+        <Image x:Name="LNumFMone2" Grid.Column="4" VerticalAlignment="Bottom" HorizontalAlignment="Center"   />
+        <Rectangle  Grid.Column="4"   Grid.Row="1" Height="3"  VerticalAlignment="Top" >
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="ItemsImage/_.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image x:Name="LNumFMechane2"  Grid.Column="4"  Grid.Row="1"  VerticalAlignment="Top"  />
+
+
+    </Grid>
+</UserControl>
