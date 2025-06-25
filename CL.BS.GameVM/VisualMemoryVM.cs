@@ -73,15 +73,15 @@ namespace CL.BS.GameVM
             }
             else
             {
-
                 RunGame = true;
                 gameRun = false;
                 NotifyPropertyChanged(nameof(gameRun) );
-
                 base.SetNewGameBut(true);
                 for (int i = 0; i < Boards.Length; i++)
+                {
                     Boards[i].SetSoldierPosition(false);
-
+                    Boards[i].SetNumLetterLimit(i);
+                }
                 StartGame();
             }
         }
@@ -143,7 +143,7 @@ namespace CL.BS.GameVM
             NotifyPropertyChanged(nameof(gameRun) );
             for (int i = 0; i < Boards.Length; i++)
             {
-                Boards[i].ClearQuestion();
+                Boards[i].Clear();
                 Boards[i].SetSoldierPosition(false);
             }
         }

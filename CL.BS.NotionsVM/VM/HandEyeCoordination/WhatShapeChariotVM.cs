@@ -132,6 +132,7 @@ SupportHandlerManager.Base.GetManager("WhatShapeChariotManager");
                             PlayUrl(System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Audio\StructuralWin.wav");
                             for (int i = 0; i < Boards.Length; i++)
                                 Boards[i].Clear();
+                            haveWin = false;
                         }
                         if (is5)
                         {

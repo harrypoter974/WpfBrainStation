@@ -246,7 +246,7 @@
         <Image x:Name="iSoldier2" Source="GameImage/C.png" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="45" Grid.Column="{Binding SoldierX0}" Grid.Row="{Binding SoldierY0}"  Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="6,6,0,0"/>
         <Image x:Name="iSoldier3" Source="GameImage/D.png" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="45"  Grid.Column="{Binding SoldierX1}" Grid.Row="{Binding SoldierY1}" Grid.RowSpan="5" Grid.ColumnSpan="5" Margin="9,9,0,0"/>
 
-        <Label  Grid.Column="53" Grid.Row="40"  Grid.RowSpan="3" Grid.ColumnSpan="4">
+        <Label  Grid.Column="53" Grid.Row="40"  Grid.RowSpan="3" Grid.ColumnSpan="4" IsEnabled="{Binding gameRun}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="TouchDown">
                     <i:InvokeCommandAction Command="{Binding NewGame}"  />

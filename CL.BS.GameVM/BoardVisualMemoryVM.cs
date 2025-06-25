@@ -126,24 +126,35 @@ namespace CL.BS.GameVM
         }
         public override void Clear()
         {
-            for (int i = 0; i < LettersList.Count(); i++)
-            {
-                LettersList[i].Uid = LettersList[i].Question = string.Empty;
-                NotifyPropertyChanged("TB" + i);
-            }
-        }
-
-        public override void ClearQuestion()
-        {
-            AnswerPic= _items[_arrowPosition].Background = string.Empty;
+            AnswerPic= string.Empty; 
+            NotifyPropertyChanged(nameof(AnswerPic));
+            _items[_arrowPosition].Background = string.Empty;            
             NotifyPropertyChanged("TBArrow" + _arrowPosition);
             _arrowPosition = 0;
             _items[_arrowPosition].Background = System.AppDomain.CurrentDomain.BaseDirectory +
                 @"Resources\Pion\Arrow" + Rotation + ".png";
             NotifyPropertyChanged("TBArrow" + _arrowPosition);
-            NotifyPropertyChanged(nameof(AnswerPic)  );
+            RestartClear();
+        }
 
-            Clear();
+        public override void ClearQuestion()
+        {
+            AnswerPic = string.Empty;
+            NotifyPropertyChanged(nameof(AnswerPic));
+            if (_arrowPosition == 4)
+            {
+                _items[_arrowPosition].Background = string.Empty;
+                NotifyPropertyChanged("TBArrow" + _arrowPosition);
+                _arrowPosition = 0;
+                _items[_arrowPosition].Background = System.AppDomain.CurrentDomain.BaseDirectory +
+                    @"Resources\Pion\Arrow" + Rotation + ".png";
+                NotifyPropertyChanged("TBArrow" + _arrowPosition);
+            }
+            for (int i = 0; i < LettersList.Count(); i++)
+            {
+                LettersList[i].Uid = LettersList[i].Question = string.Empty;
+                NotifyPropertyChanged("TB" + i);
+            }
         }
 
         public override void GameWin()
@@ -203,6 +214,9 @@ namespace CL.BS.GameVM
 
         public override void SetNumLetterLimit(int v)
         {
+            _items[_arrowPosition].Background = System.AppDomain.CurrentDomain.BaseDirectory +
+                @"Resources\Pion\Arrow" + Rotation + ".png";
+            NotifyPropertyChanged("TBArrow" + _arrowPosition);
         }
 
         public override void SetQuestion(string q)

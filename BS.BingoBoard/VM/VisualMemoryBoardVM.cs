@@ -20,7 +20,7 @@ namespace BS.BingoBoard.VM
         public string TBArrow3 { get { return _items[3].Background; } set { _items[3].Background = value; } }
         public string TBArrow4 { get { return _items[4].Background; } set { _items[4].Background = value; } }
 
-        private SoldierObject[] _items = new SoldierObject[5];
+        private SoldierObject[] _items = new SoldierObject[5]; 
 
         public Visibility VisibilityGrid0 { get { return _Grids[0].LineVisible; } set { _Grids[0].LineVisible = value; } }
         public Visibility VisibilityGrid1 { get { return _Grids[1].LineVisible; } set { _Grids[1].LineVisible = value; } }
@@ -234,9 +234,9 @@ namespace BS.BingoBoard.VM
         public override void ClearQuestion()
         {
             LinePoints = String.Empty;
-            NotifyPropertyChanged("LinePoints"); 
+            NotifyPropertyChanged(nameof(LinePoints)); 
             DeleteBut = String.Format(@"{0}\Resources\BS.Items\DeleteBut.png", System.AppDomain.CurrentDomain.BaseDirectory);
-            NotifyPropertyChanged("DeleteBut");
+            NotifyPropertyChanged(nameof(DeleteBut) );
             for (int i = 0; i < _asterisks.Length; i++)
             {
                 int i0 = i / 6;

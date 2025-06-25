@@ -217,8 +217,8 @@ namespace CL.BS.GameVM
         {
             if (IsQuestion||!IsStartGame|| TurnInxex==-1)// || (MiceLogic.GetMouseRotation() != MiceName[Soldier]&&MiceLogic.IsMouse())
             {
-                if (IsQuestion)
-                    DoTapAnswer(0);
+                //if (IsQuestion)
+                //    DoTapAnswer(0);
                 return;
             }
             if (obj.ToString() != Soldier.ToString())

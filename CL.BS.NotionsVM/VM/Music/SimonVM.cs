@@ -80,7 +80,6 @@ SupportHandlerManager.Base.GetManager("SimonManager");
             if (RunGame)
             {
                 ResetGame();
-                base.SetNewGameBut(false);
             }
             else
             {
@@ -191,9 +190,10 @@ SupportHandlerManager.Base.GetManager("SimonManager");
 
         public override void ResetGame()
         {
-            RunGame = false;
+            base.SetNewGameBut(false);
             gameRun = true;
             Logic.DoChangeMode(true);
+            RunGame = false;
             for (int i = 0; i < Boards.Length; i++)
             {
                 Boards[i].SetSoldierPosition(false);

@@ -98,7 +98,7 @@ Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" HorizontalAlignment="Le
             </i:Interaction.Triggers>
         </Label>
 
-        <Label Grid.ColumnSpan="4" Grid.Column="14"  Grid.Row="11" >
+        <Label Grid.ColumnSpan="4" Grid.Column="14"  Grid.Row="11" IsEnabled="{Binding gameRun}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="TouchDown">
                     <i:InvokeCommandAction Command="{Binding NewGame}"/>

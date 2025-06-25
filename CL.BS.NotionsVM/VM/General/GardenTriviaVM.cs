@@ -145,6 +145,7 @@ SupportHandlerManager.Base.GetManager("GardenTriviaManager");
                 }
                 if (!string.IsNullOrEmpty(q.Adio))
                 {
+                    Common.StaticVar.PlayMode = false;
                     PlayUrl(System.AppDomain.CurrentDomain.BaseDirectory + @"Resources\Audio\He\" + q.Adio);
                 }
                 new Thread(new ThreadStart(() =>
@@ -208,6 +209,7 @@ SupportHandlerManager.Base.GetManager("GardenTriviaManager");
                             }
                             if (!string.IsNullOrEmpty(q.Adio))
                             {
+                                Common.StaticVar.PlayMode = false;
                                 PlayUrl(System.AppDomain.CurrentDomain.BaseDirectory +
                                      @"Resources\Audio\He\" + q.Adio);
                             }

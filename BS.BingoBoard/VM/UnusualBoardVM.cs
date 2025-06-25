@@ -15,7 +15,7 @@ namespace BS.BingoBoard.VM
         public string TBArrow2 { get { return _items[2].Background; } set { _items[2].Background = value; } }
         public string TBArrow3 { get { return _items[3].Background; } set { _items[3].Background = value; } }
         public string TBArrow4 { get { return _items[4].Background; } set { _items[4].Background = value; } }
-
+          
         private SoldierObject[] _items = new SoldierObject[5];
         private int _arrowPosition;
         private string _answer;
@@ -68,6 +68,12 @@ namespace BS.BingoBoard.VM
                 _arrowPosition = 0;
                 _items[_arrowPosition].Background = System.AppDomain.CurrentDomain.BaseDirectory +
                     @"Resources\Pion\Arrow" + Rotation + ".png";
+                NotifyPropertyChanged("TBArrow" + _arrowPosition);
+            }
+            else if (_arrowPosition == 0)
+            {
+                _items[_arrowPosition].Background = System.AppDomain.CurrentDomain.BaseDirectory +
+                @"Resources\Pion\Arrow" + Rotation + ".png";
                 NotifyPropertyChanged("TBArrow" + _arrowPosition);
             }
             ClearQuestion();

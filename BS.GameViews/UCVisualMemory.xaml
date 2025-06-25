@@ -125,7 +125,7 @@ Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" HorizontalAlignment="Le
                 </TransformGroup>
             </local:UCBoardVisualMemory.RenderTransform>
         </local:UCBoardVisualMemory>
-        <Label Grid.ColumnSpan="3" Grid.Column="12"  Grid.Row="9" >
+        <Label Grid.ColumnSpan="3" Grid.Column="12"  Grid.Row="9" IsEnabled="{Binding gameRun}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="TouchDown">
                     <i:InvokeCommandAction Command="{Binding NewGame}"/>
@@ -135,7 +135,7 @@ Margin="{Binding SpeakerMargin}" VerticalAlignment="Top" HorizontalAlignment="Le
                 <ImageBrush ImageSource="{Binding BackgroundNewGame}"/>
             </Label.Background>
         </Label>
-        <Label Grid.ColumnSpan="3" Grid.Column="8"   Grid.Row="9">
+        <Label Grid.ColumnSpan="3" Grid.Column="8"   Grid.Row="9" >
             <Label.Background>
                 <ImageBrush ImageSource="{Binding ExitButBackground}"/>
             </Label.Background>
